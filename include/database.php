@@ -37,6 +37,7 @@ function plugin_evidence_initialize_database() {
 	$data = array();
 	$data['columns'][] = array('name' => 'id', 'type' => 'int(11)', 'NULL' => false,'auto_increment' => true);
 	$data['columns'][] = array('name' => 'org_id', 'type' => 'int(11)', 'NULL' => false);
+	$data['columns'][] = array('name' => 'sysobjectid', 'type' => 'varchar(255)', 'default' => null);
 	$data['columns'][] = array('name' => 'description', 'type' => 'varchar(255)', 'NULL' => false);
 	$data['columns'][] = array('name' => 'oid', 'type' => 'varchar(255)', 'NULL' => false);
 	$data['columns'][] = array('name' => 'result', 'type' => 'varchar(255)', 'NULL' => false);
@@ -126,6 +127,24 @@ function plugin_evidence_initialize_database() {
 		(org_id, description, oid, result, method, table_items, mandatory)
 		VALUES
 		(14823, 'APs_uptime', '.1.3.6.1.4.1.14823.2.3.3.1.2.1.1', '.*', 'table', '1-mac,2-name,9-uptime', 'no')");
+
+	// Aruba Clearpass
+	db_execute ("INSERT INTO plugin_evidence_specific_query
+		(org_id, sysobjectid, description, oid, result, method)
+		VALUES
+		(14823, '.1.3.6.1.4.1.14823.1.6.1', 'model', '.1.3.6.1.4.1.14823.1.6.1.1.1.1.1.1.0', '.*', 'get')");
+	db_execute ("INSERT INTO plugin_evidence_specific_query
+		(org_id, sysobjectid, description, oid, result, method)
+		VALUES
+		(14823, '.1.3.6.1.4.1.14823.1.6.1', 'serial number', '.1.3.6.1.4.1.14823.1.6.1.1.1.1.1.2.0', '.*', 'get')");
+	db_execute ("INSERT INTO plugin_evidence_specific_query
+		(org_id, sysobjectid, description, oid, result, method)
+		VALUES
+		(14823, '.1.3.6.1.4.1.14823.1.6.1', 'version', '.1.3.6.1.4.1.14823.1.6.1.1.1.1.1.3.0', '.*', 'get')");
+	db_execute ("INSERT INTO plugin_evidence_specific_query
+		(org_id, sysobjectid, description, oid, result, method)
+		VALUES
+		(14823, '.1.3.6.1.4.1.14823.1.6.1', 'nodetype', '.1.3.6.1.4.1.14823.1.6.1.1.1.1.1.5.0', '.*', 'get')");
 
 	// Cisco
 	db_execute ("INSERT INTO plugin_evidence_specific_query

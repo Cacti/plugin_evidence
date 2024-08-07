@@ -448,9 +448,20 @@ function plugin_evidence_get_data_specific ($h, $optional = false) {
 		ORDER BY method',
 		array($h['org_id'], $cond));
 
+	$sysobjectid = cacti_snmp_get($h['hostname'], $h['snmp_community'], '.1.3.6.1.2.1.1.2.0',
+				$h['snmp_version'], $h['snmp_username'], $h['snmp_password'], 
+				$h['snmp_auth_protocol'], $h['snmp_priv_passphrase'], $h['snmp_priv_protocol'],
+				$h['snmp_context'], $h['snmp_port'], $h['snmp_timeout']);
+
 	$i = 0;
 
 	foreach ($steps as $step) {
+
+		// device type limitation
+		if (isset($step['sysobjectid']) && $step['sysobjectid'] != $sysobjectid) {
+			continue;
+		}
+
 		if ($step['method'] == 'get') {
 			$data_spec[$i]['description'] = $step['description'];
 			$data_spec[$i]['oid'] = $step['oid'];
@@ -1103,7 +1114,7 @@ function evidence_show_host_data ($host_id, $datatype, $scan_date) {
 				}
 				print '<dd>';
 
-				if ((array_key_exists($datatype, $entities) && isset($data['entity'][$date])) || $datatype == 'all') {
+				if (isset($data['entity'][$date]) && (array_key_exists($datatype, $entities) || $datatype == 'all')) {
 
 					print 'Entity MIB:<br/>';
 		
