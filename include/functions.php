@@ -164,7 +164,7 @@ function plugin_evidence_get_entity_data($h) {
 		$h['snmp_context'], $h['snmp_port'], $h['snmp_timeout']);
 
 	/* Some devides doesn't use index, trying normal data */
-	if (!cacti_sizeof($indexes)) { 
+	if (!cacti_sizeof($indexes)) {
 
 		$data_descr = @cacti_snmp_walk($h['hostname'], $h['snmp_community'], '.1.3.6.1.2.1.47.1.1.1.1.2',
 			$h['snmp_version'], $h['snmp_username'], $h['snmp_password'],$h['snmp_auth_protocol'],
@@ -259,7 +259,7 @@ function plugin_evidence_get_entity_data($h) {
 			}
 
 			$entity[] = array (
-				'index'        => isset($indexes[$key]['value']) ? $indexes[$key]['value'] : '',
+				'index'        => isset($indexes[$key]['value']) ? (int) $indexes[$key]['value'] : '',
 				'descr'        => isset($data_descr[$key]['value']) ? $data_descr[$key]['value'] : '',
 				'name'         => isset($data_name[$key]['value']) ? $data_name[$key]['value'] : '',
 				'hardware_rev' => isset($data_hardware_rev[$key]['value']) ? $data_hardware_rev[$key]['value'] : '',
