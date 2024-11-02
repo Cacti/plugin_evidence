@@ -64,7 +64,7 @@ if (is_array($allowed) && in_array($id, $allowed)) {
 	if ($host['disabled'] == 'on' || ($host['status'] != 2 && $host['status'] != 3)) {
 		print __('Disabled/down device. No actual data', 'evidence') . '<br/>';
 	} else {
-		evidence_show_actual_data(plugin_evidence_actual_data($host));
+		evidence_show_host_info(plugin_evidence_actual_data($host), true);
 	}
 
 	if ($evidence_records > 0 && ($count_entity > 0 || $count_mac > 0 || $count_ip > 0 || $count_vendor > 0)) {

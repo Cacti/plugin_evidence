@@ -145,27 +145,14 @@ function evidence_display_form() {
 	print '<input type="text" name="find_text" id="find" value="' . get_request_var('find_text') . '">';
 	print '</td>';
 	print '<td>';
-	print __('Specify data type');
+	print 'You can search serial number, firmware version, ip, mac address,...';
 	print '</td>';
-	print '<td>';
 
-	print '<select id="datatype" name="datatype">';
-	print '<option value="all" '    . (get_request_var('datatype') == 'all'  ? 'selected="selected"' : '') . '>' . __('All', 'evidence') . '</option>';
-	print '<option value="mac" '  . (get_request_var('datatype') == 'mac'  ? 'selected="selected"' : '') . '>' . __('Mac addresses', 'evidence') . '</option>';
-	print '<option value="ip"  '  . (get_request_var('datatype') == 'ip'   ? 'selected="selected"' : '') . '>' . __('IP addresses', 'evidence') . '</option>';
-	print '<option value="spec" ' . (get_request_var('datatype') == 'spec' ? 'selected="selected"' : '') . '>' . __('Vendor specific', 'evidence') . '</option>';
-	print '<option value="opt" '  . (get_request_var('datatype') == 'opt'  ? 'selected="selected"' : '') . '>' . __('Vendor optional', 'evidence') . '</option>';
-
-	foreach ($entities as $key => $value) {
-		print '<option value="' . $key . '" ' . (get_request_var('datatype') == $key ? 'selected="selected"' : '') . '>Entity - ' . $value . '</option>';
-	}
-
-	print '</select>';
-	print '</form>';
-
-	print '</td>';
 	print '</tr>';
 	print '</table>';
+
+	print '</form>';
+
 	html_end_box();
 }
 
@@ -189,12 +176,6 @@ function evidence_find() {
 		$template_id = get_filter_request_var('template_id');
 	}
 
-	if (array_key_exists(get_request_var('datatype'), $entities) || array_key_exists(get_request_var('datatype'), $datatypes) || get_request_var('datatype') == 'all') {
-		$datatype = get_request_var('datatype');
-	} else {
-		$datatype = null;
-	}
-
 	$find_text = get_filter_request_var ('find_text', FILTER_VALIDATE_REGEXP, array('options' => array('regexp' => '/^([a-zA-Z0-9_\-\.:]+)$/')));
 	if (empty($find_text)) {
 		unset($find_text);
@@ -206,14 +187,14 @@ function evidence_find() {
 	}
 
 	if (isset($host_id)) {
-		evidence_show_host_data($host_id, $datatype, $scan_date);
+		evidence_show_host_data($host_id, $scan_date);
 	} else if (isset($template_id)) {
 		$hosts = db_fetch_assoc_prepared('SELECT id FROM host
 			WHERE host_template_id = ?',
 			array($template_id));
 	
 		foreach ($hosts as $host) {
-			evidence_show_host_data($host['id'], $datatype, $scan_date);
+			evidence_show_host_data($host['id'], $scan_date);
 		}
 	}
 

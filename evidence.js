@@ -45,7 +45,7 @@ $(function() {
 	});
 
 	$('dd').hide();
-	$('dd:first').slideToggle(); // open first line automatically
+//	$('dd:first').slideToggle(); // open first line automatically
 	$('dt').click(function () {
         	$(this).next('dd').slideToggle(250);
 	});
