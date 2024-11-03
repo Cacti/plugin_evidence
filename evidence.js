@@ -7,9 +7,7 @@ var show_expand = false;
 
 
 $(function() {
-
 	// used in host.php
-
 	$('#evidence_info').click(function(event) {
 
 		event.preventDefault();
@@ -111,7 +109,7 @@ $(function() {
 function applyFilter() {
 	strURL  = 'evidence_tab.php' +
 		'?host_id=' + $('#host_id').val() +
-		'&header=false';
+		'&header=false&action=find';
 	loadPageNoHeader(strURL);
 }
 

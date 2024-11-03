@@ -974,7 +974,7 @@ function evidence_show_host_data ($host_id, $scan_date) {
 							if (isset($row['scan_date'])) {
 								unset($row['scan_date']);
 								unset($row['host_id']);
-								unset($row['organization']);
+								unset($row['organization_id']);
 								unset($row['organization_name']);
 							}
 						}
@@ -992,6 +992,9 @@ function evidence_show_host_data ($host_id, $scan_date) {
 						foreach ($data_compare_ip as &$row) {
 							if (isset($row['scan_date'])) {
 								unset($row['scan_date']);
+								unset($row['mandatory']);
+								unset($row['sysobjectid']);
+								unset($row['host_id']);
 							}
 						}
 					}
@@ -1000,6 +1003,9 @@ function evidence_show_host_data ($host_id, $scan_date) {
 						foreach ($data_compare_spec as &$row) {
 							if (isset($row['scan_date'])) {
 								unset($row['scan_date']);
+								unset($row['mandatory']);
+								unset($row['sysobjectid']);
+								unset($row['host_id']);
 							}
 						}
 					}
@@ -1011,7 +1017,6 @@ function evidence_show_host_data ($host_id, $scan_date) {
 								unset($row['host_id']);
 								unset($row['organization_id']);
 								unset($row['organization_name']);
-
 							}
 						}
 					}
@@ -1072,10 +1077,10 @@ function evidence_show_host_data ($host_id, $scan_date) {
 
 					foreach($data['entity'][$date] as $entity) {
 						unset($entity['scan_date']);
-
 						unset($entity['host_id']);
 						unset($entity['organization_id']);
 						unset($entity['organization_name']);
+
 
 						foreach ($entity as $key => $value) {
 							if ($value != '') {
@@ -1089,6 +1094,7 @@ function evidence_show_host_data ($host_id, $scan_date) {
 				} else {
 					$data_compare_entity = array();
 				}
+
 
 				if (isset($data['mac'][$date])) {
 					$count = 0;

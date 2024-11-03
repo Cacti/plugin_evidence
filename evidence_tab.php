@@ -176,7 +176,7 @@ function evidence_find() {
 		$template_id = get_filter_request_var('template_id');
 	}
 
-	$find_text = get_filter_request_var ('find_text', FILTER_VALIDATE_REGEXP, array('options' => array('regexp' => '/^([a-zA-Z0-9_\-\.:]+)$/')));
+	$find_text = get_filter_request_var ('find_text', FILTER_VALIDATE_REGEXP, array('options' => array('regexp' => '/^([a-zA-Z0-9_\-\.:\+]+)$/')));
 	if (empty($find_text)) {
 		unset($find_text);
 	}
@@ -203,11 +203,14 @@ function evidence_find() {
 		}
 	}
 
+	if (isset($find_text)) {
+		plugin_evidence_find();
+	}
+
 	if (!isset($host_id) && !isset($template_id)) {
 		print __('Select any device or template', 'snver');
 	}
 }
-
 
 function evidence_stats() {
 	global $config;
@@ -245,8 +248,6 @@ function evidence_stats() {
 	print 'Vendor specific data: ' . $ven . '<br/>';
 	print 'Oldest record: ' . $old . '<br/>';
 }
-
-
 
 function evidence_show_checkboxes() {
 	print "<table class='filterTable'>";
