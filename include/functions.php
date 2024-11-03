@@ -866,6 +866,8 @@ function plugin_evidence_time_to_run() {
 	}
 }
 
+// show data in evidence tab
+
 function evidence_show_host_data ($host_id, $scan_date) {
 	global $config, $entities, $datatypes;
 
@@ -882,18 +884,15 @@ function evidence_show_host_data ($host_id, $scan_date) {
 		ON host.host_template_id = host_template.id
 		WHERE host.id = ?',
 		array($host_id));
-		
-	print '<h3>' . $host['description'] . ' (' . $host['hostname'] . ', ' . $host['template_name'] . ')</h3>';
 
+	print '<h3>' . $host['description'] . ' (' . $host['hostname'] . ', ' . $host['template_name'] . ')</h3>';
 
 	if (!get_filter_request_var('actual')) {
 		print '<a href="' . $config['url_path'] . 'plugins/evidence/evidence_tab.php?host_id=' .
 		$host_id . '&template=&actual=1&action=find">' . __('Also show actual data', 'evidence') . '</a>';
 		print '<br/><br/>';
-		print '<dl>';
 	} else {  // show actual data
 
-		unset_request_var('actual');
 		$data = plugin_evidence_actual_data($host);
 
 		if (isset($data['org_name'])) {
@@ -904,110 +903,52 @@ function evidence_show_host_data ($host_id, $scan_date) {
 			print ' (ID ORG: ' . $data['org_id'] . ')' . '<br/>';
 		}
 
-		print '<dl>';
-
-		print '<dt class="bold drillDown">' . date('Y-m-d H:i:s') . ' (' . __('Actual data', 'evidence') . ')</dt>';
-		print '<dd>';
+		// prepare actual data
+		$act_date = date('Y-m-d H:i:s');
 
 		if (isset($data['entity'])) {
-
-			print 'Entity MIB:<br/>';
-
-			foreach ($data['entity'] as $row) {
-
-				foreach ($row as $key => $value) {
-					if ($value != '') {
-						print $key . ': ' . $value . ' | ';
-					}
-				}
-				print '<br/>';
-			}
-			$data_compare_entity = $data['entity'];
+			$act_data['entity'][$act_date] = $data['entity'];
 		}
-
 		if (isset($data['mac'])) {
-			$count = 0;
-			print '<br/><span class="bold">MAC:</span><br/>';
-			print '<table class="cactiTable"><tr>';
-
-			foreach ($data['mac'] as $mac) {
-				print '<td>' . $mac . '</td>';
-				$count++;
-				if ($count > 5) {
-					$count = 0;
-					print '</tr><tr>';
-				}
-			}
-			print '</tr></table>';
-			$data_compare_mac = $data['mac'];
+			$act_data['mac'][$act_date] = $data['mac'];
 		}
-
 		if (isset($data['ip'])) {
-			$count = 0;
-			print '<br/><span class="bold">IP:</span><br/>';
-			print '<table class="cactiTable"><tr>';
-
-			foreach ($data['ip'] as $ip) {
-				print '<td>' . $ip . '</td>';
-				$count++;
-				if ($count > 5) {
-					$count = 0;
-					print '</tr><tr>';
-				}
-			}
-			print '</tr></table>';
-			$data_compare_ip = $data['ip'];
+			$act_data['ip'][$act_date] = $data['ip'];
 		}
-
 		if (isset($data['spec'])) {
-
-			print '<br/><span class="bold">Vendor specific:</span><br/>';
-
-			foreach ($data['spec'] as $row) {
-				if (!is_array($row['value'])) {
-					print $row['description'] . ': ' . $row['value'] . display_tooltip('OID: ' . $row['oid']) . '</br>';
-				} else {
-					print $row['description'] . display_tooltip('OID: ' . $row['oid']) . ':</br>';
-					foreach ($row['value'] as $a) {
-						if (is_array($a)) {
-							print implode(', ', $a);
-						} else {
-							print $a . '</br>';
-						}
-					}
-					print '</br>';
-				}
-			}
-			$data_compare_spec = $data['spec'];
+			$act_data['spec'][$act_date] = $data['spec'];
 		}
-
 		if (isset($data['opt'])) {
-			$count = 0;
-			print '<br/><span class="bold">Vendor optional:</span><br/>';
-
-			foreach ($data['opt'] as $row) {
-				if (!is_array($row['value'])) {
-					print $row['description'] . ': ' . $row['value'] . display_tooltip('OID: ' . $row['oid']) . '</br>';
-				} else {
-					print $row['description'] . display_tooltip('OID: ' . $row['oid']) . ':</br>';
-					foreach ($row['value'] as $a) {
-						if (is_array($a)) {
-							print implode(', ', $a);
-						} else {
-							print $a . '</br>';
-						}
-					}
-					print '</br>';
-				}
-			}
+			$act_data['opt'][$act_date] = $data['opt'];
 		}
 	}
 
-	print '</dd>';
+	print '<dl>';
 
-	if ($evidence_records > 0) {
-
+	if ($evidence_records > 0 || get_filter_request_var('actual')) {
+		$data = array();
 		$data = plugin_evidence_history($host_id);
+
+		if (get_filter_request_var('actual')) {
+			if (isset($data['entity']) && isset($act_data['entity'])) {
+				$data['entity'] += $act_data['entity'];
+			}
+			if (isset($data['mac']) && isset($act_data['mac'])) {
+				$data['mac'] += $act_data['mac'];
+			}
+			if (isset($data['ip']) && isset($act_data['ip'])) {
+				$data['ip'] += $act_data['ip'];
+			}
+			if (isset($data['spec']) && isset($act_data['spec'])) {
+				$data['spec'] += $act_data['spec'];
+			}
+			if (isset($data['opt']) && isset($act_data['opt'])) {
+				$data['opt'] += $act_data['opt'];
+			}
+			if (isset($act_date)) {
+				array_unshift($data['dates'], $act_date);
+			}
+		}
 
 		if (!isset($data['dates'])) {
 			print __('No older data yet', 'evidence');
@@ -1032,6 +973,9 @@ function evidence_show_host_data ($host_id, $scan_date) {
 						foreach ($data_compare_entity as &$row) {
 							if (isset($row['scan_date'])) {
 								unset($row['scan_date']);
+								unset($row['host_id']);
+								unset($row['organization']);
+								unset($row['organization_name']);
 							}
 						}
 					}
@@ -1040,7 +984,7 @@ function evidence_show_host_data ($host_id, $scan_date) {
 						foreach ($data_compare_mac as &$row) {
 							if (isset($row['scan_date'])) {
 								unset($row['scan_date']);
-							}
+								}
 						}
 					}
 
@@ -1064,6 +1008,10 @@ function evidence_show_host_data ($host_id, $scan_date) {
 						foreach ($data['entity'][$date] as &$row) {
 							if (isset($row['scan_date'])) {
 								unset($row['scan_date']);
+								unset($row['host_id']);
+								unset($row['organization_id']);
+								unset($row['organization_name']);
+
 							}
 						}
 					}
@@ -1081,28 +1029,30 @@ function evidence_show_host_data ($host_id, $scan_date) {
 					if (isset($data['spec'][$date]) && cacti_sizeof($data['spec'][$date])) {
 						foreach ($data['spec'][$date] as &$row) {
 							unset($row['scan_date']);
+							unset($row['mandatory']);
+							unset($row['sysobjectid']);
+							unset($row['host_id']);
 						}
 					}
 
 					if (cacti_sizeof($data_compare_entity) > 0 && isset($data['entity'][$date]) && $data_compare_entity != $data['entity'][$date]) {
 						$change = true;
-						$where = __('Entity', 'evidence');
+						$where .= __('Entity', 'evidence') . '<i class="fas fa-long-arrow-alt-up"></i>';
 					}
 
 					if (cacti_sizeof($data_compare_mac) > 0 && isset($data['mac'][$date]) && $data_compare_mac != $data['mac'][$date]) {
 						$change = true;
-						$where = __('MAC addresses', 'evidence');
+						$where .= __('MAC addresses', 'evidence') . '<i class="fas fa-long-arrow-alt-up"></i>';
 					}
 
 					if (cacti_sizeof($data_compare_ip) > 0 && isset($data['ip'][$date]) && $data_compare_ip != $data['ip'][$date]) {
 						$change = true;
-						$where = __('IP addresses', 'evidence');
+						$where .= __('IP addresses', 'evidence') . '<i class="fas fa-long-arrow-alt-up"></i>';
 					}
 
 					if (cacti_sizeof($data_compare_spec) > 0 && isset($data['spec'][$date]) && $data_compare_spec != $data['spec'][$date]) {
-
 						$change = true;
-						$where = __('Vendor specific', 'evidence');
+						$where .= __('Vendor specific', 'evidence') . '<i class="fas fa-long-arrow-alt-up"></i>';
 					}
 				}
 
@@ -1115,8 +1065,9 @@ function evidence_show_host_data ($host_id, $scan_date) {
 
 				if (isset($data['entity'][$date])) {
 
-					print 'Entity MIB:<br/>';
-		
+					print '<div class="paragraph_entity">';
+					print '<span class="bold">Entity MIB:</span><br/>';
+
 					$data_compare_entity = $data['entity'][$date];
 
 					foreach($data['entity'][$date] as $entity) {
@@ -1133,6 +1084,8 @@ function evidence_show_host_data ($host_id, $scan_date) {
 						}
 						print '<br/>';
 					}
+					print '<br/><br/>';
+					print '</div>';
 				} else {
 					$data_compare_entity = array();
 				}
@@ -1142,7 +1095,8 @@ function evidence_show_host_data ($host_id, $scan_date) {
 
 					$data_compare_mac = $data['mac'][$date];
 
-					print '<br/>MAC addresses:<br/>';
+					print '<div class="paragraph_mac">';
+					print '<span class="bold">MAC:</span><br/>';
 					print '<table class="cactiTable"><tr>';
 
 					foreach($data['mac'][$date] as $mac) {
@@ -1154,7 +1108,8 @@ function evidence_show_host_data ($host_id, $scan_date) {
 						}
 					}
 					print '</tr></table>';
-					
+					print '<br/><br/>';
+					print '</div>';
 				} else {
 					$data_compare_mac = array();
 				}
@@ -1164,7 +1119,8 @@ function evidence_show_host_data ($host_id, $scan_date) {
 
 					$data_compare_ip = $data['ip'][$date];
 
-					print '<br/>IP addresses:<br/>';
+					print '<div class="paragraph_ip">';
+					print '<span class="bold">IP:</span><br/>';
 					print '<table class="cactiTable"><tr>';
 
 					foreach($data['ip'][$date] as $ip) {
@@ -1176,7 +1132,8 @@ function evidence_show_host_data ($host_id, $scan_date) {
 						}
 					}
 					print '</tr></table>';
-					
+					print '<br/><br/>';
+					print '</div>';
 				} else {
 					$data_compare_ip = array();
 				}
@@ -1184,7 +1141,9 @@ function evidence_show_host_data ($host_id, $scan_date) {
 				if (isset($data['spec'][$date])) {
 					$data_compare_spec = $data['spec'][$date];
 
-					print '<br/>Vendor specific:<br/>';
+					print '<div class="paragraph_specific">';
+					print '<span class="bold">Vendor specific:</span><br/>';
+
 					foreach($data['spec'][$date] as $spec) {
 						unset($spec['host_id']);
 						unset($spec['mandatory']);
@@ -1204,12 +1163,16 @@ function evidence_show_host_data ($host_id, $scan_date) {
 
 						print '<br/>';
 					}
+					print '<br/><br/>';
+					print '</div>';
 				} else {
 					$data_compare_spec = array();
 				}
 
 				if (isset($data['opt'][$date])) {
-					print '<br/>Vendor optional:<br/>';
+
+					print '<div class="paragraph_optional">';
+					print '<span class="bold">Vendor optional:</span><br/>';
 
 					foreach($data['opt'][$date] as $opt) {
 						unset($opt['host_id']);
@@ -1230,7 +1193,8 @@ function evidence_show_host_data ($host_id, $scan_date) {
 
 						print '<br/>';
 					}
-
+					print '<br/><br/>';
+					print '</div>';
 				}
 				print '</dd>';
 			}
@@ -1244,6 +1208,7 @@ function evidence_show_host_data ($host_id, $scan_date) {
 
 // show actual data for device on host edit page
 function evidence_show_host_info ($data) {
+
 	global $config;
 
 	include_once($config['base_path'] . '/plugins/evidence/include/arrays.php');
@@ -1499,3 +1464,4 @@ function plugin_evidence_array_to_table ($array, $columns = 1) {
 
 	return $output;
 }
+

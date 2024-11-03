@@ -77,3 +77,4 @@ if (is_array($allowed) && in_array($id, $allowed)) {
 	print __('Permission issue', 'evidence');
 }
 
+	print '<br/>';

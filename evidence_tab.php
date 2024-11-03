@@ -187,14 +187,19 @@ function evidence_find() {
 	}
 
 	if (isset($host_id)) {
+		evidence_show_checkboxes();
 		evidence_show_host_data($host_id, $scan_date);
 	} else if (isset($template_id)) {
 		$hosts = db_fetch_assoc_prepared('SELECT id FROM host
 			WHERE host_template_id = ?',
 			array($template_id));
-	
-		foreach ($hosts as $host) {
-			evidence_show_host_data($host['id'], $scan_date);
+
+		if (cacti_sizeof($hosts) > 0) {
+			evidence_show_checkboxes();
+
+			foreach ($hosts as $host) {
+				evidence_show_host_data($host['id'], $scan_date);
+			}
 		}
 	}
 
@@ -242,3 +247,32 @@ function evidence_stats() {
 }
 
 
+
+function evidence_show_checkboxes() {
+	print "<table class='filterTable'>";
+	print '<tr>';
+	print '<td>';
+	print '<input type="checkbox" id="ch_expand" name="ch_expand" value="1"><label for="ch_expand" class="bold">Expand all dates</label>';
+	print '</td>';
+	print '<td>';
+	print '</td>';
+
+	print '<td>' . __('Show or hide', 'evidence') . ':</td>';
+	print '<td>';
+	print '<input type="checkbox" id="ch_entity" name="ch_entity" value="1" checked="checked"><label for="ch_entity">Entity MIB</label>';
+	print '</td>';
+	print '<td>';
+	print '<input type="checkbox" id="ch_mac" name="ch_mac" value="1" checked="checked"><label for="ch_mac">MAC address</label>';
+	print '</td>';
+	print '<td>';
+	print '<input type="checkbox" id="ch_ip" name="ch_ip" value="1" checked="checked"><label for="ch_ip">IP adress</label>';
+	print '</td>';
+	print '<td>';
+	print '<input type="checkbox" id="ch_specific" name="ch_vendor" value="1" checked="checked"><label for="ch_specific">Vendor spec.</label>';
+	print '</td>';
+	print '<td>';
+	print '<input type="checkbox" id="ch_optional" name="ch_optional" value="1" checked="checked"><label for="ch_optional">Vendor opt.</label>';
+	print '</td>';
+	print '</tr>';
+	print '</table>';
+}
