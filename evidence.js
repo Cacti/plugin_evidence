@@ -4,6 +4,7 @@ var show_ip = true;
 var show_specific = true;
 var show_optional = true;
 var show_expand = false;
+var show_expand_latest = false;
 
 
 $(function() {
@@ -61,6 +62,11 @@ $(function() {
 			show_entity = true;
 			$('.paragraph_entity').css('display','inline-block');
 		}
+	});
+
+	// expand/hide latest date
+	$('#ch_expand_latest').off('click').on('click', function() {
+			$('.latest').click();
 	});
 
 	$('#ch_mac').off('click').on('click', function() {

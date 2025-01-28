@@ -176,7 +176,7 @@ function evidence_find() {
 		$template_id = get_filter_request_var('template_id');
 	}
 
-	$find_text = get_filter_request_var ('find_text', FILTER_VALIDATE_REGEXP, array('options' => array('regexp' => '/^([a-zA-Z0-9_\-\.:\+]+)$/')));
+	$find_text = get_filter_request_var ('find_text', FILTER_VALIDATE_REGEXP, array('options' => array('regexp' => '/^([a-zA-Z0-9_\-\.:\+ ]+)$/')));
 	if (empty($find_text)) {
 		unset($find_text);
 	}
@@ -254,6 +254,7 @@ function evidence_show_checkboxes() {
 	print '<tr>';
 	print '<td>';
 	print '<input type="checkbox" id="ch_expand" name="ch_expand" value="1"><label for="ch_expand" class="bold">Expand all dates</label>';
+	print '<input type="checkbox" id="ch_expand_latest" name="ch_expand_latest" value="1"><label for="ch_expand_latest" class="bold">Expand latest date</label>';
 	print '</td>';
 	print '<td>';
 	print '</td>';

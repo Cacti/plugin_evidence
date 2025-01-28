@@ -877,6 +877,7 @@ function evidence_show_host_data ($host_id, $scan_date) {
 	$data_compare_mac    = array();
 	$data_compare_ip     = array();
 	$data_compare_spec   = array();
+	$latest = true;
 
 	$host = db_fetch_row_prepared ('SELECT host.*, host_template.name as `template_name`
 		FROM host
@@ -890,7 +891,7 @@ function evidence_show_host_data ($host_id, $scan_date) {
 	if (!get_filter_request_var('actual')) {
 		print '<a href="' . $config['url_path'] . 'plugins/evidence/evidence_tab.php?host_id=' .
 		$host_id . '&template=&actual=1&action=find">' . __('Also show actual data', 'evidence') . '</a>';
-		print '<br/><br/>';
+		print '<br/>';
 	} else {  // show actual data
 
 		$data = plugin_evidence_actual_data($host);
@@ -960,6 +961,7 @@ function evidence_show_host_data ($host_id, $scan_date) {
 			foreach ($dates as $date) {
 
 				$change = false;
+
 				$where = '';
 
 				if (isset($scan_date) && $scan_date != $date) {
@@ -1061,10 +1063,17 @@ function evidence_show_host_data ($host_id, $scan_date) {
 					}
 				}
 
-				if ($change) {
-					print '<dt><span class="bold drillDown">' . $date . ' ' . __('Changed', 'evidence') .' - ' .$where . '</span></dt>';
+				if ($latest) {
+					$lclass = 'latest';
+					$latest = false;
 				} else {
-					print '<dt><span class="bold drillDown">' . $date . '</span></dt>';
+					$lclass = '';
+				}
+
+				if ($change) {
+					print '<dt><span class="bold drillDown ' . $lclass . '">' . $date . ' ' . __('Changed', 'evidence') .' - ' .$where . '</span></dt>';
+				} else {
+					print '<dt><span class="bold drillDown ' . $lclass . '">' . $date . '</span></dt>';
 				}
 				print '<dd>';
 
