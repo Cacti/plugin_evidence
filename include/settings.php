@@ -60,6 +60,12 @@ function plugin_evidence_config_settings() {
 			),
 			'default'       => '10',
 		),
+		'evidence_show_host_data' => array(
+			'friendly_name' => 'Display information on device edit page',
+			'description'   => 'If enabled, flowview will display evidence data on device edit page',
+			'method'        => 'checkbox',
+			'default'       => 'off',
+		),
 		'evidence_email_notify' => array(
 			'friendly_name' => 'Send email on evidence information change',
 			'description'   => 'If evidence find change, send email',

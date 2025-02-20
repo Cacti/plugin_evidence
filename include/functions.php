@@ -69,10 +69,31 @@ function plugin_evidence_device_edit_top_links (){
 	print "<br/><span class='linkMarker'>* </span><a id='evidence_info' data-evidence_id='" . get_filter_request_var('id') . "' href=''>" . __('Evidence') . "</a>";
 }
 
-
 function plugin_evidence_host_edit_bottom () {
 	global $config;
 	print get_md5_include_js($config['base_path'] . '/plugins/evidence/evidence.js');
+
+	if (read_config_option('evidence_show_host_data')) {
+		include_once('./plugins/evidence/include/functions.php');
+		print '<br/><br/>';
+
+		$host = db_fetch_row_prepared ('SELECT host.*, host_template.name as `template_name`
+			FROM host
+			LEFT JOIN host_template
+			ON host.host_template_id = host_template.id
+			WHERE host.id = ?',
+			array(get_filter_request_var('id')));
+
+		if (cacti_sizeof($host)) {
+			$data = plugin_evidence_actual_data($host);
+			html_start_box('<strong>Evidence</strong>', '100%', '', '3', 'center', '');
+			print "<tr class='tableHeader'><th>Data</th></tr><tr><td>";
+			evidence_show_host_info ($data);
+			print '</td></tr>';
+			html_end_box(false);
+		}
+		print '<br/><br/>';
+	}
 }
 
 
