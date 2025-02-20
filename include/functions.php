@@ -840,7 +840,8 @@ function plugin_evidence_time_to_run() {
 	$baselower = $basetime - 300;
 	$now       = time();
 
-	cacti_log("LastRun:'$lastrun', Frequency:'$frequency' sec, BaseTime:'" . date('Y-m-d H:i:s', $basetime) . "', BaseUpper:'$baseupper', BaseLower:'$baselower', Now:'" . date('Y-m-d H:i:s', $now) . "'", false, 'EVIDENCE');
+	cacti_log('Last Run: ' . date('Y-m-d H:i:s', $lastrun)  . ', Frequency: $frequency sec, BaseTime:' . date('Y-m-d H:i:s', $basetime) .
+		', BaseUpper: '. date('Y-m-d H:i:s', $baseupper) . ', BaseLower: ' . date('Y-m-d H:i:s', $baselower) , false, 'EVIDENCE');
 
 	if ($frequency > 0 && ($now - $lastrun > $frequency)) {
 		if (empty($lastrun) && ($now < $baseupper) && ($now > $baselower)) {
