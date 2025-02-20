@@ -362,11 +362,7 @@ if (cacti_sizeof($hosts) > 0) {
 								'Older MAC adresses:' . plugin_evidence_array_to_table($data_mac_his, 5) . '<br/><br/>' . PHP_EOL;
 							$text .= $diff['mac'] ? '</font>' : '';
 						}
-/*
-var_dump($data_mac);
-echo plugin_evidence_array_to_table($data_mac, 3);
-die();
-*/
+
 						if (isset($data_ip)) {
 							$text .= $diff['ip'] ? '<font color="red">' : '';
 							$text .= 'Actual IP adresses:' . plugin_evidence_array_to_table($data_ip, 3) . '<br/><br/>' . PHP_EOL .
