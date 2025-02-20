@@ -678,7 +678,7 @@ function plugin_evidence_find() {
 		return false;
 	}
 
-	$f = get_request_var('find_text');
+	$f = trim(get_request_var('find_text'));
 
 	$sql_where = "descr RLIKE '" . $f . "'
 		OR name RLIKE '" . $f . "'
