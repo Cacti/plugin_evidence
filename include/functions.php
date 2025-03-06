@@ -146,7 +146,12 @@ function plugin_evidence_find_organization ($h) {
 	}
 
 	preg_match('/^([a-zA-Z0-9\.: ]+)\.1\.3\.6\.1\.4\.1\.([0-9]+)[a-zA-Z0-9\. ]*$/', $sys_object_id, $match);
-	return $match[2];
+
+	if (isset($match[2])) {
+		return $match[2];
+	} else {
+		return false;
+	}
 }
 
 
@@ -946,7 +951,7 @@ function evidence_show_host_data ($host_id, $scan_date) {
 			if (isset($data['opt']) && isset($act_data['opt'])) {
 				$data['opt'] += $act_data['opt'];
 			}
-			if (isset($act_date)) {
+			if (isset($act_date) && is_array($data['dates'])) {
 				array_unshift($data['dates'], $act_date);
 			}
 		}
