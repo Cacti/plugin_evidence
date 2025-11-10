@@ -124,6 +124,7 @@ function applyFilter() {
 		'?host_id=' + $('#host_id').val() +
 		'&template_id=' + $('#template_id').val() +
 		'&scan_date=' + $('#scan_date').val() +
+		'&find_text=' + $('#find_text').val() +
 		'&header=false&action=find';
 	loadPageNoHeader(strURL);
 }

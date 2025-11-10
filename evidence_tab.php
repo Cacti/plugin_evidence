@@ -35,10 +35,8 @@ $selectedTheme = get_selected_theme();
 
 switch (get_request_var('action')) {
 	case 'ajax_hosts':
-
 		$sql_where = '';
 		get_allowed_ajax_hosts(true, 'applyFilter', $sql_where);
-
 		break;
 
 	case 'setting':
@@ -50,7 +48,6 @@ switch (get_request_var('action')) {
 		evidence_display_form();
 		evidence_find();
 		bottom_footer();
-
 		break;
 
         default:
@@ -58,9 +55,9 @@ switch (get_request_var('action')) {
 		evidence_display_form();
 		evidence_stats();
 		bottom_footer();
-
 		break;
 }
+
 
 function evidence_display_form() {
 	global $config, $entities, $datatypes;
@@ -76,7 +73,6 @@ function evidence_display_form() {
 	$template_id = get_filter_request_var('template_id');
 	$scan_date = get_filter_request_var('scan_date', FILTER_VALIDATE_REGEXP, array('options' => array('regexp' => '/^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$/', 'default' => -1)));
 	$find_text = get_filter_request_var('find_text', FILTER_VALIDATE_REGEXP, array('options' => array('regexp' => '/^([a-zA-Z0-9_\-\.:\+ ]+)$/', 'default' => 'INCORRECT: ' . get_nfilter_request_var('find_text'))));
-
 	form_start(html_escape(basename($_SERVER['PHP_SELF'])), 'form_evidence');
 
 	html_start_box('<strong>Evidence</strong>', '100%', '', '3', 'center', '');
