@@ -773,7 +773,7 @@ function plugin_evidence_find() {
 		OR sysname RLIKE '" . $f . "'
 		OR syslocation RLIKE '" . $f . "' ";
 
-	$data = db_fetch_assoc_prepared ('SELECT host_id, COUNT(scan_date) AS `count` FROM plugin_evidence_snmp_info
+	$data = db_fetch_assoc_prepared ('SELECT host_id, scan_date FROM plugin_evidence_snmp_info
 		WHERE ' . $sql_where . 'GROUP BY host_id');
 
 	print '<br/><span class="bold">' . $datatypes['info']  . '</span><br/>';
@@ -784,7 +784,9 @@ function plugin_evidence_find() {
 			$desc = db_fetch_cell_prepared ('SELECT description FROM host WHERE id = ?', array($row['host_id']));
 			print '<a href="' . $config['url_path'] .
 				'plugins/evidence/evidence_tab.php?action=find&host_id=' . $row['host_id'] . '">' .
-				$desc . '</a> (ID: ' . $row['host_id'] . '), found in ' . $row['count'] . ' records<br/>';
+				$desc . '</a> (ID: ' . $row['host_id'] . '), found in ' . cacti_sizeof($data) . ' records<br/>';
+
+				print '(' . implode(', ', array_column($data, 'scan_date')) . ')<br/>';
 		}
 	} else {
 		print __('Not found', 'evidence') . '<br/>';
@@ -803,7 +805,7 @@ function plugin_evidence_find() {
 		OR mfg_date RLIKE '" . $f . "'
 		OR uuid RLIKE '" . $f . "' ";
 
-	$data = db_fetch_assoc ('SELECT host_id, COUNT(scan_date) AS `count` FROM plugin_evidence_entity
+	$data = db_fetch_assoc ('SELECT host_id, scan_date FROM plugin_evidence_entity
 		WHERE ' . $sql_where . ' GROUP BY host_id');
 
 	print '<br/><span class="bold">' . $datatypes['entity'] . '</span><br/>';
@@ -813,13 +815,15 @@ function plugin_evidence_find() {
 			$desc = db_fetch_cell_prepared ('SELECT description FROM host WHERE id = ?', array($row['host_id']));
 			print '<a href="' . $config['url_path'] .
 				'plugins/evidence/evidence_tab.php?action=find&host_id=' . $row['host_id'] . '">' .
-				$desc . '</a> (ID: ' . $row['host_id'] . '), found in ' . $row['count'] . ' records<br/>';
+				$desc . '</a> (ID: ' . $row['host_id'] . '), found in ' . cacti_sizeof($data) . ' records<br/>';
+
+				print ' (' . implode(', ', array_column($data, 'scan_date')) . ')<br/>';
 		}
 	} else {
 		print __('Not found', 'evidence') . '<br/>';
 	}
 
-	$data = db_fetch_assoc_prepared ("SELECT host_id, COUNT(scan_date) AS `count` FROM plugin_evidence_mac
+	$data = db_fetch_assoc_prepared ("SELECT host_id, scan_date FROM plugin_evidence_mac
 		WHERE mac RLIKE '" . $f . "' GROUP BY host_id");
 
 	print '<br/><span class="bold">' . $datatypes['mac'] . '</span><br/>';
@@ -830,11 +834,16 @@ function plugin_evidence_find() {
 			$desc = db_fetch_cell_prepared ('SELECT description FROM host WHERE id = ?', array($row['host_id']));
 			print '<a href="' . $config['url_path'] . 
 				'plugins/evidence/evidence_tab.php?action=find&host_id=' . $row['host_id'] . '">' .
-				$desc . '</a> (ID: ' . $row['host_id'] . '), found in ' . $row['count'] . ' records<br/>';
+				$desc . '</a> (ID: ' . $row['host_id'] . '), found in ' . cacti_sizeof($data) . ' records<br/>';
+
+			print '(' . implode(', ', array_column($data, 'scan_date')) . ')<br/>';
 		}
 	} else {
 		print __('Not found', 'evidence') . '<br/>';
 	}
+
+	$data = db_fetch_assoc_prepared ("SELECT host_id, scan_date FROM plugin_evidence_ip
+		WHERE mac RLIKE '" . $f . "' GROUP BY host_id");
 
 	print '<br/><span class="bold">' . $datatypes['ip'] . '</span><br/>';
 	if (cacti_sizeof($data)) {
@@ -842,7 +851,9 @@ function plugin_evidence_find() {
 			$desc = db_fetch_cell_prepared ('SELECT description FROM host WHERE id = ?', array($row['host_id']));
 			print '<a href="' . $config['url_path'] . 
 				'plugins/evidence/evidence_tab.php?action=find&host_id=' . $row['host_id'] . '">' .
-				$desc . '</a> (ID: ' . $row['host_id'] . '), found in ' . $row['count'] . ' records<br/>';
+				$desc . '</a> (ID: ' . $row['host_id'] . '), found in ' . cacti_sizeof($data) . ' records<br/>';
+
+			print '(' . implode(', ', array_column($data, 'scan_date')) . ')<br/>';
 		}
 	} else {
 		print __('Not found', 'evidence') . '<br/>';
@@ -852,7 +863,7 @@ function plugin_evidence_find() {
 		OR description RLIKE '" . $f . "'
 		OR value RLIKE '" . $f . "' ";
 
-	$data = db_fetch_assoc ('SELECT host_id, COUNT(scan_date) AS `count` FROM plugin_evidence_vendor_specific
+	$data = db_fetch_assoc ('SELECT host_id, scan_date FROM plugin_evidence_vendor_specific
 		WHERE ' . $sql_where . ' GROUP BY host_id');
 
 	print '<br/><span class="bold">' . $datatypes['spec'] . ' or ' . $datatypes['opt'] . '</span><br/>';
@@ -862,7 +873,9 @@ function plugin_evidence_find() {
 			$desc = db_fetch_cell_prepared ('SELECT description FROM host WHERE id = ?', array($row['host_id']));
 			print '<a href="' . $config['url_path'] . 
 				'plugins/evidence/evidence_tab.php?action=find&host_id=' . $row['host_id'] . '">' .
-				$desc . '</a> (ID: ' . $row['host_id'] . '), found in ' . $row['count'] . ' records<br/>';
+				$desc . '</a> (ID: ' . $row['host_id'] . '), found in ' . cacti_sizeof($data) . ' records<br/>';
+
+			print '(' . implode(', ', array_column($data, 'scan_date')) . ')<br/>';
 		}
 	} else {
 		print __('Not found', 'evidence') . '<br/>';
