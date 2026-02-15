@@ -2,7 +2,7 @@
 /* vim: ts=4
  +-------------------------------------------------------------------------+
  | Copyright (C) 2004-2026 The Cacti Group, Inc.                           |
- | Copyright (C) 2004-2024 Petr Macek                                      |
+ | Copyright (C) 2004-2026 Petr Macek                                      |
  |                                                                         |
  | This program is free software; you can redistribute it and/or           |
  | modify it under the terms of the GNU General Public License             |
