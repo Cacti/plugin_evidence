@@ -9,10 +9,10 @@
 
 The plugin also stores history and can notify you when a change occurs.
 
-
 ## Author
 Petr Macek (petr.macek@kostax.cz)
 
+Based on SNVer plugin 0.6
 
 ## Installation
 Copy directory plugin_evidence to plugins directory (keep lowercase)
@@ -34,15 +34,15 @@ Install and enable new version (Console -> Plugin management)
 ## Possible Bugs or any ideas?
 If you find a problem, let me know via github or https://forums.cacti.net
 
-
 ## Changelog
-	--- 0.3
-		Add generic snmp info
+--- 0.3 ---
+* Add generic snmp info
 
-	--- 0.2
-		Better data display
+--- 0.2 ---
+* Better data display
 
-	--- 0.1
-		Beginning
+--- 0.1 ---
+* Beginning
 
-	--- Based on SNVer plugin 0.6
+-----------------------------------------------------------------------------
+Copyright (c) 2004-2026 - The Cacti Group, Inc.
