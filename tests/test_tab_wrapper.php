@@ -1,0 +1,55 @@
+<?php
+
+require_once __DIR__ . '/../include/ui_helpers.php';
+
+$events = [];
+
+function general_header() {
+	global $events;
+	$events[] = 'header';
+}
+
+function evidence_display_form() {
+	global $events;
+	$events[] = 'form';
+}
+
+function bottom_footer() {
+	global $events;
+	$events[] = 'footer';
+}
+
+function evidence_tab_test_content() {
+	global $events;
+	$events[] = 'content';
+}
+
+function assert_same($expected, $actual, $message) {
+	if ($expected !== $actual) {
+		fwrite(STDERR, $message . PHP_EOL);
+		fwrite(STDERR, 'Expected: ' . json_encode($expected) . PHP_EOL);
+		fwrite(STDERR, 'Actual:   ' . json_encode($actual) . PHP_EOL);
+		exit(1);
+	}
+}
+
+evidence_render_tab_page('evidence_tab_test_content');
+assert_same(['header', 'form', 'content', 'footer'], $events, 'Tab helper should render wrapper in correct order.');
+
+$source = file_get_contents(__DIR__ . '/../evidence_tab.php');
+if ($source === false) {
+	fwrite(STDERR, "Unable to read evidence_tab.php\n");
+	exit(1);
+}
+
+if (strpos($source, "evidence_render_tab_page('evidence_find');") === false) {
+	fwrite(STDERR, "Expected find action to use evidence_render_tab_page().\n");
+	exit(1);
+}
+
+if (strpos($source, "evidence_render_tab_page('evidence_stats');") === false) {
+	fwrite(STDERR, "Expected default action to use evidence_render_tab_page().\n");
+	exit(1);
+}
+
+echo "OK\n";
