@@ -11,10 +11,10 @@
  */
 
 if (!function_exists('evidence_render_tab_page')) {
-	function evidence_render_tab_page($content_renderer) {
+	function evidence_render_tab_page(callable $content_renderer) {
 		general_header();
 		evidence_display_form();
-		call_user_func($content_renderer);
+		$content_renderer();
 		bottom_footer();
 	}
 }

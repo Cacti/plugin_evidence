@@ -33,6 +33,13 @@ function assert_same($expected, $actual, $message) {
 	}
 }
 
+function assert_regex($pattern, $subject, $message) {
+	if (!preg_match($pattern, $subject)) {
+		fwrite(STDERR, $message . PHP_EOL);
+		exit(1);
+	}
+}
+
 evidence_render_tab_page('evidence_tab_test_content');
 assert_same(['header', 'form', 'content', 'footer'], $events, 'Tab helper should render wrapper in correct order.');
 
@@ -42,14 +49,16 @@ if ($source === false) {
 	exit(1);
 }
 
-if (strpos($source, "evidence_render_tab_page('evidence_find');") === false) {
-	fwrite(STDERR, "Expected find action to use evidence_render_tab_page().\n");
-	exit(1);
-}
+assert_regex(
+	"/evidence_render_tab_page\\(\\s*'evidence_find'\\s*\\)\\s*;/",
+	$source,
+	"Expected find action to use evidence_render_tab_page()."
+);
 
-if (strpos($source, "evidence_render_tab_page('evidence_stats');") === false) {
-	fwrite(STDERR, "Expected default action to use evidence_render_tab_page().\n");
-	exit(1);
-}
+assert_regex(
+	"/evidence_render_tab_page\\(\\s*'evidence_stats'\\s*\\)\\s*;/",
+	$source,
+	"Expected default action to use evidence_render_tab_page()."
+);
 
 echo "OK\n";
