@@ -28,6 +28,7 @@ include_once('./include/auth.php');
 include_once('./lib/snmp.php');
 include_once('./plugins/evidence/include/functions.php');
 include_once('./plugins/evidence/include/arrays.php');
+include_once('./plugins/evidence/include/ui_helpers.php');
 
 set_default_action();
 
@@ -42,18 +43,12 @@ switch (get_request_var('action')) {
 		break;
 
 	case 'find':
-		general_header();
-		evidence_display_form();
-		evidence_find();
-		bottom_footer();
+		evidence_render_tab_page('evidence_find');
 
 		break;
 
         default:
-		general_header();
-		evidence_display_form();
-		evidence_stats();
-		bottom_footer();
+		evidence_render_tab_page('evidence_stats');
 
 		break;
 }
@@ -259,5 +254,4 @@ function evidence_stats() {
 	print 'Vendor specific data: ' . $ven . '<br/>';
 	print 'Oldest record: ' . $old . '<br/>';
 }
-
 
