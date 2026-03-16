@@ -14,6 +14,13 @@ function assert_not_contains($haystack, $needle, $message) {
 	}
 }
 
+function assert_not_regex($pattern, $subject, $message) {
+	if (preg_match($pattern, $subject)) {
+		fwrite(STDERR, $message . PHP_EOL);
+		exit(1);
+	}
+}
+
 $setup = file_get_contents(__DIR__ . '/../setup.php');
 if ($setup === false) {
 	fwrite(STDERR, "Unable to read setup.php\n");
@@ -46,13 +53,19 @@ assert_contains(
 
 assert_contains(
 	$setup,
+	"db_execute_prepared('DROP TABLE `plugin_evidence_ip`');",
+	'Expected ip drop to use db_execute_prepared().'
+);
+
+assert_contains(
+	$setup,
 	"db_execute_prepared('DROP TABLE `plugin_evidence_vendor_specific`');",
 	'Expected vendor_specific drop to use db_execute_prepared().'
 );
 
-assert_not_contains(
+assert_not_regex(
+	'/db_execute\\s*\\(\\s*["\\\']DROP TABLE\\s+`plugin_evidence_/i',
 	$setup,
-	'db_execute("DROP TABLE `plugin_evidence_',
 	'Raw db_execute drop statements should not remain in setup.php.'
 );
 
