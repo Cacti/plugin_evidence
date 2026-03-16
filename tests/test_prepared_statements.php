@@ -29,38 +29,44 @@ if ($setup === false) {
 
 assert_contains(
 	$setup,
-	"db_execute_prepared('DROP TABLE `plugin_evidence_specific_query`');",
+	"db_execute_prepared('DROP TABLE IF EXISTS `plugin_evidence_specific_query`', []);",
 	'Expected specific_query drop to use db_execute_prepared().'
 );
 
 assert_contains(
 	$setup,
-	"db_execute_prepared('DROP TABLE `plugin_evidence_organization`');",
+	"db_execute_prepared('DROP TABLE IF EXISTS `plugin_evidence_organization`', []);",
 	'Expected organization drop to use db_execute_prepared().'
 );
 
 assert_contains(
 	$setup,
-	"db_execute_prepared('DROP TABLE `plugin_evidence_entity`');",
+	"db_execute_prepared('DROP TABLE IF EXISTS `plugin_evidence_entity`', []);",
 	'Expected entity drop to use db_execute_prepared().'
 );
 
 assert_contains(
 	$setup,
-	"db_execute_prepared('DROP TABLE `plugin_evidence_mac`');",
+	"db_execute_prepared('DROP TABLE IF EXISTS `plugin_evidence_mac`', []);",
 	'Expected mac drop to use db_execute_prepared().'
 );
 
 assert_contains(
 	$setup,
-	"db_execute_prepared('DROP TABLE `plugin_evidence_ip`');",
+	"db_execute_prepared('DROP TABLE IF EXISTS `plugin_evidence_ip`', []);",
 	'Expected ip drop to use db_execute_prepared().'
 );
 
 assert_contains(
 	$setup,
-	"db_execute_prepared('DROP TABLE `plugin_evidence_vendor_specific`');",
+	"db_execute_prepared('DROP TABLE IF EXISTS `plugin_evidence_vendor_specific`', []);",
 	'Expected vendor_specific drop to use db_execute_prepared().'
+);
+
+assert_not_regex(
+	'/SHOW TABLES LIKE\\s+[\'"]plugin_evidence_/i',
+	$setup,
+	'Uninstall path should not rely on SHOW TABLES LIKE pre-checks.'
 );
 
 assert_not_regex(
