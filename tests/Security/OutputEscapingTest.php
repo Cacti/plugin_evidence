@@ -10,7 +10,7 @@
 describe('output escaping in evidence', function () {
 	it('does not interpolate raw variables into HTML attributes', function () {
 		$uiFiles = array(
-		'tests/test_prepared_statements.php',
+		'evidence_tab.php',
 		);
 
 		foreach ($uiFiles as $relativeFile) {
@@ -46,7 +46,7 @@ describe('output escaping in evidence', function () {
 
 	it('uses html_escape or __esc for user-controlled output', function () {
 		$uiFiles = array(
-		'tests/test_prepared_statements.php',
+		'evidence_tab.php',
 		);
 
 		$totalEscapeCalls = 0;
@@ -63,6 +63,14 @@ describe('output escaping in evidence', function () {
 		// At least some escaping should be present in UI files
 		expect($totalEscapeCalls)->toBeGreaterThan(0,
 			'UI files should contain at least one html_escape/__esc call'
+		);
+	});
+
+	it('escapes the evidence filter text before rendering it into the HTML value attribute', function () {
+		$contents = file_get_contents(realpath(__DIR__ . '/../../evidence_tab.php'));
+
+		expect($contents)->toContain(
+			'html_escape(get_request_var(\'find_text\'))'
 		);
 	});
 });
