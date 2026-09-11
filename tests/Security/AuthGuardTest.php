@@ -10,7 +10,8 @@
 describe('auth guard presence in evidence', function () {
 	it('includes auth.php or global.php in all UI entry points', function () {
 		$uiFiles = array(
-		'tests/test_prepared_statements.php',
+		'evidence.php',
+		'evidence_tab.php',
 		);
 
 		foreach ($uiFiles as $relativeFile) {
@@ -37,8 +38,11 @@ describe('auth guard presence in evidence', function () {
 
 	it('validates numeric IDs from request variables before DB queries', function () {
 		$uiFiles = array(
-		'tests/test_prepared_statements.php',
+		'evidence.php',
+		'evidence_tab.php',
 		);
+
+		expect($uiFiles)->not->toBeEmpty();
 
 		foreach ($uiFiles as $relativeFile) {
 			$path = realpath(__DIR__ . '/../../' . $relativeFile);
