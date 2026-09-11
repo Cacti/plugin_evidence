@@ -7,11 +7,10 @@
  +-------------------------------------------------------------------------+
 */
 
-describe('prepared statement consistency in evidence', function () {
-	it('uses prepared DB helpers in all plugin files', function () {
+describe('prepared statement consistency in evidence uninstall path', function () {
+	it('uses prepared DB helpers for the uninstall/drop path in setup.php', function () {
 		$targetFiles = array(
 		'setup.php',
-		'tests/test_prepared_statements.php',
 		);
 
 		$rawPattern = '/\bdb_(?:execute|fetch_row|fetch_assoc|fetch_cell)\s*\(/';
@@ -41,7 +40,6 @@ describe('prepared statement consistency in evidence', function () {
 	it('uses parameterized placeholders not string interpolation in SQL', function () {
 		$targetFiles = array(
 		'setup.php',
-		'tests/test_prepared_statements.php',
 		);
 
 		foreach ($targetFiles as $relativeFile) {

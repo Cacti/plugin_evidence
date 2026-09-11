@@ -10,7 +10,6 @@
 describe('PHP 7.4 compatibility in evidence', function () {
 	$files = array(
 		'setup.php',
-		'tests/test_prepared_statements.php',
 	);
 
 	it('does not use str_contains (PHP 8.0)', function () use ($files) {

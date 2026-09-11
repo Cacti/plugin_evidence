@@ -10,8 +10,9 @@
 describe('redirect safety in evidence', function () {
 	it('calls exit or die after header Location redirects', function () {
 		$files = array(
-		'setup.php',
-		'tests/test_prepared_statements.php',
+		'index.php',
+		'images/index.php',
+		'data/index.php',
 		);
 
 		foreach ($files as $relativeFile) {
