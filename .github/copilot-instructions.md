@@ -16,7 +16,7 @@ When generating code for this repository:
 ## Technology Stack
 
 ### Core Technologies
-- **PHP**: Minimum PHP 7.4 (Cacti 1.2.x baseline); CI additionally verifies compatibility through PHP 8.4. Do not introduce PHP 8.0+ only syntax (e.g. `str_contains()`, nullsafe operator `?->`, `match`, union types, constructor property promotion) — see `tests/Security/Php74CompatibilityTest.php`.
+- **PHP**: Minimum PHP 8.2; CI verifies compatibility through PHP 8.4. `tests/Security/Php74CompatibilityTest.php` still guards `setup.php` against PHP 8.0+ only syntax (e.g. `str_contains()`, nullsafe operator `?->`, `match`, union types, constructor property promotion) as a legacy regression check.
 - **Platform**: Cacti Plugin Architecture (Cacti 1.2.x)
 - **Database**: MySQL/MariaDB with InnoDB engine
 - **SNMP**: Cacti's SNMP library (`lib/snmp.php`, `cacti_snmp_get()`/`cacti_snmp_walk()`) for device polling
