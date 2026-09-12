@@ -114,9 +114,9 @@ function evidence_display_form() {
 
 	if (cacti_sizeof($scan_dates)) {
 		foreach ($scan_dates as $scan_date) {
-			print '<option value="' . $scan_date . '" ' . 
+			print '<option value="' . html_escape($scan_date) . '" ' . 
 				(get_request_var('scan_date') == $scan_date ? ' selected="selected"' : '') . 
-				'>' . $scan_date . '</option>';
+				'>' . html_escape($scan_date) . '</option>';
 		}
 	}
 
@@ -137,7 +137,7 @@ function evidence_display_form() {
 	print '</td>';
 	print '<td>';
 
-	print '<input type="text" name="find_text" id="find" value="' . get_request_var('find_text') . '">';
+	print '<input type="text" name="find_text" id="find" value="' . html_escape(get_request_var('find_text')) . '">';
 	print '</td>';
 	print '<td>';
 	print __('Specify data type');
@@ -152,7 +152,7 @@ function evidence_display_form() {
 	print '<option value="opt" '  . (get_request_var('datatype') == 'opt'  ? 'selected="selected"' : '') . '>' . __('Vendor optional', 'evidence') . '</option>';
 
 	foreach ($entities as $key => $value) {
-		print '<option value="' . $key . '" ' . (get_request_var('datatype') == $key ? 'selected="selected"' : '') . '>Entity - ' . $value . '</option>';
+		print '<option value="' . html_escape($key) . '" ' . (get_request_var('datatype') == $key ? 'selected="selected"' : '') . '>Entity - ' . html_escape($value) . '</option>';
 	}
 
 	print '</select>';
