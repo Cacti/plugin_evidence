@@ -21,7 +21,7 @@
     <!--
         Pest reads this PHPUnit-compatible configuration through Cacti's
         Composer-managed vendor tree, checked out alongside this plugin by
-        the CI workflow (see .github/workflows/php-unit-tests.yml).
+        the CI workflow (see .github/workflows/plugin-ci-workflow.yml).
     -->
     <source>
         <include>
