@@ -134,10 +134,10 @@ jobs:
       run: |
         cd ${{ github.workspace }}/cacti
         if [ -f composer.json ]; then
+          sudo composer config --no-plugins allow-plugins.pestphp/pest-plugin true
           sudo composer require --dev --no-progress --no-interaction "pestphp/pest: ^3" "pestphp/pest-plugin-drift: ^3.0"
           sudo rm -f composer.lock
-          sudo composer config --no-plugins allow-plugins.pestphp/pest-plugin true
-          sudo composer install --dev --no-progress --allow-plugins "pestphp/pest-plugin" --allow-plugins "pestphp/pest"
+          sudo composer install --dev --no-progress
         fi
 
     - name: Create Cacti config.php
