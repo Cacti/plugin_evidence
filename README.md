@@ -15,7 +15,7 @@ Petr Macek (petr.macek@kostax.cz)
 Based on SNVer plugin 0.6
 
 ## Installation
-Copy directory plugin_evidence to plugins directory (keep lowercase)
+Copy directory plugin_evidence to the plugins directory and rename it to evidence (keep lowercase)
 Check file permission (Linux/unix - readable for www server)
 Enable plugin (Console -> Plugin management)
 Configure plugin (Console -> Settings -> Evidence tab
