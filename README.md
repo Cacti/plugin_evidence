@@ -35,14 +35,7 @@ Install and enable new version (Console -> Plugin management)
 If you find a problem, let me know via github or https://forums.cacti.net
 
 ## Changelog
---- 0.3 ---
-* Add generic snmp info
-
---- 0.2 ---
-* Better data display
-
---- 0.1 ---
-* Beginning
+See [CHANGELOG.md](CHANGELOG.md)
 
 -----------------------------------------------------------------------------
 Copyright (c) 2004-2026 - The Cacti Group, Inc.

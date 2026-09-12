@@ -13,7 +13,7 @@ When generating code for this repository:
 ## Technology Stack
 
 ### Core Technologies
-- **PHP**: Minimum PHP 7.x (inherited from Cacti requirements)
+- **PHP**: Minimum PHP 8.1
 - **Platform**: Cacti Plugin Architecture (Cacti 1.2.x)
 - **Database**: MySQL/MariaDB with InnoDB engine
 - **SNMP**: Cacti's SNMP library (`lib/snmp.php`, `cacti_snmp_get()`/`cacti_snmp_walk()`) for device polling
@@ -40,7 +40,9 @@ evidence/                  # Repository root (install to plugins/evidence/ in Ca
 ├── evidence.js               # Client-side JS for device edit page
 ├── poller_evidence.php       # Background poller entry point (CLI)
 ├── setup.php                 # Plugin install/uninstall/upgrade hooks
-└── INFO                      # Plugin metadata (name, version, compat)
+├── INFO                      # Plugin metadata (name, version, compat)
+├── README.md                  # Feature overview, installation and usage
+└── CHANGELOG.md               # Version history
 ```
 
 ## Naming Conventions
@@ -368,7 +370,7 @@ $id = get_filter_request_var('host_id');  // CORRECT
 ## Version Control
 
 ### Changelog Maintenance
-Document all changes in the "Changelog" section of `README.md`:
+Document all changes in `CHANGELOG.md`:
 
 ```markdown
 --- 0.3 ---
@@ -385,4 +387,5 @@ Follow the established pattern from git history:
 
 - Cacti Plugin Development Guide
 - Cacti API Documentation
-- Project README.md for feature descriptions and changelog
+- Project README.md for feature descriptions
+- CHANGELOG.md for version history
