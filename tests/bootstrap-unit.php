@@ -50,8 +50,8 @@ if (!is_readable($expected)) {
 	throw new RuntimeException("Expected Cacti version file is not readable: $expected");
 }
 
-$cacti_version    = trim((string) file_get_contents($version));
-$expected_version = trim((string) file_get_contents($expected));
+$cacti_version     = trim((string) file_get_contents($version));
+$expected_version  = trim((string) file_get_contents($expected));
 
 if ($cacti_version === '') {
 	throw new RuntimeException("Cacti version file is empty: $version");
@@ -61,7 +61,8 @@ if ($expected_version === '') {
 	throw new RuntimeException("Expected Cacti version file is empty: $expected");
 }
 
-if ($cacti_version !== $expected_version) {
+// The CI workflow tracks a moving branch (1.2.x or develop) rather than a pinned release, so any actual version is accepted.
+if (!in_array($expected_version, array('1.2.x', 'develop'), true) && $cacti_version !== $expected_version) {
 	throw new RuntimeException("Expected Cacti $expected_version, found $cacti_version in $version");
 }
 
