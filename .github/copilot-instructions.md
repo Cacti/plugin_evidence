@@ -37,7 +37,8 @@ evidence/                  # Repository root (install to plugins/evidence/ in Ca
 ├── images/                 # Tab icons and UI images
 ├── evidence.php             # Main standalone/console page
 ├── evidence_tab.php         # Device tab integration page
-├── evidence.js               # Client-side JS for device edit page
+├── js/
+│   └── evidence.js           # Client-side JS for device edit page
 ├── poller_evidence.php       # Background poller entry point (CLI)
 ├── setup.php                 # Plugin install/uninstall/upgrade hooks
 ├── INFO                      # Plugin metadata (name, version, compat)

@@ -65,7 +65,7 @@ function evidence_display_form() {
 	$evidence_records   = read_config_option('evidence_records');
 	$evidence_frequency = read_config_option('evidence_frequency');
 
-	print get_md5_include_js($config['base_path'] . '/plugins/evidence/evidence.js');
+	print get_md5_include_js($config['base_path'] . '/plugins/evidence/js/evidence.js');
 
 	$host_where = '';
 
