@@ -72,7 +72,7 @@ function plugin_evidence_device_edit_top_links (){
 
 function plugin_evidence_host_edit_bottom () {
 	global $config;
-	print get_md5_include_js($config['base_path'] . '/plugins/evidence/evidence.js');
+	print get_md5_include_js($config['base_path'] . '/plugins/evidence/js/evidence.js');
 
 	if (read_config_option('evidence_show_host_data')) {
 		include_once('./plugins/evidence/include/functions.php');

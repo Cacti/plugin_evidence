@@ -37,7 +37,8 @@ evidence/                  # Repository root (install to plugins/evidence/ in Ca
 ├── images/                 # Tab icons and UI images
 ├── evidence.php             # Main standalone/console page
 ├── evidence_tab.php         # Device tab integration page
-├── evidence.js               # Client-side JS for device edit page
+├── js/
+│   └── evidence.js           # Client-side JS for device edit page
 ├── poller_evidence.php       # Background poller entry point (CLI)
 ├── setup.php                 # Plugin install/uninstall/upgrade hooks
 ├── INFO                      # Plugin metadata (name, version, compat)
@@ -112,9 +113,9 @@ ALL PHP files MUST include the standard GPL v2 license header used throughout th
  +-------------------------------------------------------------------------+
  | Copyright (C) 2004-2026 The Cacti Group                                 |
  |                                                                         |
- | This program is free software; you can redistribute it and/or          |
+ | This program is free software; you can redistribute it and/or           |
  | modify it under the terms of the GNU General Public License             |
- | as published by the Free Software Foundation; either version 2         |
+ | as published by the Free Software Foundation; either version 2          |
  | of the License, or (at your option) any later version.                  |
  |                                                                         |
  | This program is distributed in the hope that it will be useful,         |
