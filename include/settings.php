@@ -24,6 +24,23 @@
  +-------------------------------------------------------------------------+
 */
 
+/**
+ * Defines the plugin's 'Evidence' Settings tab and its configuration
+ * fields (scan frequency/base time, history record retention, device
+ * edit page display, email change notifications and exclusions).
+ * Invoked by the Cacti plugin framework via the 'config_settings' hook
+ * when rendering the Settings page.
+ *
+ * @return void
+ *
+ * @global array $tabs     Cacti's registered settings tabs; a
+ *                         'evidence' entry is added.
+ * @global array $settings Cacti's registered settings fields; an
+ *                         'evidence' entry is added with this plugin's
+ *                         field definitions.
+ * @global array $config   Cacti global configuration array (declared but
+ *                         not directly used here).
+ */
 function plugin_evidence_config_settings() {
 	global $tabs, $settings, $config;
 

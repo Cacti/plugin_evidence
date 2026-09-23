@@ -24,6 +24,17 @@
  +-------------------------------------------------------------------------+
 */
 
+/**
+ * Creates all of this plugin's database tables (enterprise organizations,
+ * SNMP system info, vendor-specific data-query definitions, Entity MIB
+ * data, vendor-specific results, MAC addresses, IP addresses) and seeds
+ * the vendor-specific data-query table with built-in OID definitions for
+ * several common vendors (Aruba/HPE, Cisco, Fortinet, Mikrotik, QNAP,
+ * Synology). Called from plugin_evidence_setup_database() during plugin
+ * installation.
+ *
+ * @return void
+ */
 function plugin_evidence_initialize_database() {
 
 	$data = array();
@@ -264,6 +275,17 @@ function plugin_evidence_initialize_database() {
 }
 
 
+/**
+ * Applies any pending database schema migrations for this plugin, based
+ * on comparing the installed version recorded in plugin_config against
+ * the current INFO file version, then updates the recorded version.
+ * Called from plugin_evidence_check_config() on every page load.
+ *
+ * @return void
+ *
+ * @global array $config Cacti global configuration array; used to
+ *                       locate the plugin's INFO file.
+ */
 function plugin_evidence_upgrade_database() {
 	global $config;
 

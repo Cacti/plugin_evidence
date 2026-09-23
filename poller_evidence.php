@@ -595,6 +595,17 @@ if (function_exists('unregister_process')) {
 exit(0);
 
 
+/**
+ * Prints a message to stdout when CLI debug output is enabled. Called
+ * throughout this script's main flow to report progress during a scan.
+ *
+ * @param string $message The debug message to print.
+ *
+ * @return void
+ *
+ * @global bool $debug Whether debug output ('--debug' CLI flag) is
+ *                     enabled; when false, this function is a no-op.
+ */
 function evidence_debug($message) {
 	global $debug;
 
@@ -603,6 +614,17 @@ function evidence_debug($message) {
 	}
 }
 
+/**
+ * Prints this poller script's name/plugin version/copyright to stdout.
+ * Called from the CLI argument parser for the '--version' flag, and from
+ * display_help() to prefix the usage text.
+ *
+ * @return void
+ *
+ * @global array $config Cacti global configuration array; used to
+ *                       locate and load setup.php for the version
+ *                       lookup.
+ */
 function display_version() {
 	global $config;
 
@@ -614,9 +636,16 @@ function display_version() {
 	print 'Cacti Evidence Poller, Version ' . $info['version'] . ', ' . COPYRIGHT_YEARS . PHP_EOL;
 }
 
-/*
+/**
  * display_help
  * displays the usage of the function
+ *
+ * Prints this script's version banner followed by its command-line
+ * usage/argument summary. Called from the CLI argument parser for the
+ * '--help' flag, and whenever an invalid or missing argument is
+ * supplied.
+ *
+ * @return void
  */
 function display_help() {
 	display_version();

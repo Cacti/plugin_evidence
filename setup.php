@@ -24,6 +24,15 @@
  +-------------------------------------------------------------------------+
 */
 
+/**
+ * Registers this plugin's Cacti hooks (device edit links, tab display,
+ * device removal cleanup, settings, poller_bottom, host edit page) and
+ * the evidence.php/evidence_tab.php realm, then creates the plugin's
+ * database tables. Invoked by the Cacti plugin framework when the
+ * plugin is installed/enabled.
+ *
+ * @return void
+ */
 function plugin_evidence_install () {
 
 	api_plugin_register_hook('evidence', 'device_edit_top_links', 'plugin_evidence_device_edit_top_links', 'include/functions.php');
@@ -40,11 +49,26 @@ function plugin_evidence_install () {
 }
 
 
+/**
+ * No-op uninstall hook; this plugin does not remove its database tables
+ * on uninstall (see plugin_evidence_remove_data() for that). Invoked by
+ * the Cacti plugin framework when the plugin is uninstalled.
+ *
+ * @return bool Always true.
+ */
 function plugin_evidence_uninstall () {
 	return true;
 }
 
 
+/**
+ * Reads this plugin's version/author metadata from its INFO file.
+ * Invoked by the Cacti plugin framework to display plugin information,
+ * and called directly by poller_evidence.php's display_version().
+ *
+ * @return array The plugin's INFO file 'info' section (name, version,
+ *               author, etc.).
+ */
 function plugin_evidence_version() {
 	global $config;
 
@@ -53,6 +77,16 @@ function plugin_evidence_version() {
 }
 
 
+/**
+ * Runs any pending database schema upgrades for this plugin. Invoked by
+ * the Cacti plugin framework on every page load to keep the plugin's
+ * schema current.
+ *
+ * @return bool Always true.
+ *
+ * @global array $config Cacti global configuration array; used to
+ *                       locate include/database.php.
+ */
 function plugin_evidence_check_config () {
 	global $config;
 
@@ -63,6 +97,16 @@ function plugin_evidence_check_config () {
 }
 
 
+/**
+ * Creates this plugin's database tables via include/database.php's
+ * plugin_evidence_initialize_database(). Called from
+ * plugin_evidence_install() during plugin installation.
+ *
+ * @return void
+ *
+ * @global array $config Cacti global configuration array; used to
+ *                       locate include/database.php.
+ */
 function plugin_evidence_setup_database() {
 	global $config;
 
@@ -71,10 +115,24 @@ function plugin_evidence_setup_database() {
 }
 
 
+/**
+ * Indicates that this plugin stores data that a user may want to remove
+ * on uninstall. Invoked by the Cacti plugin framework to decide whether
+ * to offer a data-removal option during uninstall.
+ *
+ * @return bool Always true.
+ */
 function plugin_evidence_has_data() {
 	return true;
 }
 
+/**
+ * Drops all of this plugin's database tables. Invoked by the Cacti
+ * plugin framework when the user opts to remove plugin data during
+ * uninstall.
+ *
+ * @return bool Always true.
+ */
 function plugin_evidence_remove_data() {
 	db_execute_prepared("DROP TABLE IF EXISTS `plugin_evidence_specific_query`");
 	db_execute_prepared("DROP TABLE IF EXISTS `plugin_evidence_organization`");

@@ -25,6 +25,18 @@
 */
 
 
+/**
+ * Launches a background poller_evidence.php process to scan all devices
+ * when it is time to run according to the configured scan frequency and
+ * base time. Invoked by the Cacti plugin framework via the
+ * 'poller_bottom' hook at the end of each poller cycle.
+ *
+ * @return void
+ *
+ * @global array $config Cacti global configuration array; used to
+ *                       resolve the PHP binary and this plugin's poller
+ *                       script path.
+ */
 function plugin_evidence_poller_bottom() {
 	global $config;
 
@@ -43,6 +55,16 @@ function plugin_evidence_poller_bottom() {
 }
 
 
+/**
+ * Deletes all of this plugin's collected evidence data (SNMP info,
+ * Entity MIB data, MAC addresses, IP addresses, vendor-specific data)
+ * for a device. Invoked by the Cacti plugin framework via the
+ * 'device_remove' hook when a device is deleted.
+ *
+ * @param int $device_id The host.id of the device being removed.
+ *
+ * @return int The same $device_id that was passed in.
+ */
 function plugin_evidence_device_remove($device_id) {
 	db_execute_prepared('DELETE FROM plugin_evidence_snmp_info WHERE host_id = ?', array($device_id));
 	db_execute_prepared('DELETE FROM plugin_evidence_entity WHERE host_id = ?', array($device_id));
@@ -54,6 +76,18 @@ function plugin_evidence_device_remove($device_id) {
 }
 
 
+/**
+ * Renders the Evidence tab icon/link shown on device and graph header
+ * pages, when the current user is authorized for evidence.php. Invoked
+ * by the Cacti plugin framework via the 'top_header_tabs' and
+ * 'top_graph_header_tabs' hooks.
+ *
+ * @return void Outputs the tab link HTML directly (nothing if the user
+ *              lacks the evidence.php realm).
+ *
+ * @global array $config Cacti global configuration array; used to build
+ *                       the tab link/image URLs.
+ */
 function evidence_show_tab () {
 	global $config;
 
@@ -68,11 +102,30 @@ function evidence_show_tab () {
 }
 
 
+/**
+ * Renders an 'Evidence' link on the device edit page's top links row,
+ * used by this plugin's JavaScript to open an evidence info panel for
+ * the device being edited. Invoked by the Cacti plugin framework via the
+ * 'device_edit_top_links' hook.
+ *
+ * @return void Outputs the link HTML directly.
+ */
 function plugin_evidence_device_edit_top_links (){
 	print "<br/><span class='linkMarker'>* </span><a id='evidence_info' data-evidence_id='" . get_filter_request_var('id') . "' href=''>" . __('Evidence', 'evidence') . "</a>";
 }
 
 
+/**
+ * Renders the collected evidence data (if any) at the bottom of the
+ * device edit page, when the 'evidence_show_host_data' setting is
+ * enabled. Invoked by the Cacti plugin framework via the
+ * 'host_edit_bottom' hook.
+ *
+ * @return void Outputs the evidence data HTML directly.
+ *
+ * @global array $config Cacti global configuration array; used to
+ *                       locate this plugin's JavaScript asset.
+ */
 function plugin_evidence_host_edit_bottom () {
 	global $config;
 	print get_md5_include_js($config['base_path'] . '/plugins/evidence/js/evidence.js');
@@ -101,11 +154,22 @@ function plugin_evidence_host_edit_bottom () {
 }
 
 
-/*
-	plugin needs enterprise numbers, import cat take longer time
-	so import is started first poller run
-*/
-
+/**
+ * plugin needs enterprise numbers, import cat take longer time
+ * so import is started first poller run
+ *
+ * Imports the IANA Private Enterprise Numbers reference data (vendor
+ * organization id -> name mappings) from this plugin's bundled SQL data
+ * file into the plugin_evidence_organization table. Called from
+ * poller_evidence.php's main flow when the organization table is found
+ * to be empty/sparse.
+ *
+ * @return int|false The number of SQL statements executed, or false if
+ *                   the bundled data file could not be opened.
+ *
+ * @global array $config Cacti global configuration array; used to
+ *                       locate the bundled enterprise-numbers.sql file.
+ */
 function evidence_import_enterprise_numbers() {
 	global $config;
 
@@ -130,6 +194,22 @@ function evidence_import_enterprise_numbers() {
 }
 
 
+/**
+ * Determines the set of device ids a user is permitted to view,
+ * temporarily disabling the user's 'hide_disabled' preference so
+ * disabled devices are included in the result. Called throughout this
+ * file wherever a user-scoped device permission check is needed (e.g.
+ * the Evidence tab's host filter, search).
+ *
+ * @param int  $user_id The user id to compute allowed devices for.
+ * @param bool $array   When true, return the ids as an array; otherwise
+ *                      return them as a comma-separated string.
+ *                      Defaults to false.
+ *
+ * @return array|string|false The allowed device ids (array or CSV string
+ *                            depending on $array), or false if the user
+ *                            has no allowed devices.
+ */
 function plugin_evidence_get_allowed_devices($user_id, $array = false) {
 
 	$x  = 0;
@@ -156,6 +236,19 @@ function plugin_evidence_get_allowed_devices($user_id, $array = false) {
 }
 
 
+/**
+ * Queries a device via SNMP for its sysObjectID and extracts the IANA
+ * Private Enterprise Number from it, identifying the device's vendor.
+ * Called from plugin_evidence_actual_data() to look up the vendor for
+ * further evidence collection.
+ *
+ * @param array $h The Cacti host row, providing SNMP connection
+ *                 settings.
+ *
+ * @return string|false The extracted enterprise number, or false if
+ *                      the sysObjectID could not be retrieved or
+ *                      parsed.
+ */
 function plugin_evidence_find_organization ($h) {
 
 	cacti_oid_numeric_format();
@@ -180,8 +273,22 @@ function plugin_evidence_find_organization ($h) {
 }
 
 
-/* get snmp info data (sysname, sysdescr, ...) */
-
+/**
+ * get snmp info data (sysname, sysdescr, ...)
+ *
+ * Queries a device via SNMP for its basic system MIB-II fields
+ * (sysDescr, sysContact, sysName, sysLocation). Called from
+ * plugin_evidence_actual_data() as part of each scan.
+ *
+ * @param array $h The Cacti host row, providing SNMP connection
+ *                 settings.
+ *
+ * @return array A single-element array wrapping the 'sysdescr',
+ *               'syscontact', 'sysname', 'syslocation' values.
+ *
+ * @global array $config Cacti global configuration array (declared but
+ *                       not directly used here).
+ */
 function plugin_evidence_get_snmp_info($h) {
 	global $config;
 
@@ -216,8 +323,27 @@ function plugin_evidence_get_snmp_info($h) {
 }
 
 
-/* get data from entity mib */
-
+/**
+ * get data from entity mib
+ *
+ * Queries a device via SNMP for its full Entity MIB physical-component
+ * table (description, name, hardware/firmware/software revisions,
+ * serial number, manufacturer/model, alias, asset id, manufacture date,
+ * UUID), decoding the manufacture-date field from its hex-encoded SNMP
+ * DateAndTime format. Falls back to walking just the description column
+ * when the standard index column returns nothing (for devices that omit
+ * it). Called from plugin_evidence_actual_data() as part of each scan.
+ *
+ * @param array $h The Cacti host row, providing SNMP connection
+ *                 settings.
+ *
+ * @return array One entry per Entity MIB physical component found, each
+ *               with the fields described above; empty if the walk
+ *               returned no data.
+ *
+ * @global array $config Cacti global configuration array (declared but
+ *                       not directly used here).
+ */
 function plugin_evidence_get_entity_data($h) {
 	global $config;
 
@@ -346,8 +472,20 @@ function plugin_evidence_get_entity_data($h) {
 }
 
 
-/* try to find if device are using any mac addresses */
-
+/**
+ * try to find if device are using any mac addresses
+ *
+ * Queries a device via SNMP for the interface physical address table
+ * (ifPhysAddress), normalizes and de-duplicates the resulting MAC
+ * addresses, ignoring a known bogus Windows-server placeholder value.
+ * Called from plugin_evidence_actual_data() as part of each scan.
+ *
+ * @param array $h The Cacti host row, providing SNMP connection
+ *                 settings.
+ *
+ * @return array The sorted, unique, normalized MAC addresses found on
+ *               the device.
+ */
 function plugin_evidence_get_mac ($h) {
 
 	$return = array();
@@ -378,6 +516,22 @@ function plugin_evidence_get_mac ($h) {
 
 /* try to find if device are using any IPv4/IPv6 addresses */
 
+/**
+ * try to find if device are using any IPv4/IPv6 addresses
+ *
+ * Queries a device via SNMP for its configured IP addresses/prefix
+ * lengths, preferring the modern ipAddressTable (with several vendor
+ * quirks worked around, e.g. Fortigate's index/mask irregularities),
+ * falling back to the deprecated ipAddrTable when the modern table
+ * yields nothing. Called from plugin_evidence_actual_data() as part of
+ * each scan.
+ *
+ * @param array $h The Cacti host row, providing SNMP connection
+ *                 settings.
+ *
+ * @return array The sorted 'address/prefixlen' strings found on the
+ *               device.
+ */
 function plugin_evidence_get_ip ($h) {
 
 	cacti_oid_numeric_format();
@@ -502,6 +656,33 @@ optional = true - There may be interesting information in this data, but it chan
 		Therefore, they are not used for comparison, only for display
 */
 
+/**
+ * try to find vendor specific data
+ *
+ * optional = false - This data doesn't change much over time, so it can be used for comparison
+ * optional = true - There may be interesting information in this data, but it changes frequently.
+ *      Therefore, they are not used for comparison, only for display
+ *
+ * Runs this device's vendor-specific data-query definitions (from
+ * plugin_evidence_specific_query, filtered by vendor organization id,
+ * optional device type sysObjectID match, and mandatory/optional flag),
+ * executing each as an SNMP get/walk/table query and extracting the
+ * configured regex-matched result. Called from
+ * plugin_evidence_actual_data() as part of each scan, once for the
+ * mandatory data set and once for the optional data set.
+ *
+ * @param array $h        The Cacti host row, providing SNMP connection
+ *                        settings and its detected vendor organization
+ *                        id.
+ * @param bool  $optional Whether to run the 'optional' (display-only,
+ *                        not used for change comparison) query set
+ *                        instead of the mandatory set; defaults to
+ *                        false.
+ *
+ * @return array One entry per matched data-query definition, each with
+ *               'description', 'oid', and 'value' (a scalar for 'get',
+ *               a comma-joined string for 'walk'/'table').
+ */
 function plugin_evidence_get_data_specific ($h, $optional = false) {
 
 	$data_spec = array();
@@ -607,6 +788,20 @@ function plugin_evidence_get_data_specific ($h, $optional = false) {
 }
 
 
+/**
+ * Normalizes a MAC address string from any of several common formats
+ * (Cisco dotted-quad, plain hex, hyphen- or colon-separated, with or
+ * without leading zero padding on each octet) into a canonical
+ * uppercase colon-separated form. Called from plugin_evidence_get_mac()
+ * for each discovered MAC address.
+ *
+ * @param string $mac The MAC address string to normalize, in any
+ *                    recognized format.
+ *
+ * @return string The normalized 'XX:XX:XX:XX:XX:XX' uppercase MAC
+ *                address, or the original (trimmed) input unchanged if
+ *                its format is not recognized.
+ */
 function plugin_evidence_normalize_mac ($mac) {
 
 	$mac = trim($mac);
@@ -657,11 +852,27 @@ function plugin_evidence_normalize_mac ($mac) {
 }
 
 
-/*
-	return all (snmp_info, entity, mac, ip, vendor specific and vendor optional) information
-	scan_date is index
-*/
-
+/**
+ * return all (snmp_info, entity, mac, ip, vendor specific and vendor optional) information
+ * scan_date is index
+ *
+ * Retrieves a device's stored evidence history (SNMP system info,
+ * Entity MIB data, MAC addresses, IP addresses, mandatory and optional
+ * vendor-specific data), grouped by scan date, for either only the most
+ * recent scan, all history, or a specific date. Called from
+ * evidence_show_host_data() and plugin_evidence_actual_data() to fetch
+ * previously recorded evidence for display/comparison.
+ *
+ * @param int    $host_id   The host.id to retrieve evidence history for.
+ * @param string $scan_date The scan date to retrieve: -2 for only the
+ *                          most recent scan, -1 for all history, or a
+ *                          specific 'Y-m-d' date string.
+ *
+ * @return array An associative array with 'dates' (all distinct scan
+ *               dates found) and per-category keys ('snmp_info',
+ *               'entity', 'mac', 'ip', 'spec', 'opt'), each keyed by
+ *               scan date.
+ */
 function plugin_evidence_history ($host_id, $scan_date) {
 	$out = array();
 
@@ -776,6 +987,23 @@ function plugin_evidence_history ($host_id, $scan_date) {
 }
 
 
+/**
+ * Searches all of this plugin's collected evidence tables (SNMP system
+ * info, Entity MIB fields, MAC/IP addresses, vendor-specific data) for a
+ * submitted free-text pattern, printing per-category grouped links to
+ * each matching device's evidence detail view. Invoked from
+ * evidence_tab.php's evidence_find() when a search term is submitted.
+ *
+ * @return bool|void False (with a message printed) if history storage
+ *                   is disabled; otherwise outputs the search results
+ *                   HTML directly and returns nothing.
+ *
+ * @global array $config    Cacti global configuration array; used to
+ *                          build result links.
+ * @global array $datatypes Map of evidence datatype keys to their
+ *                          display labels, used as section headings for
+ *                          the results.
+ */
 function plugin_evidence_find() {
 	global $config, $datatypes;
 
@@ -899,6 +1127,22 @@ function plugin_evidence_find() {
 
 /* query for actual data */
 
+/**
+ * Performs a full live SNMP evidence scan of a single device: system
+ * info, Entity MIB data, MAC/IP addresses, and (once the device's vendor
+ * is identified) its mandatory and optional vendor-specific data-query
+ * results. Called from poller_evidence.php's main flow for each device
+ * being scanned, and from plugin_evidence_host_edit_bottom() to preview
+ * a device's current evidence on its edit page.
+ *
+ * @param array $host The Cacti host row to scan, providing SNMP
+ *                    connection settings.
+ *
+ * @return array The collected evidence data: 'snmp_info', 'entity',
+ *               'mac', 'ip', 'org_id', and (when a vendor is
+ *               identified and has data-query definitions) 'org_name',
+ *               'spec', and 'opt'.
+ */
 function plugin_evidence_actual_data ($host) {
 
 	$out = array();
@@ -973,6 +1217,16 @@ function plugin_evidence_actual_data ($host) {
 }
 
 
+/**
+ * Determines whether it is time for a new periodic evidence scan to run,
+ * based on the configured scan frequency and a daily base time window
+ * (+/- 5 minutes), recording the current time as the last-run time when
+ * a run is triggered. Called from plugin_evidence_poller_bottom() once
+ * per poller cycle.
+ *
+ * @return bool True if a scan should run now (and the last-run time has
+ *              been updated accordingly), false otherwise.
+ */
 function plugin_evidence_time_to_run() {
 
 	$lastrun   = read_config_option('plugin_evidence_lastrun');
@@ -1011,8 +1265,32 @@ function plugin_evidence_time_to_run() {
 }
 
 
-// show data in evidence tab
-
+/**
+ * show data in evidence tab
+ *
+ * Renders a single device's evidence data on the Evidence tab: header
+ * with device identity, a link to also show live/actual data, then
+ * either the historical evidence (from plugin_evidence_history(),
+ * grouped and rendered per data type/date via
+ * plugin_evidence_array_to_table()) and/or a live SNMP scan's results
+ * (via plugin_evidence_actual_data() and evidence_show_actual_data())
+ * when requested, applying the current user's per-datatype and
+ * expand-dates display preferences. Called from evidence_tab.php's
+ * evidence_find() for each matching host.
+ *
+ * @param int    $host_id   The host.id whose evidence data to display.
+ * @param string $scan_date The scan date filter: -2 for only the most
+ *                          recent scan, -1 for all history, or a
+ *                          specific 'Y-m-d' date string.
+ *
+ * @return void Outputs the evidence data HTML directly.
+ *
+ * @global array $config   Cacti global configuration array; used to
+ *                         build result links.
+ * @global array $entities Reserved/declared for parity with other
+ *                         functions in this file; not used directly
+ *                         here.
+ */
 function evidence_show_host_data ($host_id, $scan_date) {
 	global $config, $entities;
 
@@ -1352,6 +1630,29 @@ function evidence_show_host_data ($host_id, $scan_date) {
 
 // show actual data for device on host edit page
 
+/**
+ * show actual data for device on host edit page
+ *
+ * Renders a live-scanned device's evidence data (system info, Entity
+ * MIB entries capped to the first 3 with a 'show more' link, MAC/IP
+ * addresses, mandatory and optional vendor-specific data) in a compact
+ * form suitable for embedding on the device edit page. Called from
+ * plugin_evidence_host_edit_bottom() to preview a device's current
+ * evidence.
+ *
+ * @param array $data    The evidence data as returned by
+ *                       plugin_evidence_actual_data().
+ * @param int   $host_id The host.id being displayed, used to build the
+ *                       'show full listing' link.
+ *
+ * @return void Outputs the evidence data HTML directly.
+ *
+ * @global array $config    Cacti global configuration array; used to
+ *                          locate include/arrays.php and build result
+ *                          links.
+ * @global array $datatypes Map of evidence datatype keys to their
+ *                          display labels, used as section headings.
+ */
 function evidence_show_host_info ($data, $host_id) {
 
 	global $config, $datatypes;
@@ -1479,6 +1780,24 @@ function evidence_show_host_info ($data, $host_id) {
 }
 
 
+/**
+ * Renders a live-scanned device's full evidence data (system info,
+ * Entity MIB entries, MAC/IP addresses, mandatory and optional
+ * vendor-specific data) on the Evidence tab, without the truncation
+ * applied by evidence_show_host_info(). Called from
+ * evidence_show_host_data() when displaying a device's 'actual'
+ * (live-scanned) data alongside its history.
+ *
+ * @param array $data The evidence data as returned by
+ *                    plugin_evidence_actual_data().
+ *
+ * @return void Outputs the evidence data HTML directly.
+ *
+ * @global array $config    Cacti global configuration array; used to
+ *                          locate include/arrays.php.
+ * @global array $datatypes Map of evidence datatype keys to their
+ *                          display labels, used as section headings.
+ */
 function evidence_show_actual_data ($data) {
 	global $config, $datatypes;
 
@@ -1600,6 +1919,19 @@ function evidence_show_actual_data ($data) {
 }
 
 
+/**
+ * Renders an array of associative sub-arrays as an HTML table, wrapping
+ * to a new row after the configured number of columns. Currently
+ * unused/dead code: not called from anywhere else in this file.
+ *
+ * @param array $array   The array of associative sub-arrays to render;
+ *                       each key/value pair becomes one 'key = value'
+ *                       table cell.
+ * @param int   $columns The number of cells to place per row before
+ *                       wrapping; defaults to 1.
+ *
+ * @return string The generated HTML table markup.
+ */
 function plugin_evidence_array_to_table ($array, $columns = 1) {
 
 	$output = '';
