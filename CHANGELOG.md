@@ -1,5 +1,8 @@
 # Changelog
 
+--- 0.4 ---
+* Customizing data search and display
+
 --- 0.3 ---
 * Add generic snmp info
 

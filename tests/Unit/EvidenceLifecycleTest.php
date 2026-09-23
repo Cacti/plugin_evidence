@@ -35,7 +35,7 @@ it('drops every table it owns on remove_data', function () {
 	plugin_evidence_remove_data();
 
 	$drops = array_filter($GLOBALS['__test_db_calls'], function ($call) {
-		return $call['fn'] === 'db_execute' && stripos($call['sql'], 'DROP TABLE') !== false;
+		return $call['fn'] === 'db_execute_prepared' && stripos($call['sql'], 'DROP TABLE') !== false;
 	});
 
 	expect($drops)->toHaveCount(6);

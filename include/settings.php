@@ -1,7 +1,8 @@
 <?php
-/*
+/* vim: ts=4
  +-------------------------------------------------------------------------+
- | Copyright (C) 2021-2024 Petr Macek                                      |
+ | Copyright (C) 2004-2026 The Cacti Group, Inc.                           |
+ | Copyright (C) 2004-2025 Petr Macek                                      |
  |                                                                         |
  | This program is free software; you can redistribute it and/or           |
  | modify it under the terms of the GNU General Public License             |
@@ -30,58 +31,58 @@ function plugin_evidence_config_settings() {
 
 	$settings['evidence'] = array(
 		'evidence_frequency' => array(
-			'friendly_name' => 'How often gather data',
-			'description'   => 'If enabled, Evidence will gather data periodically. If disabled, you can only view data for specific host',
+			'friendly_name' => __('How often gather data', 'evidence'),
+			'description'   => __('If enabled, Evidence will gather data periodically. If disabled, you can only view data for specific host', 'evidence'),
 			'method'        => 'drop_array',
 			'array'         => array(
-				'0'     => 'Disabled',
-				'6'     => 'Every 6 hours',
-				'24'    => 'Every day',
-				'168'   => 'Every week',
+				'0'     => __('Disabled', 'evidence'),
+				'6'     => __('Every %d hours', 6, 'evidence'),
+				'24'    => __('Every day', 'evidence'),
+				'168'   => __('Every week', 'evidence'),
 			),
 			'default'       => '24',
 		),
 		'evidence_base_time' => array(
-			'friendly_name' => 'When evidence will be started',
-			'description'   => 'The Base Time for gather data to occur.  For example, if you use \'12:00am\' and you choose once per day, the action would begin at approximately midnight every day.',
+			'friendly_name' => __('When evidence will be started', 'evidence'),
+			'description'   => __('The Base Time for gather data to occur.  For example, if you use \'12:00am\' and you choose once per day, the action would begin at approximately midnight every day.', 'evidence'),
 			'method'        => 'textbox',
 			'max_length'    => '10',
 			'default'       => '01:30am',
 		),
 		'evidence_records' => array(
-		'friendly_name' => 'How many changes store in database',
-			'description'   => 'If data gathering is enabled,  you can specify how many history (changed) records keep for each device',
-			'method'        => 'drop_array',
-			'array'         => array(
-				'0'    => 'Without history',
-				'2'    => '2 record',
-				'10'   => '10 records',
-				'30'   => '30 records',
+		'friendly_name'       => __('How many changes store in database', 'evidence'),
+			'description' => __('If data gathering is enabled,  you can specify how many history (changed) records keep for each device', 'evidence'),
+			'method'      => 'drop_array',
+			'array'       => array(
+				'0'   => __('Without history', 'evidence'),
+				'2'   => __('%d record', 2, 'evidence'),
+				'10'  => __('%d records', 10, 'evidence'),
+				'30'  => __('%d records', 30, 'evidence'),
 			),
-			'default'       => '10',
+			'default'     => '10',
 		),
 		'evidence_show_host_data' => array(
-			'friendly_name' => 'Display information on device edit page',
-			'description'   => 'If enabled, flowview will display evidence data on device edit page',
+			'friendly_name' => __('Display information on device edit page', 'evidence'),
+			'description'   => __('If enabled, flowview will display evidence data on device edit page', 'evidence'),
 			'method'        => 'checkbox',
 			'default'       => 'off',
 		),
 		'evidence_email_notify' => array(
-			'friendly_name' => 'Send email on evidence information change',
-			'description'   => 'If evidence find change, send email',
+			'friendly_name' => __('Send email on evidence information change', 'evidence'),
+			'description'   => __('If evidence find change, send email', 'evidence'),
 			'method'        => 'checkbox',
 			'default'       => 'off',
 		),
 		'evidence_email_notify_exclude_hosts' => array(
-			'friendly_name' => 'Excluded notification Host IDs',
-			'description'   => 'Some devices report hw changes too often. You can exclude these host from email notification. Insert Host IDs, comma separator',
+			'friendly_name' => __('Excluded notification Host IDs', 'evidence'),
+			'description'   => __('Some devices report hw changes too often. You can exclude these host from email notification. Insert Host IDs, comma separator', 'evidence'),
 			'method'        => 'textbox',
 			'max_length'    => '500',
 			'default'       => '',
 		),
 		'evidence_email_notify_exclude_templates' => array(
-			'friendly_name' => 'Excluded notification device templates',
-			'description'   => 'Some devices types report hw changes too often. You can exclude these templates from email notification. Insert device templates IDs, comma separator',
+			'friendly_name' => __('Excluded notification device templates', 'evidence'),
+			'description'   => __('Some devices types report hw changes too often. You can exclude these templates from email notification. Insert device templates IDs, comma separator', 'evidence'),
 			'method'        => 'textbox',
 			'max_length'    => '500',
 			'default'       => '',

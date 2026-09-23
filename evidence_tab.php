@@ -1,7 +1,8 @@
 <?php
-/*
+/* vim: ts=4
  +-------------------------------------------------------------------------+
- | Copyright (C) 2021-2024 Petr Macek                                      |
+ | Copyright (C) 2004-2026 The Cacti Group, Inc.                           |
+ | Copyright (C) 2004-2024 Petr Macek                                      |
  |                                                                         |
  | This program is free software; you can redistribute it and/or           |
  | modify it under the terms of the GNU General Public License             |
@@ -18,8 +19,8 @@
  | This code is designed, written, and maintained by the Cacti Group. See  |
  | about.php and/or the AUTHORS file for specific developer information.   |
  +-------------------------------------------------------------------------+
- | https://github.com/cacti/                                               |
- | https://www.cacti.net/                                                  |
+ | https://github.com/xmacan/                                              |
+ | http://www.cacti.net/                                                   |
  +-------------------------------------------------------------------------+
 */
 
@@ -33,7 +34,7 @@ set_default_action();
 
 $selectedTheme = get_selected_theme();
 
-switch (get_request_var('action')) {
+switch (html_escape_request_var('action')) {
 	case 'ajax_hosts':
 		$sql_where = '';
 		get_allowed_ajax_hosts(true, 'applyFilter', $sql_where);
@@ -50,7 +51,7 @@ switch (get_request_var('action')) {
 		bottom_footer();
 		break;
 
-        default:
+	default:
 		general_header();
 		evidence_display_form();
 		evidence_stats();
@@ -71,11 +72,17 @@ function evidence_display_form() {
 
 	$host_id = get_filter_request_var('host_id');
 	$template_id = get_filter_request_var('template_id');
-	$scan_date = get_filter_request_var('scan_date', FILTER_VALIDATE_REGEXP, array('options' => array('regexp' => '/^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$/', 'default' => -1)));
-	$find_text = get_filter_request_var('find_text', FILTER_VALIDATE_REGEXP, array('options' => array('regexp' => '/^([a-zA-Z0-9_\-\.:\+ ]+)$/', 'default' => 'INCORRECT: ' . get_nfilter_request_var('find_text'))));
+
+	if (get_nfilter_request_var('scan_date') == -1 || get_nfilter_request_var('scan_date') == -2) {
+		$scan_date = get_nfilter_request_var('scan_date');
+	} else {
+		$scan_date = get_filter_request_var ('scan_date', FILTER_VALIDATE_REGEXP, array('options' => array('regexp' => '/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/', 'default' => -1)));
+	}
+
+	$find_text = get_filter_request_var('find_text', FILTER_VALIDATE_REGEXP, array('options' => array('regexp' => '/^([a-zA-Z0-9_\-\.:\+ ]+)$/', 'default' => 'INCORRECT: ' . html_escape('find_text'))));
 	form_start(html_escape(basename($_SERVER['PHP_SELF'])), 'form_evidence');
 
-	html_start_box('<strong>Evidence</strong>', '100%', '', '3', 'center', '');
+	html_start_box('<strong>' . __('Evidence', 'evidence') . '</strong>', '100%', '', '3', 'center', '');
 
 	print "<tr class='even noprint'>";
 	print "<td>";
@@ -86,12 +93,12 @@ function evidence_display_form() {
 	print html_host_filter($host_id, 'applyFilter', $host_where, false, true);
 
 	print "<td>";
-	print __('Template');
+	print __('Template', 'evidence');
 	print "</td>";
 	print "<td>";
 
 	print "<select id='template_id' name='template_id'>";
-	print "<option value='-1'" . (get_filter_request_var('template_id') == '-1' ? ' selected' : '') . '>' . __('Any') . '</option>';
+	print "<option value='-1'" . (get_filter_request_var('template_id') == '-1' ? ' selected' : '') . '>' . __('Any', 'evidence') . '</option>';
 
 	$templates = db_fetch_assoc('SELECT id, name FROM host_template');
 
@@ -112,24 +119,34 @@ function evidence_display_form() {
 	print '<td>';
 
 	print '<select id="scan_date" name="scan_date">';
-	print '<option value="-1" ' . ($scan_date == -1 ? 'selected="selected"' : '') . '>' . __('All', 'evidence') . '</option>';
+	print '<option value="-2" ' . ($scan_date == -2 ? 'selected="selected"' : '') . '>' . __('Only last changed states', 'evidence') . '</option>';
+	print '<option value="-1" ' . ($scan_date == -1 ? 'selected="selected"' : '') . '>' . __('All history', 'evidence') . '</option>';
 
-	$scan_dates = array_column(db_fetch_assoc('SELECT DISTINCT(scan_date) FROM plugin_evidence_snmp_info
-		UNION SELECT DISTINCT(scan_date) FROM plugin_evidence_entity
-		UNION SELECT DISTINCT(scan_date) FROM plugin_evidence_mac
-		UNION SELECT DISTINCT(scan_date) FROM plugin_evidence_ip
-		UNION SELECT DISTINCT(scan_date) FROM plugin_evidence_vendor_specific
-		ORDER BY scan_date DESC'), 'scan_date');
+	$scan_dates = db_fetch_assoc('SELECT DATE(scan_date) AS scan_date, COUNT(*) AS records
+		FROM (
+			SELECT scan_date FROM plugin_evidence_snmp_info
+			UNION ALL
+			SELECT scan_date FROM plugin_evidence_entity
+			UNION ALL
+			SELECT scan_date FROM plugin_evidence_mac
+			UNION ALL
+			SELECT scan_date FROM plugin_evidence_ip
+			UNION ALL
+			SELECT scan_date FROM plugin_evidence_vendor_specific
+		) AS all_records
+		GROUP BY DATE(scan_date)
+		ORDER BY scan_date DESC');
 
 	if (cacti_sizeof($scan_dates)) {
 		foreach ($scan_dates as $sdate) {
-			print '<option value="' . $sdate . '" ' . 
-				($scan_date == $sdate ? ' selected="selected"' : '') . 
-				'>' . $sdate . '</option>';
+			print '<option value="' . $sdate['scan_date'] . '" ' . 
+				($scan_date == $sdate['scan_date'] ? ' selected="selected"' : '') . 
+				'>' . $sdate['scan_date'] . ' (' . $sdate['records'] . ' ' . __('records changed', 'evidence') . ')</option>';
 		}
 	}
 
 	print '</select>';
+
 	print '</td>';
 	print '<td>';
 	print '<input type="submit" class="ui-button ui-corner-all ui-widget" id="refresh" value="' . __('Go') . '" title="' . __esc('Find') . '">';
@@ -142,13 +159,13 @@ function evidence_display_form() {
 	print "<table class='filterTable'>";
 	print '<tr>';
 	print '<td>';
-	print 'Search';
+	print __('Search', 'evidence');
 	print '</td>';
 	print '<td>';
-	print '<input type="text" name="find_text" id="find_text" value="' . $find_text . '">';
+	print '<input type="text" name="find_text" id="find_text" value="' . html_escape($find_text) . '">';
 	print '</td>';
 	print '<td>';
-	print 'You can search serial number, firmware version, ip, mac address,...';
+	print __('You can search serial number, firmware version, ip, mac address,...', 'evidence');
 	print '</td>';
 	print '</tr>';
 	print '</table>';
@@ -156,7 +173,11 @@ function evidence_display_form() {
 	print "<table class='filterTable'>";
 	print '<tr>';
 	print '<td>';
-	evidence_show_checkboxes();
+
+	if (get_nfilter_request_var('action') == 'find') {
+		evidence_show_checkboxes();
+	}
+
 	print '</td>';
 	print '</tr>';
 	print '</table>';
@@ -176,7 +197,11 @@ function evidence_find() {
 		$host_id = get_filter_request_var('host_id');
 	}
 
-	$scan_date = get_filter_request_var ('scan_date', FILTER_VALIDATE_REGEXP, array('options' => array('regexp' => '/^[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2}$/', 'default' => -1)));
+	if (get_nfilter_request_var('scan_date') == -1 || get_nfilter_request_var('scan_date') == -2) {
+		$scan_date = get_nfilter_request_var('scan_date');
+	} else {
+		$scan_date = get_filter_request_var ('scan_date', FILTER_VALIDATE_REGEXP, array('options' => array('regexp' => '/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/', 'default' => -1)));
+	}
 
 	if (in_array(get_filter_request_var('template_id'), array_column($templates, 'id'))) {
 		$template_id = get_filter_request_var('template_id');
@@ -210,12 +235,14 @@ function evidence_find() {
 		plugin_evidence_find();
 	}
 
-	if (!isset($host_id) && !isset($template_id) && $scan_date != -1) {
-		$ids_info   = array_column(db_fetch_assoc_prepared('SELECT distinct(host_id) FROM plugin_evidence_snmp_info WHERE scan_date = ?', array($scan_date)), 'host_id');
-		$ids_entity = array_column(db_fetch_assoc_prepared('SELECT distinct(host_id) FROM plugin_evidence_entity WHERE scan_date = ?', array($scan_date)), 'host_id');
-		$ids_ip     = array_column(db_fetch_assoc_prepared('SELECT distinct(host_id) FROM plugin_evidence_ip WHERE scan_date = ?', array($scan_date)), 'host_id');
-		$ids_mac    = array_column(db_fetch_assoc_prepared('SELECT distinct(host_id) FROM plugin_evidence_mac WHERE scan_date = ?', array($scan_date)), 'host_id');
-		$ids_vendor = array_column(db_fetch_assoc_prepared('SELECT distinct(host_id) FROM plugin_evidence_vendor_specific WHERE scan_date = ?', array($scan_date)), 'host_id');
+	if (!isset($host_id) && !isset($template_id) && $scan_date > 0) {
+		print "<h3>$scan_date</h3>";
+
+		$ids_info   = array_column(db_fetch_assoc_prepared('SELECT distinct(host_id) FROM plugin_evidence_snmp_info WHERE date(scan_date) = ?', array($scan_date)), 'host_id');
+		$ids_entity = array_column(db_fetch_assoc_prepared('SELECT distinct(host_id) FROM plugin_evidence_entity WHERE date(scan_date) = ?', array($scan_date)), 'host_id');
+		$ids_ip     = array_column(db_fetch_assoc_prepared('SELECT distinct(host_id) FROM plugin_evidence_ip WHERE date(scan_date) = ?', array($scan_date)), 'host_id');
+		$ids_mac    = array_column(db_fetch_assoc_prepared('SELECT distinct(host_id) FROM plugin_evidence_mac WHERE date(scan_date) = ?', array($scan_date)), 'host_id');
+		$ids_vendor = array_column(db_fetch_assoc_prepared('SELECT distinct(host_id) FROM plugin_evidence_vendor_specific WHERE date(scan_date) = ?', array($scan_date)), 'host_id');
 
 		$merged = array_unique(array_merge($ids_info, $ids_entity, $ids_ip, $ids_mac, $ids_mac));
 
@@ -224,8 +251,8 @@ function evidence_find() {
 		}
 	}
 
-	if (!isset($host_id) && !isset($template_id) && $scan_date == -1) {
-		print __('Select any device or template', 'snver');
+	if (!isset($host_id) && !isset($template_id) && !isset($find_text) && $scan_date < 0) {
+		print __('Select any device, template, select any scan date or try search', 'evidence');
 	}
 
 }
@@ -237,13 +264,16 @@ function evidence_stats() {
 	$evidence_frequency = read_config_option('evidence_frequency');
 
 	if ($evidence_frequency == 0 || $evidence_records == 0) {
-		print __('No data. Allow periodic scan and store history in settings');
+		print __('No data. Allow periodic scan and store history in settings', 'evidence');
 	}
 
 	print '<br/><br/>';
-	print __('You can display all information about specific host, all devices with the same template.') . '<br/>';
-	print __('You can search any string in all data.') . '<br/>';
-	print __('Note when using Scan Date - Only the data that changed at the moment of Scan_date is displayed. Data not changed at that time is not displayed.') . '<br/>';
+	print __('Device or template - You can display information about specific host, all devices with the same template.', 'evidence') . '<br/><br/>';
+
+	print __('Scan date (Only last changes or All history) - You can choose whether to retrieve only the most recent change or the entire history.', 'evidence') . '<br/>';
+	print __('If you use only `Scan Date`, the changes for all devices found during this scan will be displayed', 'evidence') . '<br/><br/>';
+
+	print __('You can search any string in all data.', 'evidence') . '<br/>';
 
 	$dev = db_fetch_cell ('SELECT SUM(total) from ( SELECT COUNT(DISTINCT(host_id)) AS total FROM plugin_evidence_entity 
 		UNION SELECT COUNT(DISTINCT(host_id)) AS total FROM plugin_evidence_mac
@@ -257,20 +287,19 @@ function evidence_stats() {
 	$old = db_fetch_cell ('SELECT MIN(scan_date) FROM plugin_evidence_entity');
 
 	print '<br/><br/>';
-	print '<strong>' . __('Number of records') . ':</strong><br/>';
-	print 'Devices: ' . $dev . ' records<br/>';
-	print 'Entity MIB: ' . $ent . ', records, ' . $vnd . ' vendors<br/>';
-	print 'Unique MAC addresses: ' . $mac . '<br/>';
-	print 'Unique IP addresses: ' . $ip . '<br/>';
-	print 'Vendor specific data: ' . $ven . '<br/>';
-	print 'Oldest record: ' . $old . '<br/>';
+	print '<strong>' . __('Number of records', 'evidence') . ':</strong><br/>';
+	print __('Devices: %d records', $dev, 'evidence') . '<br/>';
+	print __('Entity MIB: %d records, %d vendors', $ent, $vnd, 'evidence') . '<br/>';
+	print __('Unique MAC addresses: %d', $mac, 'evidence') . '<br/>';
+	print __('Unique IP addresses: %d', $ip, 'evidence') . '<br/>';
+	print __('Vendor specific data: %d', $ven, 'evidence') . '<br/>';
+	print __('Oldest record: %d', $old, 'evidence') . '<br/>';
 	print '<br/><br/>';
 
 	$treemap = array(
 		'label' => array(),
 		'data'  => array(),
 	);
-
 
 	$vendors = db_fetch_assoc('SELECT count(distinct(host_id)) AS `count`, organization
 		FROM plugin_evidence_entity AS pee
@@ -287,7 +316,7 @@ function evidence_stats() {
 			array_push($treemap['data'], $vendor['count']);
 		}
 		
-		print '<strong>Vendors:</strong><br />';
+		print '<strong>' . __('Vendors', 'evidence') . ':</strong><br />';
 		evidence_treemap('Vendors', $treemap);
 	}
 }
@@ -310,10 +339,11 @@ function evidence_show_checkboxes() {
 	print '<td>';
 	print '</td>';
 	print '<td>';
-	print '<input type="checkbox" id="ch_expand" name="ch_expand" value="1"><label for="ch_expand" class="bold">Expand all dates</label>';
-	print '<input type="checkbox" id="ch_expand_latest" name="ch_expand_latest" value="1"><label for="ch_expand_latest" class="bold">Expand latest date</label>';
+	print '<input type="checkbox" id="ch_expand" name="ch_expand" value="1">';
+	print '<label for="ch_expand" class="bold">' . __('Expand all dates', 'evidence') . '</label>';
+	print '<input type="checkbox" id="ch_expand_latest" name="ch_expand_latest" value="1">';
+	print '<label for="ch_expand_latest" class="bold">' . __('Expand latest date', 'evidence') . '</label>';
 	print '</td>';
-
 	print '</tr>';
 	print '</table>';
 }
@@ -321,40 +351,45 @@ function evidence_show_checkboxes() {
 
 function evidence_treemap($title, $data) {
 
-	$xid = 'x'. substr(md5($title), 0, 7);
+	$xid = 'treemap_x'. substr(md5($title), 0, 7);
 
-	echo "<div class='chart_wrapper center' id=\"treemap_$xid\"></div>";
-	echo '<script type="text/javascript">';
-	echo 'treemap_' . $xid . ' = bb.generate({';
-	echo " bindto: \"#treemap_$xid\",";
+	print '<style>';
+	print '#' . $xid . ' text {';
+	print 'transform: translate(0, 20px) !important;}';
+	print '</style>';
 
-	echo " size: {";
-	echo "  width: 450,";
-	echo "  height: 200";
-	echo " },";
+	print '<div class="chart_wrapper center" id="' . $xid . '"></div>';
+	print '<script type="text/javascript">';
+	print $xid . ' = bb.generate({';
+	print ' bindto: "#' . $xid . '",';
 
-	echo " data: {";
-	echo "  columns: [";
+	print ' size: {';
+	print '  width: 700,';
+	print '  height: 350';
+	print ' },';
+
+	print ' data: {';
+	print '  columns: [';
 
 	foreach ($data['data'] as $key => $value) {
-		echo "['" . $data['label'][$key] . "', " . $value . "],";
+		print "['" . $data['label'][$key] . "', " . $value . "],";
 	}
 
-	echo "  ],";
-	echo "  type: 'treemap',";
-	echo "  labels: {";
-	echo "    colors: '#fff'";
-	echo "  }";
-	echo "  },";
+	print '  ],';
+	print '  type: "treemap",';
+	print '  labels: {';
+	print '    colors: "#fff"';
+	print '  }';
+	print '  },';
 
-	echo "  treemap: {";
-	echo "    label: {";
-	echo "      threshold: 0.03, show: true,";
-	echo "    }";
-	echo "  },";
+	print '  treemap: {';
+	print '    label: {';
+	print '      threshold: 0.03, show: true';
+	print '    },';
+	print '  },';
 
-	echo "});";
-	echo "</script>";
+	print '});';
+	print '</script>';
 }
 
 

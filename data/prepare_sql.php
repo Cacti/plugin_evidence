@@ -26,5 +26,5 @@ if ($file) {
 fclose ($file);
 fclose ($output);
 
-echo 'rows: ' . $i . PHP_EOL;
+print 'rows: ' . $i . PHP_EOL;
 ?>

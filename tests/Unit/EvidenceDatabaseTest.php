@@ -42,7 +42,7 @@ it('seeds the vendor-specific query catalog', function () {
 	plugin_evidence_setup_database();
 
 	$inserts = array_filter($GLOBALS['__test_db_calls'], function ($call) {
-		return $call['fn'] === 'db_execute' && stripos($call['sql'], 'INSERT INTO plugin_evidence_specific_query') !== false;
+		return $call['fn'] === 'db_execute_prepared' && stripos($call['sql'], 'INSERT INTO plugin_evidence_specific_query') !== false;
 	});
 
 	expect($inserts)->not->toBeEmpty();

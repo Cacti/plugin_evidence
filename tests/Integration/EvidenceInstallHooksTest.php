@@ -31,7 +31,7 @@ it('registers every hook evidence depends on, its realm, and provisions its tabl
 		$hooks[$registered['hook']] = $registered;
 	}
 
-	foreach (array('device_edit_top_links', 'top_header_tabs', 'top_graph_header_tabs', 'host_device_remove', 'config_settings', 'poller_bottom', 'host_edit_bottom') as $expected) {
+	foreach (array('device_edit_top_links', 'top_header_tabs', 'top_graph_header_tabs', 'device_remove', 'config_settings', 'poller_bottom', 'host_edit_bottom') as $expected) {
 		expect($hooks)->toHaveKey($expected);
 		expect($hooks[$expected]['name'])->toBe('evidence');
 	}

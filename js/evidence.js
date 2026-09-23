@@ -1,5 +1,5 @@
 var show_expand = false;
-var show_expand_latest = false;
+var show_expand_latest = true;
 
 
 $(function() {
