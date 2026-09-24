@@ -277,7 +277,7 @@ function evidence_find() {
 		$ids_mac    = array_column(db_fetch_assoc_prepared('SELECT distinct(host_id) FROM plugin_evidence_mac WHERE date(scan_date) = ?', array($scan_date)), 'host_id');
 		$ids_vendor = array_column(db_fetch_assoc_prepared('SELECT distinct(host_id) FROM plugin_evidence_vendor_specific WHERE date(scan_date) = ?', array($scan_date)), 'host_id');
 
-		$merged = array_unique(array_merge($ids_info, $ids_entity, $ids_ip, $ids_mac, $ids_mac));
+		$merged = array_unique(array_merge($ids_info, $ids_entity, $ids_ip, $ids_mac, $ids_vendor));
 
 		foreach ($merged as $item) {
 			evidence_show_host_data($item, $scan_date);

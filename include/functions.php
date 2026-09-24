@@ -155,7 +155,7 @@ function plugin_evidence_host_edit_bottom () {
 
 
 /**
- * plugin needs enterprise numbers, import cat take longer time
+ * plugin needs enterprise numbers, import can take longer
  * so import is started first poller run
  *
  * Imports the IANA Private Enterprise Numbers reference data (vendor
@@ -860,13 +860,15 @@ function plugin_evidence_normalize_mac ($mac) {
  * Entity MIB data, MAC addresses, IP addresses, mandatory and optional
  * vendor-specific data), grouped by scan date, for either only the most
  * recent scan, all history, or a specific date. Called from
- * evidence_show_host_data() and plugin_evidence_actual_data() to fetch
- * previously recorded evidence for display/comparison.
+ * evidence_show_host_data() to fetch previously recorded evidence for
+ * display/comparison.
  *
- * @param int    $host_id   The host.id to retrieve evidence history for.
- * @param string $scan_date The scan date to retrieve: -2 for only the
- *                          most recent scan, -1 for all history, or a
- *                          specific 'Y-m-d' date string.
+ * @param int        $host_id   The host.id to retrieve evidence history
+ *                              for.
+ * @param int|string $scan_date The scan date to retrieve: -2 for only
+ *                              the most recent scan, -1 for all
+ *                              history, or a specific 'Y-m-d' date
+ *                              string.
  *
  * @return array An associative array with 'dates' (all distinct scan
  *               dates found) and per-category keys ('snmp_info',
@@ -1087,7 +1089,7 @@ function plugin_evidence_find() {
 	}
 
 	$data = db_fetch_assoc_prepared ("SELECT host_id, scan_date FROM plugin_evidence_ip
-		WHERE mac RLIKE '" . $f . "' GROUP BY host_id");
+		WHERE ip_mask RLIKE '" . $f . "' GROUP BY host_id");
 
 	print '<br/><span class="bold">' . $datatypes['ip'] . '</span><br/>';
 	if (cacti_sizeof($data)) {
@@ -1270,11 +1272,10 @@ function plugin_evidence_time_to_run() {
  *
  * Renders a single device's evidence data on the Evidence tab: header
  * with device identity, a link to also show live/actual data, then
- * either the historical evidence (from plugin_evidence_history(),
- * grouped and rendered per data type/date via
- * plugin_evidence_array_to_table()) and/or a live SNMP scan's results
- * (via plugin_evidence_actual_data() and evidence_show_actual_data())
- * when requested, applying the current user's per-datatype and
+ * either the historical evidence (from plugin_evidence_history()) and/
+ * or a live SNMP scan's results (via plugin_evidence_actual_data())
+ * when requested, rendering both inline (grouped and formatted per
+ * data type/date), applying the current user's per-datatype and
  * expand-dates display preferences. Called from evidence_tab.php's
  * evidence_find() for each matching host.
  *
@@ -1784,9 +1785,9 @@ function evidence_show_host_info ($data, $host_id) {
  * Renders a live-scanned device's full evidence data (system info,
  * Entity MIB entries, MAC/IP addresses, mandatory and optional
  * vendor-specific data) on the Evidence tab, without the truncation
- * applied by evidence_show_host_info(). Called from
- * evidence_show_host_data() when displaying a device's 'actual'
- * (live-scanned) data alongside its history.
+ * applied by evidence_show_host_info(). Currently has no production
+ * call sites in this plugin; evidence_show_host_data() renders its
+ * 'actual' (live-scanned) data inline instead of calling this helper.
  *
  * @param array $data The evidence data as returned by
  *                    plugin_evidence_actual_data().
@@ -1921,8 +1922,10 @@ function evidence_show_actual_data ($data) {
 
 /**
  * Renders an array of associative sub-arrays as an HTML table, wrapping
- * to a new row after the configured number of columns. Currently
- * unused/dead code: not called from anywhere else in this file.
+ * to a new row after the configured number of columns. Called several
+ * times from poller_evidence.php when composing change-notification
+ * messages (rendering the actual/older SNMP info, entity, MAC, IP, and
+ * vendor-specific data sections).
  *
  * @param array $array   The array of associative sub-arrays to render;
  *                       each key/value pair becomes one 'key = value'

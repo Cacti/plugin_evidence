@@ -138,6 +138,7 @@ function plugin_evidence_remove_data() {
 	db_execute_prepared("DROP TABLE IF EXISTS `plugin_evidence_organization`");
 	db_execute_prepared("DROP TABLE IF EXISTS `plugin_evidence_entity`");
 	db_execute_prepared("DROP TABLE IF EXISTS `plugin_evidence_mac`");
+	db_execute_prepared("DROP TABLE IF EXISTS `plugin_evidence_ip`");
 	db_execute_prepared("DROP TABLE IF EXISTS `plugin_evidence_vendor_specific`");
 	db_execute_prepared("DROP TABLE IF EXISTS `plugin_evidence_snmp_info`");
 
