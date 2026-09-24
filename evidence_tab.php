@@ -60,6 +60,23 @@ switch (html_escape_request_var('action')) {
 }
 
 
+/**
+ * Renders the Evidence tab's search/filter toolbar (device, host
+ * template, scan date, and free-text search filters) and, when a search
+ * has been submitted, the data-type visibility checkboxes. Invoked from
+ * this file's dispatcher for both the default (stats) and 'find' views.
+ *
+ * @return void Outputs the filter form HTML directly.
+ *
+ * @global array $config    Cacti global configuration array; used to
+ *                          locate this plugin's JavaScript asset.
+ * @global array $entities  Reserved/declared for parity with other
+ *                          functions in this file; not used directly
+ *                          here.
+ * @global array $datatypes Reserved/declared for parity with other
+ *                          functions in this file; not used directly
+ *                          here.
+ */
 function evidence_display_form() {
 	global $config, $entities, $datatypes;
 
@@ -188,6 +205,22 @@ function evidence_display_form() {
 }
 
 
+/**
+ * Validates the submitted host/template/scan-date/search filters and
+ * displays the matching collected evidence data: for a specific host or
+ * template, for every host with data changed on a specific scan date, or
+ * matching a free-text search. Invoked from this file's dispatcher when
+ * the request's 'action' is 'find'.
+ *
+ * @return bool|void False if the search text fails length validation
+ *                   (with an error message printed); otherwise outputs
+ *                   the matching evidence data directly and returns
+ *                   nothing.
+ *
+ * @global array $entities Reserved/declared for parity with other
+ *                         functions in this file; not used directly
+ *                         here.
+ */
 function evidence_find() {
 	global $entities;
 
@@ -244,7 +277,7 @@ function evidence_find() {
 		$ids_mac    = array_column(db_fetch_assoc_prepared('SELECT distinct(host_id) FROM plugin_evidence_mac WHERE date(scan_date) = ?', array($scan_date)), 'host_id');
 		$ids_vendor = array_column(db_fetch_assoc_prepared('SELECT distinct(host_id) FROM plugin_evidence_vendor_specific WHERE date(scan_date) = ?', array($scan_date)), 'host_id');
 
-		$merged = array_unique(array_merge($ids_info, $ids_entity, $ids_ip, $ids_mac, $ids_mac));
+		$merged = array_unique(array_merge($ids_info, $ids_entity, $ids_ip, $ids_mac, $ids_vendor));
 
 		foreach ($merged as $item) {
 			evidence_show_host_data($item, $scan_date);
@@ -257,6 +290,18 @@ function evidence_find() {
 
 }
 
+/**
+ * Renders the Evidence tab's introductory help text and summary
+ * statistics (device/entity/MAC/IP/vendor-specific record counts, oldest
+ * record date) along with a vendor-distribution treemap chart. Invoked
+ * from this file's dispatcher for the default (no 'action') view.
+ *
+ * @return void Outputs the stats/help HTML (and an embedded treemap
+ *              chart) directly.
+ *
+ * @global array $config Reserved/declared for parity with other
+ *                       functions in this file; not used directly here.
+ */
 function evidence_stats() {
 	global $config;
 
@@ -321,6 +366,18 @@ function evidence_stats() {
 	}
 }
 
+/**
+ * Renders the per-data-type visibility checkboxes (one per configured
+ * evidence datatype, plus 'expand all dates'/'expand latest date'
+ * toggles) shown above search results. Called from evidence_display_form()
+ * when displaying the 'find' results view.
+ *
+ * @return void Outputs the checkbox row HTML directly.
+ *
+ * @global array $datatypes Map of evidence datatype keys to their
+ *                          display labels, used to render one checkbox
+ *                          per type.
+ */
 function evidence_show_checkboxes() {
 	global $datatypes;
 
@@ -349,6 +406,18 @@ function evidence_show_checkboxes() {
 }
 
 
+/**
+ * Renders a billboard.js treemap chart visualizing a label/value data
+ * set (e.g. device counts per vendor). Called from evidence_stats() to
+ * chart the vendor distribution of collected entity data.
+ *
+ * @param string $title A title used to derive a unique DOM/JS element id
+ *                      for the chart (not printed as visible text).
+ * @param array  $data  Chart data with 'label' and 'data' parallel
+ *                      arrays of category names and their values.
+ *
+ * @return void Outputs the chart's HTML/CSS/JavaScript directly.
+ */
 function evidence_treemap($title, $data) {
 
 	$xid = 'treemap_x'. substr(md5($title), 0, 7);
@@ -393,6 +462,15 @@ function evidence_treemap($title, $data) {
 }
 
 
+/**
+ * Toggles the current user's per-datatype display preference (whether a
+ * given evidence datatype's data is shown or hidden) based on the
+ * submitted 'what' parameter. Invoked from this file's dispatcher when
+ * the request's 'action' is 'setting', via an AJAX call from the
+ * datatype visibility checkboxes.
+ *
+ * @return void
+ */
 function evidence_save_settings() {
 	switch (get_nfilter_request_var('what')) {
 		case 'info':

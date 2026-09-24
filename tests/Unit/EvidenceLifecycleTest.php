@@ -38,7 +38,7 @@ it('drops every table it owns on remove_data', function () {
 		return $call['fn'] === 'db_execute_prepared' && stripos($call['sql'], 'DROP TABLE') !== false;
 	});
 
-	expect($drops)->toHaveCount(6);
+	expect($drops)->toHaveCount(7);
 });
 
 it('does nothing when the stored version already matches the plugin version', function () {
