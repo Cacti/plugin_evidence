@@ -227,7 +227,7 @@ function evidence_find() {
 
 	$allowed_devices = plugin_evidence_get_allowed_devices($_SESSION['sess_user_id'], true);
 
-	if (is_array($allowed_devices) && in_array(get_filter_request_var('host_id'), $allowed_devices, true)) {
+	if (is_array($allowed_devices) && in_array(get_filter_request_var('host_id'), $allowed_devices)) {
 		$host_id = get_filter_request_var('host_id');
 	}
 
@@ -237,7 +237,7 @@ function evidence_find() {
 		$scan_date = get_filter_request_var('scan_date', FILTER_VALIDATE_REGEXP, ['options' => ['regexp' => '/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/', 'default' => -1]]);
 	}
 
-	if (in_array(get_filter_request_var('template_id'), array_column($templates, 'id'), true)) {
+	if (in_array(get_filter_request_var('template_id'), array_column($templates, 'id'))) {
 		$template_id = get_filter_request_var('template_id');
 	}
 

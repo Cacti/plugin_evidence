@@ -290,7 +290,7 @@ function plugin_evidence_upgrade_database() {
 	$info = parse_ini_file($config['base_path'] . '/plugins/evidence/INFO', true);
 	$info = isset($info['info']) && is_array($info['info']) ? $info['info'] : [];
 
-	if (!isset($info['version'])) {
+	if (!isset($info['version'], $info['author'], $info['homepage'])) {
 		cacti_log('ERROR: evidence plugin INFO file is missing required fields, skipping upgrade check', false, 'EVIDENCE');
 
 		return;

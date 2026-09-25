@@ -35,7 +35,7 @@ $id = get_filter_request_var('host_id');
 
 $allowed = plugin_evidence_get_allowed_devices($_SESSION['sess_user_id'], true);
 
-if (is_array($allowed) && in_array($id, $allowed, true)) {
+if (is_array($allowed) && in_array($id, $allowed)) {
 	$host = db_fetch_row_prepared('SELECT *
 		FROM host
 		WHERE id = ?',

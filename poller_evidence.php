@@ -356,7 +356,7 @@ if (cacti_sizeof($hosts) > 0) {
 				$excluded = explode(',', read_config_option('evidence_email_notify_exclude_hosts'));
 
 				if (read_config_option('evidence_email_notify') == 'on') {
-					if (in_array($host['id'], $excluded, true) || in_array($host['host_template_id'], $excluded_templates, true)) {
+					if (in_array($host['id'], $excluded) || in_array($host['host_template_id'], $excluded_templates)) {
 						cacti_log('Plugin evidence - host changed (id:' . $host['id'] . '),  Device ID or Template ID is excluded from notification');
 						evidence_debug('Host ' . $host['id'] . ' Device ID or Template ID is excluded from notification');
 					} else {
