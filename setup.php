@@ -33,8 +33,7 @@
  *
  * @return void
  */
-function plugin_evidence_install () {
-
+function plugin_evidence_install() {
 	api_plugin_register_hook('evidence', 'device_edit_top_links', 'plugin_evidence_device_edit_top_links', 'include/functions.php');
 	api_plugin_register_hook('evidence', 'top_header_tabs', 'evidence_show_tab', 'include/functions.php');
 	api_plugin_register_hook('evidence', 'top_graph_header_tabs', 'evidence_show_tab', 'include/functions.php');
@@ -48,7 +47,6 @@ function plugin_evidence_install () {
 	plugin_evidence_setup_database();
 }
 
-
 /**
  * No-op uninstall hook; this plugin does not remove its database tables
  * on uninstall (see plugin_evidence_remove_data() for that). Invoked by
@@ -56,10 +54,9 @@ function plugin_evidence_install () {
  *
  * @return bool Always true.
  */
-function plugin_evidence_uninstall () {
+function plugin_evidence_uninstall() {
 	return true;
 }
-
 
 /**
  * Reads this plugin's version/author metadata from its INFO file.
@@ -73,9 +70,9 @@ function plugin_evidence_version() {
 	global $config;
 
 	$info = parse_ini_file($config['base_path'] . '/plugins/evidence/INFO', true);
-	return $info['info'];
-}
 
+	return isset($info['info']) && is_array($info['info']) ? $info['info'] : [];
+}
 
 /**
  * Runs any pending database schema upgrades for this plugin. Invoked by
@@ -87,7 +84,7 @@ function plugin_evidence_version() {
  * @global array $config Cacti global configuration array; used to
  *                       locate include/database.php.
  */
-function plugin_evidence_check_config () {
+function plugin_evidence_check_config() {
 	global $config;
 
 	include_once($config['base_path'] . '/plugins/evidence/include/database.php');
@@ -95,7 +92,6 @@ function plugin_evidence_check_config () {
 
 	return true;
 }
-
 
 /**
  * Creates this plugin's database tables via include/database.php's
@@ -113,7 +109,6 @@ function plugin_evidence_setup_database() {
 	include_once($config['base_path'] . '/plugins/evidence/include/database.php');
 	plugin_evidence_initialize_database();
 }
-
 
 /**
  * Indicates that this plugin stores data that a user may want to remove
@@ -134,13 +129,13 @@ function plugin_evidence_has_data() {
  * @return bool Always true.
  */
 function plugin_evidence_remove_data() {
-	db_execute_prepared("DROP TABLE IF EXISTS `plugin_evidence_specific_query`");
-	db_execute_prepared("DROP TABLE IF EXISTS `plugin_evidence_organization`");
-	db_execute_prepared("DROP TABLE IF EXISTS `plugin_evidence_entity`");
-	db_execute_prepared("DROP TABLE IF EXISTS `plugin_evidence_mac`");
-	db_execute_prepared("DROP TABLE IF EXISTS `plugin_evidence_ip`");
-	db_execute_prepared("DROP TABLE IF EXISTS `plugin_evidence_vendor_specific`");
-	db_execute_prepared("DROP TABLE IF EXISTS `plugin_evidence_snmp_info`");
+	db_execute_prepared('DROP TABLE IF EXISTS `plugin_evidence_specific_query`');
+	db_execute_prepared('DROP TABLE IF EXISTS `plugin_evidence_organization`');
+	db_execute_prepared('DROP TABLE IF EXISTS `plugin_evidence_entity`');
+	db_execute_prepared('DROP TABLE IF EXISTS `plugin_evidence_mac`');
+	db_execute_prepared('DROP TABLE IF EXISTS `plugin_evidence_ip`');
+	db_execute_prepared('DROP TABLE IF EXISTS `plugin_evidence_vendor_specific`');
+	db_execute_prepared('DROP TABLE IF EXISTS `plugin_evidence_snmp_info`');
 
 	return true;
 }

@@ -24,7 +24,7 @@
  +-------------------------------------------------------------------------+
 */
 
-$entities = array(
+$entities = [
 	'descr'        => __('Description', 'evidence'),
 	'name'         => __('Name', 'evidence'),
 	'hardware_rev' => __('Hardware revision', 'evidence'),
@@ -37,13 +37,13 @@ $entities = array(
 	'asset_id'     => __('Asset ID', 'evidence'),
 	'mfg_date'     => __('Manufacturing date', 'evidence'),
 	'uuid'         => __('UUID', 'evidence')
-);
+];
 
-$datatypes = array(
+$datatypes = [
 	'info'   => __('SNMP info', 'evidence'),
 	'entity' => __('Entity MIB', 'evidence'),
 	'mac'    => __('Mac addresses', 'evidence'),
 	'ip'     => __('IP addresses', 'evidence'),
 	'spec'   => __('Vendor specific data', 'evidence'),
 	'opt'    => __('Vendor optional data', 'evidence')
-);
+];

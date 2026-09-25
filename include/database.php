@@ -36,94 +36,93 @@
  * @return void
  */
 function plugin_evidence_initialize_database() {
+	$data              = [];
+	$data['columns'][] = ['name' => 'id', 'type' => 'int(11)', 'NULL' => false];
+	$data['columns'][] = ['name' => 'organization', 'type' => 'varchar(200)', 'NULL' => false];
+	$data['primary']   = 'id';
+	$data['type']      = 'InnoDB';
+	$data['comment']   = 'evidence organizations';
+	api_plugin_db_table_create('evidence', 'plugin_evidence_organization', $data);
 
-	$data = array();
-	$data['columns'][] = array('name' => 'id', 'type' => 'int(11)', 'NULL' => false);
-	$data['columns'][] = array('name' => 'organization', 'type' => 'varchar(200)', 'NULL' => false);
-	$data['primary'] = 'id';
-	$data['type'] = 'InnoDB';
-	$data['comment'] = 'evidence organizations';
-	api_plugin_db_table_create ('evidence', 'plugin_evidence_organization', $data);
+	$data              = [];
+	$data['columns'][] = ['name' => 'host_id', 'type' => 'int(11)', 'NULL' => false];
+	$data['columns'][] = ['name' => 'sysdescr', 'type' => 'varchar(255)', 'default' => null];
+	$data['columns'][] = ['name' => 'syscontact', 'type' => 'varchar(255)', 'default' => null];
+	$data['columns'][] = ['name' => 'sysname', 'type' => 'varchar(255)', 'default' => null];
+	$data['columns'][] = ['name' => 'syslocation', 'type' => 'varchar(255)', 'default' => null];
+	$data['columns'][] = ['name' => 'scan_date', 'type' => 'timestamp', 'NULL' => false, 'default' => '0000-00-00 00:00:00'];
+	$data['type']      = 'InnoDB';
+	$data['comment']   = 'evidence snmp info';
+	api_plugin_db_table_create('evidence', 'plugin_evidence_snmp_info', $data);
 
-	$data = array();
-	$data['columns'][] = array('name' => 'host_id', 'type' => 'int(11)', 'NULL' => false);
-	$data['columns'][] = array('name' => 'sysdescr', 'type' => 'varchar(255)', 'default' => null);
-	$data['columns'][] = array('name' => 'syscontact', 'type' => 'varchar(255)', 'default' => null);
-	$data['columns'][] = array('name' => 'sysname', 'type' => 'varchar(255)', 'default' => null);
-	$data['columns'][] = array('name' => 'syslocation', 'type' => 'varchar(255)', 'default' => null);
-	$data['columns'][] = array('name' => 'scan_date', 'type' => 'timestamp', 'NULL' => false, 'default' => '0000-00-00 00:00:00');
-	$data['type'] = 'InnoDB';
-	$data['comment'] = 'evidence snmp info';
-	api_plugin_db_table_create ('evidence', 'plugin_evidence_snmp_info', $data);
+	$data              = [];
+	$data['columns'][] = ['name' => 'id', 'type' => 'int(11)', 'NULL' => false, 'auto_increment' => true];
+	$data['columns'][] = ['name' => 'org_id', 'type' => 'int(11)', 'NULL' => false];
+	$data['columns'][] = ['name' => 'sysobjectid', 'type' => 'varchar(255)', 'default' => null];
+	$data['columns'][] = ['name' => 'description', 'type' => 'varchar(255)', 'NULL' => false];
+	$data['columns'][] = ['name' => 'oid', 'type' => 'varchar(255)', 'NULL' => false];
+	$data['columns'][] = ['name' => 'result', 'type' => 'varchar(255)', 'NULL' => false];
+	$data['columns'][] = ['name' => 'method', 'type' => 'enum("get", "walk", "info", "table")', 'default' => 'get', 'NULL' => false];
+	$data['columns'][] = ['name' => 'table_items', 'type' => 'varchar(100)', 'default' => null, 'NULL' => true];
+	$data['columns'][] = ['name' => 'mandatory', 'type' => 'enum("yes","no")', 'default' => 'yes', 'NULL' => false];
+	$data['primary']   = 'id';
+	$data['type']      = 'InnoDB';
+	$data['comment']   = 'evidence specific';
+	api_plugin_db_table_create('evidence', 'plugin_evidence_specific_query', $data);
 
-	$data = array();
-	$data['columns'][] = array('name' => 'id', 'type' => 'int(11)', 'NULL' => false,'auto_increment' => true);
-	$data['columns'][] = array('name' => 'org_id', 'type' => 'int(11)', 'NULL' => false);
-	$data['columns'][] = array('name' => 'sysobjectid', 'type' => 'varchar(255)', 'default' => null);
-	$data['columns'][] = array('name' => 'description', 'type' => 'varchar(255)', 'NULL' => false);
-	$data['columns'][] = array('name' => 'oid', 'type' => 'varchar(255)', 'NULL' => false);
-	$data['columns'][] = array('name' => 'result', 'type' => 'varchar(255)', 'NULL' => false);
-	$data['columns'][] = array('name' => 'method', 'type' => 'enum("get", "walk", "info", "table")', 'default' => 'get', 'NULL' => false);
-	$data['columns'][] = array('name' => 'table_items', 'type' => 'varchar(100)', 'default' => null, 'NULL' => true);
-	$data['columns'][] = array('name' => 'mandatory', 'type' => 'enum("yes","no")', 'default' => 'yes', 'NULL' => false);
-	$data['primary'] = 'id';
-	$data['type'] = 'InnoDB';
-	$data['comment'] = 'evidence specific';
-	api_plugin_db_table_create ('evidence', 'plugin_evidence_specific_query', $data);
+	$data              = [];
+	$data['columns'][] = ['name' => 'host_id', 'type' => 'int(11)', 'NULL' => false];
+	$data['columns'][] = ['name' => 'organization_id', 'type' => 'int(11)', 'NULL' => false, 'default' => null];
+	$data['columns'][] = ['name' => 'organization_name', 'type' => 'varchar(255)', 'NULL' => false, 'default' => null];
+	$data['columns'][] = ['name' => 'index', 'type' => 'int(11)', 'NULL' => false];
+	$data['columns'][] = ['name' => 'descr', 'type' => 'varchar(255)', 'NULL' => false, 'default' => null];
+	$data['columns'][] = ['name' => 'name', 'type' => 'varchar(255)', 'NULL' => false, 'default' => null];
+	$data['columns'][] = ['name' => 'hardware_rev', 'type' => 'varchar(255)', 'NULL' => false, 'default' => null];
+	$data['columns'][] = ['name' => 'firmware_rev', 'type' => 'varchar(255)', 'NULL' => false, 'default' => null];
+	$data['columns'][] = ['name' => 'software_rev', 'type' => 'varchar(255)', 'NULL' => false, 'default' => null];
+	$data['columns'][] = ['name' => 'serial_num', 'type' => 'varchar(255)', 'NULL' => false, 'default' => null];
+	$data['columns'][] = ['name' => 'mfg_name', 'type' => 'varchar(255)', 'NULL' => false, 'default' => null];
+	$data['columns'][] = ['name' => 'model_name', 'type' => 'varchar(255)', 'NULL' => false, 'default' => null];
+	$data['columns'][] = ['name' => 'alias', 'type' => 'varchar(255)', 'NULL' => false, 'default' => null];
+	$data['columns'][] = ['name' => 'asset_id', 'type' => 'varchar(255)', 'NULL' => false, 'default' => null];
+	$data['columns'][] = ['name' => 'mfg_date', 'type' => 'varchar(255)', 'NULL' => false, 'default' => null];
+	$data['columns'][] = ['name' => 'uuid', 'type' => 'varchar(255)', 'NULL' => false, 'default' => null];
+	$data['columns'][] = ['name' => 'scan_date', 'type' => 'timestamp', 'NULL' => false, 'default' => '0000-00-00 00:00:00'];
+	$data['type']      = 'InnoDB';
+	$data['comment']   = 'evidence entity mib data';
+	api_plugin_db_table_create('evidence', 'plugin_evidence_entity', $data);
 
-	$data = array();
-	$data['columns'][] = array('name' => 'host_id', 'type' => 'int(11)', 'NULL' => false);
-	$data['columns'][] = array('name' => 'organization_id', 'type' => 'int(11)', 'NULL' => false, 'default' => null);
-	$data['columns'][] = array('name' => 'organization_name', 'type' => 'varchar(255)', 'NULL' => false, 'default' => null);
-	$data['columns'][] = array('name' => 'index', 'type' => 'int(11)', 'NULL' => false);
-	$data['columns'][] = array('name' => 'descr', 'type' => 'varchar(255)', 'NULL' => false, 'default' => null);
-	$data['columns'][] = array('name' => 'name', 'type' => 'varchar(255)', 'NULL' => false, 'default' => null);
-	$data['columns'][] = array('name' => 'hardware_rev', 'type' => 'varchar(255)', 'NULL' => false, 'default' => null);
-	$data['columns'][] = array('name' => 'firmware_rev', 'type' => 'varchar(255)', 'NULL' => false, 'default' => null);
-	$data['columns'][] = array('name' => 'software_rev', 'type' => 'varchar(255)', 'NULL' => false, 'default' => null);
-	$data['columns'][] = array('name' => 'serial_num', 'type' => 'varchar(255)', 'NULL' => false, 'default' => null);
-	$data['columns'][] = array('name' => 'mfg_name', 'type' => 'varchar(255)', 'NULL' => false, 'default' => null);
-	$data['columns'][] = array('name' => 'model_name', 'type' => 'varchar(255)', 'NULL' => false, 'default' => null);
-	$data['columns'][] = array('name' => 'alias', 'type' => 'varchar(255)', 'NULL' => false, 'default' => null);
-	$data['columns'][] = array('name' => 'asset_id', 'type' => 'varchar(255)', 'NULL' => false, 'default' => null);
-	$data['columns'][] = array('name' => 'mfg_date', 'type' => 'varchar(255)', 'NULL' => false, 'default' => null);
-	$data['columns'][] = array('name' => 'uuid', 'type' => 'varchar(255)', 'NULL' => false, 'default' => null);
-	$data['columns'][] = array('name' => 'scan_date', 'type' => 'timestamp', 'NULL' => false, 'default' => '0000-00-00 00:00:00');
-	$data['type'] = 'InnoDB';
-	$data['comment'] = 'evidence entity mib data';
-	api_plugin_db_table_create ('evidence', 'plugin_evidence_entity', $data);
+	$data              = [];
+	$data['columns'][] = ['name' => 'host_id', 'type' => 'int(11)', 'NULL' => false];
+	$data['columns'][] = ['name' => 'oid', 'type' => 'varchar(255)', 'default' => null];
+	$data['columns'][] = ['name' => 'description', 'type' => 'varchar(255)', 'default' => null];
+	$data['columns'][] = ['name' => 'value', 'type' => 'text', 'default' => null];
+	$data['columns'][] = ['name' => 'mandatory', 'type' => 'enum("yes","no")', 'default' => 'yes', 'NULL' => false];
+	$data['columns'][] = ['name' => 'scan_date', 'type' => 'timestamp', 'NULL' => false, 'default' => '0000-00-00 00:00:00'];
+	$data['type']      = 'InnoDB';
+	$data['comment']   = 'evidence vendor specific data';
+	api_plugin_db_table_create('evidence', 'plugin_evidence_vendor_specific', $data);
 
-	$data = array();
-	$data['columns'][] = array('name' => 'host_id', 'type' => 'int(11)', 'NULL' => false);
-	$data['columns'][] = array('name' => 'oid', 'type' => 'varchar(255)', 'default' => null);
-	$data['columns'][] = array('name' => 'description', 'type' => 'varchar(255)', 'default' => null);
-	$data['columns'][] = array('name' => 'value', 'type' => 'text', 'default' => null);
-	$data['columns'][] = array('name' => 'mandatory', 'type' => 'enum("yes","no")', 'default' => 'yes', 'NULL' => false);
-	$data['columns'][] = array('name' => 'scan_date', 'type' => 'timestamp', 'NULL' => false, 'default' => '0000-00-00 00:00:00');
-	$data['type'] = 'InnoDB';
-	$data['comment'] = 'evidence vendor specific data';
-	api_plugin_db_table_create ('evidence', 'plugin_evidence_vendor_specific', $data);
+	$data              = [];
+	$data['columns'][] = ['name' => 'host_id', 'type' => 'int(11)', 'NULL' => false];
+	$data['columns'][] = ['name' => 'mac', 'type' => 'varchar(17)', 'default' => null];
+	$data['columns'][] = ['name' => 'scan_date', 'type' => 'timestamp', 'NULL' => false, 'default' => '0000-00-00 00:00:00'];
+	$data['type']      = 'InnoDB';
+	$data['comment']   = 'evidence entity mac address';
+	api_plugin_db_table_create('evidence', 'plugin_evidence_mac', $data);
 
-	$data = array();
-	$data['columns'][] = array('name' => 'host_id', 'type' => 'int(11)', 'NULL' => false);
-	$data['columns'][] = array('name' => 'mac', 'type' => 'varchar(17)', 'default' => null);
-	$data['columns'][] = array('name' => 'scan_date', 'type' => 'timestamp', 'NULL' => false, 'default' => '0000-00-00 00:00:00');
-	$data['type'] = 'InnoDB';
-	$data['comment'] = 'evidence entity mac address';
-	api_plugin_db_table_create ('evidence', 'plugin_evidence_mac', $data);
-
-	$data = array();
-	$data['columns'][] = array('name' => 'host_id', 'type' => 'int(11)', 'NULL' => false);
-	$data['columns'][] = array('name' => 'ip_mask', 'type' => 'varchar(79)', 'default' => null);
-	$data['columns'][] = array('name' => 'scan_date', 'type' => 'timestamp', 'NULL' => false, 'default' => '0000-00-00 00:00:00');
-	$data['type'] = 'InnoDB';
-	$data['comment'] = 'evidence entity ip address';
-	api_plugin_db_table_create ('evidence', 'plugin_evidence_ip', $data);
+	$data              = [];
+	$data['columns'][] = ['name' => 'host_id', 'type' => 'int(11)', 'NULL' => false];
+	$data['columns'][] = ['name' => 'ip_mask', 'type' => 'varchar(79)', 'default' => null];
+	$data['columns'][] = ['name' => 'scan_date', 'type' => 'timestamp', 'NULL' => false, 'default' => '0000-00-00 00:00:00'];
+	$data['type']      = 'InnoDB';
+	$data['comment']   = 'evidence entity ip address';
+	api_plugin_db_table_create('evidence', 'plugin_evidence_ip', $data);
 
 	// vendor specific
 
 	// Aruba/HPE
-	db_execute_prepared ('INSERT INTO plugin_evidence_specific_query
+	db_execute_prepared('INSERT INTO plugin_evidence_specific_query
 		(org_id, description, oid, result, method)
 		VALUES (?,?,?,?,?)',
 		[14823, 'Serial numbers', '.1.3.6.1.4.1.14823.2.3.3.1.2.1.1.4', '.*', 'walk']);
@@ -244,7 +243,7 @@ function plugin_evidence_initialize_database() {
 	db_execute_prepared('INSERT INTO plugin_evidence_specific_query
 		(org_id, description, oid, result, method)
 		VALUES (?,?,?,?,?)',
-		[14988, 'hw', '.1.3.6.1.2.1.47.1.1.1.1.2.65536', '([a-zA-Z0-9_-]){1,20}$','get']);
+		[14988, 'hw', '.1.3.6.1.2.1.47.1.1.1.1.2.65536', '([a-zA-Z0-9_-]){1,20}$', 'get']);
 
 	// QNAP
 	db_execute_prepared('INSERT INTO plugin_evidence_specific_query
@@ -274,7 +273,6 @@ function plugin_evidence_initialize_database() {
 		[8072, 'hw model', '.1.3.6.1.4.1.6574.1.5.1.0', '.*', 'get']);
 }
 
-
 /**
  * Applies any pending database schema migrations for this plugin, based
  * on comparing the installed version recorded in plugin_config against
@@ -290,36 +288,40 @@ function plugin_evidence_upgrade_database() {
 	global $config;
 
 	$info = parse_ini_file($config['base_path'] . '/plugins/evidence/INFO', true);
-	$info = $info['info'];
+	$info = isset($info['info']) && is_array($info['info']) ? $info['info'] : [];
+
+	if (!isset($info['version'])) {
+		cacti_log('ERROR: evidence plugin INFO file is missing required fields, skipping upgrade check', false, 'EVIDENCE');
+
+		return;
+	}
 
 	$current = $info['version'];
 	$oldv    = db_fetch_cell('SELECT version FROM plugin_config WHERE directory = "evidence"');
 
 	if (!cacti_version_compare($oldv, $current, '=')) {
 		if (cacti_version_compare($oldv, '0.3', '<')) {
-
-			$data = array();
-			$data['columns'][] = array('name' => 'host_id', 'type' => 'int(11)', 'NULL' => false);
-			$data['columns'][] = array('name' => 'sysdescr', 'type' => 'varchar(255)', 'default' => null);
-			$data['columns'][] = array('name' => 'syscontact', 'type' => 'varchar(255)', 'default' => null);
-			$data['columns'][] = array('name' => 'sysname', 'type' => 'varchar(255)', 'default' => null);
-			$data['columns'][] = array('name' => 'syslocation', 'type' => 'varchar(255)', 'default' => null);
-			$data['columns'][] = array('name' => 'scan_date', 'type' => 'timestamp', 'NULL' => false, 'default' => '0000-00-00 00:00:00');
-			$data['type'] = 'InnoDB';
-			$data['comment'] = 'evidence snmp info';
-			api_plugin_db_table_create ('evidence', 'plugin_evidence_snmp_info', $data);
+			$data              = [];
+			$data['columns'][] = ['name' => 'host_id', 'type' => 'int(11)', 'NULL' => false];
+			$data['columns'][] = ['name' => 'sysdescr', 'type' => 'varchar(255)', 'default' => null];
+			$data['columns'][] = ['name' => 'syscontact', 'type' => 'varchar(255)', 'default' => null];
+			$data['columns'][] = ['name' => 'sysname', 'type' => 'varchar(255)', 'default' => null];
+			$data['columns'][] = ['name' => 'syslocation', 'type' => 'varchar(255)', 'default' => null];
+			$data['columns'][] = ['name' => 'scan_date', 'type' => 'timestamp', 'NULL' => false, 'default' => '0000-00-00 00:00:00'];
+			$data['type']      = 'InnoDB';
+			$data['comment']   = 'evidence snmp info';
+			api_plugin_db_table_create('evidence', 'plugin_evidence_snmp_info', $data);
 		}
 
 		// Set the new version
 		db_execute_prepared("UPDATE plugin_config
 			SET version = ?, author = ?, webpage = ?
 			WHERE directory = 'evidence'",
-			array(
+			[
 				$info['version'],
 				$info['author'],
 				$info['homepage']
-			)
+			]
 		);
 	}
 }
-

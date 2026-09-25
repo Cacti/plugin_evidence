@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cacti \n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-09-24 11:33-0400\n"
+"POT-Creation-Date: 2026-09-25 11:13-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Cacti Developers <developers@cacti.net>>\n"
 "Language-Team: Cacti Developers <developers@cacti.net>\n"
@@ -17,23 +17,23 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: evidence.php:66
+#: evidence.php:67
 msgid "Disabled/down device. No actual data"
 msgstr ""
 
-#: evidence.php:73
+#: evidence.php:74
 msgid "Show older records"
 msgstr ""
 
-#: evidence.php:75 include/functions.php:1626
+#: evidence.php:76 include/functions.php:1641
 msgid "History data store disabled"
 msgstr ""
 
-#: evidence.php:78
+#: evidence.php:79
 msgid "Permission issue"
 msgstr ""
 
-#: evidence_tab.php:102 include/functions.php:100 include/functions.php:114
+#: evidence_tab.php:102 include/functions.php:98 include/functions.php:111
 msgid "Evidence"
 msgstr ""
 
@@ -85,81 +85,81 @@ msgstr ""
 msgid "You can search serial number, firmware version, ip, mac address,..."
 msgstr ""
 
-#: evidence_tab.php:249
+#: evidence_tab.php:251
 msgid "Search string must be 3-20 characters"
 msgstr ""
 
-#: evidence_tab.php:288
+#: evidence_tab.php:291
 msgid "Select any device, template, select any scan date or try search"
 msgstr ""
 
-#: evidence_tab.php:312
+#: evidence_tab.php:314
 msgid "No data. Allow periodic scan and store history in settings"
 msgstr ""
 
-#: evidence_tab.php:316
+#: evidence_tab.php:318
 msgid "Device or template - You can display information about specific host, all devices with the same template."
 msgstr ""
 
-#: evidence_tab.php:318
+#: evidence_tab.php:320
 msgid "Scan date (Only last changes or All history) - You can choose whether to retrieve only the most recent change or the entire history."
 msgstr ""
 
-#: evidence_tab.php:319
+#: evidence_tab.php:321
 msgid "If you use only `Scan Date`, the changes for all devices found during this scan will be displayed"
 msgstr ""
 
-#: evidence_tab.php:321
+#: evidence_tab.php:323
 msgid "You can search any string in all data."
 msgstr ""
 
-#: evidence_tab.php:335
-msgid "Number of records"
-msgstr ""
-
-#: evidence_tab.php:336
-#, php-format
-msgid "Devices: %d records"
-msgstr ""
-
 #: evidence_tab.php:337
-#, php-format
-msgid "Entity MIB: %d records, %d vendors"
+msgid "Number of records"
 msgstr ""
 
 #: evidence_tab.php:338
 #, php-format
-msgid "Unique MAC addresses: %d"
+msgid "Devices: %d records"
 msgstr ""
 
 #: evidence_tab.php:339
 #, php-format
-msgid "Unique IP addresses: %d"
+msgid "Entity MIB: %d records, %d vendors"
 msgstr ""
 
 #: evidence_tab.php:340
 #, php-format
-msgid "Vendor specific data: %d"
+msgid "Unique MAC addresses: %d"
 msgstr ""
 
 #: evidence_tab.php:341
 #, php-format
+msgid "Unique IP addresses: %d"
+msgstr ""
+
+#: evidence_tab.php:342
+#, php-format
+msgid "Vendor specific data: %d"
+msgstr ""
+
+#: evidence_tab.php:343
+#, php-format
 msgid "Oldest record: %d"
 msgstr ""
 
-#: evidence_tab.php:364
+#: evidence_tab.php:365
 msgid "Vendors"
 msgstr ""
 
-#: evidence_tab.php:387
+#: evidence_tab.php:388
 msgid "Show or hide"
 msgstr ""
 
-#: evidence_tab.php:400
+#: evidence_tab.php:401
 msgid "Expand all dates"
 msgstr ""
 
-#: evidence_tab.php:402
+#: evidence_tab.php:403
 msgid "Expand latest date"
 msgstr ""
 
@@ -211,11 +211,11 @@ msgstr ""
 msgid "UUID"
 msgstr ""
 
-#: include/arrays.php:43 include/functions.php:1432
+#: include/arrays.php:43 include/functions.php:1452
 msgid "SNMP info"
 msgstr ""
 
-#: include/arrays.php:44 include/functions.php:1502
+#: include/arrays.php:44 include/functions.php:1519
 msgid "Entity MIB"
 msgstr ""
 
@@ -223,7 +223,7 @@ msgstr ""
 msgid "Mac addresses"
 msgstr ""
 
-#: include/arrays.php:46 include/functions.php:1447 include/functions.php:1552
+#: include/arrays.php:46 include/functions.php:1467 include/functions.php:1569
 msgid "IP addresses"
 msgstr ""
 
@@ -235,65 +235,65 @@ msgstr ""
 msgid "Vendor optional data"
 msgstr ""
 
-#: include/functions.php:147
+#: include/functions.php:145
 msgid "Data"
 msgstr ""
 
-#: include/functions.php:1013
+#: include/functions.php:1025
 msgid "Store history is not allowed. Nothing to do."
 msgstr ""
 
-#: include/functions.php:1039 include/functions.php:1070
-#: include/functions.php:1088 include/functions.php:1104
-#: include/functions.php:1125
+#: include/functions.php:1051 include/functions.php:1081
+#: include/functions.php:1098 include/functions.php:1115
+#: include/functions.php:1136
 msgid "Not found"
 msgstr ""
 
-#: include/functions.php:1322
+#: include/functions.php:1334
 msgid "Also show actual data"
 msgstr ""
 
-#: include/functions.php:1333
+#: include/functions.php:1344
 msgid "ID ORG"
 msgstr ""
 
-#: include/functions.php:1392
+#: include/functions.php:1413
 msgid "No older data yet"
 msgstr ""
 
-#: include/functions.php:1437
+#: include/functions.php:1457
 msgid "Entity"
 msgstr ""
 
-#: include/functions.php:1442 include/functions.php:1528
+#: include/functions.php:1462 include/functions.php:1544
 msgid "MAC addresses"
 msgstr ""
 
-#: include/functions.php:1452
+#: include/functions.php:1472
 msgid "Vendor specific"
 msgstr ""
 
-#: include/functions.php:1463
+#: include/functions.php:1483
 msgid "Actual data"
 msgstr ""
 
-#: include/functions.php:1466
+#: include/functions.php:1486
 msgid "Changed"
 msgstr ""
 
-#: include/functions.php:1477
+#: include/functions.php:1497
 msgid "SNMP information"
 msgstr ""
 
-#: include/functions.php:1574
+#: include/functions.php:1592
 msgid "Vendor specific information"
 msgstr ""
 
-#: include/functions.php:1601
+#: include/functions.php:1617
 msgid "Vendor optional information"
 msgstr ""
 
-#: include/functions.php:1708
+#: include/functions.php:1722
 msgid "Show only first 3 items, for the full listing click here"
 msgstr ""
 

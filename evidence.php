@@ -35,32 +35,33 @@ $id = get_filter_request_var('host_id');
 
 $allowed = plugin_evidence_get_allowed_devices($_SESSION['sess_user_id'], true);
 
-if (is_array($allowed) && in_array($id, $allowed)) {
-
-	$host = db_fetch_row_prepared ('SELECT *
+if (is_array($allowed) && in_array($id, $allowed, true)) {
+	$host = db_fetch_row_prepared('SELECT *
 		FROM host
 		WHERE id = ?',
-		array($id));
+		[$id]);
+
+	$host = is_array($host) ? $host : [];
 
 	$count_entity = db_fetch_assoc_prepared('SELECT count(*)
 		FROM plugin_evidence_entity
 		WHERE host_id = ?',
-		array($id));
+		[$id]);
 
 	$count_mac = db_fetch_assoc_prepared('SELECT count(*)
 		FROM plugin_evidence_mac
 		WHERE host_id = ?',
-		array($id));
+		[$id]);
 
 	$count_ip = db_fetch_assoc_prepared('SELECT count(*)
 		FROM plugin_evidence_ip
 		WHERE host_id = ?',
-		array($id));
+		[$id]);
 
 	$count_vendor = db_fetch_assoc_prepared('SELECT count(*)
 		FROM plugin_evidence_vendor_specific
 		WHERE host_id = ?',
-		array($id));
+		[$id]);
 
 	if ($host['disabled'] == 'on' || ($host['status'] != 2 && $host['status'] != 3)) {
 		print __('Disabled/down device. No actual data', 'evidence') . '<br/>';
