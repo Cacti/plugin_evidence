@@ -427,7 +427,7 @@ function evidence_treemap($title, $data) {
 	print '</style>';
 
 	print '<div class="chart_wrapper center" id="' . $xid . '"></div>';
-	print '<script type="text/javascript">';
+	print '<script type="text/javascript" ' . plugin_evidence_csp_nonce() . '>';
 	print $xid . ' = bb.generate({';
 	print ' bindto: "#' . $xid . '",';
 
