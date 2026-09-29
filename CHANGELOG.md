@@ -1,6 +1,7 @@
 # Changelog
 
 --- develop ---
+* dev: Measure CI coverage with xdebug instead of pcov so the plugin's own sources are instrumented (pcov auto-scopes to the Composer root and skipped cacti/plugins/, leaving the patch-coverage gate with nothing to measure)
 * dev: Enforce patch coverage of changed lines in CI and remove the inert COMPOSER_ROOT_VERSION env from the Pest step
 * security: Add a version-safe CSP nonce (`plugin_evidence_csp_nonce()`) to every inline `<script>` tag so pages stay compatible with Cacti's Content-Security-Policy nonce enforcement, while falling back cleanly on older Cacti releases that lack the `CactiSecureHeaders` class
 * issue: PHPStan level 8 typing pass - fixed a wrong get_allowed_ajax_hosts() argument (broke the AJAX host filter dropdown), a cross-iteration variable-reuse bug in the vendor-specific data-query 'table' method, an undefined $data_descr fallback in the Entity MIB scan, and several unguarded db_fetch_row_prepared()/parse_ini_file() result reads
