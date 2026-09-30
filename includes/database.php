@@ -39,7 +39,7 @@ function plugin_evidence_initialize_database() {
 	$data              = [];
 	$data['columns'][] = ['name' => 'id', 'type' => 'int(11)', 'NULL' => false];
 	$data['columns'][] = ['name' => 'organization', 'type' => 'varchar(200)', 'NULL' => false];
-	$data['primary']   = 'id';
+	$data['primary']   = ['id'];
 	$data['type']      = 'InnoDB';
 	$data['comment']   = 'evidence organizations';
 	api_plugin_db_table_create('evidence', 'plugin_evidence_organization', $data);
@@ -65,7 +65,7 @@ function plugin_evidence_initialize_database() {
 	$data['columns'][] = ['name' => 'method', 'type' => 'enum("get", "walk", "info", "table")', 'default' => 'get', 'NULL' => false];
 	$data['columns'][] = ['name' => 'table_items', 'type' => 'varchar(100)', 'default' => null, 'NULL' => true];
 	$data['columns'][] = ['name' => 'mandatory', 'type' => 'enum("yes","no")', 'default' => 'yes', 'NULL' => false];
-	$data['primary']   = 'id';
+	$data['primary']   = ['id'];
 	$data['type']      = 'InnoDB';
 	$data['comment']   = 'evidence specific';
 	api_plugin_db_table_create('evidence', 'plugin_evidence_specific_query', $data);

@@ -11,7 +11,7 @@
  * Unit coverage for the plugin lifecycle contract functions in setup.php:
  * plugin_evidence_uninstall(), plugin_evidence_has_data(),
  * plugin_evidence_remove_data(), and plugin_evidence_check_config()
- * (which drives include/database.php's plugin_evidence_upgrade_database()).
+ * (which drives includes/database.php's plugin_evidence_upgrade_database()).
  */
 
 beforeAll(function () {
