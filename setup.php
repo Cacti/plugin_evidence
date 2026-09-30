@@ -50,13 +50,13 @@ function plugin_evidence_csp_nonce(): string {
  * @return void
  */
 function plugin_evidence_install() {
-	api_plugin_register_hook('evidence', 'device_edit_top_links', 'plugin_evidence_device_edit_top_links', 'includes/functions.php');
-	api_plugin_register_hook('evidence', 'top_header_tabs', 'evidence_show_tab', 'includes/functions.php');
-	api_plugin_register_hook('evidence', 'top_graph_header_tabs', 'evidence_show_tab', 'includes/functions.php');
-	api_plugin_register_hook('evidence', 'device_remove', 'plugin_evidence_device_remove', 'includes/functions.php');
-	api_plugin_register_hook('evidence', 'config_settings', 'plugin_evidence_config_settings', 'includes/settings.php');
-	api_plugin_register_hook('evidence', 'poller_bottom', 'plugin_evidence_poller_bottom', 'includes/functions.php');
-	api_plugin_register_hook('evidence', 'host_edit_bottom', 'plugin_evidence_host_edit_bottom', 'includes/functions.php');
+	api_plugin_register_hook('evidence', 'device_edit_top_links', 'plugin_evidence_device_edit_top_links', 'include/functions.php');
+	api_plugin_register_hook('evidence', 'top_header_tabs', 'evidence_show_tab', 'include/functions.php');
+	api_plugin_register_hook('evidence', 'top_graph_header_tabs', 'evidence_show_tab', 'include/functions.php');
+	api_plugin_register_hook('evidence', 'device_remove', 'plugin_evidence_device_remove', 'include/functions.php');
+	api_plugin_register_hook('evidence', 'config_settings', 'plugin_evidence_config_settings', 'include/settings.php');
+	api_plugin_register_hook('evidence', 'poller_bottom', 'plugin_evidence_poller_bottom', 'include/functions.php');
+	api_plugin_register_hook('evidence', 'host_edit_bottom', 'plugin_evidence_host_edit_bottom', 'include/functions.php');
 
 	api_plugin_register_realm('evidence', 'evidence.php,evidence_tab.php,', 'Plugin evidence - view', 1);
 
@@ -98,31 +98,31 @@ function plugin_evidence_version() {
  * @return bool Always true.
  *
  * @global array $config Cacti global configuration array; used to
- *                       locate includes/database.php.
+ *                       locate include/database.php.
  */
 function plugin_evidence_check_config() {
 	global $config;
 
-	require_once($config['base_path'] . '/plugins/evidence/includes/database.php');
+	require_once($config['base_path'] . '/plugins/evidence/include/database.php');
 	plugin_evidence_upgrade_database();
 
 	return true;
 }
 
 /**
- * Creates this plugin's database tables via includes/database.php's
+ * Creates this plugin's database tables via include/database.php's
  * plugin_evidence_initialize_database(). Called from
  * plugin_evidence_install() during plugin installation.
  *
  * @return void
  *
  * @global array $config Cacti global configuration array; used to
- *                       locate includes/database.php.
+ *                       locate include/database.php.
  */
 function plugin_evidence_setup_database() {
 	global $config;
 
-	require_once($config['base_path'] . '/plugins/evidence/includes/database.php');
+	require_once($config['base_path'] . '/plugins/evidence/include/database.php');
 	plugin_evidence_initialize_database();
 }
 

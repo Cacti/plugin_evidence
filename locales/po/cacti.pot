@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cacti \n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-09-29 23:22-0400\n"
+"POT-Creation-Date: 2026-09-28 16:05-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Cacti Developers <developers@cacti.net>>\n"
 "Language-Team: Cacti Developers <developers@cacti.net>\n"
@@ -25,7 +25,7 @@ msgstr ""
 msgid "Show older records"
 msgstr ""
 
-#: evidence.php includes/functions.php
+#: evidence.php include/functions.php
 msgid "History data store disabled"
 msgstr ""
 
@@ -33,7 +33,7 @@ msgstr ""
 msgid "Permission issue"
 msgstr ""
 
-#: evidence_tab.php includes/functions.php
+#: evidence_tab.php include/functions.php
 msgid "Evidence"
 msgstr ""
 
@@ -163,221 +163,221 @@ msgstr ""
 msgid "Expand latest date"
 msgstr ""
 
-#: includes/arrays.php
+#: include/arrays.php
 msgid "Description"
 msgstr ""
 
-#: includes/arrays.php
+#: include/arrays.php
 msgid "Name"
 msgstr ""
 
-#: includes/arrays.php
+#: include/arrays.php
 msgid "Hardware revision"
 msgstr ""
 
-#: includes/arrays.php
+#: include/arrays.php
 msgid "Firmware revision"
 msgstr ""
 
-#: includes/arrays.php
+#: include/arrays.php
 msgid "Software revision"
 msgstr ""
 
-#: includes/arrays.php
+#: include/arrays.php
 msgid "Serial number"
 msgstr ""
 
-#: includes/arrays.php
+#: include/arrays.php
 msgid "Manufacturer name"
 msgstr ""
 
-#: includes/arrays.php
+#: include/arrays.php
 msgid "Model name"
 msgstr ""
 
-#: includes/arrays.php
+#: include/arrays.php
 msgid "Alias"
 msgstr ""
 
-#: includes/arrays.php
+#: include/arrays.php
 msgid "Asset ID"
 msgstr ""
 
-#: includes/arrays.php
+#: include/arrays.php
 msgid "Manufacturing date"
 msgstr ""
 
-#: includes/arrays.php
+#: include/arrays.php
 msgid "UUID"
 msgstr ""
 
-#: includes/arrays.php includes/functions.php
+#: include/arrays.php include/functions.php
 msgid "SNMP info"
 msgstr ""
 
-#: includes/arrays.php includes/functions.php
+#: include/arrays.php include/functions.php
 msgid "Entity MIB"
 msgstr ""
 
-#: includes/arrays.php
+#: include/arrays.php
 msgid "Mac addresses"
 msgstr ""
 
-#: includes/arrays.php includes/functions.php
+#: include/arrays.php include/functions.php
 msgid "IP addresses"
 msgstr ""
 
-#: includes/arrays.php
+#: include/arrays.php
 msgid "Vendor specific data"
 msgstr ""
 
-#: includes/arrays.php
+#: include/arrays.php
 msgid "Vendor optional data"
 msgstr ""
 
-#: includes/functions.php
+#: include/functions.php
 msgid "Data"
 msgstr ""
 
-#: includes/functions.php
+#: include/functions.php
 msgid "Store history is not allowed. Nothing to do."
 msgstr ""
 
-#: includes/functions.php
+#: include/functions.php
 msgid "Not found"
 msgstr ""
 
-#: includes/functions.php
+#: include/functions.php
 msgid "Also show actual data"
 msgstr ""
 
-#: includes/functions.php
+#: include/functions.php
 msgid "ID ORG"
 msgstr ""
 
-#: includes/functions.php
+#: include/functions.php
 msgid "No older data yet"
 msgstr ""
 
-#: includes/functions.php
+#: include/functions.php
 msgid "Entity"
 msgstr ""
 
-#: includes/functions.php
+#: include/functions.php
 msgid "MAC addresses"
 msgstr ""
 
-#: includes/functions.php
+#: include/functions.php
 msgid "Vendor specific"
 msgstr ""
 
-#: includes/functions.php
+#: include/functions.php
 msgid "Actual data"
 msgstr ""
 
-#: includes/functions.php
+#: include/functions.php
 msgid "Changed"
 msgstr ""
 
-#: includes/functions.php
+#: include/functions.php
 msgid "SNMP information"
 msgstr ""
 
-#: includes/functions.php
+#: include/functions.php
 msgid "Vendor specific information"
 msgstr ""
 
-#: includes/functions.php
+#: include/functions.php
 msgid "Vendor optional information"
 msgstr ""
 
-#: includes/functions.php
+#: include/functions.php
 msgid "Show only first 3 items, for the full listing click here"
 msgstr ""
 
-#: includes/settings.php
+#: include/settings.php
 msgid "How often gather data"
 msgstr ""
 
-#: includes/settings.php
+#: include/settings.php
 msgid "If enabled, Evidence will gather data periodically. If disabled, you can only view data for specific host"
 msgstr ""
 
-#: includes/settings.php
+#: include/settings.php
 msgid "Disabled"
 msgstr ""
 
-#: includes/settings.php
+#: include/settings.php
 #, php-format
 msgid "Every %d hours"
 msgstr ""
 
-#: includes/settings.php
+#: include/settings.php
 msgid "Every day"
 msgstr ""
 
-#: includes/settings.php
+#: include/settings.php
 msgid "Every week"
 msgstr ""
 
-#: includes/settings.php
+#: include/settings.php
 msgid "When evidence will be started"
 msgstr ""
 
-#: includes/settings.php
+#: include/settings.php
 msgid "The Base Time for gather data to occur.  For example, if you use '12:00am' and you choose once per day, the action would begin at approximately midnight every day."
 msgstr ""
 
-#: includes/settings.php
+#: include/settings.php
 msgid "How many changes store in database"
 msgstr ""
 
-#: includes/settings.php
+#: include/settings.php
 msgid "If data gathering is enabled,  you can specify how many history (changed) records keep for each device"
 msgstr ""
 
-#: includes/settings.php
+#: include/settings.php
 msgid "Without history"
 msgstr ""
 
-#: includes/settings.php
+#: include/settings.php
 #, php-format
 msgid "%d record"
 msgstr ""
 
-#: includes/settings.php
+#: include/settings.php
 #, php-format
 msgid "%d records"
 msgstr ""
 
-#: includes/settings.php
+#: include/settings.php
 msgid "Display information on device edit page"
 msgstr ""
 
-#: includes/settings.php
+#: include/settings.php
 msgid "If enabled, flowview will display evidence data on device edit page"
 msgstr ""
 
-#: includes/settings.php
+#: include/settings.php
 msgid "Send email on evidence information change"
 msgstr ""
 
-#: includes/settings.php
+#: include/settings.php
 msgid "If evidence find change, send email"
 msgstr ""
 
-#: includes/settings.php
+#: include/settings.php
 msgid "Excluded notification Host IDs"
 msgstr ""
 
-#: includes/settings.php
+#: include/settings.php
 msgid "Some devices report hw changes too often. You can exclude these host from email notification. Insert Host IDs, comma separator"
 msgstr ""
 
-#: includes/settings.php
+#: include/settings.php
 msgid "Excluded notification device templates"
 msgstr ""
 
-#: includes/settings.php
+#: include/settings.php
 msgid "Some devices types report hw changes too often. You can exclude these templates from email notification. Insert device templates IDs, comma separator"
 msgstr ""
