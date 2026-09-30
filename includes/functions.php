@@ -127,7 +127,7 @@ function plugin_evidence_host_edit_bottom() {
 	print get_md5_include_js($config['base_path'] . '/plugins/evidence/js/evidence.js');
 
 	if (read_config_option('evidence_show_host_data')) {
-		include_once('./plugins/evidence/include/functions.php');
+		include_once('./plugins/evidence/includes/functions.php');
 		print '<br/><br/>';
 
 		$host = db_fetch_row_prepared('SELECT host.*, host_template.name as `template_name`
@@ -1671,7 +1671,7 @@ function evidence_show_host_data($host_id, $scan_date) {
 function evidence_show_host_info($data, $host_id) {
 	global $config, $datatypes;
 
-	include_once($config['base_path'] . '/plugins/evidence/include/arrays.php');
+	include_once($config['base_path'] . '/plugins/evidence/includes/arrays.php');
 
 	$short = false;
 
@@ -1817,7 +1817,7 @@ function evidence_show_host_info($data, $host_id) {
 function evidence_show_actual_data($data) {
 	global $config, $datatypes;
 
-	include_once($config['base_path'] . '/plugins/evidence/include/arrays.php');
+	include_once($config['base_path'] . '/plugins/evidence/includes/arrays.php');
 
 	if (isset($data['org_name'])) {
 		print $data['org_name'];

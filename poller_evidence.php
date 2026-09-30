@@ -29,7 +29,7 @@ chdir($dir);
 
 require('../../include/cli_check.php');
 require_once($config['library_path'] . '/snmp.php');
-require_once($config['base_path'] . '/plugins/evidence/include/functions.php');
+require_once($config['base_path'] . '/plugins/evidence/includes/functions.php');
 
 // let PHP run just as long as it has to
 ini_set('max_execution_time', '0');

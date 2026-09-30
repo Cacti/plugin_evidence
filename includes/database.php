@@ -313,6 +313,11 @@ function plugin_evidence_upgrade_database() {
 			api_plugin_db_table_create('evidence', 'plugin_evidence_snmp_info', $data);
 		}
 
+		// The plugin's library directory moved from include/ to includes/; repoint
+		// any hook still registered against the old path so existing installs load
+		// them from the new location after upgrade.
+		db_execute("UPDATE plugin_hooks SET file = REPLACE(file, 'include/', 'includes/') WHERE name = 'evidence' AND file LIKE 'include/%'");
+
 		// Set the new version
 		db_execute_prepared("UPDATE plugin_config
 			SET version = ?, author = ?, webpage = ?

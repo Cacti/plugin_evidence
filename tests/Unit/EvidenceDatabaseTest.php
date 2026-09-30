@@ -9,7 +9,7 @@
 
 /*
  * Unit coverage for plugin_evidence_setup_database() in setup.php, which
- * drives include/database.php's plugin_evidence_initialize_database().
+ * drives includes/database.php's plugin_evidence_initialize_database().
  */
 
 beforeAll(function () {

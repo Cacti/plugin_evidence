@@ -27,8 +27,8 @@
 chdir('../../');
 require_once('./include/auth.php');
 require_once('./lib/snmp.php');
-require_once('./plugins/evidence/include/functions.php');
-require_once('./plugins/evidence/include/arrays.php');
+require_once('./plugins/evidence/includes/functions.php');
+require_once('./plugins/evidence/includes/arrays.php');
 
 set_default_action();
 
