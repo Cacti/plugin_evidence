@@ -16,7 +16,6 @@
         "js/",
         "locales/",
         "manifest.json",
-        "phpunit.xml",
         "poller_evidence.php",
         "setup.php"
     ],
