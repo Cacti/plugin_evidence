@@ -172,7 +172,7 @@ function plugin_evidence_remove_data() {
  * @global array $config Cacti global configuration array; used to resolve
  *                       the plugin directory.
  */
-function plugin_evidence_prune_files(): void {
+function evidence_prune_files(): void {
 	global $config;
 
 	$plugin_dir    = $config['base_path'] . '/plugins/evidence';
@@ -258,7 +258,7 @@ function plugin_evidence_prune_files(): void {
 		}
 
 		if (is_dir($path) && !is_link($path)) {
-			$removed = plugin_evidence_rmtree($path);
+			$removed = evidence_rmtree($path);
 		} else {
 			$removed = @unlink($path);
 		}
@@ -292,14 +292,14 @@ function plugin_evidence_prune_files(): void {
 
 /**
  * Recursively deletes a directory and its contents. Symlinks are removed
- * without being followed. Helper for plugin_evidence_prune_files().
+ * without being followed. Helper for evidence_prune_files().
  *
  * @param string $dir Absolute path to the directory to remove.
  *
  * @return bool True if the directory and everything under it was removed;
  *              false if any entry could not be deleted.
  */
-function plugin_evidence_rmtree(string $dir): bool {
+function evidence_rmtree(string $dir): bool {
 	$entries = scandir($dir);
 	$ok      = true;
 
@@ -311,7 +311,7 @@ function plugin_evidence_rmtree(string $dir): bool {
 		$path = $dir . '/' . $entry;
 
 		if (is_dir($path) && !is_link($path)) {
-			if (!plugin_evidence_rmtree($path)) {
+			if (!evidence_rmtree($path)) {
 				$ok = false;
 			}
 		} elseif (!@unlink($path)) {

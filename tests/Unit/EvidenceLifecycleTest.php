@@ -52,7 +52,7 @@ it('does nothing when the stored version already matches the plugin version', fu
 
 it('updates the stored plugin_config version when it drifts', function () {
 	// Load the schema library from the real checkout, then sandbox base_path so
-	// the upgrade-time prune (plugin_evidence_prune_files) runs against a temp
+	// the upgrade-time prune (evidence_prune_files) runs against a temp
 	// tree, never the real checkout. A minimal INFO drives the version-drift
 	// path; no manifest.json there means the prune no-ops.
 	require_once $GLOBALS['config']['base_path'] . '/plugins/evidence/includes/database.php';

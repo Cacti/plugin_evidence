@@ -318,7 +318,7 @@ function plugin_evidence_upgrade_database() {
 		// them from the new location after upgrade.
 		db_execute("UPDATE plugin_hooks SET file = REPLACE(file, 'include/', 'includes/') WHERE name = 'evidence' AND file LIKE 'include/%'");
 			// Remove files tombstoned in manifest.json (the old include/ tree).
-			plugin_evidence_prune_files();
+			evidence_prune_files();
 		// Set the new version
 		db_execute_prepared("UPDATE plugin_config
 			SET version = ?, author = ?, webpage = ?
