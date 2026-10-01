@@ -26,24 +26,24 @@ When generating code for this repository:
 ## Project Structure
 
 ```
-evidence/                  # Repository root (install to plugins/evidence/ in Cacti)
+evidence/               # Repository root (install to plugins/evidence/ in Cacti)
 ├── include/
-│   ├── functions.php       # Core polling, display and hook logic
-│   ├── database.php        # Table creation and upgrade logic
-│   ├── settings.php        # Plugin config_settings hook
-│   ├── arrays.php          # Configuration arrays (entities, datatypes)
-│   └── index.php           # Access protection
-├── data/                   # SQL seed data (enterprise-numbers.sql) and prep scripts
-├── images/                 # Tab icons and UI images
-├── evidence.php             # Main standalone/console page
-├── evidence_tab.php         # Device tab integration page
+│   ├── functions.php   # Core polling, display and hook logic
+│   ├── database.php    # Table creation and upgrade logic
+│   ├── settings.php    # Plugin config_settings hook
+│   ├── arrays.php      # Configuration arrays (entities, datatypes)
+│   └── index.php       # Access protection
+├── data/               # SQL seed data (enterprise-numbers.sql) and prep scripts
+├── images/             # Tab icons and UI images
+├── evidence.php        # Main standalone/console page
+├── evidence_tab.php    # Device tab integration page
 ├── js/
-│   └── evidence.js           # Client-side JS for device edit page
-├── poller_evidence.php       # Background poller entry point (CLI)
-├── setup.php                 # Plugin install/uninstall/upgrade hooks
-├── INFO                      # Plugin metadata (name, version, compat)
-├── README.md                  # Feature overview, installation and usage
-└── CHANGELOG.md               # Version history
+│   └── evidence.js     # Client-side JS for device edit page
+├── poller_evidence.php # Background poller entry point (CLI)
+├── setup.php           # Plugin install/uninstall/upgrade hooks
+├── INFO                # Plugin metadata (name, version, compat)
+├── README.md           # Feature overview, installation and usage
+└── CHANGELOG.md        # Version history
 ```
 
 ## Naming Conventions
