@@ -25,10 +25,10 @@
 */
 
 chdir('../../');
-include_once('./include/auth.php');
-include_once('./lib/snmp.php');
-include_once('./plugins/evidence/include/functions.php');
-include_once('./plugins/evidence/include/arrays.php');
+require_once('./include/auth.php');
+require_once('./lib/snmp.php');
+require_once('./plugins/evidence/includes/functions.php');
+require_once('./plugins/evidence/includes/arrays.php');
 
 set_default_action();
 
