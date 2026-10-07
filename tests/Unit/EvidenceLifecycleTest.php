@@ -41,13 +41,23 @@ it('drops every table it owns on remove_data', function () {
 	expect($drops)->toHaveCount(7);
 });
 
-it('does nothing when the stored version already matches the plugin version', function () {
+it('repoints stale include/ hooks even when the stored version already matches', function () {
 	$info = plugin_evidence_version();
 
 	evidence_test_mock_db('db_fetch_cell', 'plugin_config', $info['version']);
 
 	expect(plugin_evidence_check_config())->toBeTrue();
-	expect($GLOBALS['__test_db_calls'])->toBeEmpty();
+
+	// On an up-to-date install the only work is the idempotent include/ ->
+	// includes/ plugin_hooks repoint; no schema migration or version write runs.
+	expect($GLOBALS['__test_db_calls'])->toHaveCount(1);
+
+	$call = $GLOBALS['__test_db_calls'][0];
+
+	expect($call['fn'])->toBe('db_execute')
+		->and($call['sql'])->toContain('UPDATE plugin_hooks')
+		->and($call['sql'])->toContain("REPLACE(file, 'include/', 'includes/')")
+		->and($call['sql'])->toContain("file LIKE 'include/%'");
 });
 
 it('updates the stored plugin_config version when it drifts', function () {

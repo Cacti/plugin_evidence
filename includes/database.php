@@ -299,6 +299,15 @@ function plugin_evidence_upgrade_database() {
 	$current = $info['version'];
 	$oldv    = db_fetch_cell('SELECT version FROM plugin_config WHERE directory = "evidence"');
 
+	// The plugin's library directory moved from include/ to includes/. Repoint
+	// any plugin_hooks row still bound to the old path on every check - not only
+	// during a version-change upgrade - because an install whose version was
+	// already bumped without its hooks being repointed would otherwise keep
+	// loading the stale include/<file> path (or, once include/ is deleted, fail
+	// Cacti's plugin file-inclusion security check for it) on every page. The
+	// LIKE filter makes this a no-op on healthy installs.
+	db_execute("UPDATE plugin_hooks SET file = REPLACE(file, 'include/', 'includes/') WHERE name = 'evidence' AND file LIKE 'include/%'");
+
 	if (!cacti_version_compare($oldv, $current, '=')) {
 		if (cacti_version_compare($oldv, '0.3', '<')) {
 			$data              = [];
@@ -313,12 +322,9 @@ function plugin_evidence_upgrade_database() {
 			api_plugin_db_table_create('evidence', 'plugin_evidence_snmp_info', $data);
 		}
 
-		// The plugin's library directory moved from include/ to includes/; repoint
-		// any hook still registered against the old path so existing installs load
-		// them from the new location after upgrade.
-		db_execute("UPDATE plugin_hooks SET file = REPLACE(file, 'include/', 'includes/') WHERE name = 'evidence' AND file LIKE 'include/%'");
-			// Remove files tombstoned in manifest.json (the old include/ tree).
-			evidence_prune_files();
+		// Remove files tombstoned in manifest.json (the old include/ tree).
+		evidence_prune_files();
+
 		// Set the new version
 		db_execute_prepared("UPDATE plugin_config
 			SET version = ?, author = ?, webpage = ?
