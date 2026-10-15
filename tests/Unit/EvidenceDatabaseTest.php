@@ -38,6 +38,23 @@ it('creates every table the plugin owns', function () {
 	));
 });
 
+it('declares scalar primary keys for api_plugin_db_table_create', function () {
+	// api_plugin_db_table_create() interpolates data['primary'] straight into
+	// PRIMARY KEY (`...`) down to the 1.2.29 compat floor, so an array would
+	// render as PRIMARY KEY (`Array`) and fail the create on a fresh install.
+	plugin_evidence_setup_database();
+
+	$withPrimary = array_filter($GLOBALS['__test_db_calls'], function ($call) {
+		return $call['fn'] === 'api_plugin_db_table_create' && isset($call['params']['primary']);
+	});
+
+	expect($withPrimary)->not->toBeEmpty();
+
+	foreach ($withPrimary as $call) {
+		expect($call['params']['primary'])->toBeString();
+	}
+});
+
 it('seeds the vendor-specific query catalog', function () {
 	plugin_evidence_setup_database();
 
