@@ -1,6 +1,7 @@
 # Changelog
 
 --- develop ---
+* security: Pin CI fixtures and shared test dependencies, disable persisted checkout credentials, and limit workflow permissions and runtime
 * dev: Move the plugin's library directory from `include/` to `includes/` and re-register the affected hooks on upgrade (via a `plugin_hooks` file repoint in `plugin_evidence_upgrade_database()`) so existing installations load them from the new path
 * dev: Measure CI coverage with xdebug instead of pcov so the plugin's own sources are instrumented (pcov auto-scopes to the Composer root and skipped cacti/plugins/, leaving the patch-coverage gate with nothing to measure)
 * dev: Enforce patch coverage of changed lines in CI and remove the inert COMPOSER_ROOT_VERSION env from the Pest step
