@@ -160,6 +160,9 @@ foreach ($clover->xpath('//file') as $file) {
  * Empty by default; add entries per repository as the need arises.
  */
 $unmeasured_allowlist = [
+	'evidence.php',        // web UI entry point (chdir + require auth.php); not loadable in the isolated unit process
+	'evidence_tab.php',    // web UI tab entry point (chdir + require auth.php); not loadable in the isolated unit process
+	'poller_evidence.php', // CLI poller entry point (require cli_check.php); not loadable in the isolated unit process
 ];
 $unmeasured            = array_values(array_diff(array_keys($changed), array_keys($measured)));
 $unexpected_unmeasured = array_values(array_diff($unmeasured, $unmeasured_allowlist));

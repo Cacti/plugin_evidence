@@ -50,13 +50,13 @@ function plugin_evidence_csp_nonce(): string {
  * @return void
  */
 function plugin_evidence_install() {
-	api_plugin_register_hook('evidence', 'device_edit_top_links', 'plugin_evidence_device_edit_top_links', 'include/functions.php');
-	api_plugin_register_hook('evidence', 'top_header_tabs', 'evidence_show_tab', 'include/functions.php');
-	api_plugin_register_hook('evidence', 'top_graph_header_tabs', 'evidence_show_tab', 'include/functions.php');
-	api_plugin_register_hook('evidence', 'device_remove', 'plugin_evidence_device_remove', 'include/functions.php');
-	api_plugin_register_hook('evidence', 'config_settings', 'plugin_evidence_config_settings', 'include/settings.php');
-	api_plugin_register_hook('evidence', 'poller_bottom', 'plugin_evidence_poller_bottom', 'include/functions.php');
-	api_plugin_register_hook('evidence', 'host_edit_bottom', 'plugin_evidence_host_edit_bottom', 'include/functions.php');
+	api_plugin_register_hook('evidence', 'device_edit_top_links', 'plugin_evidence_device_edit_top_links', 'includes/functions.php');
+	api_plugin_register_hook('evidence', 'top_header_tabs', 'evidence_show_tab', 'includes/functions.php');
+	api_plugin_register_hook('evidence', 'top_graph_header_tabs', 'evidence_show_tab', 'includes/functions.php');
+	api_plugin_register_hook('evidence', 'device_remove', 'plugin_evidence_device_remove', 'includes/functions.php');
+	api_plugin_register_hook('evidence', 'config_settings', 'plugin_evidence_config_settings', 'includes/settings.php');
+	api_plugin_register_hook('evidence', 'poller_bottom', 'plugin_evidence_poller_bottom', 'includes/functions.php');
+	api_plugin_register_hook('evidence', 'host_edit_bottom', 'plugin_evidence_host_edit_bottom', 'includes/functions.php');
 
 	api_plugin_register_realm('evidence', 'evidence.php,evidence_tab.php,', 'Plugin evidence - view', 1);
 
@@ -103,7 +103,7 @@ function plugin_evidence_version() {
 function plugin_evidence_check_config() {
 	global $config;
 
-	include_once($config['base_path'] . '/plugins/evidence/include/database.php');
+	require_once($config['base_path'] . '/plugins/evidence/includes/database.php');
 	plugin_evidence_upgrade_database();
 
 	return true;
@@ -122,7 +122,7 @@ function plugin_evidence_check_config() {
 function plugin_evidence_setup_database() {
 	global $config;
 
-	include_once($config['base_path'] . '/plugins/evidence/include/database.php');
+	require_once($config['base_path'] . '/plugins/evidence/includes/database.php');
 	plugin_evidence_initialize_database();
 }
 
@@ -154,4 +154,174 @@ function plugin_evidence_remove_data() {
 	db_execute_prepared('DROP TABLE IF EXISTS `plugin_evidence_snmp_info`');
 
 	return true;
+}
+
+/**
+ * Removes files and directories that a previous version of this plugin
+ * shipped but that have since moved or been deleted, using the tombstone
+ * and whitelist lists in manifest.json. Whitelisted (user-data) paths and
+ * any VCS metadata (.git*) are never touched; the dev-only tests/ tree is
+ * removed. Any path that resolves outside the plugin directory (a tampered
+ * manifest.json) is refused, and any file/directory that cannot be removed
+ * (e.g. read-only) is reported to the Cacti log. Any top-level entry that is
+ * neither expected nor a tombstone nor whitelisted is logged to the Cacti
+ * log and left in place. Called on a plugin version change.
+ *
+ * @return void
+ *
+ * @global array $config Cacti global configuration array; used to resolve
+ *                       the plugin directory.
+ */
+function evidence_prune_files(): void {
+	global $config;
+
+	$plugin_dir    = $config['base_path'] . '/plugins/evidence';
+	$manifest_path = $plugin_dir . '/manifest.json';
+
+	if (!is_readable($manifest_path)) {
+		return;
+	}
+
+	$manifest = json_decode((string) file_get_contents($manifest_path), true);
+
+	if (!is_array($manifest)) {
+		cacti_log('WARNING: evidence manifest.json could not be parsed; skipping file prune', false, 'EVIDENCE');
+
+		return;
+	}
+
+	$tombstones = isset($manifest['tombstones']) && is_array($manifest['tombstones']) ? $manifest['tombstones'] : [];
+	$expected   = isset($manifest['expected'])   && is_array($manifest['expected'])   ? $manifest['expected']   : [];
+	$whitelist  = isset($manifest['whitelist'])  && is_array($manifest['whitelist'])  ? $manifest['whitelist']  : [];
+
+	$protected = function (string $rel) use ($whitelist): bool {
+		if (strncmp($rel, '.git', 4) === 0 || strncmp($rel, '.md', 3) === 0) {
+			return true;
+		}
+
+		foreach ($whitelist as $entry) {
+			$entry = trim((string) $entry, '/');
+
+			if ($entry !== '' && ($rel === $entry
+				|| strncmp($rel, $entry . '/', strlen($entry) + 1) === 0
+				|| strncmp($entry, $rel . '/', strlen($rel) + 1) === 0)) {
+				return true;
+			}
+		}
+
+		return false;
+	};
+
+	// Security: resolve the plugin directory so a tampered manifest.json
+	// cannot steer the prune outside of it.
+	$plugin_real = realpath($plugin_dir);
+
+	// Remove tombstoned (moved/deleted) paths plus the dev-only tests/
+	// tree and the phpunit.xml test configuration.
+	$remove   = $tombstones;
+	$remove[] = 'tests/';
+	$remove[] = 'phpunit.xml';
+
+	foreach ($remove as $rel) {
+		$rel = trim((string) $rel, '/');
+
+		if ($rel === '' || $protected($rel)) {
+			continue;
+		}
+
+		// A tombstone must never contain '.'/'..' segments; a tampered manifest
+		// could use them to escape the plugin directory or target its root.
+		$segments = explode('/', $rel);
+
+		if (in_array('.', $segments, true) || in_array('..', $segments, true)) {
+			cacti_log(sprintf('WARNING: evidence prune refused to remove %s: path contains a traversal segment (tampered manifest.json?)', $rel), false, 'EVIDENCE');
+
+			continue;
+		}
+
+		$path = $plugin_dir . '/' . $rel;
+
+		if (!is_link($path) && !file_exists($path)) {
+			continue;
+		}
+
+		// Refuse any path that, after resolving symlinks and ../ segments,
+		// escapes the plugin directory (protects user data from a tampered
+		// manifest.json).
+		$anchor = is_link($path) ? dirname($path) : $path;
+		$real   = realpath($anchor);
+
+		if ($real === false || ($real !== $plugin_real && strncmp($real, $plugin_real . DIRECTORY_SEPARATOR, strlen((string) $plugin_real) + 1) !== 0)) {
+			cacti_log(sprintf('WARNING: evidence prune refused to remove %s: path resolves outside the plugin directory (tampered manifest.json?)', $rel), false, 'EVIDENCE');
+
+			continue;
+		}
+
+		if (is_dir($path) && !is_link($path)) {
+			$removed = evidence_rmtree($path);
+		} else {
+			$removed = @unlink($path);
+		}
+
+		if (!$removed) {
+			cacti_log(sprintf('WARNING: evidence upgrade could not remove %s (check file/directory permissions)', $rel), false, 'EVIDENCE');
+		}
+	}
+
+	// Surface any top-level entry the manifest does not account for.
+	$known = [];
+
+	foreach (array_merge($expected, $tombstones) as $entry) {
+		$top = explode('/', trim((string) $entry, '/'))[0];
+
+		if ($top !== '') {
+			$known[$top] = true;
+		}
+	}
+
+	$entries = scandir($plugin_dir);
+
+	foreach (($entries !== false ? $entries : []) as $entry) {
+		if ($entry === '.' || $entry === '..' || $entry === 'tests' || $entry === 'phpunit.xml' || $protected($entry) || isset($known[$entry])) {
+			continue;
+		}
+
+		cacti_log(sprintf('WARNING: evidence upgrade found a file/directory not described in manifest.json: %s (left in place)', $entry), false, 'EVIDENCE');
+	}
+}
+
+/**
+ * Recursively deletes a directory and its contents. Symlinks are removed
+ * without being followed. Helper for evidence_prune_files().
+ *
+ * @param string $dir Absolute path to the directory to remove.
+ *
+ * @return bool True if the directory and everything under it was removed;
+ *              false if any entry could not be deleted.
+ */
+function evidence_rmtree(string $dir): bool {
+	$entries = scandir($dir);
+	$ok      = true;
+
+	foreach (($entries !== false ? $entries : []) as $entry) {
+		if ($entry === '.' || $entry === '..') {
+			continue;
+		}
+
+		$path = $dir . '/' . $entry;
+
+		if (is_dir($path) && !is_link($path)) {
+			if (!evidence_rmtree($path)) {
+				$ok = false;
+			}
+		} elseif (!@unlink($path)) {
+			$ok = false;
+		}
+	}
+
+	if (!@rmdir($dir)) {
+		$ok = false;
+	}
+
+	return $ok;
 }

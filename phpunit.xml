@@ -28,8 +28,8 @@
     <source>
         <include>
             <file>setup.php</file>
-            <file>include/database.php</file>
-            <file>include/functions.php</file>
+            <file>includes/database.php</file>
+            <file>includes/functions.php</file>
         </include>
     </source>
 </phpunit>

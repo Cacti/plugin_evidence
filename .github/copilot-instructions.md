@@ -26,24 +26,24 @@ When generating code for this repository:
 ## Project Structure
 
 ```
-evidence/                  # Repository root (install to plugins/evidence/ in Cacti)
+evidence/               # Repository root (install to plugins/evidence/ in Cacti)
 ├── include/
-│   ├── functions.php       # Core polling, display and hook logic
-│   ├── database.php        # Table creation and upgrade logic
-│   ├── settings.php        # Plugin config_settings hook
-│   ├── arrays.php          # Configuration arrays (entities, datatypes)
-│   └── index.php           # Access protection
-├── data/                   # SQL seed data (enterprise-numbers.sql) and prep scripts
-├── images/                 # Tab icons and UI images
-├── evidence.php             # Main standalone/console page
-├── evidence_tab.php         # Device tab integration page
+│   ├── functions.php   # Core polling, display and hook logic
+│   ├── database.php    # Table creation and upgrade logic
+│   ├── settings.php    # Plugin config_settings hook
+│   ├── arrays.php      # Configuration arrays (entities, datatypes)
+│   └── index.php       # Access protection
+├── data/               # SQL seed data (enterprise-numbers.sql) and prep scripts
+├── images/             # Tab icons and UI images
+├── evidence.php        # Main standalone/console page
+├── evidence_tab.php    # Device tab integration page
 ├── js/
-│   └── evidence.js           # Client-side JS for device edit page
-├── poller_evidence.php       # Background poller entry point (CLI)
-├── setup.php                 # Plugin install/uninstall/upgrade hooks
-├── INFO                      # Plugin metadata (name, version, compat)
-├── README.md                  # Feature overview, installation and usage
-└── CHANGELOG.md               # Version history
+│   └── evidence.js     # Client-side JS for device edit page
+├── poller_evidence.php # Background poller entry point (CLI)
+├── setup.php           # Plugin install/uninstall/upgrade hooks
+├── INFO                # Plugin metadata (name, version, compat)
+├── README.md           # Feature overview, installation and usage
+└── CHANGELOG.md        # Version history
 ```
 
 ## Naming Conventions
@@ -427,3 +427,7 @@ existing code or adding new code, not just in dedicated cleanup passes:
   line, `@param` lines, a blank comment line, then `@return`. Infer parameter/return types from
   actual usage; don't change the function's real type-hints in the same pass (let static analysis
   flag mismatches separately). Skip vendored third-party library files.
+
+## File manifest & upgrade pruning
+
+The plugin ships a root `manifest.json` with three arrays: `tombstones` (files/directories older versions shipped that have since moved or been removed), `expected` (the top-level files and directories that ship today, directories written with a trailing `/`), and `whitelist` (paths holding user data that must never be touched). Keep `expected` current: CI runs `tests/bin/validate-manifest.php`, which fails on any drift between `expected` and the real top-level tree (it ignores `tests/`, `phpunit.xml`, `.git*`, `.md*`, and whitelisted paths). Custom customer CSS/theme files belong in `expected`, and stylesheets live in `css/` (not `themes/`). On upgrade, `evidence_prune_files()` deletes the tombstoned paths, the dev-only `tests/` tree, and the `phpunit.xml` test config, leaves `whitelist`, `.git*`, and `.md*` alone, and logs (without removing) any top-level entry the manifest does not account for. As a safety measure it refuses any tombstone that resolves outside the plugin directory (a tampered manifest.json) and logs a warning for any file or directory it cannot remove. When you move or delete a shipped file, add its old path to `tombstones` and update `expected` in the same change.

@@ -11,7 +11,7 @@
  * Unit coverage for the plugin lifecycle contract functions in setup.php:
  * plugin_evidence_uninstall(), plugin_evidence_has_data(),
  * plugin_evidence_remove_data(), and plugin_evidence_check_config()
- * (which drives include/database.php's plugin_evidence_upgrade_database()).
+ * (which drives includes/database.php's plugin_evidence_upgrade_database()).
  */
 
 beforeAll(function () {
@@ -41,19 +41,45 @@ it('drops every table it owns on remove_data', function () {
 	expect($drops)->toHaveCount(7);
 });
 
-it('does nothing when the stored version already matches the plugin version', function () {
+it('repoints stale include/ hooks even when the stored version already matches', function () {
 	$info = plugin_evidence_version();
 
 	evidence_test_mock_db('db_fetch_cell', 'plugin_config', $info['version']);
 
 	expect(plugin_evidence_check_config())->toBeTrue();
-	expect($GLOBALS['__test_db_calls'])->toBeEmpty();
+
+	// On an up-to-date install the only work is the idempotent include/ ->
+	// includes/ plugin_hooks repoint; no schema migration or version write runs.
+	expect($GLOBALS['__test_db_calls'])->toHaveCount(1);
+
+	$call = $GLOBALS['__test_db_calls'][0];
+
+	expect($call['fn'])->toBe('db_execute')
+		->and($call['sql'])->toContain('UPDATE plugin_hooks')
+		->and($call['sql'])->toContain("REPLACE(file, 'include/', 'includes/')")
+		->and($call['sql'])->toContain("file LIKE 'include/%'");
 });
 
 it('updates the stored plugin_config version when it drifts', function () {
+	// Load the schema library from the real checkout, then sandbox base_path so
+	// the upgrade-time prune (evidence_prune_files) runs against a temp
+	// tree, never the real checkout. A minimal INFO drives the version-drift
+	// path; no manifest.json there means the prune no-ops.
+	require_once $GLOBALS['config']['base_path'] . '/plugins/evidence/includes/database.php';
+
 	evidence_test_mock_db('db_fetch_cell', 'plugin_config', '0.0.0');
 
-	expect(plugin_evidence_check_config())->toBeTrue();
+	$restore = $GLOBALS['config']['base_path'];
+	$base    = sys_get_temp_dir() . '/evidence-upg-' . uniqid();
+	mkdir($base . '/plugins/evidence', 0777, true);
+	file_put_contents($base . '/plugins/evidence/INFO', "[info]\nversion = 9.9.9\nauthor = x\nhomepage = x\n");
+	$GLOBALS['config']['base_path'] = $base;
+
+	try {
+		plugin_evidence_upgrade_database();
+	} finally {
+		$GLOBALS['config']['base_path'] = $restore;
+	}
 
 	$updates = array_values(array_filter($GLOBALS['__test_db_calls'], function ($call) {
 		return $call['fn'] === 'db_execute_prepared' && stripos($call['sql'], 'UPDATE plugin_config') !== false;

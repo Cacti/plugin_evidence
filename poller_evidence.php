@@ -27,9 +27,9 @@
 $dir = __DIR__;
 chdir($dir);
 
-include('../../include/cli_check.php');
-include_once($config['library_path'] . '/snmp.php');
-include_once($config['base_path'] . '/plugins/evidence/include/functions.php');
+require('../../include/cli_check.php');
+require_once($config['library_path'] . '/snmp.php');
+require_once($config['base_path'] . '/plugins/evidence/includes/functions.php');
 
 // let PHP run just as long as it has to
 ini_set('max_execution_time', '0');
@@ -636,7 +636,7 @@ function display_version() {
 	global $config;
 
 	if (!function_exists('plugin_evidence_version')) {
-		include_once($config['base_path'] . '/plugins/evidence/setup.php');
+		require_once($config['base_path'] . '/plugins/evidence/setup.php');
 	}
 
 	$info = plugin_evidence_version();
