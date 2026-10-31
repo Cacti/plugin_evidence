@@ -7,6 +7,8 @@
 * dev: Pin the CI database image and shared test dependencies, disable persisted checkout credentials, and limit workflow permissions and runtime
 * security: Add a version-safe CSP nonce (`plugin_evidence_csp_nonce()`) to every inline `<script>` tag so pages stay compatible with Cacti's Content-Security-Policy nonce enforcement, while falling back cleanly on older Cacti releases that lack the `CactiSecureHeaders` class
 * issue: PHPStan level 8 typing pass - fixed a wrong get_allowed_ajax_hosts() argument (broke the AJAX host filter dropdown), a cross-iteration variable-reuse bug in the vendor-specific data-query 'table' method, an undefined $data_descr fallback in the Entity MIB scan, and several unguarded db_fetch_row_prepared()/parse_ini_file() result reads
+* issue: better formatting on device page
+* feature: Add an export feature
 
 --- 0.4 ---
 * Customizing data search and display

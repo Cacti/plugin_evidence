@@ -1570,6 +1570,7 @@ function evidence_show_host_data($host_id, $scan_date) {
 			return;
 		} else {
 			$dates = array_unique($data['dates']);
+			rsort($dates, SORT_STRING);
 
 			foreach ($dates as $date) {
 				$change = false;
