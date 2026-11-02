@@ -163,6 +163,8 @@ $unmeasured_allowlist = [
 	'evidence.php',        // web UI entry point (chdir + require auth.php); not loadable in the isolated unit process
 	'evidence_tab.php',    // web UI tab entry point (chdir + require auth.php); not loadable in the isolated unit process
 	'poller_evidence.php', // CLI poller entry point (require cli_check.php); not loadable in the isolated unit process
+
+	'locales/LC_MESSAGES/index.php', // directory access guard (header redirect only); no measurable logic
 ];
 $unmeasured            = array_values(array_diff(array_keys($changed), array_keys($measured)));
 $unexpected_unmeasured = array_values(array_diff($unmeasured, $unmeasured_allowlist));
