@@ -1195,18 +1195,7 @@ function plugin_evidence_find() {
 	print '<div class="paragraph_entity">';
 	print '<br/><span class="bold">' . $datatypes['entity'] . '</span><br/>';
 
-	if (cacti_sizeof($data)) {
-		foreach ($data as $row) {
-			$desc = db_fetch_cell_prepared('SELECT description FROM host WHERE id = ?', [$row['host_id']]);
-
-			print '<a href="' . $config['url_path'] . 'plugins/evidence/evidence_tab.php?action=find&scan_date=' .
-			substr($row['scan_date'],0,10) . '&host_id=' . $row['host_id'] . '">' . $desc .
-			'</a> (' . $row['scan_date'] . '), ' .
-				__('ID: %d, found in %d records', (int) $row['host_id'], (int) $row['record_count'], 'evidence') . '<br/>';
-		}
-	} else {
-		print __('Not found', 'evidence') . '<br/>';
-	}
+	plugin_evidence_display_paragraph($data);
 
 	print '</div>';
 
@@ -1216,18 +1205,7 @@ function plugin_evidence_find() {
 	print '<div class="paragraph_mac">';
 	print '<br/><span class="bold">' . $datatypes['mac'] . '</span><br/>';
 
-	if (cacti_sizeof($data)) {
-		foreach ($data as $row) {
-			$desc = db_fetch_cell_prepared('SELECT description FROM host WHERE id = ?', [$row['host_id']]);
-
-			print '<a href="' . $config['url_path'] . 'plugins/evidence/evidence_tab.php?action=find&scan_date=' .
-			substr($row['scan_date'],0,10) . '&host_id=' . $row['host_id'] . '">' . $desc .
-			'</a> (' . $row['scan_date'] . '), ' .
-				__('ID: %d, found in %d records', (int) $row['host_id'], (int) $row['record_count'], 'evidence') . '<br/>';
-		}
-	} else {
-		print __('Not found', 'evidence') . '<br/>';
-	}
+	plugin_evidence_display_paragraph($data);
 
 	print '</div>';
 
@@ -1237,18 +1215,7 @@ function plugin_evidence_find() {
 	print '<div class="paragraph_ip">';
 	print '<br/><span class="bold">' . $datatypes['ip'] . '</span><br/>';
 
-	if (cacti_sizeof($data)) {
-		foreach ($data as $row) {
-			$desc = db_fetch_cell_prepared('SELECT description FROM host WHERE id = ?', [$row['host_id']]);
-
-			print '<a href="' . $config['url_path'] . 'plugins/evidence/evidence_tab.php?action=find&scan_date=' .
-			substr($row['scan_date'],0,10) . '&host_id=' . $row['host_id'] . '">' . $desc .
-			'</a> (' . $row['scan_date'] . '), ' .
-				__('ID: %d, found in %d records', (int) $row['host_id'], (int) $row['record_count'], 'evidence') . '<br/>';
-		}
-	} else {
-		print __('Not found', 'evidence') . '<br/>';
-	}
+	plugin_evidence_display_paragraph($data);
 
 	print '</div>';
 
@@ -1264,18 +1231,8 @@ function plugin_evidence_find() {
 		print '<div class="paragraph_' . $type . '">';
 		print '<br/><span class="bold">' . $datatypes[$type] . '</span><br/>';
 
-		if (cacti_sizeof($data)) {
-			foreach ($data as $row) {
-				$desc = db_fetch_cell_prepared('SELECT description FROM host WHERE id = ?', [$row['host_id']]);
+		plugin_evidence_display_paragraph($data);
 
-				print '<a href="' . $config['url_path'] . 'plugins/evidence/evidence_tab.php?action=find&scan_date=' .
-					substr($row['scan_date'],0,10) . '&host_id=' . $row['host_id'] . '">' . $desc .
-					'</a> (' . $row['scan_date'] . '), ' .
-				__('ID: %d, found in %d records', (int) $row['host_id'], (int) $row['record_count'], 'evidence') . '<br/>';
-			}
-		} else {
-			print __('Not found', 'evidence') . '<br/>';
-		}
 		print '</div>';
 	}
 
@@ -2146,4 +2103,34 @@ function plugin_evidence_array_to_table($array, $columns = 1) {
 	}
 
 	return $output;
+}
+
+/**
+ * Display data
+ *
+ * @param array $array   The array of associative sub-arrays to render;
+ *
+ * @return void
+ *
+ * @global array $config Cacti global configuration array; used to
+ *                       resolve the PHP binary and this plugin's poller
+ *                       script path.
+ */
+
+function plugin_evidence_display_paragraph($data) {
+	global $config;
+
+	if (cacti_sizeof($data)) {
+		foreach ($data as $row) {
+			$desc = db_fetch_cell_prepared('SELECT description FROM host WHERE id = ?', [$row['host_id']]);
+
+			print '<a href="' . $config['url_path'] . 'plugins/evidence/evidence_tab.php?action=find&scan_date=' .
+			substr($row['scan_date'],0,10) . '&host_id=' . $row['host_id'] . '">' . $desc .
+			'</a> (' . $row['scan_date'] . '), ' .
+				__('ID: %d, found in %d records', (int) $row['host_id'], (int) $row['record_count'], 'evidence') . '<br/>';
+		}
+	} else {
+		print __('Not found', 'evidence') . '<br/>';
+	}
+
 }
