@@ -407,34 +407,33 @@ function plugin_evidence_find_organization($h) {
  *                       not directly used here).
  */
 function plugin_evidence_get_snmp_info($h) {
-	global $config;
 
-	$snmp_info = [
-		'sysdescr'    => '',
-		'syscontact'  => '',
-		'sysname'     => '',
-		'syslocation' => ''
+	$oids = [
+		'sysdescr'    => '.1.3.6.1.2.1.1.1.0',
+		'syscontact'  => '.1.3.6.1.2.1.1.4.0',
+		'sysname'     => '.1.3.6.1.2.1.1.5.0',
+		'syslocation' => '.1.3.6.1.2.1.1.6.0',
 	];
 
-	$snmp_info['sysdescr']    = cacti_snmp_get($h['hostname'], $h['snmp_community'], '.1.3.6.1.2.1.1.1.0',
-		$h['snmp_version'], $h['snmp_username'], $h['snmp_password'],
-		$h['snmp_auth_protocol'], $h['snmp_priv_passphrase'], $h['snmp_priv_protocol'],
-		$h['snmp_context'], $h['snmp_port'], $h['snmp_timeout'], 3);
+	$snmp_info = [];
 
-	$snmp_info['syscontact']  = cacti_snmp_get($h['hostname'], $h['snmp_community'], '.1.3.6.1.2.1.1.4.0',
-		$h['snmp_version'], $h['snmp_username'], $h['snmp_password'],
-		$h['snmp_auth_protocol'], $h['snmp_priv_passphrase'], $h['snmp_priv_protocol'],
-		$h['snmp_context'], $h['snmp_port'], $h['snmp_timeout'], 3);
-
-	$snmp_info['sysname']     = cacti_snmp_get($h['hostname'], $h['snmp_community'], '.1.3.6.1.2.1.1.5.0',
-		$h['snmp_version'], $h['snmp_username'], $h['snmp_password'],
-		$h['snmp_auth_protocol'], $h['snmp_priv_passphrase'], $h['snmp_priv_protocol'],
-		$h['snmp_context'], $h['snmp_port'], $h['snmp_timeout'], 3);
-
-	$snmp_info['syslocation'] = cacti_snmp_get($h['hostname'], $h['snmp_community'], '.1.3.6.1.2.1.1.6.0',
-		$h['snmp_version'], $h['snmp_username'], $h['snmp_password'],
-		$h['snmp_auth_protocol'], $h['snmp_priv_passphrase'], $h['snmp_priv_protocol'],
-		$h['snmp_context'], $h['snmp_port'], $h['snmp_timeout'], 3);
+	foreach ($oids as $key => $oid) {
+		$snmp_info[$key] = cacti_snmp_get(
+			$h['hostname'],
+			$h['snmp_community'],
+			$oid,
+			$h['snmp_version'],
+			$h['snmp_username'],
+			$h['snmp_password'],
+			$h['snmp_auth_protocol'],
+			$h['snmp_priv_passphrase'],
+			$h['snmp_priv_protocol'],
+			$h['snmp_context'],
+			$h['snmp_port'],
+			$h['snmp_timeout'],
+			3
+		);
+	}
 
 	return [$snmp_info];
 }
