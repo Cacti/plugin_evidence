@@ -287,14 +287,20 @@ if (!function_exists('html_escape')) {
 }
 
 if (!function_exists('__')) {
-	function __($text, $domain = '') {
-		return $text;
+	/*
+	 * Cacti's real __() is variadic (printf-style substitution args plus an
+	 * optional trailing text domain). Declare the stub the same way so static
+	 * analysis resolves production calls like __('ID: %d', $n, 'evidence')
+	 * against a matching arity instead of flagging them as too many arguments.
+	 */
+	function __(...$args) {
+		return isset($args[0]) ? (string) $args[0] : '';
 	}
 }
 
 if (!function_exists('__esc')) {
-	function __esc($text, $domain = '') {
-		return htmlspecialchars($text, ENT_QUOTES | ENT_HTML5, 'UTF-8');
+	function __esc(...$args) {
+		return isset($args[0]) ? htmlspecialchars((string) $args[0], ENT_QUOTES | ENT_HTML5, 'UTF-8') : '';
 	}
 }
 
