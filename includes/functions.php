@@ -1161,18 +1161,7 @@ function plugin_evidence_find() {
 	print '<div class="paragraph_info">';
 	print '<br/><span class="bold">' . $datatypes['info'] . '</span><br/>';
 
-	if (cacti_sizeof($data)) {
-		foreach ($data as $row) {
-			$desc = db_fetch_cell_prepared('SELECT description FROM host WHERE id = ?', [$row['host_id']]);
-
-			print '<a href="' . $config['url_path'] . 'plugins/evidence/evidence_tab.php?action=find&scan_date=' .
-			substr($row['scan_date'],0,10) . '&host_id=' . $row['host_id'] . '">' . $desc .
-			'</a> (' . $row['scan_date'] . '), ' .
-				__('ID: %d, found in %d records', (int) $row['host_id'], (int) $row['record_count'], 'evidence') . '<br/>';
-		}
-	} else {
-		print __('Not found', 'evidence') . '<br/>';
-	}
+	plugin_evidence_display_paragraph($data);
 
 	print '</div>';
 
