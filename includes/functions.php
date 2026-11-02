@@ -158,7 +158,7 @@ function plugin_evidence_host_edit_bottom() {
 function evidence_show_host_edit_tables($data, $host_id) {
 	global $config, $datatypes, $entities;
 
-	include_once($config['base_path'] . '/plugins/evidence/include/arrays.php');
+	include_once($config['base_path'] . '/plugins/evidence/includes/arrays.php');
 
 	// Escape device-provided text, preserving line breaks and UTF-8 characters.
 	$cell = function ($value) {

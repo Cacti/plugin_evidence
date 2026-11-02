@@ -82,6 +82,42 @@ $GLOBALS['config'] = array(
 $GLOBALS['__test_db_calls'] = array();
 $GLOBALS['__test_db_fixtures'] = array();
 
+/*
+ * Test-controllable inputs for the Cacti stubs below. Each defaults to an
+ * empty array, so an unseeded lookup returns the same safe default the stubs
+ * always returned. Tests seed these to drive branch coverage of sources that
+ * read configuration, request variables, and per-user settings.
+ */
+$GLOBALS['__test_config_options'] = array();
+$GLOBALS['__test_request_vars']   = array();
+$GLOBALS['__test_user_settings']  = array();
+
+if (!function_exists('evidence_test_reset_inputs')) {
+	function evidence_test_reset_inputs() {
+		$GLOBALS['__test_config_options'] = array();
+		$GLOBALS['__test_request_vars']   = array();
+		$GLOBALS['__test_user_settings']  = array();
+	}
+}
+
+if (!function_exists('evidence_test_set_config_option')) {
+	function evidence_test_set_config_option($name, $value) {
+		$GLOBALS['__test_config_options'][$name] = $value;
+	}
+}
+
+if (!function_exists('evidence_test_set_request_var')) {
+	function evidence_test_set_request_var($name, $value) {
+		$GLOBALS['__test_request_vars'][$name] = $value;
+	}
+}
+
+if (!function_exists('evidence_test_set_user_setting')) {
+	function evidence_test_set_user_setting($name, $value) {
+		$GLOBALS['__test_user_settings'][$name] = $value;
+	}
+}
+
 if (!function_exists('evidence_test_mock_db')) {
 	function evidence_test_mock_db($fn, $match, $result) {
 		$GLOBALS['__test_db_fixtures'][] = array('fn' => $fn, 'match' => $match, 'result' => $result);
@@ -233,12 +269,14 @@ if (!function_exists('cacti_version_compare')) {
 
 if (!function_exists('read_config_option')) {
 	function read_config_option($name, $force = false) {
-		return '';
+		return array_key_exists($name, $GLOBALS['__test_config_options'])
+			? $GLOBALS['__test_config_options'][$name] : '';
 	}
 }
 
 if (!function_exists('set_config_option')) {
 	function set_config_option($name, $value) {
+		$GLOBALS['__test_config_options'][$name] = $value;
 	}
 }
 
@@ -286,19 +324,42 @@ if (!function_exists('raise_message')) {
 
 if (!function_exists('get_request_var')) {
 	function get_request_var($name) {
-		return '';
+		return array_key_exists($name, $GLOBALS['__test_request_vars'])
+			? $GLOBALS['__test_request_vars'][$name] : '';
 	}
 }
 
 if (!function_exists('get_nfilter_request_var')) {
 	function get_nfilter_request_var($name) {
-		return '';
+		return array_key_exists($name, $GLOBALS['__test_request_vars'])
+			? $GLOBALS['__test_request_vars'][$name] : '';
 	}
 }
 
 if (!function_exists('get_filter_request_var')) {
 	function get_filter_request_var($name) {
-		return '';
+		return array_key_exists($name, $GLOBALS['__test_request_vars'])
+			? $GLOBALS['__test_request_vars'][$name] : '';
+	}
+}
+
+if (!function_exists('html_escape_request_var')) {
+	function html_escape_request_var($name) {
+		return array_key_exists($name, $GLOBALS['__test_request_vars'])
+			? html_escape((string) $GLOBALS['__test_request_vars'][$name]) : '';
+	}
+}
+
+if (!function_exists('read_user_setting')) {
+	function read_user_setting($name, $default = false, $force = false, $user = 0) {
+		return array_key_exists($name, $GLOBALS['__test_user_settings'])
+			? $GLOBALS['__test_user_settings'][$name] : $default;
+	}
+}
+
+if (!function_exists('set_user_setting')) {
+	function set_user_setting($name, $value, $user = 0) {
+		$GLOBALS['__test_user_settings'][$name] = $value;
 	}
 }
 
