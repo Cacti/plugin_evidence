@@ -1149,7 +1149,7 @@ function plugin_evidence_find() {
 		return false;
 	}
 
-	$f = html_escape_request_var('find_text');
+	$f = trim(html_escape_request_var('find_text'));
 
 	$sql_where = "sysdescr RLIKE '" . $f . "'
 		OR syscontact RLIKE '" . $f . "'
