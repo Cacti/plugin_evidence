@@ -1,0 +1,29 @@
+body {
+	margin: 1.5rem auto;
+	padding: 0 1rem;
+	max-width: 1100px;
+	font: 11pt/1.45 Arial, sans-serif;
+	color: #000;
+	background: #fff;
+}
+
+h1 { font-size: 20pt; }
+h3 { margin-top: 1.5rem; }
+h1, h3, dt { break-after: avoid; }
+dt { margin-top: 1rem; font-weight: bold; }
+dd { display: block !important; margin: .5rem 0 1rem 1rem; }
+table { width: 100%; border-collapse: collapse; }
+td, th { padding: .3rem .5rem; border: 1px solid #aaa; text-align: left; vertical-align: top; }
+tr { break-inside: avoid; }
+td, dd { overflow-wrap: anywhere; }
+.bold { font-weight: bold; }
+a { color: inherit; }
+.evidence-print-toolbar { margin-bottom: 1.5rem; }
+button { padding: .5rem 1rem; cursor: pointer; }
+
+@media print {
+	@page { margin: 15mm; }
+	body { max-width: none; margin: 0; padding: 0; }
+	.evidence-print-toolbar { display: none; }
+	a { text-decoration: none; }
+}

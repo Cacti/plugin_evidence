@@ -8,6 +8,7 @@
         "LICENSE",
         "README.md",
         "data/",
+        "css/",
         "evidence.php",
         "evidence_tab.php",
         "images/",

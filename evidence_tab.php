@@ -25,10 +25,11 @@
 */
 
 chdir('../../');
-require_once('./include/auth.php');
-require_once('./lib/snmp.php');
-require_once('./plugins/evidence/includes/functions.php');
-require_once('./plugins/evidence/includes/arrays.php');
+include_once('./include/auth.php');
+include_once('./lib/snmp.php');
+include_once('./plugins/evidence/includes/functions.php');
+include_once('./plugins/evidence/includes/arrays.php');
+include_once('./plugins/evidence/setup.php');
 
 set_default_action();
 
@@ -47,7 +48,9 @@ switch (html_escape_request_var('action')) {
 	case 'find':
 		general_header();
 		evidence_display_form();
+		print '<div id="evidence_results">';
 		evidence_find();
+		print '</div>';
 		bottom_footer();
 
 		break;
@@ -84,6 +87,7 @@ function evidence_display_form() {
 	$evidence_frequency = read_config_option('evidence_frequency');
 
 	print get_md5_include_js($config['base_path'] . '/plugins/evidence/js/evidence.js');
+	print get_md5_include_js($config['base_path'] . '/plugins/evidence/js/evidence-print.js');
 
 	$host_where = '';
 
@@ -168,6 +172,13 @@ function evidence_display_form() {
 	print '<td>';
 	print '<input type="submit" class="ui-button ui-corner-all ui-widget" id="refresh" value="' . __('Go') . '" title="' . __esc('Find') . '">';
 	print '<input type="button" class="ui-button ui-corner-all ui-widget" id="clear" value="' . __('Clear') . '" title="' . __esc('Clear Filters') . '">';
+	if (get_nfilter_request_var('action') == 'find') {
+		print '<input type="button" class="ui-button ui-corner-all ui-widget" id="evidence_export" value="' . __esc('Export', 'evidence') .
+			'" data-print-title="' . __esc('Evidence', 'evidence') .
+			'" data-print-label="' . __esc('Print', 'evidence') .
+			'" data-popup-message="' . __esc('Allow pop-ups to open the print view.', 'evidence') .
+			'" data-print-css="' . html_escape($config['url_path'] . 'plugins/evidence/css/evidence-print.css') . '">';
+	}
 	print '<input type="hidden" name="action" value="find">';
 	print '</td>';
 	print '</tr>';
@@ -389,7 +400,7 @@ function evidence_show_checkboxes() {
 
 	foreach ($datatypes as $key => $value) {
 		print '<td>';
-		print '<input type="checkbox" id="ch_' . $key . '" name="ch_' . $key . '" value="1" ' . (read_user_setting('evidence_display_' . $key, true) ? ' checked="checked" ' : '') . '>';
+		print '<input type="checkbox" data-evidence-section id="ch_' . $key . '" name="ch_' . $key . '" value="1" ' . (read_user_setting('evidence_display_' . $key, true) ? ' checked="checked" ' : '') . '>';
 		print '<label for="ch_' . $key . '">' . $value . '</label>';
 		print '</td>';
 	}
@@ -419,6 +430,7 @@ function evidence_show_checkboxes() {
  * @return void Outputs the chart's HTML/CSS/JavaScript directly.
  */
 function evidence_treemap($title, $data) {
+
 	$xid = 'treemap_x' . substr(md5($title), 0, 7);
 
 	print '<style>';
