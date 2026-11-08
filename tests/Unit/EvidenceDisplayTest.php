@@ -103,7 +103,9 @@ beforeEach(function () {
 	evidence_test_reset_inputs();
 	$GLOBALS['__test_db_calls'] = array();
 	$GLOBALS['__test_allowed_devices'] = [['id' => 1], ['id' => 2], ['id' => 3]];
+	$GLOBALS['__test_allowed_devices_calls'] = 0;
 	$_SESSION['sess_user_id'] = 1;
+	plugin_evidence_allowed_lookup(true);
 	unset($GLOBALS['__test_snmp_get'], $GLOBALS['__test_snmp_walk']);
 });
 
@@ -269,9 +271,10 @@ it('limits template and scan-date evidence results to allowed devices', function
 
 	evidence_test_reset_db_mocks();
 	evidence_test_reset_inputs();
+	plugin_evidence_allowed_lookup(true);
 	$GLOBALS['__test_allowed_devices'] = [['id' => 4]];
 	evidence_test_set_request_var('scan_date', '2024-05-01');
-	evidence_test_mock_db('db_fetch_assoc_prepared', 'SELECT DISTINCT(host_id)', [['host_id' => 4], ['host_id' => 9]]);
+	evidence_test_mock_db('db_fetch_assoc_prepared', 'SELECT distinct(host_id)', [['host_id' => 4], ['host_id' => 9]]);
 	evidence_test_mock_db('db_fetch_row_prepared', 'FROM host', ['id' => 4, 'description' => 'Allowed']);
 	ob_start();
 	evidence_find();
@@ -279,6 +282,115 @@ it('limits template and scan-date evidence results to allowed devices', function
 	expect($date_html)->toContain('host_id=4')->not->toContain('host_id=9');
 });
 
+it('reports a failed search query as not found', function () {
+	// A search such as '+++' passes the find_text filter but is an invalid
+	// RLIKE pattern, so the database layer returns false instead of rows.
+	ob_start();
+	plugin_evidence_display_paragraph(false);
+	$html = ob_get_clean();
+
+	expect($html)->toContain('Not found');
+});
+
+it('computes the allowed devices once per request', function () {
+	$GLOBALS['__test_allowed_devices'] = [['id' => 3]];
+	ob_start();
+	plugin_evidence_display_paragraph([['host_id' => 3, 'scan_date' => '2024-05-01 08:30:00', 'record_count' => 1]]);
+	plugin_evidence_display_paragraph([['host_id' => 3, 'scan_date' => '2024-05-01 08:30:00', 'record_count' => 1]]);
+	evidence_show_host_data(9, -1);
+	ob_end_clean();
+
+	expect($GLOBALS['__test_allowed_devices_calls'])->toBe(1);
+});
+
+it('shows an allowed device requested by host_id', function () {
+	$GLOBALS['__test_allowed_devices'] = [['id' => 3]];
+	evidence_test_set_request_var('host_id', 3);
+	evidence_test_set_request_var('scan_date', -1);
+	evidence_test_mock_db('db_fetch_row_prepared', 'FROM host', ['id' => 3, 'description' => 'Allowed']);
+	ob_start();
+	evidence_find();
+	$html = ob_get_clean();
+
+	expect($html)->toContain('host_id=3');
+});
+
+it('ignores a requested host_id outside the user permissions', function () {
+	$GLOBALS['__test_allowed_devices'] = [['id' => 3]];
+	evidence_test_set_request_var('host_id', 9);
+	evidence_test_set_request_var('scan_date', -1);
+	ob_start();
+	evidence_find();
+	$html = ob_get_clean();
+
+	expect($html)->toContain('Select any device')->not->toContain('host_id=9');
+});
+
+it('falls back to no scan date when the requested date is malformed', function () {
+	evidence_test_set_request_var('scan_date', '2024-5-1');
+	ob_start();
+	evidence_find();
+	$html = ob_get_clean();
+
+	expect($html)->toContain('Select any device')->not->toContain('<h3>');
+});
+
+it('rejects search text the filter does not accept', function () {
+	evidence_test_set_request_var('scan_date', -1);
+	evidence_test_set_request_var('find_text', "a'b");
+
+	expect(fn () => evidence_find())->toThrow(RuntimeException::class);
+});
+
+it('rejects search text outside the allowed length', function () {
+	evidence_test_set_request_var('scan_date', -1);
+	evidence_test_set_request_var('find_text', 'ab');
+	ob_start();
+	$result = evidence_find();
+	$html = ob_get_clean();
+
+	expect($result)->toBeFalse()
+		->and($html)->toContain('Search string must be 3-20 characters');
+});
+
+it('runs the evidence search for valid search text', function () {
+	evidence_test_set_config_option('evidence_records', 5);
+	evidence_test_set_request_var('scan_date', -1);
+	evidence_test_set_request_var('find_text', '+++');
+	evidence_test_mock_db('db_fetch_assoc_prepared', 'plugin_evidence_snmp_info', false);
+	ob_start();
+	evidence_find();
+	$html = ob_get_clean();
+
+	expect($html)->toContain('paragraph_info')->toContain('Not found');
+});
+
+it('accepts only the exact scan_date mode values', function ($raw, $expected) {
+	evidence_test_set_request_var('scan_date', $raw);
+
+	expect(plugin_evidence_get_scan_date())->toBe($expected);
+})->with([
+	['-1', -1],
+	['-2', -2],
+	[-2, -2],
+	[' -1', -1],
+	['-1e0', -1],
+	['-2 ', -1],
+	['2024-05-01', '2024-05-01'],
+	['2024-05-01<x>', -1],
+]);
+
+it('links actual data with the validated scan date', function () {
+	evidence_test_set_request_var('scan_date', '-2e0');
+	evidence_test_set_request_var('template_id', 5);
+	evidence_test_mock_db('db_fetch_row_prepared', 'FROM host', ['id' => 3, 'description' => 'Allowed']);
+	ob_start();
+	evidence_show_host_data(3, plugin_evidence_get_scan_date());
+	$html = ob_get_clean();
+
+	expect($html)->toContain('host_id=3&template_id=5&scan_date=-1&actual=1')
+		->not->toContain('-2e0');
+});
 
 it('reports an empty search-result paragraph', function () {
 	ob_start();

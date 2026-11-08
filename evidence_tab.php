@@ -94,11 +94,7 @@ function evidence_display_form() {
 	$host_id     = get_filter_request_var('host_id');
 	$template_id = get_filter_request_var('template_id');
 
-	if (get_nfilter_request_var('scan_date') == -1 || get_nfilter_request_var('scan_date') == -2) {
-		$scan_date = get_nfilter_request_var('scan_date');
-	} else {
-		$scan_date = get_filter_request_var('scan_date', FILTER_VALIDATE_REGEXP, ['options' => ['regexp' => '/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/', 'default' => -1]]);
-	}
+	$scan_date = plugin_evidence_get_scan_date();
 
 	$find_text = get_filter_request_var('find_text', FILTER_VALIDATE_REGEXP, ['options' => ['regexp' => '/^([a-zA-Z0-9_\-\.:\+ ]+)$/', 'default' => 'INCORRECT: ' . html_escape('find_text')]]);
 	form_start(html_escape(basename($_SERVER['PHP_SELF'])), 'form_evidence');

@@ -343,14 +343,63 @@ if (!function_exists('get_nfilter_request_var')) {
 }
 
 if (!function_exists('get_filter_request_var')) {
-	function get_filter_request_var($name) {
-		return array_key_exists($name, $GLOBALS['__test_request_vars'])
-			? $GLOBALS['__test_request_vars'][$name] : '';
+	/**
+	 * Mirrors Cacti's get_filter_request_var() closely enough to exercise
+	 * the plugin's request validation: an unset variable returns the
+	 * top-level default (or null), an empty or '0' value passes through,
+	 * and anything else goes through filter_var() with the given filter and
+	 * options. The validated value is written back like set_request_var().
+	 *
+	 * @param string $name    Request variable name.
+	 * @param int    $filter  PHP validation filter, FILTER_VALIDATE_INT by default.
+	 * @param array  $options filter_var() options and flags.
+	 *
+	 * @throws RuntimeException When validation fails, where Cacti would call
+	 *                          die_html_input_error() and exit.
+	 *
+	 * @return mixed The validated value.
+	 */
+	function get_filter_request_var($name, $filter = FILTER_VALIDATE_INT, $options = []) {
+		if (!array_key_exists($name, $GLOBALS['__test_request_vars'])) {
+			return $options['default'] ?? null;
+		}
+
+		$raw = $GLOBALS['__test_request_vars'][$name];
+
+		if ($raw === '' || $raw === null || (string) $raw === '0') {
+			return $raw;
+		}
+
+		$value = cacti_sizeof($options) ? filter_var($raw, $filter, $options) : filter_var($raw, $filter);
+
+		if ($value === false) {
+			throw new RuntimeException("Validation error for request variable '$name'");
+		}
+
+		$GLOBALS['__test_request_vars'][$name] = $value;
+
+		return $value;
 	}
 }
 
 if (!function_exists('get_allowed_devices')) {
-	function get_allowed_devices($where = '', $order = 'description', $limit = '', &$total = 0, $user_id = 0) {
+	/**
+	 * Returns the devices the test marks as allowed in
+	 * $GLOBALS['__test_allowed_devices'], ignoring the query arguments, and
+	 * counts calls in $GLOBALS['__test_allowed_devices_calls'].
+	 *
+	 * @param string $sql_where  Ignored.
+	 * @param string $sql_order  Ignored.
+	 * @param string $sql_limit  Ignored.
+	 * @param int    $total_rows Ignored.
+	 * @param int    $user_id    Ignored.
+	 * @param int    $device_id  Ignored.
+	 *
+	 * @return array<int, array<string, mixed>> Allowed device rows.
+	 */
+	function get_allowed_devices($sql_where = '', $sql_order = 'description', $sql_limit = '', &$total_rows = 0, $user_id = 0, $device_id = 0) {
+		$GLOBALS['__test_allowed_devices_calls'] = ($GLOBALS['__test_allowed_devices_calls'] ?? 0) + 1;
+
 		return array_values(array_filter($GLOBALS['__test_allowed_devices'] ?? [], 'is_array'));
 	}
 }
