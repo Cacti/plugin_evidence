@@ -102,6 +102,8 @@ beforeEach(function () {
 	evidence_test_reset_db_mocks();
 	evidence_test_reset_inputs();
 	$GLOBALS['__test_db_calls'] = array();
+	$GLOBALS['__test_allowed_devices'] = [['id' => 1], ['id' => 2], ['id' => 3]];
+	$_SESSION['sess_user_id'] = 1;
 	unset($GLOBALS['__test_snmp_get'], $GLOBALS['__test_snmp_walk']);
 });
 
@@ -216,15 +218,67 @@ it('stops the search immediately when history storage is disabled', function () 
 });
 
 it('links each device in a search-result paragraph', function () {
+	$GLOBALS['__test_allowed_devices'] = [['id' => 3]];
+	ob_start();
+	plugin_evidence_display_paragraph([
+		['host_id' => 3, 'scan_date' => '2024-05-01 08:30:00', 'record_count' => 4],
+		['host_id' => 9, 'scan_date' => '2024-05-01 08:30:00', 'record_count' => 8],
+	]);
+	$html = ob_get_clean();
+
+	expect($html)->toContain('host_id=3')
+		->and($html)->not->toContain('host_id=9')
+		->and($html)->toContain('scan_date=2024-05-01');
+});
+
+it('renders no search links when the user has no allowed devices', function () {
+	$GLOBALS['__test_allowed_devices'] = [];
 	ob_start();
 	plugin_evidence_display_paragraph([
 		['host_id' => 3, 'scan_date' => '2024-05-01 08:30:00', 'record_count' => 4],
 	]);
 	$html = ob_get_clean();
 
-	expect($html)->toContain('host_id=3')
-		->and($html)->toContain('scan_date=2024-05-01');
+	expect($html)->toContain('Not found')->not->toContain('host_id=3');
 });
+
+it('does not display evidence details for a device outside the user permissions', function () {
+	$GLOBALS['__test_allowed_devices'] = [['id' => 9]];
+	ob_start();
+	evidence_show_host_data(3, -1);
+	$html = ob_get_clean();
+
+	expect($html)->toBe('')
+		->and($GLOBALS['__test_db_calls'])->toBeEmpty();
+});
+
+it('limits template and scan-date evidence results to allowed devices', function () {
+	$GLOBALS['__test_allowed_devices'] = [['id' => 4]];
+	evidence_test_set_request_var('template_id', 5);
+	evidence_test_set_request_var('scan_date', -1);
+	evidence_test_mock_db('db_fetch_assoc', 'FROM host_template', [['id' => 5, 'name' => 'Router']]);
+	evidence_test_mock_db('db_fetch_assoc_prepared', 'SELECT id FROM host', function ($sql, $params) {
+		expect($sql)->toContain('id IN (4)');
+		expect($params)->toBe([5]);
+		return [['id' => 4], ['id' => 9]];
+	});
+	ob_start();
+	evidence_find();
+	$template_html = ob_get_clean();
+	expect($template_html)->toContain('host_id=4')->not->toContain('host_id=9');
+
+	evidence_test_reset_db_mocks();
+	evidence_test_reset_inputs();
+	$GLOBALS['__test_allowed_devices'] = [['id' => 4]];
+	evidence_test_set_request_var('scan_date', '2024-05-01');
+	evidence_test_mock_db('db_fetch_assoc_prepared', 'SELECT DISTINCT(host_id)', [['host_id' => 4], ['host_id' => 9]]);
+	evidence_test_mock_db('db_fetch_row_prepared', 'FROM host', ['id' => 4, 'description' => 'Allowed']);
+	ob_start();
+	evidence_find();
+	$date_html = ob_get_clean();
+	expect($date_html)->toContain('host_id=4')->not->toContain('host_id=9');
+});
+
 
 it('reports an empty search-result paragraph', function () {
 	ob_start();

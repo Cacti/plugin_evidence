@@ -349,6 +349,12 @@ if (!function_exists('get_filter_request_var')) {
 	}
 }
 
+if (!function_exists('get_allowed_devices')) {
+	function get_allowed_devices($where = '', $order = 'description', $limit = '', &$total = 0, $user_id = 0) {
+		return array_values(array_filter($GLOBALS['__test_allowed_devices'] ?? [], 'is_array'));
+	}
+}
+
 if (!function_exists('html_escape_request_var')) {
 	function html_escape_request_var($name) {
 		return array_key_exists($name, $GLOBALS['__test_request_vars'])

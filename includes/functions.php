@@ -356,6 +356,61 @@ function plugin_evidence_get_allowed_devices($user_id, $array = false) {
 }
 
 /**
+ * Displays evidence results restricted to the current user's allowed devices.
+ *
+ * @return bool|void False when the search term is invalid; otherwise outputs results.
+ */
+function evidence_find() {
+	global $entities;
+	$templates = db_fetch_assoc('SELECT id, name FROM host_template');
+	$allowed_devices = plugin_evidence_get_allowed_devices($_SESSION['sess_user_id'], true);
+	$allowed_ids = is_array($allowed_devices) ? array_map('intval', $allowed_devices) : [];
+	$requested_host = (int) get_filter_request_var('host_id');
+	if (in_array($requested_host, $allowed_ids, true)) {
+		$host_id = $requested_host;
+	}
+	$scan_date = in_array(get_nfilter_request_var('scan_date'), [-1, '-1', -2, '-2'], true)
+		? get_nfilter_request_var('scan_date')
+		: get_filter_request_var('scan_date', FILTER_VALIDATE_REGEXP, ['options' => ['regexp' => '/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/', 'default' => -1]]);
+	$template_id = (int) get_filter_request_var('template_id');
+	if (!in_array($template_id, array_map('intval', array_column($templates, 'id')), true)) {
+		unset($template_id);
+	}
+	$find_text = get_filter_request_var('find_text', FILTER_VALIDATE_REGEXP, ['options' => ['regexp' => '/^([a-zA-Z0-9_\-\.:\+ ]+)$/']]);
+	if (empty($find_text)) {
+		unset($find_text);
+	}
+	if (isset($find_text) && (strlen($find_text) < 3 || strlen($find_text) > 20)) {
+		print __('Search string must be 3-20 characters', 'evidence');
+		return false;
+	}
+	if (isset($host_id)) {
+		evidence_show_host_data($host_id, $scan_date);
+	} elseif (isset($template_id)) {
+		$hosts = db_fetch_assoc_prepared('SELECT id FROM host WHERE host_template_id = ? AND id IN (' . implode(',', $allowed_ids ?: [0]) . ')', [$template_id]);
+		foreach ($hosts as $host) {
+			evidence_show_host_data($host['id'], $scan_date);
+		}
+	}
+	if (isset($find_text)) {
+		plugin_evidence_find();
+	}
+	if (!isset($host_id) && !isset($template_id) && $scan_date > 0) {
+		print "<h3>$scan_date</h3>";
+		$ids = [];
+		foreach (['plugin_evidence_snmp_info', 'plugin_evidence_entity', 'plugin_evidence_ip', 'plugin_evidence_mac', 'plugin_evidence_vendor_specific'] as $table) {
+			$ids = array_merge($ids, array_column(db_fetch_assoc_prepared('SELECT DISTINCT(host_id) FROM ' . $table . ' WHERE date(scan_date) = ?', [$scan_date]), 'host_id'));
+		}
+		foreach (array_intersect(array_unique($ids), $allowed_ids) as $id) {
+			evidence_show_host_data($id, $scan_date);
+		}
+	}
+	if (!isset($host_id) && !isset($template_id) && !isset($find_text) && $scan_date < 0) {
+		print __('Select any device, template, select any scan date or try search', 'evidence');
+	}
+}
+
+/**
  * Queries a device via SNMP for its sysObjectID and extracts the IANA
  * Private Enterprise Number from it, identifying the device's vendor.
  * Called from plugin_evidence_actual_data() to look up the vendor for
@@ -1394,6 +1449,10 @@ function plugin_evidence_time_to_run() {
  */
 function evidence_show_host_data($host_id, $scan_date) {
 	global $config, $entities;
+	$allowed_devices = plugin_evidence_get_allowed_devices($_SESSION['sess_user_id'], true);
+	if (!is_array($allowed_devices) || !in_array((int) $host_id, array_map('intval', $allowed_devices), true)) {
+		return;
+	}
 
 	$evidence_records       = read_config_option('evidence_records');
 	$evidence_frequency     = read_config_option('evidence_frequency');
@@ -2108,6 +2167,11 @@ function plugin_evidence_array_to_table($array, $columns = 1) {
 
 function plugin_evidence_display_paragraph($data) {
 	global $config;
+	$allowed_devices = plugin_evidence_get_allowed_devices($_SESSION['sess_user_id'], true);
+	$allowed_lookup = is_array($allowed_devices) ? array_fill_keys(array_map('intval', $allowed_devices), true) : [];
+	$data = array_filter($data, static function ($row) use ($allowed_lookup) {
+		return isset($row['host_id']) && isset($allowed_lookup[(int) $row['host_id']]);
+	});
 
 	if (cacti_sizeof($data)) {
 		foreach ($data as $row) {
