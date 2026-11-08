@@ -428,6 +428,26 @@ it('lists stored history and flags changed scans across dates', function () {
 		->and($html)->toContain('Changed');
 });
 
+it('escapes the device fields in the evidence heading', function () {
+	evidence_test_set_config_option('evidence_records', 5);
+
+	evidence_test_mock_db('db_fetch_row_prepared', 'FROM host', [
+		'id'            => 1,
+		'description'   => '<img src=x onerror=alert(1)>',
+		'hostname'      => '"><script>alert(2)</script>',
+		'template_name' => '<b>Router</b>',
+	]);
+
+	ob_start();
+	evidence_show_host_data(1, -1);
+	$html = ob_get_clean();
+
+	expect($html)->not->toContain('<img src=x')
+		->and($html)->not->toContain('<script>')
+		->and($html)->not->toContain('<b>Router</b>')
+		->and($html)->toContain('&lt;img src=x onerror=alert(1)&gt;');
+});
+
 it('merges actual scan data into the history listing when requested', function () {
 	evidence_test_set_config_option('evidence_records', 5);
 	evidence_test_set_request_var('actual', 1);

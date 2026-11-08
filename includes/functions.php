@@ -461,7 +461,7 @@ function evidence_find() {
 	}
 
 	if (!isset($host_id) && !isset($template_id) && $scan_date > 0) {
-		print "<h3>$scan_date</h3>";
+		print '<h3>' . html_escape((string) $scan_date) . '</h3>';
 
 		$ids_info   = array_column(db_fetch_assoc_prepared('SELECT distinct(host_id) FROM plugin_evidence_snmp_info WHERE date(scan_date) = ?', [$scan_date]), 'host_id');
 		$ids_entity = array_column(db_fetch_assoc_prepared('SELECT distinct(host_id) FROM plugin_evidence_entity WHERE date(scan_date) = ?', [$scan_date]), 'host_id');
@@ -1557,7 +1557,7 @@ function evidence_show_host_data($host_id, $scan_date) {
 		}
 	}
 
-	print '<h3>' . ($host['description'] ?? '') . ' (' . ($host['hostname'] ?? '') . ', ' . ($host['template_name'] ?? '') . ') — ' .
+	print '<h3>' . html_escape($host['description'] ?? '') . ' (' . html_escape($host['hostname'] ?? '') . ', ' . html_escape($host['template_name'] ?? '') . ') — ' .
 		__('ID: %d, stored records: %d', (int) $host_id, $record_count, 'evidence') . '</h3>';
 
 	if (!get_filter_request_var('actual')) {
