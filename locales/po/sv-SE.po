@@ -5,235 +5,247 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Cacti \n"
+"Project-Id-Version: Cacti\n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
 "POT-Creation-Date: 2026-09-30 11:26-0400\n"
-"PO-Revision-Date: 2026-09-30 11:26-0400\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
-"Language: sv_SE\n"
+"PO-Revision-Date: 2026-11-09 22:18+0000\n"
+"Last-Translator: Daniel Nylander <daniel@danielnylander.se>\n"
+"Language-Team: Swedish <https://translate.cacti.net/projects/cacti/evidence/"
+"sv/>\n"
+"Language: sv-SE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.11.4\n"
 
 #: evidence.php
 msgid "Disabled/down device. No actual data"
-msgstr ""
+msgstr "Inaktiverad/nedstängd enhet. Inga aktuella data"
 
 #: evidence.php
 msgid "Show older records"
-msgstr ""
+msgstr "Visa äldre poster"
 
 #: evidence.php includes/functions.php
 msgid "History data store disabled"
-msgstr ""
+msgstr "Lagring av historikdata är inaktiverad"
 
 #: evidence.php
 msgid "Permission issue"
-msgstr ""
+msgstr "Behörighetsproblem"
 
 #: evidence_tab.php includes/functions.php
 msgid "Evidence"
-msgstr ""
+msgstr "Inventeringsdata"
 
 #: evidence_tab.php
 msgid "Template"
-msgstr ""
+msgstr "Mall"
 
 #: evidence_tab.php
 msgid "Any"
-msgstr ""
+msgstr "Valfri"
 
 #: evidence_tab.php
 msgid "Scan date"
-msgstr ""
+msgstr "Skanningsdatum"
 
 #: evidence_tab.php
 msgid "Only last changed states"
-msgstr ""
+msgstr "Endast senast ändrade tillstånd"
 
 #: evidence_tab.php
 msgid "All history"
-msgstr ""
+msgstr "All historik"
 
 #: evidence_tab.php
 msgid "records changed"
-msgstr ""
+msgstr "poster ändrades"
 
 #: evidence_tab.php
 msgid "Find"
-msgstr ""
+msgstr "Sök"
 
 #: evidence_tab.php
 msgid "Go"
-msgstr ""
+msgstr "Gå"
 
 #: evidence_tab.php
 msgid "Clear"
-msgstr ""
+msgstr "Rensa"
 
 #: evidence_tab.php
 msgid "Clear Filters"
-msgstr ""
+msgstr "Rensa filter"
 
 #: evidence_tab.php
 msgid "Search"
-msgstr ""
+msgstr "Sök"
 
 #: evidence_tab.php
 msgid "You can search serial number, firmware version, ip, mac address,..."
 msgstr ""
+"Du kan söka efter serienummer, firmwareversion, IP-adress, MAC-adress med "
+"mera."
 
 #: evidence_tab.php
 msgid "Search string must be 3-20 characters"
-msgstr ""
+msgstr "Söksträngen måste vara 3–20 tecken lång"
 
 #: evidence_tab.php
 msgid "Select any device, template, select any scan date or try search"
-msgstr ""
+msgstr "Välj en enhet eller mall, ett skanningsdatum eller sök."
 
 #: evidence_tab.php
 msgid "No data. Allow periodic scan and store history in settings"
 msgstr ""
+"Inga data. Aktivera periodisk skanning och lagring av historik i "
+"inställningarna."
 
 #: evidence_tab.php
 msgid "Device or template - You can display information about specific host, all devices with the same template."
 msgstr ""
+"Enhet eller mall: Du kan visa information om en viss värd eller alla enheter "
+"med samma mall."
 
 #: evidence_tab.php
 msgid "Scan date (Only last changes or All history) - You can choose whether to retrieve only the most recent change or the entire history."
 msgstr ""
+"Skanningsdatum (endast senaste ändringar eller all historik): Du kan välja "
+"att hämta enbart den senaste ändringen eller hela historiken."
 
 #: evidence_tab.php
 msgid "If you use only `Scan Date`, the changes for all devices found during this scan will be displayed"
 msgstr ""
+"Om du bara använder ”Skanningsdatum” visas ändringarna för alla enheter som "
+"hittades under denna skanning."
 
 #: evidence_tab.php
 msgid "You can search any string in all data."
-msgstr ""
+msgstr "Du kan söka efter valfri sträng i alla data."
 
 #: evidence_tab.php
 msgid "Number of records"
-msgstr ""
+msgstr "Antal poster"
 
 #: evidence_tab.php
 #, php-format
 msgid "Devices: %d records"
-msgstr ""
+msgstr "Enheter: %d poster"
 
 #: evidence_tab.php
 #, php-format
 msgid "Entity MIB: %d records, %d vendors"
-msgstr ""
+msgstr "Entity MIB: %d poster, %d tillverkare"
 
 #: evidence_tab.php
 #, php-format
 msgid "Unique MAC addresses: %d"
-msgstr ""
+msgstr "Unika MAC-adresser: %d"
 
 #: evidence_tab.php
 #, php-format
 msgid "Unique IP addresses: %d"
-msgstr ""
+msgstr "Unika IP-adresser: %d"
 
 #: evidence_tab.php
 #, php-format
 msgid "Vendor specific data: %d"
-msgstr ""
+msgstr "Tillverkarspecifika data: %d"
 
 #: evidence_tab.php
 #, php-format
 msgid "Oldest record: %d"
-msgstr ""
+msgstr "Äldsta post: %d"
 
 #: evidence_tab.php
 msgid "Vendors"
-msgstr ""
+msgstr "Tillverkare"
 
 #: evidence_tab.php
 msgid "Show or hide"
-msgstr ""
+msgstr "Visa eller dölj"
 
 #: evidence_tab.php
 msgid "Expand all dates"
-msgstr ""
+msgstr "Expandera alla datum"
 
 #: evidence_tab.php
 msgid "Expand latest date"
-msgstr ""
+msgstr "Expandera senaste datumet"
 
 #: includes/arrays.php
 msgid "Description"
-msgstr ""
+msgstr "Beskrivning"
 
 #: includes/arrays.php
 msgid "Name"
-msgstr ""
+msgstr "Namn"
 
 #: includes/arrays.php
 msgid "Hardware revision"
-msgstr ""
+msgstr "Maskinvarurevision"
 
 #: includes/arrays.php
 msgid "Firmware revision"
-msgstr ""
+msgstr "Firmwareversion"
 
 #: includes/arrays.php
 msgid "Software revision"
-msgstr ""
+msgstr "Programvarurevision"
 
 #: includes/arrays.php
 msgid "Serial number"
-msgstr ""
+msgstr "Serienummer"
 
 #: includes/arrays.php
 msgid "Manufacturer name"
-msgstr ""
+msgstr "Tillverkarens namn"
 
 #: includes/arrays.php
 msgid "Model name"
-msgstr ""
+msgstr "Modellnamn"
 
 #: includes/arrays.php
 msgid "Alias"
-msgstr ""
+msgstr "Alias"
 
 #: includes/arrays.php
 msgid "Asset ID"
-msgstr ""
+msgstr "Tillgångs-ID"
 
 #: includes/arrays.php
 msgid "Manufacturing date"
-msgstr ""
+msgstr "Tillverkningsdatum"
 
 #: includes/arrays.php
 msgid "UUID"
-msgstr ""
+msgstr "UUID"
 
 #: includes/arrays.php includes/functions.php
 msgid "SNMP info"
-msgstr ""
+msgstr "SNMP-information"
 
 #: includes/arrays.php includes/functions.php
 msgid "Entity MIB"
-msgstr ""
+msgstr "Entity MIB"
 
 #: includes/arrays.php
 msgid "Mac addresses"
-msgstr ""
+msgstr "MAC-adresser"
 
 #: includes/arrays.php includes/functions.php
 msgid "IP addresses"
-msgstr ""
+msgstr "IP-adresser"
 
 #: includes/arrays.php
 msgid "Vendor specific data"
-msgstr ""
+msgstr "Tillverkarspecifika data"
 
 #: includes/arrays.php
 msgid "Vendor optional data"
-msgstr ""
+msgstr "Valfria tillverkardata"
 
 #: includes/functions.php
 msgid "Data"
@@ -241,143 +253,156 @@ msgstr ""
 
 #: includes/functions.php
 msgid "Store history is not allowed. Nothing to do."
-msgstr ""
+msgstr "Lagring av historik är inte tillåten. Inget behöver göras."
 
 #: includes/functions.php
 msgid "Not found"
-msgstr ""
+msgstr "Hittades inte"
 
 #: includes/functions.php
 msgid "Also show actual data"
-msgstr ""
+msgstr "Visa även aktuella data"
 
 #: includes/functions.php
 msgid "ID ORG"
-msgstr ""
+msgstr "Organisations-ID"
 
 #: includes/functions.php
 msgid "No older data yet"
-msgstr ""
+msgstr "Det finns ännu inga äldre data"
 
 #: includes/functions.php
 msgid "Entity"
-msgstr ""
+msgstr "Entitet"
 
 #: includes/functions.php
 msgid "MAC addresses"
-msgstr ""
+msgstr "MAC-adresser"
 
 #: includes/functions.php
 msgid "Vendor specific"
-msgstr ""
+msgstr "Tillverkarspecifik"
 
 #: includes/functions.php
 msgid "Actual data"
-msgstr ""
+msgstr "Aktuella data"
 
 #: includes/functions.php
 msgid "Changed"
-msgstr ""
+msgstr "Ändrad"
 
 #: includes/functions.php
 msgid "SNMP information"
-msgstr ""
+msgstr "SNMP-information"
 
 #: includes/functions.php
 msgid "Vendor specific information"
-msgstr ""
+msgstr "Tillverkarspecifik information"
 
 #: includes/functions.php
 msgid "Vendor optional information"
-msgstr ""
+msgstr "Valfri tillverkarinformation"
 
 #: includes/functions.php
 msgid "Show only first 3 items, for the full listing click here"
-msgstr ""
+msgstr "Visa endast de första 3 objekten. Klicka här för hela listan."
 
 #: includes/settings.php
 msgid "How often gather data"
-msgstr ""
+msgstr "Hur ofta data ska samlas in"
 
 #: includes/settings.php
 msgid "If enabled, Evidence will gather data periodically. If disabled, you can only view data for specific host"
 msgstr ""
+"Om detta är aktiverat samlar Inventeringsdata in data regelbundet. Om det är "
+"inaktiverat kan du endast visa data för en viss värd."
 
 #: includes/settings.php
 msgid "Disabled"
-msgstr ""
+msgstr "Inaktiverad"
 
 #: includes/settings.php
 #, php-format
 msgid "Every %d hours"
-msgstr ""
+msgstr "Var %d:e timme"
 
 #: includes/settings.php
 msgid "Every day"
-msgstr ""
+msgstr "Varje dag"
 
 #: includes/settings.php
 msgid "Every week"
-msgstr ""
+msgstr "Varje vecka"
 
 #: includes/settings.php
 msgid "When evidence will be started"
-msgstr ""
+msgstr "När insamlingen startar"
 
 #: includes/settings.php
 msgid "The Base Time for gather data to occur.  For example, if you use '12:00am' and you choose once per day, the action would begin at approximately midnight every day."
 msgstr ""
+"Bastiden för datainsamlingen. Om du till exempel använder ”00:00” och väljer "
+"en gång per dag, startar åtgärden ungefär vid midnatt varje dag."
 
 #: includes/settings.php
 msgid "How many changes store in database"
-msgstr ""
+msgstr "Hur många ändringar som lagras i databasen"
 
 #: includes/settings.php
 msgid "If data gathering is enabled,  you can specify how many history (changed) records keep for each device"
 msgstr ""
+"Om datainsamling är aktiverad kan du ange hur många historikposter med "
+"ändringar som ska behållas för varje enhet."
 
 #: includes/settings.php
 msgid "Without history"
-msgstr ""
+msgstr "Utan historik"
 
 #: includes/settings.php
 #, php-format
 msgid "%d record"
-msgstr ""
+msgstr "%d post"
 
 #: includes/settings.php
 #, php-format
 msgid "%d records"
-msgstr ""
+msgstr "%d poster"
 
 #: includes/settings.php
 msgid "Display information on device edit page"
-msgstr ""
+msgstr "Visa information på enhetens redigeringssida"
 
 #: includes/settings.php
 msgid "If enabled, flowview will display evidence data on device edit page"
 msgstr ""
+"Om detta är aktiverat visar Flowview inventeringsdata på enhetens "
+"redigeringssida."
 
 #: includes/settings.php
 msgid "Send email on evidence information change"
-msgstr ""
+msgstr "Skicka e-post när inventeringsdata ändras"
 
 #: includes/settings.php
 msgid "If evidence find change, send email"
-msgstr ""
+msgstr "Skicka e-post om inventeringsdata hittar en ändring"
 
 #: includes/settings.php
 msgid "Excluded notification Host IDs"
-msgstr ""
+msgstr "Värd-ID:n som undantas från aviseringar"
 
 #: includes/settings.php
 msgid "Some devices report hw changes too often. You can exclude these host from email notification. Insert Host IDs, comma separator"
 msgstr ""
+"Vissa enheter rapporterar maskinvaruändringar för ofta. Du kan undanta dessa "
+"värdar från e-postaviseringar. Ange värd-ID:n, avgränsade med kommatecken."
 
 #: includes/settings.php
 msgid "Excluded notification device templates"
-msgstr ""
+msgstr "Enhetsmallar som undantas från aviseringar"
 
 #: includes/settings.php
 msgid "Some devices types report hw changes too often. You can exclude these templates from email notification. Insert device templates IDs, comma separator"
 msgstr ""
+"Vissa enhetstyper rapporterar maskinvaruändringar för ofta. Du kan undanta "
+"dessa mallar från e-postaviseringar. Ange enhetsmallarnas ID:n, avgränsade "
+"med kommatecken."
