@@ -356,6 +356,132 @@ function plugin_evidence_get_allowed_devices($user_id, $array = false) {
 }
 
 /**
+ * Returns the current user's allowed device ids as a lookup table.
+ *
+ * plugin_evidence_get_allowed_devices() runs a full device permission query
+ * and toggles the user's hide_disabled setting around it, so a page that
+ * renders many hosts or result paragraphs computes the list once per request
+ * and shares it.
+ *
+ * @param bool $reset Discard the cached lookup; used by the unit suite,
+ *                    which changes the allowed devices between tests.
+ *
+ * @return array<int, true> Allowed host ids as keys.
+ */
+function plugin_evidence_allowed_lookup($reset = false) {
+	static $lookup = null;
+
+	if ($reset) {
+		$lookup = null;
+
+		return [];
+	}
+
+	if ($lookup === null) {
+		$allowed = plugin_evidence_get_allowed_devices($_SESSION['sess_user_id'], true);
+		$lookup  = is_array($allowed) ? array_fill_keys(array_map('intval', $allowed), true) : [];
+	}
+
+	return $lookup;
+}
+
+/**
+ * Returns the validated scan_date request value.
+ *
+ * Only the exact strings '-1' (all history) and '-2' (only last changed
+ * states) select a mode. A loose comparison would also accept variants
+ * such as ' -1' or '-1e0' and then pass the raw text on to links and
+ * queries, so the mode is returned as an integer literal and anything else
+ * must be a YYYY-MM-DD date, falling back to -1.
+ *
+ * @return int|string -1, -2, or a YYYY-MM-DD date string.
+ */
+function plugin_evidence_get_scan_date() {
+	$raw = get_nfilter_request_var('scan_date');
+
+	if (in_array($raw, ['-1', '-2', -1, -2], true)) {
+		return (int) $raw;
+	}
+
+	return get_filter_request_var('scan_date', FILTER_VALIDATE_REGEXP, ['options' => ['regexp' => '/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/', 'default' => -1]]);
+}
+
+/**
+ * Displays evidence results restricted to the current user's allowed devices.
+ *
+ * @return bool|void False when the search term is invalid; otherwise outputs results.
+ */
+function evidence_find() {
+	global $entities;
+
+	$templates = db_fetch_assoc('SELECT id, name FROM host_template');
+
+	$allowed_lookup = plugin_evidence_allowed_lookup();
+
+	if (isset($allowed_lookup[(int) get_filter_request_var('host_id')])) {
+		$host_id = get_filter_request_var('host_id');
+	}
+
+	$scan_date = plugin_evidence_get_scan_date();
+
+	if (in_array(get_filter_request_var('template_id'), array_column($templates, 'id'))) {
+		$template_id = get_filter_request_var('template_id');
+	}
+
+	$find_text = get_filter_request_var('find_text', FILTER_VALIDATE_REGEXP, ['options' => ['regexp' => '/^([a-zA-Z0-9_\-\.:\+ ]+)$/']]);
+
+	if (empty($find_text)) {
+		unset($find_text);
+	}
+
+	if (isset($find_text) && (strlen($find_text) < 3 || strlen($find_text) > 20)) {
+		print __('Search string must be 3-20 characters', 'evidence');
+
+		return false;
+	}
+
+	if (isset($host_id)) {
+		evidence_show_host_data($host_id, $scan_date);
+	} elseif (isset($template_id)) {
+		// The allowed ids are intval-mapped keys, so the IN list is safe to interpolate.
+		$hosts = db_fetch_assoc_prepared('SELECT id FROM host
+			WHERE host_template_id = ?
+			AND id IN (' . implode(',', array_keys($allowed_lookup) ?: [0]) . ')',
+			[$template_id]);
+
+		if (cacti_sizeof($hosts) > 0) {
+			foreach ($hosts as $host) {
+				evidence_show_host_data($host['id'], $scan_date);
+			}
+		}
+	}
+
+	if (isset($find_text)) {
+		plugin_evidence_find();
+	}
+
+	if (!isset($host_id) && !isset($template_id) && $scan_date > 0) {
+		print '<h3>' . html_escape((string) $scan_date) . '</h3>';
+
+		$ids_info   = array_column(db_fetch_assoc_prepared('SELECT distinct(host_id) FROM plugin_evidence_snmp_info WHERE date(scan_date) = ?', [$scan_date]), 'host_id');
+		$ids_entity = array_column(db_fetch_assoc_prepared('SELECT distinct(host_id) FROM plugin_evidence_entity WHERE date(scan_date) = ?', [$scan_date]), 'host_id');
+		$ids_ip     = array_column(db_fetch_assoc_prepared('SELECT distinct(host_id) FROM plugin_evidence_ip WHERE date(scan_date) = ?', [$scan_date]), 'host_id');
+		$ids_mac    = array_column(db_fetch_assoc_prepared('SELECT distinct(host_id) FROM plugin_evidence_mac WHERE date(scan_date) = ?', [$scan_date]), 'host_id');
+		$ids_vendor = array_column(db_fetch_assoc_prepared('SELECT distinct(host_id) FROM plugin_evidence_vendor_specific WHERE date(scan_date) = ?', [$scan_date]), 'host_id');
+
+		$merged = array_unique(array_merge($ids_info, $ids_entity, $ids_ip, $ids_mac, $ids_vendor));
+
+		foreach ($merged as $item) {
+			evidence_show_host_data($item, $scan_date);
+		}
+	}
+
+	if (!isset($host_id) && !isset($template_id) && !isset($find_text) && $scan_date < 0) {
+		print __('Select any device, template, select any scan date or try search', 'evidence');
+	}
+}
+
+/**
  * Queries a device via SNMP for its sysObjectID and extracts the IANA
  * Private Enterprise Number from it, identifying the device's vendor.
  * Called from plugin_evidence_actual_data() to look up the vendor for
@@ -1395,6 +1521,12 @@ function plugin_evidence_time_to_run() {
 function evidence_show_host_data($host_id, $scan_date) {
 	global $config, $entities;
 
+	$allowed_lookup = plugin_evidence_allowed_lookup();
+
+	if (!isset($allowed_lookup[(int) $host_id])) {
+		return;
+	}
+
 	$evidence_records       = read_config_option('evidence_records');
 	$evidence_frequency     = read_config_option('evidence_frequency');
 	$data_compare_snmp_info = [];
@@ -1425,14 +1557,14 @@ function evidence_show_host_data($host_id, $scan_date) {
 		}
 	}
 
-	print '<h3>' . ($host['description'] ?? '') . ' (' . ($host['hostname'] ?? '') . ', ' . ($host['template_name'] ?? '') . ') — ' .
+	print '<h3>' . html_escape($host['description'] ?? '') . ' (' . html_escape($host['hostname'] ?? '') . ', ' . html_escape($host['template_name'] ?? '') . ') — ' .
 		__('ID: %d, stored records: %d', (int) $host_id, $record_count, 'evidence') . '</h3>';
 
 	if (!get_filter_request_var('actual')) {
 		print '<a href="' . $config['url_path'] . 'plugins/evidence/evidence_tab.php?' .
-			'host_id=' . $host_id .
-			'&template_id=' . get_filter_request_var('template_id') .
-			'&scan_date=' . get_nfilter_request_var('scan_date') .
+			'host_id=' . (int) $host_id .
+			'&template_id=' . (int) get_filter_request_var('template_id') .
+			'&scan_date=' . urlencode((string) $scan_date) .
 			'&actual=1&action=find">' . __('Also show actual data', 'evidence') . '</a>';
 		print '<br/>';
 	} else {  // show actual data
@@ -2108,6 +2240,18 @@ function plugin_evidence_array_to_table($array, $columns = 1) {
 
 function plugin_evidence_display_paragraph($data) {
 	global $config;
+
+	// db_fetch_assoc*() returns false when the query fails, for example when
+	// the RLIKE search text is not a valid regular expression ('+++').
+	if (!is_array($data)) {
+		$data = [];
+	}
+
+	$allowed_lookup = plugin_evidence_allowed_lookup();
+
+	$data = array_filter($data, static function ($row) use ($allowed_lookup) {
+		return isset($row['host_id']) && isset($allowed_lookup[(int) $row['host_id']]);
+	});
 
 	if (cacti_sizeof($data)) {
 		foreach ($data as $row) {

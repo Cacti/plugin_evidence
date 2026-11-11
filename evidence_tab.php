@@ -94,11 +94,7 @@ function evidence_display_form() {
 	$host_id     = get_filter_request_var('host_id');
 	$template_id = get_filter_request_var('template_id');
 
-	if (get_nfilter_request_var('scan_date') == -1 || get_nfilter_request_var('scan_date') == -2) {
-		$scan_date = get_nfilter_request_var('scan_date');
-	} else {
-		$scan_date = get_filter_request_var('scan_date', FILTER_VALIDATE_REGEXP, ['options' => ['regexp' => '/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/', 'default' => -1]]);
-	}
+	$scan_date = plugin_evidence_get_scan_date();
 
 	$find_text = get_filter_request_var('find_text', FILTER_VALIDATE_REGEXP, ['options' => ['regexp' => '/^([a-zA-Z0-9_\-\.:\+ ]+)$/', 'default' => 'INCORRECT: ' . html_escape('find_text')]]);
 	form_start(html_escape(basename($_SERVER['PHP_SELF'])), 'form_evidence');
@@ -231,77 +227,6 @@ function evidence_display_form() {
  *                         functions in this file; not used directly
  *                         here.
  */
-function evidence_find() {
-	global $entities;
-
-	$templates = db_fetch_assoc('SELECT id, name FROM host_template');
-
-	$allowed_devices = plugin_evidence_get_allowed_devices($_SESSION['sess_user_id'], true);
-
-	if (is_array($allowed_devices) && in_array(get_filter_request_var('host_id'), $allowed_devices)) {
-		$host_id = get_filter_request_var('host_id');
-	}
-
-	if (get_nfilter_request_var('scan_date') == -1 || get_nfilter_request_var('scan_date') == -2) {
-		$scan_date = get_nfilter_request_var('scan_date');
-	} else {
-		$scan_date = get_filter_request_var('scan_date', FILTER_VALIDATE_REGEXP, ['options' => ['regexp' => '/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/', 'default' => -1]]);
-	}
-
-	if (in_array(get_filter_request_var('template_id'), array_column($templates, 'id'))) {
-		$template_id = get_filter_request_var('template_id');
-	}
-
-	$find_text = get_filter_request_var('find_text', FILTER_VALIDATE_REGEXP, ['options' => ['regexp' => '/^([a-zA-Z0-9_\-\.:\+ ]+)$/']]);
-
-	if (empty($find_text)) {
-		unset($find_text);
-	}
-
-	if (isset($find_text) && (strlen($find_text) < 3 || strlen($find_text) > 20)) {
-		print __('Search string must be 3-20 characters', 'evidence');
-
-		return false;
-	}
-
-	if (isset($host_id)) {
-		evidence_show_host_data($host_id, $scan_date);
-	} elseif (isset($template_id)) {
-		$hosts = db_fetch_assoc_prepared('SELECT id FROM host
-			WHERE host_template_id = ?',
-			[$template_id]);
-
-		if (cacti_sizeof($hosts) > 0) {
-			foreach ($hosts as $host) {
-				evidence_show_host_data($host['id'], $scan_date);
-			}
-		}
-	}
-
-	if (isset($find_text)) {
-		plugin_evidence_find();
-	}
-
-	if (!isset($host_id) && !isset($template_id) && $scan_date > 0) {
-		print "<h3>$scan_date</h3>";
-
-		$ids_info   = array_column(db_fetch_assoc_prepared('SELECT distinct(host_id) FROM plugin_evidence_snmp_info WHERE date(scan_date) = ?', [$scan_date]), 'host_id');
-		$ids_entity = array_column(db_fetch_assoc_prepared('SELECT distinct(host_id) FROM plugin_evidence_entity WHERE date(scan_date) = ?', [$scan_date]), 'host_id');
-		$ids_ip     = array_column(db_fetch_assoc_prepared('SELECT distinct(host_id) FROM plugin_evidence_ip WHERE date(scan_date) = ?', [$scan_date]), 'host_id');
-		$ids_mac    = array_column(db_fetch_assoc_prepared('SELECT distinct(host_id) FROM plugin_evidence_mac WHERE date(scan_date) = ?', [$scan_date]), 'host_id');
-		$ids_vendor = array_column(db_fetch_assoc_prepared('SELECT distinct(host_id) FROM plugin_evidence_vendor_specific WHERE date(scan_date) = ?', [$scan_date]), 'host_id');
-
-		$merged = array_unique(array_merge($ids_info, $ids_entity, $ids_ip, $ids_mac, $ids_vendor));
-
-		foreach ($merged as $item) {
-			evidence_show_host_data($item, $scan_date);
-		}
-	}
-
-	if (!isset($host_id) && !isset($template_id) && !isset($find_text) && $scan_date < 0) {
-		print __('Select any device, template, select any scan date or try search', 'evidence');
-	}
-}
 
 /**
  * Renders the Evidence tab's introductory help text and summary
