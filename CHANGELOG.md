@@ -1,5 +1,8 @@
 # Changelog
 
+Documentation update (unreleased): Refresh README release/source compatibility,
+installation guidance and source-checked behavior.
+
 --- develop ---
 * dev: Run the CI poller with the shared runner group so RRD files and structured directories pass permission verification
 * dev: Move the plugin's library directory from `include/` to `includes/` and re-register the affected hooks on upgrade (via a `plugin_hooks` file repoint in `plugin_evidence_upgrade_database()`) so existing installations load them from the new path
