@@ -41,6 +41,21 @@ Based on SNVer plugin 0.6
 You will see information about serial numbers and version on each supported device
 You can use the Evidence tab or link on edit device page
 
+After a search on the Evidence tab, an **Export** button appears next to the
+filter buttons.  It opens the results in a print view in a new window, so
+allow pop-ups for the Cacti site.  Use the **Print** button in that window to
+print the results or save them to PDF.
+
+### Email notification
+Evidence can send an email when it finds a change in the evidence information.
+On **Settings > Evidence**, enable **Send email on evidence information
+change**.  Two optional fields limit the notifications for devices that report
+hardware changes too often:
+
+* **Excluded notification Host IDs** - Host IDs, separated by commas.
+* **Excluded notification device templates** - Device template IDs, separated
+  by commas.
+
 ## Upgrade
 Back up the Cacti database and plugin configuration before replacing the files.
 Keep the directory named `evidence`. The plugin’s configuration check runs its
