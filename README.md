@@ -10,7 +10,7 @@ This README describes the `main` source branch.
 
 | Code | Plugin version | Minimum Cacti declared in `INFO` |
 | --- | --- | --- |
-| [Source branch](INFO) | 0.4 | 1.2.32 |
+| [Source branch](https://github.com/Cacti/plugin_evidence/blob/main/INFO) | 0.4 | 1.2.32 |
 | [Published v0.2](https://github.com/Cacti/plugin_evidence/releases/tag/v0.2) | 0.1 | 1.0.0 |
 
 Use the published release’s assets and tagged documentation when installing that
@@ -23,7 +23,7 @@ metadata shipped in that tag.
 Install this plugin in **`<cacti-root>/plugins/evidence`**, using the directory
 name `evidence` rather than `plugin_evidence`.
 
-See [CHANGELOG.md](CHANGELOG.md) for the version history.
+See [CHANGELOG.md](https://github.com/Cacti/plugin_evidence/blob/main/CHANGELOG.md) for the version history.
 
 ## Author
 Petr Macek (petr.macek@kostax.cz)
