@@ -1,0 +1,451 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-11-02 16:25+0100\n"
+"PO-Revision-Date: 2026-11-24 19:00+0000\n"
+"Last-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\n"
+"Language-Team: French (Morocco)\n"
+"Language: fr-MA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: evidence.php
+msgid "Disabled/down device. No actual data"
+msgstr "Équipement désactivé/hors ligne. Aucune donnée réelle"
+
+#: evidence.php
+msgid "Show older records"
+msgstr "Afficher les enregistrements plus anciens"
+
+#: evidence.php includes/functions.php
+msgid "History data store disabled"
+msgstr "Stockage des données d'historique désactivé"
+
+#: evidence.php
+msgid "Permission issue"
+msgstr "Problème de permission"
+
+#: evidence_tab.php includes/functions.php
+msgid "Evidence"
+msgstr "Preuves"
+
+#: evidence_tab.php
+msgid "Template"
+msgstr "Modèle"
+
+#: evidence_tab.php
+msgid "Any"
+msgstr "N'importe lequel"
+
+#: evidence_tab.php
+msgid "Scan date"
+msgstr "Date d'analyse"
+
+#: evidence_tab.php
+msgid "Only last changed states"
+msgstr "Uniquement les derniers états modifiés"
+
+#: evidence_tab.php
+msgid "All history"
+msgstr "Tout l'historique"
+
+#: evidence_tab.php
+msgid "records changed"
+msgstr "enregistrements modifiés"
+
+#: evidence_tab.php
+msgid "Find"
+msgstr "Rechercher"
+
+#: evidence_tab.php
+msgid "Go"
+msgstr "Go"
+
+#: evidence_tab.php
+msgid "Clear"
+msgstr "Effacer"
+
+#: evidence_tab.php
+msgid "Clear Filters"
+msgstr "Supprimer les filtres"
+
+#: evidence_tab.php
+msgid "Export"
+msgstr "Exporter"
+
+#: evidence_tab.php
+msgid "Print"
+msgstr "Imprimer"
+
+#: evidence_tab.php
+msgid "Allow pop-ups to open the print view."
+msgstr "Autoriser les fenêtres contextuelles pour ouvrir la vue d'impression."
+
+#: evidence_tab.php
+msgid "Search"
+msgstr "Rechercher"
+
+#: evidence_tab.php
+msgid "You can search serial number, firmware version, ip, mac address,..."
+msgstr "Vous pouvez rechercher un numéro de série, une version de micrologiciel, une adresse IP, une adresse MAC, ..."
+
+#: evidence_tab.php
+msgid "Search string must be 3-20 characters"
+msgstr "La chaîne de recherche doit comporter entre 3 et 20 caractères"
+
+#: evidence_tab.php
+msgid "Select any device, template, select any scan date or try search"
+msgstr "Sélectionnez un équipement, un modèle, une date d'analyse ou essayez une recherche"
+
+#: evidence_tab.php
+msgid "No data. Allow periodic scan and store history in settings"
+msgstr "Aucune donnée. Activez l'analyse périodique et la conservation de l'historique dans les paramètres"
+
+#: evidence_tab.php
+msgid "Device or template - You can display information about specific host, all devices with the same template."
+msgstr "Équipement ou modèle - Vous pouvez afficher des informations sur un hôte spécifique, ou sur tous les équipements utilisant le même modèle."
+
+#: evidence_tab.php
+msgid "Scan date (Only last changes or All history) - You can choose whether to retrieve only the most recent change or the entire history."
+msgstr "Date d'analyse (Uniquement les dernières modifications ou Tout l'historique) - Vous pouvez choisir de récupérer uniquement la modification la plus récente ou l'historique complet."
+
+#: evidence_tab.php
+msgid "If you use only `Scan Date`, the changes for all devices found during this scan will be displayed"
+msgstr "Si vous utilisez uniquement `Date d'analyse`, les modifications pour tous les équipements trouvés lors de cette analyse seront affichées"
+
+#: evidence_tab.php
+msgid "You can search any string in all data."
+msgstr "Vous pouvez rechercher n'importe quelle chaîne dans toutes les données."
+
+#: evidence_tab.php
+msgid "Number of records"
+msgstr "Nombre d'enregistrements"
+
+#: evidence_tab.php
+#, php-format
+msgid "Devices: %d records"
+msgstr "Équipements : %d enregistrements"
+
+#: evidence_tab.php
+#, php-format
+msgid "Entity MIB: %d records, %d vendors"
+msgstr "Entity MIB : %d enregistrements, %d fournisseurs"
+
+#: evidence_tab.php
+#, php-format
+msgid "Unique MAC addresses: %d"
+msgstr "Adresses MAC uniques : %d"
+
+#: evidence_tab.php
+#, php-format
+msgid "Unique IP addresses: %d"
+msgstr "Adresses IP uniques : %d"
+
+#: evidence_tab.php
+#, php-format
+msgid "Vendor specific data: %d"
+msgstr "Données spécifiques au fournisseur : %d"
+
+#: evidence_tab.php
+#, php-format
+msgid "Oldest record: %d"
+msgstr "Enregistrement le plus ancien : %d"
+
+#: evidence_tab.php
+msgid "Vendors"
+msgstr "Fournisseurs"
+
+#: evidence_tab.php
+msgid "Show or hide"
+msgstr "Afficher ou masquer"
+
+#: evidence_tab.php
+msgid "Expand all dates"
+msgstr "Déplier toutes les dates"
+
+#: evidence_tab.php
+msgid "Expand latest date"
+msgstr "Déplier la dernière date"
+
+#: includes/arrays.php includes/functions.php
+msgid "Description"
+msgstr "Description"
+
+#: includes/arrays.php includes/functions.php
+msgid "Name"
+msgstr "Nom"
+
+#: includes/arrays.php
+msgid "Hardware revision"
+msgstr "Révision matérielle"
+
+#: includes/arrays.php
+msgid "Firmware revision"
+msgstr "Révision du micrologiciel"
+
+#: includes/arrays.php
+msgid "Software revision"
+msgstr "Révision logicielle"
+
+#: includes/arrays.php
+msgid "Serial number"
+msgstr "Numéro de série"
+
+#: includes/arrays.php
+msgid "Manufacturer name"
+msgstr "Nom du fabricant"
+
+#: includes/arrays.php
+msgid "Model name"
+msgstr "Nom du modèle"
+
+#: includes/arrays.php
+msgid "Alias"
+msgstr "Alias"
+
+#: includes/arrays.php
+msgid "Asset ID"
+msgstr "ID d'actif"
+
+#: includes/arrays.php
+msgid "Manufacturing date"
+msgstr "Date de fabrication"
+
+#: includes/arrays.php
+msgid "UUID"
+msgstr "UUID"
+
+#: includes/arrays.php includes/functions.php
+msgid "SNMP info"
+msgstr "Informations SNMP"
+
+#: includes/arrays.php includes/functions.php
+msgid "Entity MIB"
+msgstr "Entity MIB"
+
+#: includes/arrays.php
+msgid "Mac addresses"
+msgstr "Adresses MAC"
+
+#: includes/arrays.php includes/functions.php
+msgid "IP addresses"
+msgstr "Adresses IP"
+
+#: includes/arrays.php
+msgid "Vendor specific data"
+msgstr "Données spécifiques au fournisseur"
+
+#: includes/arrays.php
+msgid "Vendor optional data"
+msgstr "Données facultatives du fournisseur"
+
+#: includes/functions.php
+msgid "No data"
+msgstr "Aucune donnée"
+
+#: includes/functions.php
+msgid "Organization"
+msgstr "Organisation"
+
+#: includes/functions.php
+msgid "Organization ID"
+msgstr "ID d'organisation"
+
+#: includes/functions.php
+msgid "System name"
+msgstr "Nom du système"
+
+#: includes/functions.php
+msgid "Contact"
+msgstr "Contact"
+
+#: includes/functions.php
+msgid "Location"
+msgstr "Emplacement"
+
+#: includes/functions.php
+msgid "Field"
+msgstr "Champ"
+
+#: includes/functions.php
+msgid "Value"
+msgstr "Valeur"
+
+#: includes/functions.php
+msgid "Entity"
+msgstr "Entité"
+
+#: includes/functions.php
+msgid "Show only first 3 items, for the full listing click here"
+msgstr "N'afficher que les 3 premiers éléments, cliquez ici pour la liste complète"
+
+#: includes/functions.php
+msgid "IP address"
+msgstr "Adresse IP"
+
+#: includes/functions.php
+msgid "MAC address"
+msgstr "Adresse MAC"
+
+#: includes/functions.php
+msgid "OID"
+msgstr "OID"
+
+#: includes/functions.php
+msgid "Store history is not allowed. Nothing to do."
+msgstr "La conservation de l'historique n'est pas autorisée. Rien à faire."
+
+#: includes/functions.php
+#, php-format
+msgid "ID: %d, stored records: %d"
+msgstr "ID : %d, enregistrements stockés : %d"
+
+#: includes/functions.php
+msgid "Also show actual data"
+msgstr "Afficher également les données réelles"
+
+#: includes/functions.php
+msgid "ID ORG"
+msgstr "ID ORG"
+
+#: includes/functions.php
+msgid "No older data yet"
+msgstr "Aucune donnée plus ancienne pour le moment"
+
+#: includes/functions.php
+msgid "MAC addresses"
+msgstr "Adresses MAC"
+
+#: includes/functions.php
+msgid "Vendor specific"
+msgstr "Spécifique au fournisseur"
+
+#: includes/functions.php
+#, php-format
+msgid "Records: %d"
+msgstr "Enregistrements : %d"
+
+#: includes/functions.php
+msgid "Actual data"
+msgstr "Données réelles"
+
+#: includes/functions.php
+msgid "Changed"
+msgstr "Modifié"
+
+#: includes/functions.php
+msgid "SNMP information"
+msgstr "Informations SNMP"
+
+#: includes/functions.php
+msgid "Vendor specific information"
+msgstr "Informations spécifiques au fournisseur"
+
+#: includes/functions.php
+msgid "Vendor optional information"
+msgstr "Informations facultatives du fournisseur"
+
+#: includes/functions.php
+#, php-format
+msgid "ID: %d, found in %d records"
+msgstr "ID : %d, trouvé dans %d enregistrements"
+
+#: includes/functions.php
+msgid "Not found"
+msgstr "Introuvable"
+
+#: includes/settings.php
+msgid "How often gather data"
+msgstr "Fréquence de collecte des données"
+
+#: includes/settings.php
+msgid "If enabled, Evidence will gather data periodically. If disabled, you can only view data for specific host"
+msgstr "Si activé, Evidence collectera les données périodiquement. Si désactivé, vous pourrez uniquement consulter les données d'un hôte spécifique"
+
+#: includes/settings.php
+msgid "Disabled"
+msgstr "Désactivé"
+
+#: includes/settings.php
+#, php-format
+msgid "Every %d hours"
+msgstr "Toutes les %d heures"
+
+#: includes/settings.php
+msgid "Every day"
+msgstr "Chaque jour"
+
+#: includes/settings.php
+msgid "Every week"
+msgstr "Chaque semaine"
+
+#: includes/settings.php
+msgid "When evidence will be started"
+msgstr "Quand la collecte de preuves démarrera"
+
+#: includes/settings.php
+msgid "The Base Time for gather data to occur.  For example, if you use '12:00am' and you choose once per day, the action would begin at approximately midnight every day."
+msgstr "L'heure de base pour la collecte des données. Par exemple, si vous utilisez « 12:00am » et choisissez une fois par jour, l'action commencera approximativement à minuit chaque jour."
+
+#: includes/settings.php
+msgid "How many changes store in database"
+msgstr "Nombre de modifications à stocker dans la base de données"
+
+#: includes/settings.php
+msgid "If data gathering is enabled,  you can specify how many history (changed) records keep for each device"
+msgstr "Si la collecte de données est activée, vous pouvez spécifier combien d'enregistrements d'historique (modifiés) conserver pour chaque équipement"
+
+#: includes/settings.php
+msgid "Without history"
+msgstr "Sans historique"
+
+#: includes/settings.php
+#, php-format
+msgid "%d record"
+msgstr "%d enregistrement"
+
+#: includes/settings.php
+#, php-format
+msgid "%d records"
+msgstr "%d enregistrements"
+
+#: includes/settings.php
+msgid "Display information on device edit page"
+msgstr "Afficher les informations sur la page d'édition de l'équipement"
+
+#: includes/settings.php
+msgid "If enabled, flowview will display evidence data on device edit page"
+msgstr "Si activé, flowview affichera les données d'Evidence sur la page d'édition de l'équipement"
+
+#: includes/settings.php
+msgid "Send email on evidence information change"
+msgstr "Envoyer un e-mail lors de la modification des informations de preuve"
+
+#: includes/settings.php
+msgid "If evidence find change, send email"
+msgstr "Si Evidence détecte un changement, envoyer un e-mail"
+
+#: includes/settings.php
+msgid "Excluded notification Host IDs"
+msgstr "ID d'hôtes exclus des notifications"
+
+#: includes/settings.php
+msgid "Some devices report hw changes too often. You can exclude these host from email notification. Insert Host IDs, comma separator"
+msgstr "Certains équipements signalent trop souvent des changements matériels. Vous pouvez exclure ces hôtes des notifications par e-mail. Saisissez les ID d'hôtes, séparés par des virgules"
+
+#: includes/settings.php
+msgid "Excluded notification device templates"
+msgstr "Modèles d'équipement exclus des notifications"
+
+#: includes/settings.php
+msgid "Some devices types report hw changes too often. You can exclude these templates from email notification. Insert device templates IDs, comma separator"
+msgstr "Certains types d'équipements signalent trop souvent des changements matériels. Vous pouvez exclure ces modèles des notifications par e-mail. Saisissez les ID de modèles d'équipements, séparés par des virgules"
+

@@ -1,0 +1,451 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-11-02 16:25+0100\n"
+"PO-Revision-Date: 2026-11-24 19:00+0000\n"
+"Last-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\n"
+"Language-Team: Igbo\n"
+"Language: ig-NG\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: evidence.php
+msgid "Disabled/down device. No actual data"
+msgstr "Ngwaọrụ gbanyụrụ/kwụsịrị. Enweghị ezigbo data"
+
+#: evidence.php
+msgid "Show older records"
+msgstr "Gosi ndekọ ochie gasị"
+
+#: evidence.php includes/functions.php
+msgid "History data store disabled"
+msgstr "Ụlọ nchekwa data akụkọ ihe mere eme gbanyụrụ"
+
+#: evidence.php
+msgid "Permission issue"
+msgstr "Nsogbu ikike"
+
+#: evidence_tab.php includes/functions.php
+msgid "Evidence"
+msgstr "Ihe akaebe"
+
+#: evidence_tab.php
+msgid "Template"
+msgstr "Nlereanya"
+
+#: evidence_tab.php
+msgid "Any"
+msgstr "Ọ Bụla"
+
+#: evidence_tab.php
+msgid "Scan date"
+msgstr "Ụbọchị nnyocha"
+
+#: evidence_tab.php
+msgid "Only last changed states"
+msgstr "Naanị ọnọdụ gbanwere ikpeazụ"
+
+#: evidence_tab.php
+msgid "All history"
+msgstr "Akụkọ ihe mere eme nile"
+
+#: evidence_tab.php
+msgid "records changed"
+msgstr "ndekọ gbanwere"
+
+#: evidence_tab.php
+msgid "Find"
+msgstr "Chọta"
+
+#: evidence_tab.php
+msgid "Go"
+msgstr "Gaa"
+
+#: evidence_tab.php
+msgid "Clear"
+msgstr "Kpochapụ"
+
+#: evidence_tab.php
+msgid "Clear Filters"
+msgstr "Kpochapụ Ihe nzacha"
+
+#: evidence_tab.php
+msgid "Export"
+msgstr "Bupụ"
+
+#: evidence_tab.php
+msgid "Print"
+msgstr "Bipụta"
+
+#: evidence_tab.php
+msgid "Allow pop-ups to open the print view."
+msgstr "Kwe ka windo na-apụta apụta meghee nlele obibi."
+
+#: evidence_tab.php
+msgid "Search"
+msgstr "Chọọ"
+
+#: evidence_tab.php
+msgid "You can search serial number, firmware version, ip, mac address,..."
+msgstr "Ị nwere ike ịchọ nọmba usoro, ụdị firmware, adreesị IP, adreesị MAC,..."
+
+#: evidence_tab.php
+msgid "Search string must be 3-20 characters"
+msgstr "Eriri ọchụchọ ga-abụ mkpụrụedemede 3-20"
+
+#: evidence_tab.php
+msgid "Select any device, template, select any scan date or try search"
+msgstr "Họrọ ngwaọrụ ọ bụla, nlereanya, họrọ ụbọchị nyocha ọ bụla ma ọ bụ nwaa ọchụchọ"
+
+#: evidence_tab.php
+msgid "No data. Allow periodic scan and store history in settings"
+msgstr "Enweghị data. Kwe ka nyocha oge niile na nchekwa akụkọ ihe mere eme dị na ntọala"
+
+#: evidence_tab.php
+msgid "Device or template - You can display information about specific host, all devices with the same template."
+msgstr "Ngwaọrụ ma ọ bụ nlereanya - Ị nwere ike igosi ozi gbasara onye nnabata kpọmkwem, ma ọ bụ ngwaọrụ niile nwere otu nlereanya."
+
+#: evidence_tab.php
+msgid "Scan date (Only last changes or All history) - You can choose whether to retrieve only the most recent change or the entire history."
+msgstr "Ụbọchị nnyocha (Naanị mgbanwe ikpeazụ ma ọ bụ Akụkọ ihe mere eme niile) - Ị nwere ike ịhọrọ ma ị ga-eweta naanị mgbanwe kacha ọhụrụ ma ọ bụ akụkọ ihe mere eme niile."
+
+#: evidence_tab.php
+msgid "If you use only `Scan Date`, the changes for all devices found during this scan will be displayed"
+msgstr "Ọ bụrụ na ị jiri naanị `Ụbọchị Nyocha`, a ga-egosi mgbanwe maka ngwaọrụ niile ahụrụ n'oge nyocha a"
+
+#: evidence_tab.php
+msgid "You can search any string in all data."
+msgstr "Ị nwere ike ịchọ eriri ederede ọ bụla na data niile."
+
+#: evidence_tab.php
+msgid "Number of records"
+msgstr "Ọnụọgụ ndekọ"
+
+#: evidence_tab.php
+#, php-format
+msgid "Devices: %d records"
+msgstr "Ngwaọrụ: ndekọ %d"
+
+#: evidence_tab.php
+#, php-format
+msgid "Entity MIB: %d records, %d vendors"
+msgstr "Entity MIB: ndekọ %d, ndị na-ere %d"
+
+#: evidence_tab.php
+#, php-format
+msgid "Unique MAC addresses: %d"
+msgstr "Adreesị MAC pụrụ iche: %d"
+
+#: evidence_tab.php
+#, php-format
+msgid "Unique IP addresses: %d"
+msgstr "Adreesị IP pụrụ iche: %d"
+
+#: evidence_tab.php
+#, php-format
+msgid "Vendor specific data: %d"
+msgstr "Data pụrụ iche nke onye nrụpụta: %d"
+
+#: evidence_tab.php
+#, php-format
+msgid "Oldest record: %d"
+msgstr "Ndekọ kasị ochie: %d"
+
+#: evidence_tab.php
+msgid "Vendors"
+msgstr "Ndị nrụpụta"
+
+#: evidence_tab.php
+msgid "Show or hide"
+msgstr "Gosi ma ọ bụ zoo"
+
+#: evidence_tab.php
+msgid "Expand all dates"
+msgstr "Gbasaa ụbọchị niile"
+
+#: evidence_tab.php
+msgid "Expand latest date"
+msgstr "Gbasaa ụbọchị kacha ọhụrụ"
+
+#: includes/arrays.php includes/functions.php
+msgid "Description"
+msgstr "Nkọwa"
+
+#: includes/arrays.php includes/functions.php
+msgid "Name"
+msgstr "Aha"
+
+#: includes/arrays.php
+msgid "Hardware revision"
+msgstr "Ntụlegharị ngwaike"
+
+#: includes/arrays.php
+msgid "Firmware revision"
+msgstr "Mmezigharị Firmware"
+
+#: includes/arrays.php
+msgid "Software revision"
+msgstr "Ntugharị ngwanrọ"
+
+#: includes/arrays.php
+msgid "Serial number"
+msgstr "Nọmba sirial"
+
+#: includes/arrays.php
+msgid "Manufacturer name"
+msgstr "Aha onye nrụpụta"
+
+#: includes/arrays.php
+msgid "Model name"
+msgstr "Aha ụdị"
+
+#: includes/arrays.php
+msgid "Alias"
+msgstr "Aha ọzọ"
+
+#: includes/arrays.php
+msgid "Asset ID"
+msgstr "NJ Akụrụngwa"
+
+#: includes/arrays.php
+msgid "Manufacturing date"
+msgstr "Ụbọchị nrụpụta"
+
+#: includes/arrays.php
+msgid "UUID"
+msgstr "UUID"
+
+#: includes/arrays.php includes/functions.php
+msgid "SNMP info"
+msgstr "Ozi SNMP"
+
+#: includes/arrays.php includes/functions.php
+msgid "Entity MIB"
+msgstr "Entity MIB"
+
+#: includes/arrays.php
+msgid "Mac addresses"
+msgstr "adreesị Mac gasị"
+
+#: includes/arrays.php includes/functions.php
+msgid "IP addresses"
+msgstr "adreesị IP gasị"
+
+#: includes/arrays.php
+msgid "Vendor specific data"
+msgstr "Data pụrụ iche nke onye nrụpụta"
+
+#: includes/arrays.php
+msgid "Vendor optional data"
+msgstr "Data nhọrọ nke onye nrụpụta"
+
+#: includes/functions.php
+msgid "No data"
+msgstr "Enweghị data"
+
+#: includes/functions.php
+msgid "Organization"
+msgstr "Nzukọ"
+
+#: includes/functions.php
+msgid "Organization ID"
+msgstr "ID Nzukọ"
+
+#: includes/functions.php
+msgid "System name"
+msgstr "Aha sistemụ"
+
+#: includes/functions.php
+msgid "Contact"
+msgstr "Onye Nkpọtụrụ"
+
+#: includes/functions.php
+msgid "Location"
+msgstr "Ebe Ọ Nọ"
+
+#: includes/functions.php
+msgid "Field"
+msgstr "Mpaghara"
+
+#: includes/functions.php
+msgid "Value"
+msgstr "Uru"
+
+#: includes/functions.php
+msgid "Entity"
+msgstr "Ihe dị adị"
+
+#: includes/functions.php
+msgid "Show only first 3 items, for the full listing click here"
+msgstr "Gosi naanị ihe 3 mbụ, maka ndepụta zuru ezu pịa ebe a"
+
+#: includes/functions.php
+msgid "IP address"
+msgstr "Adreesị IP"
+
+#: includes/functions.php
+msgid "MAC address"
+msgstr "adreesị MAC"
+
+#: includes/functions.php
+msgid "OID"
+msgstr "OID"
+
+#: includes/functions.php
+msgid "Store history is not allowed. Nothing to do."
+msgstr "Anaghị ekwe ka e chekwaa akụkọ ihe mere eme. Enweghị ihe a ga-eme."
+
+#: includes/functions.php
+#, php-format
+msgid "ID: %d, stored records: %d"
+msgstr "ID: %d, ndekọ echekwara: %d"
+
+#: includes/functions.php
+msgid "Also show actual data"
+msgstr "Gosi kwa data n'ezie"
+
+#: includes/functions.php
+msgid "ID ORG"
+msgstr "ID Òtù"
+
+#: includes/functions.php
+msgid "No older data yet"
+msgstr "Enweghị data ochie ugbu a"
+
+#: includes/functions.php
+msgid "MAC addresses"
+msgstr "adreesị MAC gasị"
+
+#: includes/functions.php
+msgid "Vendor specific"
+msgstr "Nke pụrụ iche maka onye nrụpụta"
+
+#: includes/functions.php
+#, php-format
+msgid "Records: %d"
+msgstr "Ndekọ: %d"
+
+#: includes/functions.php
+msgid "Actual data"
+msgstr "Ezigbo data"
+
+#: includes/functions.php
+msgid "Changed"
+msgstr "Agbanweela"
+
+#: includes/functions.php
+msgid "SNMP information"
+msgstr "Ozi SNMP"
+
+#: includes/functions.php
+msgid "Vendor specific information"
+msgstr "Ozi pụrụ iche nke onye nrụpụta"
+
+#: includes/functions.php
+msgid "Vendor optional information"
+msgstr "Ozi nhọrọ nke onye nrụpụta"
+
+#: includes/functions.php
+#, php-format
+msgid "ID: %d, found in %d records"
+msgstr "ID: %d, achọtara na ndekọ %d"
+
+#: includes/functions.php
+msgid "Not found"
+msgstr "Ahụghị ya"
+
+#: includes/settings.php
+msgid "How often gather data"
+msgstr "Ugboro ole a na-achịkọta data"
+
+#: includes/settings.php
+msgid "If enabled, Evidence will gather data periodically. If disabled, you can only view data for specific host"
+msgstr "Ọ bụrụ na agbanyere ya, Evidence ga-achịkọta data site n'oge ruo n'oge. Ọ bụrụ na agbanyụrụ ya, ị nwere ike ile data naanị maka onye nnabata pụrụ iche"
+
+#: includes/settings.php
+msgid "Disabled"
+msgstr "Gbanyụrụ"
+
+#: includes/settings.php
+#, php-format
+msgid "Every %d hours"
+msgstr "Elekere %d ọ bụla"
+
+#: includes/settings.php
+msgid "Every day"
+msgstr "Kwa ụbọchị"
+
+#: includes/settings.php
+msgid "Every week"
+msgstr "Izu ọ bụla"
+
+#: includes/settings.php
+msgid "When evidence will be started"
+msgstr "Mgbe a ga-amalite ihe akaebe"
+
+#: includes/settings.php
+msgid "The Base Time for gather data to occur.  For example, if you use '12:00am' and you choose once per day, the action would begin at approximately midnight every day."
+msgstr "Oge Ntọala maka nchịkọta data ime.  Dịka ọmụmaatụ, ọ bụrụ na i jiri '12:00am' ma họrọ otu ugboro n'ụbọchị, omume ahụ ga-amalite n'ihe dị ka etiti abalị kwa ụbọchị."
+
+#: includes/settings.php
+msgid "How many changes store in database"
+msgstr "Ọnụ ọgụgụ mgbanwe ole a ga-echekwa na nchekwa data"
+
+#: includes/settings.php
+msgid "If data gathering is enabled,  you can specify how many history (changed) records keep for each device"
+msgstr "Ọ bụrụ na agbanyere nchịkọta data,  ị nwere ike ịkọwapụta ndekọ akụkọ ihe mere eme (nke gbanwere) ole a ga-edobe maka ngwaọrụ ọ bụla"
+
+#: includes/settings.php
+msgid "Without history"
+msgstr "Enweghị akụkọ ihe mere eme"
+
+#: includes/settings.php
+#, php-format
+msgid "%d record"
+msgstr "ndekọ %d"
+
+#: includes/settings.php
+#, php-format
+msgid "%d records"
+msgstr "ndekọ %d"
+
+#: includes/settings.php
+msgid "Display information on device edit page"
+msgstr "Gosi ozi na peeji ndezi ngwaọrụ"
+
+#: includes/settings.php
+msgid "If enabled, flowview will display evidence data on device edit page"
+msgstr "Ọ bụrụ na agbanyere ya, flowview ga-egosi data evidence na ibe edezi ngwaọrụ"
+
+#: includes/settings.php
+msgid "Send email on evidence information change"
+msgstr "Ziga ozi-e mgbe ozi ihe akaebe gbanwere"
+
+#: includes/settings.php
+msgid "If evidence find change, send email"
+msgstr "Ọ bụrụ na evidence ahụ mgbanwe, zipụ ozi-e"
+
+#: includes/settings.php
+msgid "Excluded notification Host IDs"
+msgstr "NJ Onye nnabata ewepụrụ na ọkwa"
+
+#: includes/settings.php
+msgid "Some devices report hw changes too often. You can exclude these host from email notification. Insert Host IDs, comma separator"
+msgstr "Ụfọdụ ngwaọrụ na-akọ mgbanwe ngwaike ugboro ugboro. Ị nwere ike wepụ ndị nnabata a na ọkwa ozi-e. Tinye ID Onye nnabata, jiri rikọm kewaa"
+
+#: includes/settings.php
+msgid "Excluded notification device templates"
+msgstr "Nlereanya Gasị nke ngwaọrụ ewepụrụ na ọkwa"
+
+#: includes/settings.php
+msgid "Some devices types report hw changes too often. You can exclude these templates from email notification. Insert device templates IDs, comma separator"
+msgstr "Ụfọdụ ụdị ngwaọrụ na-akọ mgbanwe ngwaike ugboro ugboro. Ị nwere ike wepụ nlereanya gasị a na ọkwa ozi-e. Tinye ID nlereanya ngwaọrụ, jiri rikọm kewaa"
+

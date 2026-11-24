@@ -1,0 +1,451 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-11-02 16:25+0100\n"
+"PO-Revision-Date: 2026-11-24 19:00+0000\n"
+"Last-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\n"
+"Language-Team: Swahili\n"
+"Language: sw-KE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: evidence.php
+msgid "Disabled/down device. No actual data"
+msgstr "Kifaa kimezimwa/kiko chini. Hakuna data halisi"
+
+#: evidence.php
+msgid "Show older records"
+msgstr "Onyesha rekodi za zamani"
+
+#: evidence.php includes/functions.php
+msgid "History data store disabled"
+msgstr "Hifadhi ya data ya historia imezimwa"
+
+#: evidence.php
+msgid "Permission issue"
+msgstr "Tatizo la ruhusa"
+
+#: evidence_tab.php includes/functions.php
+msgid "Evidence"
+msgstr "Ushahidi"
+
+#: evidence_tab.php
+msgid "Template"
+msgstr "Kiolezo"
+
+#: evidence_tab.php
+msgid "Any"
+msgstr "Yoyote"
+
+#: evidence_tab.php
+msgid "Scan date"
+msgstr "Tarehe ya uchanganuzi"
+
+#: evidence_tab.php
+msgid "Only last changed states"
+msgstr "Hali zilizobadilishwa mwisho pekee"
+
+#: evidence_tab.php
+msgid "All history"
+msgstr "Historia yote"
+
+#: evidence_tab.php
+msgid "records changed"
+msgstr "rekodi zilizobadilishwa"
+
+#: evidence_tab.php
+msgid "Find"
+msgstr "Tafuta"
+
+#: evidence_tab.php
+msgid "Go"
+msgstr "Nenda"
+
+#: evidence_tab.php
+msgid "Clear"
+msgstr "Futa"
+
+#: evidence_tab.php
+msgid "Clear Filters"
+msgstr "Futa Vichujio"
+
+#: evidence_tab.php
+msgid "Export"
+msgstr "Hamisha"
+
+#: evidence_tab.php
+msgid "Print"
+msgstr "Chapisha"
+
+#: evidence_tab.php
+msgid "Allow pop-ups to open the print view."
+msgstr "Ruhusu madirisha ibukizi kufungua mwonekano wa uchapishaji."
+
+#: evidence_tab.php
+msgid "Search"
+msgstr "Tafuta"
+
+#: evidence_tab.php
+msgid "You can search serial number, firmware version, ip, mac address,..."
+msgstr "Unaweza kutafuta nambari ya mfululizo, toleo la programu dhibiti, anwani ya IP, anwani ya MAC,..."
+
+#: evidence_tab.php
+msgid "Search string must be 3-20 characters"
+msgstr "Mfuatano wa utafutaji lazima uwe na vibambo 3-20"
+
+#: evidence_tab.php
+msgid "Select any device, template, select any scan date or try search"
+msgstr "Chagua kifaa chochote, kiolezo, chagua tarehe yoyote ya uchanganuzi au jaribu kutafuta"
+
+#: evidence_tab.php
+msgid "No data. Allow periodic scan and store history in settings"
+msgstr "Hakuna data. Ruhusu uchunguzi wa mara kwa mara na uhifadhi historia katika mipangilio"
+
+#: evidence_tab.php
+msgid "Device or template - You can display information about specific host, all devices with the same template."
+msgstr "Kifaa au kiolezo - Unaweza kuonyesha taarifa kuhusu kipangishi mahususi, au vifaa vyote vyenye kiolezo sawa."
+
+#: evidence_tab.php
+msgid "Scan date (Only last changes or All history) - You can choose whether to retrieve only the most recent change or the entire history."
+msgstr "Tarehe ya uchanganuzi (Mabadiliko ya mwisho pekee au Historia yote) - Unaweza kuchagua kurejesha mabadiliko ya hivi karibuni pekee au historia yote."
+
+#: evidence_tab.php
+msgid "If you use only `Scan Date`, the changes for all devices found during this scan will be displayed"
+msgstr "Ukitumia `Tarehe ya Uchanganuzi` pekee, mabadiliko ya vifaa vyote vilivyopatikana wakati wa uchanganuzi huu yataonyeshwa"
+
+#: evidence_tab.php
+msgid "You can search any string in all data."
+msgstr "Unaweza kutafuta mfuatano wowote wa herufi katika data yote."
+
+#: evidence_tab.php
+msgid "Number of records"
+msgstr "Idadi ya rekodi"
+
+#: evidence_tab.php
+#, php-format
+msgid "Devices: %d records"
+msgstr "Vifaa: rekodi %d"
+
+#: evidence_tab.php
+#, php-format
+msgid "Entity MIB: %d records, %d vendors"
+msgstr "Entity MIB: rekodi %d, wachuuzi %d"
+
+#: evidence_tab.php
+#, php-format
+msgid "Unique MAC addresses: %d"
+msgstr "Anwani za MAC za kipekee: %d"
+
+#: evidence_tab.php
+#, php-format
+msgid "Unique IP addresses: %d"
+msgstr "Anwani za IP za kipekee: %d"
+
+#: evidence_tab.php
+#, php-format
+msgid "Vendor specific data: %d"
+msgstr "Data mahususi ya muuzaji: %d"
+
+#: evidence_tab.php
+#, php-format
+msgid "Oldest record: %d"
+msgstr "Rekodi ya zamani zaidi: %d"
+
+#: evidence_tab.php
+msgid "Vendors"
+msgstr "Wauzaji"
+
+#: evidence_tab.php
+msgid "Show or hide"
+msgstr "Onyesha au ficha"
+
+#: evidence_tab.php
+msgid "Expand all dates"
+msgstr "Panua tarehe zote"
+
+#: evidence_tab.php
+msgid "Expand latest date"
+msgstr "Panua tarehe ya hivi karibuni"
+
+#: includes/arrays.php includes/functions.php
+msgid "Description"
+msgstr "Maelezo"
+
+#: includes/arrays.php includes/functions.php
+msgid "Name"
+msgstr "Jina"
+
+#: includes/arrays.php
+msgid "Hardware revision"
+msgstr "Marekebisho ya maunzi"
+
+#: includes/arrays.php
+msgid "Firmware revision"
+msgstr "Marekebisho ya programu dhibiti"
+
+#: includes/arrays.php
+msgid "Software revision"
+msgstr "Marekebisho ya programu"
+
+#: includes/arrays.php
+msgid "Serial number"
+msgstr "Nambari tambulishi"
+
+#: includes/arrays.php
+msgid "Manufacturer name"
+msgstr "Jina la mtengenezaji"
+
+#: includes/arrays.php
+msgid "Model name"
+msgstr "Jina la modeli"
+
+#: includes/arrays.php
+msgid "Alias"
+msgstr "Jina Mbadala"
+
+#: includes/arrays.php
+msgid "Asset ID"
+msgstr "Kitambulisho cha Mali"
+
+#: includes/arrays.php
+msgid "Manufacturing date"
+msgstr "Tarehe ya utengenezaji"
+
+#: includes/arrays.php
+msgid "UUID"
+msgstr "UUID"
+
+#: includes/arrays.php includes/functions.php
+msgid "SNMP info"
+msgstr "Maelezo ya SNMP"
+
+#: includes/arrays.php includes/functions.php
+msgid "Entity MIB"
+msgstr "Entity MIB"
+
+#: includes/arrays.php
+msgid "Mac addresses"
+msgstr "Anwani za MAC"
+
+#: includes/arrays.php includes/functions.php
+msgid "IP addresses"
+msgstr "anwani za IP"
+
+#: includes/arrays.php
+msgid "Vendor specific data"
+msgstr "Data mahususi ya muuzaji"
+
+#: includes/arrays.php
+msgid "Vendor optional data"
+msgstr "Data ya hiari ya muuzaji"
+
+#: includes/functions.php
+msgid "No data"
+msgstr "Hakuna data"
+
+#: includes/functions.php
+msgid "Organization"
+msgstr "Shirika"
+
+#: includes/functions.php
+msgid "Organization ID"
+msgstr "Kitambulisho cha Shirika"
+
+#: includes/functions.php
+msgid "System name"
+msgstr "Jina la mfumo"
+
+#: includes/functions.php
+msgid "Contact"
+msgstr "Mawasiliano"
+
+#: includes/functions.php
+msgid "Location"
+msgstr "Mahali"
+
+#: includes/functions.php
+msgid "Field"
+msgstr "Uga"
+
+#: includes/functions.php
+msgid "Value"
+msgstr "Thamani"
+
+#: includes/functions.php
+msgid "Entity"
+msgstr "Huluki"
+
+#: includes/functions.php
+msgid "Show only first 3 items, for the full listing click here"
+msgstr "Onyesha vipengee 3 vya kwanza pekee, kwa orodha kamili bofya hapa"
+
+#: includes/functions.php
+msgid "IP address"
+msgstr "anwani ya IP"
+
+#: includes/functions.php
+msgid "MAC address"
+msgstr "Anwani ya MAC"
+
+#: includes/functions.php
+msgid "OID"
+msgstr "OID"
+
+#: includes/functions.php
+msgid "Store history is not allowed. Nothing to do."
+msgstr "Kuhifadhi historia hakuruhusiwi. Hakuna cha kufanya."
+
+#: includes/functions.php
+#, php-format
+msgid "ID: %d, stored records: %d"
+msgstr "Kitambulisho: %d, rekodi zilizohifadhiwa: %d"
+
+#: includes/functions.php
+msgid "Also show actual data"
+msgstr "Pia onyesha data halisi"
+
+#: includes/functions.php
+msgid "ID ORG"
+msgstr "Kitambulisho cha Shirika"
+
+#: includes/functions.php
+msgid "No older data yet"
+msgstr "Hakuna data ya zamani zaidi bado"
+
+#: includes/functions.php
+msgid "MAC addresses"
+msgstr "Anwani za MAC"
+
+#: includes/functions.php
+msgid "Vendor specific"
+msgstr "Mahususi kwa muuzaji"
+
+#: includes/functions.php
+#, php-format
+msgid "Records: %d"
+msgstr "Rekodi: %d"
+
+#: includes/functions.php
+msgid "Actual data"
+msgstr "Data halisi"
+
+#: includes/functions.php
+msgid "Changed"
+msgstr "Imebadilishwa"
+
+#: includes/functions.php
+msgid "SNMP information"
+msgstr "Taarifa za SNMP"
+
+#: includes/functions.php
+msgid "Vendor specific information"
+msgstr "Taarifa mahususi ya muuzaji"
+
+#: includes/functions.php
+msgid "Vendor optional information"
+msgstr "Taarifa ya hiari ya muuzaji"
+
+#: includes/functions.php
+#, php-format
+msgid "ID: %d, found in %d records"
+msgstr "Kitambulisho: %d, imepatikana katika rekodi %d"
+
+#: includes/functions.php
+msgid "Not found"
+msgstr "Haikupatikana"
+
+#: includes/settings.php
+msgid "How often gather data"
+msgstr "Mara ngapi kukusanya data"
+
+#: includes/settings.php
+msgid "If enabled, Evidence will gather data periodically. If disabled, you can only view data for specific host"
+msgstr "Ikiwa imewashwa, Evidence itakusanya data mara kwa mara. Ikiwa imezimwa, unaweza kutazama data ya kipangishi mahususi pekee"
+
+#: includes/settings.php
+msgid "Disabled"
+msgstr "Imezimwa"
+
+#: includes/settings.php
+#, php-format
+msgid "Every %d hours"
+msgstr "Kila saa %d"
+
+#: includes/settings.php
+msgid "Every day"
+msgstr "Kila siku"
+
+#: includes/settings.php
+msgid "Every week"
+msgstr "Kila wiki"
+
+#: includes/settings.php
+msgid "When evidence will be started"
+msgstr "Wakati ushahidi utakapoanza"
+
+#: includes/settings.php
+msgid "The Base Time for gather data to occur.  For example, if you use '12:00am' and you choose once per day, the action would begin at approximately midnight every day."
+msgstr "Muda wa Msingi wa kukusanya data.  Kwa mfano, ukitumia '12:00am' na ukachagua mara moja kwa siku, kitendo kitaanza takriban usiku wa manane kila siku."
+
+#: includes/settings.php
+msgid "How many changes store in database"
+msgstr "Idadi ya mabadiliko ya kuhifadhi kwenye hifadhidata"
+
+#: includes/settings.php
+msgid "If data gathering is enabled,  you can specify how many history (changed) records keep for each device"
+msgstr "Ikiwa ukusanyaji wa data umewashwa, unaweza kubainisha ni rekodi ngapi za historia (zilizobadilishwa) za kuhifadhi kwa kila kifaa"
+
+#: includes/settings.php
+msgid "Without history"
+msgstr "Bila historia"
+
+#: includes/settings.php
+#, php-format
+msgid "%d record"
+msgstr "rekodi %d"
+
+#: includes/settings.php
+#, php-format
+msgid "%d records"
+msgstr "rekodi %d"
+
+#: includes/settings.php
+msgid "Display information on device edit page"
+msgstr "Onyesha maelezo kwenye ukurasa wa kuhariri kifaa"
+
+#: includes/settings.php
+msgid "If enabled, flowview will display evidence data on device edit page"
+msgstr "Ikiwa imewashwa, flowview itaonyesha data ya evidence kwenye ukurasa wa kuhariri kifaa"
+
+#: includes/settings.php
+msgid "Send email on evidence information change"
+msgstr "Tuma barua pepe kunapokuwa na mabadiliko ya taarifa za ushahidi"
+
+#: includes/settings.php
+msgid "If evidence find change, send email"
+msgstr "Ikiwa evidence itapata badiliko, tuma barua pepe"
+
+#: includes/settings.php
+msgid "Excluded notification Host IDs"
+msgstr "Vitambulisho vya Kipangishi vilivyotengwa kwenye arifa"
+
+#: includes/settings.php
+msgid "Some devices report hw changes too often. You can exclude these host from email notification. Insert Host IDs, comma separator"
+msgstr "Baadhi ya vifaa huripoti mabadiliko ya maunzi mara nyingi mno. Unaweza kuondoa kipangishi hiki kwenye arifa ya barua pepe. Ingiza Vitambulisho vya Kipangishi, vikitenganishwa kwa koma"
+
+#: includes/settings.php
+msgid "Excluded notification device templates"
+msgstr "Violezo vya vifaa vilivyotengwa kwenye arifa"
+
+#: includes/settings.php
+msgid "Some devices types report hw changes too often. You can exclude these templates from email notification. Insert device templates IDs, comma separator"
+msgstr "Baadhi ya aina za vifaa huripoti mabadiliko ya maunzi mara nyingi mno. Unaweza kuondoa violezo hivi kwenye arifa ya barua pepe. Ingiza Vitambulisho vya violezo vya vifaa, vikitenganishwa kwa koma"
+

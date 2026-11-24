@@ -1,0 +1,451 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-11-02 16:25+0100\n"
+"PO-Revision-Date: 2026-11-24 19:00+0000\n"
+"Last-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\n"
+"Language-Team: Hausa\n"
+"Language: ha-NG\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: evidence.php
+msgid "Disabled/down device. No actual data"
+msgstr "Na'ura da aka kashe/ba ta aiki. Babu ainihin bayanai"
+
+#: evidence.php
+msgid "Show older records"
+msgstr "Nuna tsofaffin rikododin"
+
+#: evidence.php includes/functions.php
+msgid "History data store disabled"
+msgstr "An kashe ma'ajiyar bayanan tarihi"
+
+#: evidence.php
+msgid "Permission issue"
+msgstr "Matsalar izini"
+
+#: evidence_tab.php includes/functions.php
+msgid "Evidence"
+msgstr "Shaida"
+
+#: evidence_tab.php
+msgid "Template"
+msgstr "Samfuri"
+
+#: evidence_tab.php
+msgid "Any"
+msgstr "Kowane"
+
+#: evidence_tab.php
+msgid "Scan date"
+msgstr "Ranar bincike"
+
+#: evidence_tab.php
+msgid "Only last changed states"
+msgstr "Yanayin da aka sauya na ƙarshe kawai"
+
+#: evidence_tab.php
+msgid "All history"
+msgstr "Duk tarihi"
+
+#: evidence_tab.php
+msgid "records changed"
+msgstr "bayanai sun canza"
+
+#: evidence_tab.php
+msgid "Find"
+msgstr "Nemo"
+
+#: evidence_tab.php
+msgid "Go"
+msgstr "Tafi"
+
+#: evidence_tab.php
+msgid "Clear"
+msgstr "Share"
+
+#: evidence_tab.php
+msgid "Clear Filters"
+msgstr "Share Matatu"
+
+#: evidence_tab.php
+msgid "Export"
+msgstr "Fitarwa"
+
+#: evidence_tab.php
+msgid "Print"
+msgstr "Buga"
+
+#: evidence_tab.php
+msgid "Allow pop-ups to open the print view."
+msgstr "Ba da izin tagogi masu tasowa su buɗe yanayin bugawa."
+
+#: evidence_tab.php
+msgid "Search"
+msgstr "Bincika"
+
+#: evidence_tab.php
+msgid "You can search serial number, firmware version, ip, mac address,..."
+msgstr "Za ka iya bincika lambar seri, nau'in firmware, adireshin IP, adireshin MAC,..."
+
+#: evidence_tab.php
+msgid "Search string must be 3-20 characters"
+msgstr "Kalmomin bincike dole ne su zama haruffa 3-20"
+
+#: evidence_tab.php
+msgid "Select any device, template, select any scan date or try search"
+msgstr "Zaɓi kowace na'ura, samfuri, zaɓi kowace ranar bincike ko gwada bincike"
+
+#: evidence_tab.php
+msgid "No data. Allow periodic scan and store history in settings"
+msgstr "Babu bayanai. Ba da izinin bincike na lokaci-lokaci da ajiyar tarihi a cikin saituna"
+
+#: evidence_tab.php
+msgid "Device or template - You can display information about specific host, all devices with the same template."
+msgstr "Na'ura ko samfuri - Za ku iya nuna bayanai game da takamaiman Mai Masauki, ko duk na'urori masu samfuri iri ɗaya."
+
+#: evidence_tab.php
+msgid "Scan date (Only last changes or All history) - You can choose whether to retrieve only the most recent change or the entire history."
+msgstr "Ranar bincike (Canje-canje na ƙarshe kawai ko Duk tarihi) - Za ka iya zaɓar ko za a dawo da canji na baya-bayan nan kawai ko dukkan tarihin."
+
+#: evidence_tab.php
+msgid "If you use only `Scan Date`, the changes for all devices found during this scan will be displayed"
+msgstr "Idan ka yi amfani da `Ranar Bincike` kawai, za a nuna sauye-sauyen dukkan na'urorin da aka samo yayin wannan binciken"
+
+#: evidence_tab.php
+msgid "You can search any string in all data."
+msgstr "Za ka iya bincika kowane rubutu a cikin dukkan bayanai."
+
+#: evidence_tab.php
+msgid "Number of records"
+msgstr "Adadin rikodi"
+
+#: evidence_tab.php
+#, php-format
+msgid "Devices: %d records"
+msgstr "Na'urori: bayanai %d"
+
+#: evidence_tab.php
+#, php-format
+msgid "Entity MIB: %d records, %d vendors"
+msgstr "Entity MIB: bayanai %d, masu sayarwa %d"
+
+#: evidence_tab.php
+#, php-format
+msgid "Unique MAC addresses: %d"
+msgstr "Adiresoshin MAC na musamman: %d"
+
+#: evidence_tab.php
+#, php-format
+msgid "Unique IP addresses: %d"
+msgstr "Adiresoshin IP na musamman: %d"
+
+#: evidence_tab.php
+#, php-format
+msgid "Vendor specific data: %d"
+msgstr "Bayanai keɓantattu ga Mai ƙera: %d"
+
+#: evidence_tab.php
+#, php-format
+msgid "Oldest record: %d"
+msgstr "Rubutu mafi tsufa: %d"
+
+#: evidence_tab.php
+msgid "Vendors"
+msgstr "Masu ƙera"
+
+#: evidence_tab.php
+msgid "Show or hide"
+msgstr "Nuna ko ɓoye"
+
+#: evidence_tab.php
+msgid "Expand all dates"
+msgstr "Faɗaɗa duk kwanakin wata"
+
+#: evidence_tab.php
+msgid "Expand latest date"
+msgstr "Faɗaɗa kwanan wata na baya-bayan nan"
+
+#: includes/arrays.php includes/functions.php
+msgid "Description"
+msgstr "Bayani"
+
+#: includes/arrays.php includes/functions.php
+msgid "Name"
+msgstr "Suna"
+
+#: includes/arrays.php
+msgid "Hardware revision"
+msgstr "Bita na kayan aiki"
+
+#: includes/arrays.php
+msgid "Firmware revision"
+msgstr "Gyaran Firmware"
+
+#: includes/arrays.php
+msgid "Software revision"
+msgstr "Sigar bita ta manhaja"
+
+#: includes/arrays.php
+msgid "Serial number"
+msgstr "Lambar jeri"
+
+#: includes/arrays.php
+msgid "Manufacturer name"
+msgstr "Sunan mai kera"
+
+#: includes/arrays.php
+msgid "Model name"
+msgstr "Sunan ƙira"
+
+#: includes/arrays.php
+msgid "Alias"
+msgstr "Laƙabi"
+
+#: includes/arrays.php
+msgid "Asset ID"
+msgstr "Lambar Kadara"
+
+#: includes/arrays.php
+msgid "Manufacturing date"
+msgstr "Ranar kerawa"
+
+#: includes/arrays.php
+msgid "UUID"
+msgstr "UUID"
+
+#: includes/arrays.php includes/functions.php
+msgid "SNMP info"
+msgstr "Bayanin SNMP"
+
+#: includes/arrays.php includes/functions.php
+msgid "Entity MIB"
+msgstr "Entity MIB"
+
+#: includes/arrays.php
+msgid "Mac addresses"
+msgstr "Adiresoshin MAC"
+
+#: includes/arrays.php includes/functions.php
+msgid "IP addresses"
+msgstr "adireshoshin IP"
+
+#: includes/arrays.php
+msgid "Vendor specific data"
+msgstr "Bayanai keɓantattu ga Mai ƙera"
+
+#: includes/arrays.php
+msgid "Vendor optional data"
+msgstr "Bayanai na zaɓi na Mai ƙera"
+
+#: includes/functions.php
+msgid "No data"
+msgstr "Babu bayanai"
+
+#: includes/functions.php
+msgid "Organization"
+msgstr "Ƙungiya"
+
+#: includes/functions.php
+msgid "Organization ID"
+msgstr "Lambar Ƙungiya"
+
+#: includes/functions.php
+msgid "System name"
+msgstr "Sunan tsari"
+
+#: includes/functions.php
+msgid "Contact"
+msgstr "Tuntuɓa"
+
+#: includes/functions.php
+msgid "Location"
+msgstr "Wuri"
+
+#: includes/functions.php
+msgid "Field"
+msgstr "Fili"
+
+#: includes/functions.php
+msgid "Value"
+msgstr "Ƙima"
+
+#: includes/functions.php
+msgid "Entity"
+msgstr "Abu (Entity)"
+
+#: includes/functions.php
+msgid "Show only first 3 items, for the full listing click here"
+msgstr "Nuna abubuwa 3 na farko kaɗai, don cikakken jeri danna nan"
+
+#: includes/functions.php
+msgid "IP address"
+msgstr "adireshin IP"
+
+#: includes/functions.php
+msgid "MAC address"
+msgstr "Adireshin MAC"
+
+#: includes/functions.php
+msgid "OID"
+msgstr "OID"
+
+#: includes/functions.php
+msgid "Store history is not allowed. Nothing to do."
+msgstr "Ba a yarda da ajiye tarihi ba. Babu abin yi."
+
+#: includes/functions.php
+#, php-format
+msgid "ID: %d, stored records: %d"
+msgstr "Lambar ID: %d, rubuce-rubucen da aka ajiye: %d"
+
+#: includes/functions.php
+msgid "Also show actual data"
+msgstr "Haka kuma nuna ainihin bayanai"
+
+#: includes/functions.php
+msgid "ID ORG"
+msgstr "ID na Ƙungiya"
+
+#: includes/functions.php
+msgid "No older data yet"
+msgstr "Babu tsofaffin bayanai tukuna"
+
+#: includes/functions.php
+msgid "MAC addresses"
+msgstr "Adiresoshin MAC"
+
+#: includes/functions.php
+msgid "Vendor specific"
+msgstr "Keɓantacce ga Mai ƙera"
+
+#: includes/functions.php
+#, php-format
+msgid "Records: %d"
+msgstr "Rikodi: %d"
+
+#: includes/functions.php
+msgid "Actual data"
+msgstr "Bayanai na gaske"
+
+#: includes/functions.php
+msgid "Changed"
+msgstr "An sauya"
+
+#: includes/functions.php
+msgid "SNMP information"
+msgstr "Bayanin SNMP"
+
+#: includes/functions.php
+msgid "Vendor specific information"
+msgstr "Bayani keɓantacce ga Mai ƙera"
+
+#: includes/functions.php
+msgid "Vendor optional information"
+msgstr "Bayanin zaɓi na Mai ƙera"
+
+#: includes/functions.php
+#, php-format
+msgid "ID: %d, found in %d records"
+msgstr "Lambar ID: %d, an samu a cikin rubuce-rubuce %d"
+
+#: includes/functions.php
+msgid "Not found"
+msgstr "Ba a samu ba"
+
+#: includes/settings.php
+msgid "How often gather data"
+msgstr "Sau nawa ake tattara bayanai"
+
+#: includes/settings.php
+msgid "If enabled, Evidence will gather data periodically. If disabled, you can only view data for specific host"
+msgstr "Idan an kunna, Evidence zai riƙa tattara bayanai lokaci-lokaci. Idan an kashe, za ka iya duba bayanai ne kawai na takamaiman mai masauki"
+
+#: includes/settings.php
+msgid "Disabled"
+msgstr "An kashe"
+
+#: includes/settings.php
+#, php-format
+msgid "Every %d hours"
+msgstr "Kowace sa'o'i %d"
+
+#: includes/settings.php
+msgid "Every day"
+msgstr "Kowace rana"
+
+#: includes/settings.php
+msgid "Every week"
+msgstr "Kowane mako"
+
+#: includes/settings.php
+msgid "When evidence will be started"
+msgstr "Lokacin da za a fara shaida"
+
+#: includes/settings.php
+msgid "The Base Time for gather data to occur.  For example, if you use '12:00am' and you choose once per day, the action would begin at approximately midnight every day."
+msgstr "Lokacin Asali don fara tattara bayanai. Misali, idan ka yi amfani da '12:00am' kuma ka zaɓi sau ɗaya a rana, aikin zai fara kusan tsakar dare kowace rana."
+
+#: includes/settings.php
+msgid "How many changes store in database"
+msgstr "Canje-canje nawa za a adana a cikin rumbun adana bayanai"
+
+#: includes/settings.php
+msgid "If data gathering is enabled,  you can specify how many history (changed) records keep for each device"
+msgstr "Idan an kunna tattara bayanai, za ka iya ƙayyade adadin bayanan tarihi (waɗanda suka canza) da za a ajiye wa kowace na'ura"
+
+#: includes/settings.php
+msgid "Without history"
+msgstr "Ba tare da tarihi ba"
+
+#: includes/settings.php
+#, php-format
+msgid "%d record"
+msgstr "rikodi %d"
+
+#: includes/settings.php
+#, php-format
+msgid "%d records"
+msgstr "rikodai %d"
+
+#: includes/settings.php
+msgid "Display information on device edit page"
+msgstr "Nuna bayanai a shafin gyara na'ura"
+
+#: includes/settings.php
+msgid "If enabled, flowview will display evidence data on device edit page"
+msgstr "Idan an kunna, flowview zai nuna bayanan evidence a shafin gyaran na'ura"
+
+#: includes/settings.php
+msgid "Send email on evidence information change"
+msgstr "Aika imel idan bayanan shaida suka sauya"
+
+#: includes/settings.php
+msgid "If evidence find change, send email"
+msgstr "Idan evidence ya gano canji, aika imel"
+
+#: includes/settings.php
+msgid "Excluded notification Host IDs"
+msgstr "Lambobin Mai Masauki da aka ware daga sanarwa"
+
+#: includes/settings.php
+msgid "Some devices report hw changes too often. You can exclude these host from email notification. Insert Host IDs, comma separator"
+msgstr "Wasu na'urori suna ba da rahoton sauye-sauyen kayan aiki (hw) akai-akai. Za ka iya cire waɗannan mai masauki daga sanarwar imel. Shigar da ID ɗin Mai Masauki, tare da waƙafi a matsayin mai rarrabawa"
+
+#: includes/settings.php
+msgid "Excluded notification device templates"
+msgstr "Samfuran na'urori da aka ware daga sanarwa"
+
+#: includes/settings.php
+msgid "Some devices types report hw changes too often. You can exclude these templates from email notification. Insert device templates IDs, comma separator"
+msgstr "Wasu nau'ikan na'urori suna ba da rahoton sauye-sauyen kayan aiki (hw) akai-akai. Za ka iya cire waɗannan samfura daga sanarwar imel. Shigar da ID ɗin samfuran na'ura, tare da waƙafi a matsayin mai rarrabawa"
+

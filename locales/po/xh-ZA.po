@@ -1,0 +1,451 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-11-02 16:25+0100\n"
+"PO-Revision-Date: 2026-11-24 19:00+0000\n"
+"Last-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\n"
+"Language-Team: Xhosa\n"
+"Language: xh-ZA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: evidence.php
+msgid "Disabled/down device. No actual data"
+msgstr "Isixhobo esicinyiweyo/esiphantsi. Akukho datha yokwenyani"
+
+#: evidence.php
+msgid "Show older records"
+msgstr "Bonisa iirekhodi ezindala"
+
+#: evidence.php includes/functions.php
+msgid "History data store disabled"
+msgstr "Uvimba wedatha yembali ucinyiwe"
+
+#: evidence.php
+msgid "Permission issue"
+msgstr "Ingxaki yemvume"
+
+#: evidence_tab.php includes/functions.php
+msgid "Evidence"
+msgstr "Ubungqina"
+
+#: evidence_tab.php
+msgid "Template"
+msgstr "Itempleyiti"
+
+#: evidence_tab.php
+msgid "Any"
+msgstr "Nayiphi na"
+
+#: evidence_tab.php
+msgid "Scan date"
+msgstr "Umhla woskeno"
+
+#: evidence_tab.php
+msgid "Only last changed states"
+msgstr "Izimo ezitshintshwe mva nje kuphela"
+
+#: evidence_tab.php
+msgid "All history"
+msgstr "Yonke imbali"
+
+#: evidence_tab.php
+msgid "records changed"
+msgstr "iirekhodi ezitshintshiweyo"
+
+#: evidence_tab.php
+msgid "Find"
+msgstr "Fumana"
+
+#: evidence_tab.php
+msgid "Go"
+msgstr "Hamba"
+
+#: evidence_tab.php
+msgid "Clear"
+msgstr "Sula"
+
+#: evidence_tab.php
+msgid "Clear Filters"
+msgstr "Sula Izihluzo"
+
+#: evidence_tab.php
+msgid "Export"
+msgstr "Thumela ngaphandle"
+
+#: evidence_tab.php
+msgid "Print"
+msgstr "Shicilela"
+
+#: evidence_tab.php
+msgid "Allow pop-ups to open the print view."
+msgstr "Vumela ii-pop-up zivule imboniselo yoshicilelo."
+
+#: evidence_tab.php
+msgid "Search"
+msgstr "Khangela"
+
+#: evidence_tab.php
+msgid "You can search serial number, firmware version, ip, mac address,..."
+msgstr "Ungakhangela inombolo yothotho, inguqulelo ye-firmware, ip, idilesi ye-mac,..."
+
+#: evidence_tab.php
+msgid "Search string must be 3-20 characters"
+msgstr "Umtya wophando kufuneka ube noonobumba aba-3-20"
+
+#: evidence_tab.php
+msgid "Select any device, template, select any scan date or try search"
+msgstr "Khetha nasiphi na isixhobo, itempleyiti, khetha nawuphi na umhla wokuskena okanye zama ukukhangela"
+
+#: evidence_tab.php
+msgid "No data. Allow periodic scan and store history in settings"
+msgstr "Akukho datha. Vumela ukuskena kwamaxesha ngamaxesha kwaye ugcine imbali kwiisetingi"
+
+#: evidence_tab.php
+msgid "Device or template - You can display information about specific host, all devices with the same template."
+msgstr "Isixhobo okanye itempleyiti - Unokubonisa ulwazi malunga nehosti ethile, zonke izixhobo ezineitempleyiti efanayo."
+
+#: evidence_tab.php
+msgid "Scan date (Only last changes or All history) - You can choose whether to retrieve only the most recent change or the entire history."
+msgstr "Umhla woskeno (Utshintsho lokugqibela kuphela okanye yonke imbali) - Ungakhetha ukuba ufuna ukufumana utshintsho lwakutshanje kuphela okanye yonke imbali."
+
+#: evidence_tab.php
+msgid "If you use only `Scan Date`, the changes for all devices found during this scan will be displayed"
+msgstr "Ukuba usebenzisa kuphela u-`Scan Date`, utshintsho lwazo zonke izixhobo ezifunyenwe ngexesha loku skena luya kuboniswa"
+
+#: evidence_tab.php
+msgid "You can search any string in all data."
+msgstr "Ungakhangela nawuphi na umtya wedatha kuyo yonke idatha."
+
+#: evidence_tab.php
+msgid "Number of records"
+msgstr "Inani leerekhodi"
+
+#: evidence_tab.php
+#, php-format
+msgid "Devices: %d records"
+msgstr "Izixhobo: iirekhodi ezingama-%d"
+
+#: evidence_tab.php
+#, php-format
+msgid "Entity MIB: %d records, %d vendors"
+msgstr "I-Entity MIB: %d iirekhodi, %d abathengisi"
+
+#: evidence_tab.php
+#, php-format
+msgid "Unique MAC addresses: %d"
+msgstr "Iidilesi ze-MAC ezizodwa: %d"
+
+#: evidence_tab.php
+#, php-format
+msgid "Unique IP addresses: %d"
+msgstr "Iidilesi ze-IP ezizodwa: %d"
+
+#: evidence_tab.php
+#, php-format
+msgid "Vendor specific data: %d"
+msgstr "Idatha ekhethekileyo kumthengisi: %d"
+
+#: evidence_tab.php
+#, php-format
+msgid "Oldest record: %d"
+msgstr "Eyona rekhodi indala: %d"
+
+#: evidence_tab.php
+msgid "Vendors"
+msgstr "Abathengisi"
+
+#: evidence_tab.php
+msgid "Show or hide"
+msgstr "Bonisa okanye fihla"
+
+#: evidence_tab.php
+msgid "Expand all dates"
+msgstr "Yandisa yonke imihla"
+
+#: evidence_tab.php
+msgid "Expand latest date"
+msgstr "Yandisa umhla wamva nje"
+
+#: includes/arrays.php includes/functions.php
+msgid "Description"
+msgstr "Inkcazo"
+
+#: includes/arrays.php includes/functions.php
+msgid "Name"
+msgstr "Igama"
+
+#: includes/arrays.php
+msgid "Hardware revision"
+msgstr "Uhlaziyo lwehadwe"
+
+#: includes/arrays.php
+msgid "Firmware revision"
+msgstr "Uhlaziyo lwe-Firmware"
+
+#: includes/arrays.php
+msgid "Software revision"
+msgstr "Uhlaziyo lwesoftware"
+
+#: includes/arrays.php
+msgid "Serial number"
+msgstr "Inombolo yomlandelelwano"
+
+#: includes/arrays.php
+msgid "Manufacturer name"
+msgstr "Igama lomenzi"
+
+#: includes/arrays.php
+msgid "Model name"
+msgstr "Igama lemodeli"
+
+#: includes/arrays.php
+msgid "Alias"
+msgstr "I-Aliyasi"
+
+#: includes/arrays.php
+msgid "Asset ID"
+msgstr "I-ID ye-Asethi"
+
+#: includes/arrays.php
+msgid "Manufacturing date"
+msgstr "Umhla wokwenziwa"
+
+#: includes/arrays.php
+msgid "UUID"
+msgstr "UUID"
+
+#: includes/arrays.php includes/functions.php
+msgid "SNMP info"
+msgstr "Ulwazi lwe-SNMP"
+
+#: includes/arrays.php includes/functions.php
+msgid "Entity MIB"
+msgstr "I-Entity MIB"
+
+#: includes/arrays.php
+msgid "Mac addresses"
+msgstr "iidilesi ze-MAC"
+
+#: includes/arrays.php includes/functions.php
+msgid "IP addresses"
+msgstr "Iidilesi ze-IP"
+
+#: includes/arrays.php
+msgid "Vendor specific data"
+msgstr "Idatha ekhethekileyo kumthengisi"
+
+#: includes/arrays.php
+msgid "Vendor optional data"
+msgstr "Idatha yokhetho yoMthengisi"
+
+#: includes/functions.php
+msgid "No data"
+msgstr "Akukho datha"
+
+#: includes/functions.php
+msgid "Organization"
+msgstr "Umbutho"
+
+#: includes/functions.php
+msgid "Organization ID"
+msgstr "I-ID yoMbutho"
+
+#: includes/functions.php
+msgid "System name"
+msgstr "Igama lenkqubo"
+
+#: includes/functions.php
+msgid "Contact"
+msgstr "Uqhagamshelwano"
+
+#: includes/functions.php
+msgid "Location"
+msgstr "Indawo"
+
+#: includes/functions.php
+msgid "Field"
+msgstr "Umhlaba"
+
+#: includes/functions.php
+msgid "Value"
+msgstr "Ixabiso"
+
+#: includes/functions.php
+msgid "Entity"
+msgstr "I-Entity"
+
+#: includes/functions.php
+msgid "Show only first 3 items, for the full listing click here"
+msgstr "Bonisa kuphela izinto ezi-3 zokuqala, ukufumana uluhlu olupheleleyo cofa apha"
+
+#: includes/functions.php
+msgid "IP address"
+msgstr "Idilesi ye-IP"
+
+#: includes/functions.php
+msgid "MAC address"
+msgstr "idilesi ye-MAC"
+
+#: includes/functions.php
+msgid "OID"
+msgstr "OID"
+
+#: includes/functions.php
+msgid "Store history is not allowed. Nothing to do."
+msgstr "Ukugcina imbali akuvumelekanga. Akukho nto yakwenza."
+
+#: includes/functions.php
+#, php-format
+msgid "ID: %d, stored records: %d"
+msgstr "I-ID: %d, iirekhodi ezigciniweyo: %d"
+
+#: includes/functions.php
+msgid "Also show actual data"
+msgstr "Kwakhona bonisa idatha yokwenyani"
+
+#: includes/functions.php
+msgid "ID ORG"
+msgstr "I-ID ye-ORG"
+
+#: includes/functions.php
+msgid "No older data yet"
+msgstr "Akukho datha indala okwangoku"
+
+#: includes/functions.php
+msgid "MAC addresses"
+msgstr "iidilesi ze-MAC"
+
+#: includes/functions.php
+msgid "Vendor specific"
+msgstr "Okukhethekileyo kumthengisi"
+
+#: includes/functions.php
+#, php-format
+msgid "Records: %d"
+msgstr "Iirekhodi: %d"
+
+#: includes/functions.php
+msgid "Actual data"
+msgstr "Idatha yokwenyani"
+
+#: includes/functions.php
+msgid "Changed"
+msgstr "Itshintshiwe"
+
+#: includes/functions.php
+msgid "SNMP information"
+msgstr "Ulwazi lwe-SNMP"
+
+#: includes/functions.php
+msgid "Vendor specific information"
+msgstr "Ulwazi olukhethekileyo kumthengisi"
+
+#: includes/functions.php
+msgid "Vendor optional information"
+msgstr "Ulwazi lokhetho loMthengisi"
+
+#: includes/functions.php
+#, php-format
+msgid "ID: %d, found in %d records"
+msgstr "I-ID: %d, ifunyenwe kwiirekhodi ezingama-%d"
+
+#: includes/functions.php
+msgid "Not found"
+msgstr "Ayifunyenwanga"
+
+#: includes/settings.php
+msgid "How often gather data"
+msgstr "Qokelela idatha kangaphi"
+
+#: includes/settings.php
+msgid "If enabled, Evidence will gather data periodically. If disabled, you can only view data for specific host"
+msgstr "Ukuba ivuliwe, i-Evidence iya kuqokelela idatha ngamaxesha athile. Ukuba icinyiwe, unokujonga kuphela idatha yehosti ethile"
+
+#: includes/settings.php
+msgid "Disabled"
+msgstr "Icinyiwe"
+
+#: includes/settings.php
+#, php-format
+msgid "Every %d hours"
+msgstr "Rhoqo ngeeyure ezi-%d"
+
+#: includes/settings.php
+msgid "Every day"
+msgstr "Yonke imihla"
+
+#: includes/settings.php
+msgid "Every week"
+msgstr "Rhoqo ngeveki"
+
+#: includes/settings.php
+msgid "When evidence will be started"
+msgstr "Xa ubungqina buza kuqaliswa"
+
+#: includes/settings.php
+msgid "The Base Time for gather data to occur.  For example, if you use '12:00am' and you choose once per day, the action would begin at approximately midnight every day."
+msgstr "IXesha eliSisiseko lokuqokelela idatha. Umzekelo, ukuba usebenzisa u-'12:00am' kwaye ukhethe kanye ngosuku, inyathelo liya kuqala malunga nenzulu yobusuku yonke imihla."
+
+#: includes/settings.php
+msgid "How many changes store in database"
+msgstr "Zingaphi iinguqu eziza kugcinwa kwiziko ledatha"
+
+#: includes/settings.php
+msgid "If data gathering is enabled,  you can specify how many history (changed) records keep for each device"
+msgstr "Ukuba ukuqokelelwa kwedatha kuvuliwe, unokuchaza ukuba zingaphi iirekhodi zembali (ezitshintshileyo) eziza kugcinwa kwisixhobo ngasinye"
+
+#: includes/settings.php
+msgid "Without history"
+msgstr "Ngaphandle kwembali"
+
+#: includes/settings.php
+#, php-format
+msgid "%d record"
+msgstr "%d irekhodi"
+
+#: includes/settings.php
+#, php-format
+msgid "%d records"
+msgstr "%d iirekhodi"
+
+#: includes/settings.php
+msgid "Display information on device edit page"
+msgstr "Bonisa ulwazi kwiphepha lokuhlela isixhobo"
+
+#: includes/settings.php
+msgid "If enabled, flowview will display evidence data on device edit page"
+msgstr "Ukuba ivuliwe, i-flowview iya kubonisa idatha ye-evidence kwiphepha lokuhlela isixhobo"
+
+#: includes/settings.php
+msgid "Send email on evidence information change"
+msgstr "Thumela i-imeyile xa kutshintsha ulwazi lobungqina"
+
+#: includes/settings.php
+msgid "If evidence find change, send email"
+msgstr "Ukuba i-evidence ifumana utshintsho, thumela i-imeyile"
+
+#: includes/settings.php
+msgid "Excluded notification Host IDs"
+msgstr "I-ID zeHosti zesaziso ezishiywe ngaphandle"
+
+#: includes/settings.php
+msgid "Some devices report hw changes too often. You can exclude these host from email notification. Insert Host IDs, comma separator"
+msgstr "Ezinye izixhobo zixela utshintsho lwe-hw rhoqo kakhulu. Unokuzikhuphela ngaphandle ezi hosti kwisaziso se-imeyile. Faka ii-ID zeehosti, uhlule ngekoma"
+
+#: includes/settings.php
+msgid "Excluded notification device templates"
+msgstr "Iitempleyiti zesixhobo zesaziso ezishiywe ngaphandle"
+
+#: includes/settings.php
+msgid "Some devices types report hw changes too often. You can exclude these templates from email notification. Insert device templates IDs, comma separator"
+msgstr "Ezinye iintlobo zezixhobo zixela utshintsho lwe-hw rhoqo kakhulu. Unokuzikhuphela ngaphandle ezi itempleyiti kwisaziso se-imeyile. Faka ii-ID zeethempleyiti zezixhobo, uhlule ngekoma"
+

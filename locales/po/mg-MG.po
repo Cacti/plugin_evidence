@@ -1,0 +1,451 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-11-02 16:25+0100\n"
+"PO-Revision-Date: 2026-11-24 19:00+0000\n"
+"Last-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\n"
+"Language-Team: Malagasy\n"
+"Language: mg-MG\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: evidence.php
+msgid "Disabled/down device. No actual data"
+msgstr "Fitaovana tsy mavitrika/maty. Tsy misy angona tena izy"
+
+#: evidence.php
+msgid "Show older records"
+msgstr "Asehoy ireo firaketana taloha kokoa"
+
+#: evidence.php includes/functions.php
+msgid "History data store disabled"
+msgstr "Tsy mavitrika ny fitehirizana angona tantara"
+
+#: evidence.php
+msgid "Permission issue"
+msgstr "Olana amin'ny fahazoan-dalana"
+
+#: evidence_tab.php includes/functions.php
+msgid "Evidence"
+msgstr "Porofo"
+
+#: evidence_tab.php
+msgid "Template"
+msgstr "Modely"
+
+#: evidence_tab.php
+msgid "Any"
+msgstr "Na inona na inona"
+
+#: evidence_tab.php
+msgid "Scan date"
+msgstr "Datin'ny fitiliana"
+
+#: evidence_tab.php
+msgid "Only last changed states"
+msgstr "Ny sata niova farany ihany"
+
+#: evidence_tab.php
+msgid "All history"
+msgstr "Tantara rehetra"
+
+#: evidence_tab.php
+msgid "records changed"
+msgstr "firaketana niova"
+
+#: evidence_tab.php
+msgid "Find"
+msgstr "Tadiavo"
+
+#: evidence_tab.php
+msgid "Go"
+msgstr "Alefa"
+
+#: evidence_tab.php
+msgid "Clear"
+msgstr "Fafao"
+
+#: evidence_tab.php
+msgid "Clear Filters"
+msgstr "Esory ny sivana"
+
+#: evidence_tab.php
+msgid "Export"
+msgstr "Aondrana"
+
+#: evidence_tab.php
+msgid "Print"
+msgstr "Atonta"
+
+#: evidence_tab.php
+msgid "Allow pop-ups to open the print view."
+msgstr "Avelao hisokatra ny varavarankely mipoitra hanokafana ny fijery fanontana."
+
+#: evidence_tab.php
+msgid "Search"
+msgstr "Fikarohana"
+
+#: evidence_tab.php
+msgid "You can search serial number, firmware version, ip, mac address,..."
+msgstr "Afaka mikaroka laharan'ny vokatra, dikan'ny firmware, adiresy IP, adiresy MAC,... ianao"
+
+#: evidence_tab.php
+msgid "Search string must be 3-20 characters"
+msgstr "Ny teny fikarohana dia tsy maintsy misy litera na marika 3-20"
+
+#: evidence_tab.php
+msgid "Select any device, template, select any scan date or try search"
+msgstr "Misafidiana Fitaovana na Modely, misafidiana daty fitiliana na andramo ny fikarohana"
+
+#: evidence_tab.php
+msgid "No data. Allow periodic scan and store history in settings"
+msgstr "Tsy misy angona. Avelao ny fitiliana ara-potoana ary tehirizo ny tantara ao amin'ny fandrindrana"
+
+#: evidence_tab.php
+msgid "Device or template - You can display information about specific host, all devices with the same template."
+msgstr "Fitaovana na modely - Azonao atao ny mampiseho fampahalalana momba ny mpampiantrano iray manokana, na ny fitaovana rehetra mitovy modely."
+
+#: evidence_tab.php
+msgid "Scan date (Only last changes or All history) - You can choose whether to retrieve only the most recent change or the entire history."
+msgstr "Datin'ny fitiliana (Ny fanovana farany ihany na ny Tantara rehetra) - Azonao atao ny misafidy na haka ny fanovana farany indrindra ihany na ny tantara manontolo."
+
+#: evidence_tab.php
+msgid "If you use only `Scan Date`, the changes for all devices found during this scan will be displayed"
+msgstr "Raha `Scan Date` ihany no ampiasainao, dia haseho ny fiovana ho an'ny Fitaovana rehetra hita nandritra ity fitarafana ity"
+
+#: evidence_tab.php
+msgid "You can search any string in all data."
+msgstr "Afaka mikaroka lahatsoratra na inona na inona ao amin'ny angona rehetra ianao."
+
+#: evidence_tab.php
+msgid "Number of records"
+msgstr "Isan'ny firaketana"
+
+#: evidence_tab.php
+#, php-format
+msgid "Devices: %d records"
+msgstr "Fitaovana: firaketana %d"
+
+#: evidence_tab.php
+#, php-format
+msgid "Entity MIB: %d records, %d vendors"
+msgstr "Entity MIB: %d firaketana, %d mpivarotra"
+
+#: evidence_tab.php
+#, php-format
+msgid "Unique MAC addresses: %d"
+msgstr "Adiresy MAC miavaka: %d"
+
+#: evidence_tab.php
+#, php-format
+msgid "Unique IP addresses: %d"
+msgstr "Adiresy IP miavaka: %d"
+
+#: evidence_tab.php
+#, php-format
+msgid "Vendor specific data: %d"
+msgstr "Angona manokana ho an'ny mpamatsy: %d"
+
+#: evidence_tab.php
+#, php-format
+msgid "Oldest record: %d"
+msgstr "Firaketana tranainy indrindra: %d"
+
+#: evidence_tab.php
+msgid "Vendors"
+msgstr "Ireo mpamatsy"
+
+#: evidence_tab.php
+msgid "Show or hide"
+msgstr "Asehoy na afeno"
+
+#: evidence_tab.php
+msgid "Expand all dates"
+msgstr "Velaro ny daty rehetra"
+
+#: evidence_tab.php
+msgid "Expand latest date"
+msgstr "Velaro ny daty farany"
+
+#: includes/arrays.php includes/functions.php
+msgid "Description"
+msgstr "Famaritana"
+
+#: includes/arrays.php includes/functions.php
+msgid "Name"
+msgstr "Anarana"
+
+#: includes/arrays.php
+msgid "Hardware revision"
+msgstr "Kinovan'ny fitaovana ara-batana"
+
+#: includes/arrays.php
+msgid "Firmware revision"
+msgstr "Fanitsiana ny firmware"
+
+#: includes/arrays.php
+msgid "Software revision"
+msgstr "Fanavaozana ny rindrankajy"
+
+#: includes/arrays.php
+msgid "Serial number"
+msgstr "Laharana famantarana"
+
+#: includes/arrays.php
+msgid "Manufacturer name"
+msgstr "Anaran'ny mpanamboatra"
+
+#: includes/arrays.php
+msgid "Model name"
+msgstr "Anaran'ny modely"
+
+#: includes/arrays.php
+msgid "Alias"
+msgstr "Solon'anarana"
+
+#: includes/arrays.php
+msgid "Asset ID"
+msgstr "Famantarana ny fananana"
+
+#: includes/arrays.php
+msgid "Manufacturing date"
+msgstr "Daty nanamboarana"
+
+#: includes/arrays.php
+msgid "UUID"
+msgstr "UUID"
+
+#: includes/arrays.php includes/functions.php
+msgid "SNMP info"
+msgstr "Fampahalalana SNMP"
+
+#: includes/arrays.php includes/functions.php
+msgid "Entity MIB"
+msgstr "Entity MIB"
+
+#: includes/arrays.php
+msgid "Mac addresses"
+msgstr "adiresy Mac"
+
+#: includes/arrays.php includes/functions.php
+msgid "IP addresses"
+msgstr "Adiresy IP"
+
+#: includes/arrays.php
+msgid "Vendor specific data"
+msgstr "Angona manokana ho an'ny mpamatsy"
+
+#: includes/arrays.php
+msgid "Vendor optional data"
+msgstr "Angona safidy an'ny mpamatsy"
+
+#: includes/functions.php
+msgid "No data"
+msgstr "Tsy misy angona"
+
+#: includes/functions.php
+msgid "Organization"
+msgstr "Fikambanana"
+
+#: includes/functions.php
+msgid "Organization ID"
+msgstr "ID-n'ny fikambanana"
+
+#: includes/functions.php
+msgid "System name"
+msgstr "Anaran'ny rafitra"
+
+#: includes/functions.php
+msgid "Contact"
+msgstr "Fifandraisana"
+
+#: includes/functions.php
+msgid "Location"
+msgstr "Toerana"
+
+#: includes/functions.php
+msgid "Field"
+msgstr "Saha"
+
+#: includes/functions.php
+msgid "Value"
+msgstr "Sanda"
+
+#: includes/functions.php
+msgid "Entity"
+msgstr "Singa"
+
+#: includes/functions.php
+msgid "Show only first 3 items, for the full listing click here"
+msgstr "Asehoy ireo singa 3 voalohany ihany, tsindrio eto raha hijery ny lisitra feno"
+
+#: includes/functions.php
+msgid "IP address"
+msgstr "Adiresy IP"
+
+#: includes/functions.php
+msgid "MAC address"
+msgstr "adiresy MAC"
+
+#: includes/functions.php
+msgid "OID"
+msgstr "OID"
+
+#: includes/functions.php
+msgid "Store history is not allowed. Nothing to do."
+msgstr "Tsy azo atao ny mitahiry ny tantara. Tsy misy zavatra atao."
+
+#: includes/functions.php
+#, php-format
+msgid "ID: %d, stored records: %d"
+msgstr "ID: %d, firaketana voatahiry: %d"
+
+#: includes/functions.php
+msgid "Also show actual data"
+msgstr "Asehoy koa ny tena angona"
+
+#: includes/functions.php
+msgid "ID ORG"
+msgstr "ID Fikambanana"
+
+#: includes/functions.php
+msgid "No older data yet"
+msgstr "Tsy mbola misy angona tranainy kokoa"
+
+#: includes/functions.php
+msgid "MAC addresses"
+msgstr "adiresy MAC"
+
+#: includes/functions.php
+msgid "Vendor specific"
+msgstr "Manokana ho an'ny mpamatsy"
+
+#: includes/functions.php
+#, php-format
+msgid "Records: %d"
+msgstr "Firaketana: %d"
+
+#: includes/functions.php
+msgid "Actual data"
+msgstr "Angona tena izy"
+
+#: includes/functions.php
+msgid "Changed"
+msgstr "Novaina"
+
+#: includes/functions.php
+msgid "SNMP information"
+msgstr "Fampahalalana SNMP"
+
+#: includes/functions.php
+msgid "Vendor specific information"
+msgstr "Fampahalalana manokana ho an'ny mpamatsy"
+
+#: includes/functions.php
+msgid "Vendor optional information"
+msgstr "Fampahalalana safidy an'ny mpamatsy"
+
+#: includes/functions.php
+#, php-format
+msgid "ID: %d, found in %d records"
+msgstr "ID: %d, hita tao amin'ny firaketana %d"
+
+#: includes/functions.php
+msgid "Not found"
+msgstr "Tsy hita"
+
+#: includes/settings.php
+msgid "How often gather data"
+msgstr "Impiry no manangona angona"
+
+#: includes/settings.php
+msgid "If enabled, Evidence will gather data periodically. If disabled, you can only view data for specific host"
+msgstr "Raha mavitrika, dia hanangona angona tsindraindray ny Evidence. Raha tsy mavitrika, dia angona ho an'ny Mpampiantrano manokana ihany no azonao jerena"
+
+#: includes/settings.php
+msgid "Disabled"
+msgstr "Tsy mavitrika"
+
+#: includes/settings.php
+#, php-format
+msgid "Every %d hours"
+msgstr "Isaky ny %d ora"
+
+#: includes/settings.php
+msgid "Every day"
+msgstr "Isan'andro"
+
+#: includes/settings.php
+msgid "Every week"
+msgstr "Isan-kerinandro"
+
+#: includes/settings.php
+msgid "When evidence will be started"
+msgstr "Rahoviana no hanomboka ny porofo"
+
+#: includes/settings.php
+msgid "The Base Time for gather data to occur.  For example, if you use '12:00am' and you choose once per day, the action would begin at approximately midnight every day."
+msgstr "Ny ora fototra hanombohan'ny fanangonana angona. Ohatra, raha mampiasa '12:00am' ianao ary misafidy indray mandeha isan'andro, dia hanomboka manodidina ny misasak'alina isan'andro ny hetsika."
+
+#: includes/settings.php
+msgid "How many changes store in database"
+msgstr "Firy ny fanovana tehirizina ao amin'ny angon-drakitra"
+
+#: includes/settings.php
+msgid "If data gathering is enabled,  you can specify how many history (changed) records keep for each device"
+msgstr "Raha mavitrika ny fanangonana angona, dia azonao faritana hoe firy ny tantaran'ny firaketana (niova) tazonina ho an'ny Fitaovana tsirairay"
+
+#: includes/settings.php
+msgid "Without history"
+msgstr "Tsy misy tantara"
+
+#: includes/settings.php
+#, php-format
+msgid "%d record"
+msgstr "%d firaketana"
+
+#: includes/settings.php
+#, php-format
+msgid "%d records"
+msgstr "%d firaketana"
+
+#: includes/settings.php
+msgid "Display information on device edit page"
+msgstr "Asehoy eo amin'ny pejy fanovana Fitaovana ny fampahalalana"
+
+#: includes/settings.php
+msgid "If enabled, flowview will display evidence data on device edit page"
+msgstr "Raha mavitrika, dia hampiseho ny angona Evidence ao amin'ny pejy fanovana Fitaovana ny flowview"
+
+#: includes/settings.php
+msgid "Send email on evidence information change"
+msgstr "Mandefa mailaka rehefa miova ny fampahalalana momba ny porofo"
+
+#: includes/settings.php
+msgid "If evidence find change, send email"
+msgstr "Raha mahita fiovana ny Evidence, mandefasa mailaka"
+
+#: includes/settings.php
+msgid "Excluded notification Host IDs"
+msgstr "ID-n'ny Mpampiantrano tsy mahazo fampandrenesana"
+
+#: includes/settings.php
+msgid "Some devices report hw changes too often. You can exclude these host from email notification. Insert Host IDs, comma separator"
+msgstr "Misy fitaovana mitatitra fiovana ara-pitaovana (hw) matetika loatra. Azonao esorina amin'ny fampandrenesana mailaka ireo mpampiantrano ireo. Ampidiro ny ID-n'ny mpampiantrano, sarahina faingo"
+
+#: includes/settings.php
+msgid "Excluded notification device templates"
+msgstr "Modelin'ny fitaovana tsy mahazo fampandrenesana"
+
+#: includes/settings.php
+msgid "Some devices types report hw changes too often. You can exclude these templates from email notification. Insert device templates IDs, comma separator"
+msgstr "Misy karazana fitaovana mitatitra fiovana ara-pitaovana (hw) matetika loatra. Azonao esorina amin'ny fampandrenesana mailaka ireo modely ireo. Ampidiro ny ID-n'ny modely fitaovana, sarahina faingo"
+
