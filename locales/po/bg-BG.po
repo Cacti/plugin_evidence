@@ -5,235 +5,245 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Cacti \n"
+"Project-Id-Version: Cacti\n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
 "POT-Creation-Date: 2026-09-30 11:26-0400\n"
-"PO-Revision-Date: 2026-09-30 11:26-0400\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
-"Language: bg_BG\n"
+"PO-Revision-Date: 2026-11-25 02:18+0000\n"
+"Last-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\n"
+"Language-Team: Bulgarian <https://translate.cacti.net/projects/cacti/"
+"evidence/bg/>\n"
+"Language: bg-BG\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.11.4\n"
 
 #: evidence.php
 msgid "Disabled/down device. No actual data"
-msgstr ""
+msgstr "Деактивирано/неактивно устройство. Няма актуални данни"
 
 #: evidence.php
 msgid "Show older records"
-msgstr ""
+msgstr "Показване на по-стари записи"
 
 #: evidence.php includes/functions.php
 msgid "History data store disabled"
-msgstr ""
+msgstr "Съхранението на исторически данни е деактивирано"
 
 #: evidence.php
 msgid "Permission issue"
-msgstr ""
+msgstr "Проблем с правата"
 
 #: evidence_tab.php includes/functions.php
 msgid "Evidence"
-msgstr ""
+msgstr "Evidence"
 
 #: evidence_tab.php
 msgid "Template"
-msgstr ""
+msgstr "Шаблон"
 
 #: evidence_tab.php
 msgid "Any"
-msgstr ""
+msgstr "Всички"
 
 #: evidence_tab.php
 msgid "Scan date"
-msgstr ""
+msgstr "Дата на сканиране"
 
 #: evidence_tab.php
 msgid "Only last changed states"
-msgstr ""
+msgstr "Само последно променените състояния"
 
 #: evidence_tab.php
 msgid "All history"
-msgstr ""
+msgstr "Цялата история"
 
 #: evidence_tab.php
 msgid "records changed"
-msgstr ""
+msgstr "променени записи"
 
 #: evidence_tab.php
 msgid "Find"
-msgstr ""
+msgstr "Търсене"
 
 #: evidence_tab.php
 msgid "Go"
-msgstr ""
+msgstr "Търси"
 
 #: evidence_tab.php
 msgid "Clear"
-msgstr ""
+msgstr "Изчисти"
 
 #: evidence_tab.php
 msgid "Clear Filters"
-msgstr ""
+msgstr "Изчистване на филтрите"
 
 #: evidence_tab.php
 msgid "Search"
-msgstr ""
+msgstr "Търсене"
 
 #: evidence_tab.php
 msgid "You can search serial number, firmware version, ip, mac address,..."
-msgstr ""
+msgstr "Можете да търсите сериен номер, версия на фърмуера, IP, MAC адрес,..."
 
 #: evidence_tab.php
 msgid "Search string must be 3-20 characters"
-msgstr ""
+msgstr "Низът за търсене трябва да е с дължина 3-20 знака"
 
 #: evidence_tab.php
 msgid "Select any device, template, select any scan date or try search"
-msgstr ""
+msgstr "Изберете устройство, шаблон, дата на сканиране или опитайте търсене"
 
 #: evidence_tab.php
 msgid "No data. Allow periodic scan and store history in settings"
 msgstr ""
+"Няма данни. Разрешете периодичното сканиране и съхраняването на история в "
+"настройките"
 
 #: evidence_tab.php
 msgid "Device or template - You can display information about specific host, all devices with the same template."
 msgstr ""
+"Устройство или шаблон - Можете да покажете информация за конкретен хост или "
+"за всички устройства със същия шаблон."
 
 #: evidence_tab.php
 msgid "Scan date (Only last changes or All history) - You can choose whether to retrieve only the most recent change or the entire history."
 msgstr ""
+"Дата на сканиране (само последни промени или цялата история) - можете да "
+"изберете дали да се извлича само най-новата промяна, или цялата история."
 
 #: evidence_tab.php
 msgid "If you use only `Scan Date`, the changes for all devices found during this scan will be displayed"
 msgstr ""
+"Ако използвате само `Дата на сканиране`, ще бъдат показани промените за "
+"всички устройства, открити по време на това сканиране"
 
 #: evidence_tab.php
 msgid "You can search any string in all data."
-msgstr ""
+msgstr "Можете да търсите произволен низ във всички данни."
 
 #: evidence_tab.php
 msgid "Number of records"
-msgstr ""
+msgstr "Брой записи"
 
 #: evidence_tab.php
 #, php-format
 msgid "Devices: %d records"
-msgstr ""
+msgstr "Устройства: %d записа"
 
 #: evidence_tab.php
 #, php-format
 msgid "Entity MIB: %d records, %d vendors"
-msgstr ""
+msgstr "Entity MIB: %d записа, %d производители"
 
 #: evidence_tab.php
 #, php-format
 msgid "Unique MAC addresses: %d"
-msgstr ""
+msgstr "Уникални MAC адреси: %d"
 
 #: evidence_tab.php
 #, php-format
 msgid "Unique IP addresses: %d"
-msgstr ""
+msgstr "Уникални IP адреси: %d"
 
 #: evidence_tab.php
 #, php-format
 msgid "Vendor specific data: %d"
-msgstr ""
+msgstr "Специфични за производителя данни: %d"
 
 #: evidence_tab.php
 #, php-format
 msgid "Oldest record: %d"
-msgstr ""
+msgstr "Най-стар запис: %d"
 
 #: evidence_tab.php
 msgid "Vendors"
-msgstr ""
+msgstr "Производители"
 
 #: evidence_tab.php
 msgid "Show or hide"
-msgstr ""
+msgstr "Показване или скриване"
 
 #: evidence_tab.php
 msgid "Expand all dates"
-msgstr ""
+msgstr "Разгъване на всички дати"
 
 #: evidence_tab.php
 msgid "Expand latest date"
-msgstr ""
+msgstr "Разгъване на последната дата"
 
 #: includes/arrays.php
 msgid "Description"
-msgstr ""
+msgstr "Описание"
 
 #: includes/arrays.php
 msgid "Name"
-msgstr ""
+msgstr "Име"
 
 #: includes/arrays.php
 msgid "Hardware revision"
-msgstr ""
+msgstr "Хардуерна ревизия"
 
 #: includes/arrays.php
 msgid "Firmware revision"
-msgstr ""
+msgstr "Версия на фърмуера"
 
 #: includes/arrays.php
 msgid "Software revision"
-msgstr ""
+msgstr "Версия на софтуера"
 
 #: includes/arrays.php
 msgid "Serial number"
-msgstr ""
+msgstr "Сериен номер"
 
 #: includes/arrays.php
 msgid "Manufacturer name"
-msgstr ""
+msgstr "Име на производител"
 
 #: includes/arrays.php
 msgid "Model name"
-msgstr ""
+msgstr "Име на модела"
 
 #: includes/arrays.php
 msgid "Alias"
-msgstr ""
+msgstr "Псевдоним"
 
 #: includes/arrays.php
 msgid "Asset ID"
-msgstr ""
+msgstr "ИД на актив"
 
 #: includes/arrays.php
 msgid "Manufacturing date"
-msgstr ""
+msgstr "Дата на производство"
 
 #: includes/arrays.php
 msgid "UUID"
-msgstr ""
+msgstr "UUID"
 
 #: includes/arrays.php includes/functions.php
 msgid "SNMP info"
-msgstr ""
+msgstr "SNMP информация"
 
 #: includes/arrays.php includes/functions.php
 msgid "Entity MIB"
-msgstr ""
+msgstr "Entity MIB"
 
 #: includes/arrays.php
 msgid "Mac addresses"
-msgstr ""
+msgstr "MAC адреси"
 
 #: includes/arrays.php includes/functions.php
 msgid "IP addresses"
-msgstr ""
+msgstr "IP адреси"
 
 #: includes/arrays.php
 msgid "Vendor specific data"
-msgstr ""
+msgstr "Специфични за производителя данни"
 
 #: includes/arrays.php
 msgid "Vendor optional data"
-msgstr ""
+msgstr "Незадължителни данни от производителя"
 
 #: includes/functions.php
 msgid "Data"
@@ -241,143 +251,158 @@ msgstr ""
 
 #: includes/functions.php
 msgid "Store history is not allowed. Nothing to do."
-msgstr ""
+msgstr "Съхраняването на история не е разрешено. Няма какво да се направи."
 
 #: includes/functions.php
 msgid "Not found"
-msgstr ""
+msgstr "Не е намерено"
 
 #: includes/functions.php
 msgid "Also show actual data"
-msgstr ""
+msgstr "Показване също на действителните данни"
 
 #: includes/functions.php
 msgid "ID ORG"
-msgstr ""
+msgstr "ID на организация"
 
 #: includes/functions.php
 msgid "No older data yet"
-msgstr ""
+msgstr "Все още няма по-стари данни"
 
 #: includes/functions.php
 msgid "Entity"
-msgstr ""
+msgstr "Обект"
 
 #: includes/functions.php
 msgid "MAC addresses"
-msgstr ""
+msgstr "MAC адреси"
 
 #: includes/functions.php
 msgid "Vendor specific"
-msgstr ""
+msgstr "Специфично за производителя"
 
 #: includes/functions.php
 msgid "Actual data"
-msgstr ""
+msgstr "Действителни данни"
 
 #: includes/functions.php
 msgid "Changed"
-msgstr ""
+msgstr "Променено"
 
 #: includes/functions.php
 msgid "SNMP information"
-msgstr ""
+msgstr "SNMP информация"
 
 #: includes/functions.php
 msgid "Vendor specific information"
-msgstr ""
+msgstr "Специфична за производителя информация"
 
 #: includes/functions.php
 msgid "Vendor optional information"
-msgstr ""
+msgstr "Незадължителна информация от производителя"
 
 #: includes/functions.php
 msgid "Show only first 3 items, for the full listing click here"
-msgstr ""
+msgstr "Показване само на първите 3 елемента, за пълния списък щракнете тук"
 
 #: includes/settings.php
 msgid "How often gather data"
-msgstr ""
+msgstr "Колко често да се събират данни"
 
 #: includes/settings.php
 msgid "If enabled, Evidence will gather data periodically. If disabled, you can only view data for specific host"
 msgstr ""
+"Ако е активирано, Evidence ще събира данни периодично. Ако е деактивирано, "
+"можете да преглеждате данни само за конкретен хост"
 
 #: includes/settings.php
 msgid "Disabled"
-msgstr ""
+msgstr "деактивиран"
 
 #: includes/settings.php
 #, php-format
 msgid "Every %d hours"
-msgstr ""
+msgstr "На всеки %d часа"
 
 #: includes/settings.php
 msgid "Every day"
-msgstr ""
+msgstr "Всеки ден"
 
 #: includes/settings.php
 msgid "Every week"
-msgstr ""
+msgstr "Всяка седмица"
 
 #: includes/settings.php
 msgid "When evidence will be started"
-msgstr ""
+msgstr "Кога ще бъде стартирано Evidence"
 
 #: includes/settings.php
 msgid "The Base Time for gather data to occur.  For example, if you use '12:00am' and you choose once per day, the action would begin at approximately midnight every day."
 msgstr ""
+"Базовото време за събиране на данните. Например, ако зададете '12:00am' и "
+"изберете веднъж дневно, действието ще започва приблизително в полунощ всеки "
+"ден."
 
 #: includes/settings.php
 msgid "How many changes store in database"
-msgstr ""
+msgstr "Колко промени да се съхраняват в базата данни"
 
 #: includes/settings.php
 msgid "If data gathering is enabled,  you can specify how many history (changed) records keep for each device"
 msgstr ""
+"Ако събирането на данни е активирано, можете да посочите колко исторически "
+"(променени) записа да се пазят за всяко устройство"
 
 #: includes/settings.php
 msgid "Without history"
-msgstr ""
+msgstr "Без история"
 
 #: includes/settings.php
 #, php-format
 msgid "%d record"
-msgstr ""
+msgstr "%d запис"
 
 #: includes/settings.php
 #, php-format
 msgid "%d records"
-msgstr ""
+msgstr "%d записа"
 
 #: includes/settings.php
 msgid "Display information on device edit page"
-msgstr ""
+msgstr "Показване на информация на страницата за редактиране на устройство"
 
 #: includes/settings.php
 msgid "If enabled, flowview will display evidence data on device edit page"
 msgstr ""
+"Ако е активирано, flowview ще показва данни от Evidence на страницата за "
+"редактиране на устройството"
 
 #: includes/settings.php
 msgid "Send email on evidence information change"
-msgstr ""
+msgstr "Изпращане на имейл при промяна в информацията за доказателства"
 
 #: includes/settings.php
 msgid "If evidence find change, send email"
-msgstr ""
+msgstr "При открита промяна от Evidence да се изпраща имейл"
 
 #: includes/settings.php
 msgid "Excluded notification Host IDs"
-msgstr ""
+msgstr "Изключени идентификатори (ID) на хостове за известия"
 
 #: includes/settings.php
 msgid "Some devices report hw changes too often. You can exclude these host from email notification. Insert Host IDs, comma separator"
 msgstr ""
+"Някои устройства докладват хардуерни промени твърде често. Можете да "
+"изключите тези хостове от имейл известяването. Въведете идентификатори (ID) "
+"на хостове, разделени със запетая"
 
 #: includes/settings.php
 msgid "Excluded notification device templates"
-msgstr ""
+msgstr "Изключени шаблони на устройства за известия"
 
 #: includes/settings.php
 msgid "Some devices types report hw changes too often. You can exclude these templates from email notification. Insert device templates IDs, comma separator"
 msgstr ""
+"Някои типове устройства докладват хардуерни промени твърде често. Можете да "
+"изключите тези шаблони от имейл известяването. Въведете идентификатори (ID) "
+"на шаблони за устройства, разделени със запетая"
