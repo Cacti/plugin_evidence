@@ -5,235 +5,245 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Cacti \n"
+"Project-Id-Version: Cacti\n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
 "POT-Creation-Date: 2026-09-30 11:26-0400\n"
-"PO-Revision-Date: 2026-09-30 11:26-0400\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
-"Language: vi_VN\n"
+"PO-Revision-Date: 2026-11-25 02:18+0000\n"
+"Last-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\n"
+"Language-Team: Vietnamese <https://translate.cacti.net/projects/cacti/"
+"evidence/vi/>\n"
+"Language: vi-VN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.11.4\n"
 
 #: evidence.php
 msgid "Disabled/down device. No actual data"
-msgstr ""
+msgstr "Thiết bị bị vô hiệu hóa/ngừng hoạt động. Không có dữ liệu thực tế"
 
 #: evidence.php
 msgid "Show older records"
-msgstr ""
+msgstr "Hiển thị các bản ghi cũ hơn"
 
 #: evidence.php includes/functions.php
 msgid "History data store disabled"
-msgstr ""
+msgstr "Kho lưu trữ dữ liệu lịch sử đã bị tắt"
 
 #: evidence.php
 msgid "Permission issue"
-msgstr ""
+msgstr "Vấn đề về quyền hạn"
 
 #: evidence_tab.php includes/functions.php
 msgid "Evidence"
-msgstr ""
+msgstr "Bằng chứng"
 
 #: evidence_tab.php
 msgid "Template"
-msgstr ""
+msgstr "Mẫu"
 
 #: evidence_tab.php
 msgid "Any"
-msgstr ""
+msgstr "Bất kỳ"
 
 #: evidence_tab.php
 msgid "Scan date"
-msgstr ""
+msgstr "Ngày quét"
 
 #: evidence_tab.php
 msgid "Only last changed states"
-msgstr ""
+msgstr "Chỉ các trạng thái thay đổi gần nhất"
 
 #: evidence_tab.php
 msgid "All history"
-msgstr ""
+msgstr "Toàn bộ lịch sử"
 
 #: evidence_tab.php
 msgid "records changed"
-msgstr ""
+msgstr "bản ghi đã thay đổi"
 
 #: evidence_tab.php
 msgid "Find"
-msgstr ""
+msgstr "Tìm"
 
 #: evidence_tab.php
 msgid "Go"
-msgstr ""
+msgstr "Đi"
 
 #: evidence_tab.php
 msgid "Clear"
-msgstr ""
+msgstr "Xóa"
 
 #: evidence_tab.php
 msgid "Clear Filters"
-msgstr ""
+msgstr "Xóa bộ lọc"
 
 #: evidence_tab.php
 msgid "Search"
-msgstr ""
+msgstr "Tìm kiếm"
 
 #: evidence_tab.php
 msgid "You can search serial number, firmware version, ip, mac address,..."
 msgstr ""
+"Bạn có thể tìm kiếm số sê-ri, phiên bản firmware, địa chỉ IP, địa chỉ MAC,..."
 
 #: evidence_tab.php
 msgid "Search string must be 3-20 characters"
-msgstr ""
+msgstr "Chuỗi tìm kiếm phải dài từ 3-20 ký tự"
 
 #: evidence_tab.php
 msgid "Select any device, template, select any scan date or try search"
-msgstr ""
+msgstr "Chọn bất kỳ thiết bị, mẫu nào, chọn ngày quét bất kỳ hoặc thử tìm kiếm"
 
 #: evidence_tab.php
 msgid "No data. Allow periodic scan and store history in settings"
 msgstr ""
+"Không có dữ liệu. Cho phép quét định kỳ và lưu lịch sử trong phần cài đặt"
 
 #: evidence_tab.php
 msgid "Device or template - You can display information about specific host, all devices with the same template."
 msgstr ""
+"Thiết bị hoặc mẫu - Bạn có thể hiển thị thông tin về máy chủ cụ thể, hoặc "
+"tất cả thiết bị có cùng mẫu."
 
 #: evidence_tab.php
 msgid "Scan date (Only last changes or All history) - You can choose whether to retrieve only the most recent change or the entire history."
 msgstr ""
+"Ngày quét (Chỉ các thay đổi gần nhất hoặc Toàn bộ lịch sử) - Bạn có thể chọn "
+"chỉ lấy thay đổi gần đây nhất hay toàn bộ lịch sử."
 
 #: evidence_tab.php
 msgid "If you use only `Scan Date`, the changes for all devices found during this scan will be displayed"
 msgstr ""
+"Nếu bạn chỉ sử dụng `Ngày quét`, các thay đổi cho tất cả thiết bị được tìm "
+"thấy trong lần quét này sẽ được hiển thị"
 
 #: evidence_tab.php
 msgid "You can search any string in all data."
-msgstr ""
+msgstr "Bạn có thể tìm kiếm bất kỳ chuỗi nào trong toàn bộ dữ liệu."
 
 #: evidence_tab.php
 msgid "Number of records"
-msgstr ""
+msgstr "Số lượng bản ghi"
 
 #: evidence_tab.php
 #, php-format
 msgid "Devices: %d records"
-msgstr ""
+msgstr "Thiết bị: %d bản ghi"
 
 #: evidence_tab.php
 #, php-format
 msgid "Entity MIB: %d records, %d vendors"
-msgstr ""
+msgstr "Entity MIB: %d bản ghi, %d nhà cung cấp"
 
 #: evidence_tab.php
 #, php-format
 msgid "Unique MAC addresses: %d"
-msgstr ""
+msgstr "Địa chỉ MAC duy nhất: %d"
 
 #: evidence_tab.php
 #, php-format
 msgid "Unique IP addresses: %d"
-msgstr ""
+msgstr "Địa chỉ IP duy nhất: %d"
 
 #: evidence_tab.php
 #, php-format
 msgid "Vendor specific data: %d"
-msgstr ""
+msgstr "Dữ liệu đặc thù theo nhà cung cấp: %d"
 
 #: evidence_tab.php
 #, php-format
 msgid "Oldest record: %d"
-msgstr ""
+msgstr "Bản ghi cũ nhất: %d"
 
 #: evidence_tab.php
 msgid "Vendors"
-msgstr ""
+msgstr "Nhà cung cấp"
 
 #: evidence_tab.php
 msgid "Show or hide"
-msgstr ""
+msgstr "Hiện hoặc ẩn"
 
 #: evidence_tab.php
 msgid "Expand all dates"
-msgstr ""
+msgstr "Mở rộng tất cả các ngày"
 
 #: evidence_tab.php
 msgid "Expand latest date"
-msgstr ""
+msgstr "Mở rộng ngày mới nhất"
 
 #: includes/arrays.php
 msgid "Description"
-msgstr ""
+msgstr "Mô tả"
 
 #: includes/arrays.php
 msgid "Name"
-msgstr ""
+msgstr "Tên"
 
 #: includes/arrays.php
 msgid "Hardware revision"
-msgstr ""
+msgstr "Phiên bản phần cứng"
 
 #: includes/arrays.php
 msgid "Firmware revision"
-msgstr ""
+msgstr "Phiên bản firmware"
 
 #: includes/arrays.php
 msgid "Software revision"
-msgstr ""
+msgstr "Phiên bản phần mềm"
 
 #: includes/arrays.php
 msgid "Serial number"
-msgstr ""
+msgstr "Số sê-ri"
 
 #: includes/arrays.php
 msgid "Manufacturer name"
-msgstr ""
+msgstr "Tên nhà sản xuất"
 
 #: includes/arrays.php
 msgid "Model name"
-msgstr ""
+msgstr "Tên mẫu thiết bị"
 
 #: includes/arrays.php
 msgid "Alias"
-msgstr ""
+msgstr "Bí danh"
 
 #: includes/arrays.php
 msgid "Asset ID"
-msgstr ""
+msgstr "Mã tài sản"
 
 #: includes/arrays.php
 msgid "Manufacturing date"
-msgstr ""
+msgstr "Ngày sản xuất"
 
 #: includes/arrays.php
 msgid "UUID"
-msgstr ""
+msgstr "UUID"
 
 #: includes/arrays.php includes/functions.php
 msgid "SNMP info"
-msgstr ""
+msgstr "Thông tin SNMP"
 
 #: includes/arrays.php includes/functions.php
 msgid "Entity MIB"
-msgstr ""
+msgstr "Entity MIB"
 
 #: includes/arrays.php
 msgid "Mac addresses"
-msgstr ""
+msgstr "Các địa chỉ MAC"
 
 #: includes/arrays.php includes/functions.php
 msgid "IP addresses"
-msgstr ""
+msgstr "Các địa chỉ IP"
 
 #: includes/arrays.php
 msgid "Vendor specific data"
-msgstr ""
+msgstr "Dữ liệu đặc thù theo nhà cung cấp"
 
 #: includes/arrays.php
 msgid "Vendor optional data"
-msgstr ""
+msgstr "Dữ liệu tùy chọn của nhà cung cấp"
 
 #: includes/functions.php
 msgid "Data"
@@ -241,143 +251,158 @@ msgstr ""
 
 #: includes/functions.php
 msgid "Store history is not allowed. Nothing to do."
-msgstr ""
+msgstr "Không được phép lưu lịch sử. Không có gì để thực hiện."
 
 #: includes/functions.php
 msgid "Not found"
-msgstr ""
+msgstr "Không tìm thấy"
 
 #: includes/functions.php
 msgid "Also show actual data"
-msgstr ""
+msgstr "Hiển thị cả dữ liệu thực tế"
 
 #: includes/functions.php
 msgid "ID ORG"
-msgstr ""
+msgstr "ID tổ chức"
 
 #: includes/functions.php
 msgid "No older data yet"
-msgstr ""
+msgstr "Chưa có dữ liệu cũ hơn"
 
 #: includes/functions.php
 msgid "Entity"
-msgstr ""
+msgstr "Thực thể"
 
 #: includes/functions.php
 msgid "MAC addresses"
-msgstr ""
+msgstr "Các địa chỉ MAC"
 
 #: includes/functions.php
 msgid "Vendor specific"
-msgstr ""
+msgstr "Đặc thù theo nhà cung cấp"
 
 #: includes/functions.php
 msgid "Actual data"
-msgstr ""
+msgstr "Dữ liệu thực tế"
 
 #: includes/functions.php
 msgid "Changed"
-msgstr ""
+msgstr "Đã thay đổi"
 
 #: includes/functions.php
 msgid "SNMP information"
-msgstr ""
+msgstr "Thông tin SNMP"
 
 #: includes/functions.php
 msgid "Vendor specific information"
-msgstr ""
+msgstr "Thông tin đặc thù theo nhà cung cấp"
 
 #: includes/functions.php
 msgid "Vendor optional information"
-msgstr ""
+msgstr "Thông tin tùy chọn của nhà cung cấp"
 
 #: includes/functions.php
 msgid "Show only first 3 items, for the full listing click here"
-msgstr ""
+msgstr "Chỉ hiển thị 3 mục đầu tiên, nhấp vào đây để xem danh sách đầy đủ"
 
 #: includes/settings.php
 msgid "How often gather data"
-msgstr ""
+msgstr "Tần suất thu thập dữ liệu"
 
 #: includes/settings.php
 msgid "If enabled, Evidence will gather data periodically. If disabled, you can only view data for specific host"
 msgstr ""
+"Nếu được bật, Evidence sẽ thu thập dữ liệu định kỳ. Nếu tắt, bạn chỉ có thể "
+"xem dữ liệu cho một máy chủ cụ thể"
 
 #: includes/settings.php
 msgid "Disabled"
-msgstr ""
+msgstr "Vô hiệu hóa"
 
 #: includes/settings.php
 #, php-format
 msgid "Every %d hours"
-msgstr ""
+msgstr "Mỗi %d giờ"
 
 #: includes/settings.php
 msgid "Every day"
-msgstr ""
+msgstr "Hàng ngày"
 
 #: includes/settings.php
 msgid "Every week"
-msgstr ""
+msgstr "Mỗi tuần"
 
 #: includes/settings.php
 msgid "When evidence will be started"
-msgstr ""
+msgstr "Thời điểm Evidence sẽ bắt đầu"
 
 #: includes/settings.php
 msgid "The Base Time for gather data to occur.  For example, if you use '12:00am' and you choose once per day, the action would begin at approximately midnight every day."
 msgstr ""
+"Thời gian cơ sở để thực hiện thu thập dữ liệu.  Ví dụ: nếu bạn dùng '12:"
+"00am' và chọn mỗi ngày một lần, tác vụ sẽ bắt đầu vào khoảng nửa đêm hằng "
+"ngày."
 
 #: includes/settings.php
 msgid "How many changes store in database"
-msgstr ""
+msgstr "Số lượng thay đổi lưu trong cơ sở dữ liệu"
 
 #: includes/settings.php
 msgid "If data gathering is enabled,  you can specify how many history (changed) records keep for each device"
 msgstr ""
+"Nếu tính năng thu thập dữ liệu được bật, bạn có thể chỉ định số lượng bản "
+"ghi lịch sử (đã thay đổi) lưu giữ cho mỗi thiết bị"
 
 #: includes/settings.php
 msgid "Without history"
-msgstr ""
+msgstr "Không có lịch sử"
 
 #: includes/settings.php
 #, php-format
 msgid "%d record"
-msgstr ""
+msgstr "%d bản ghi"
 
 #: includes/settings.php
 #, php-format
 msgid "%d records"
-msgstr ""
+msgstr "%d bản ghi"
 
 #: includes/settings.php
 msgid "Display information on device edit page"
-msgstr ""
+msgstr "Hiển thị thông tin trên trang chỉnh sửa thiết bị"
 
 #: includes/settings.php
 msgid "If enabled, flowview will display evidence data on device edit page"
 msgstr ""
+"Nếu được bật, FlowView sẽ hiển thị dữ liệu bằng chứng trên trang chỉnh sửa "
+"thiết bị"
 
 #: includes/settings.php
 msgid "Send email on evidence information change"
-msgstr ""
+msgstr "Gửi email khi thông tin bằng chứng thay đổi"
 
 #: includes/settings.php
 msgid "If evidence find change, send email"
-msgstr ""
+msgstr "Nếu Evidence phát hiện thay đổi, hãy gửi email"
 
 #: includes/settings.php
 msgid "Excluded notification Host IDs"
-msgstr ""
+msgstr "ID máy chủ bị loại trừ khỏi thông báo"
 
 #: includes/settings.php
 msgid "Some devices report hw changes too often. You can exclude these host from email notification. Insert Host IDs, comma separator"
 msgstr ""
+"Một số thiết bị báo cáo thay đổi phần cứng quá thường xuyên. Bạn có thể loại "
+"trừ các máy chủ này khỏi thông báo qua email. Nhập các ID máy chủ, phân tách "
+"bằng dấu phẩy"
 
 #: includes/settings.php
 msgid "Excluded notification device templates"
-msgstr ""
+msgstr "Mẫu thiết bị bị loại trừ khỏi thông báo"
 
 #: includes/settings.php
 msgid "Some devices types report hw changes too often. You can exclude these templates from email notification. Insert device templates IDs, comma separator"
 msgstr ""
+"Một số loại thiết bị báo cáo thay đổi phần cứng quá thường xuyên. Bạn có thể "
+"loại trừ các mẫu này khỏi thông báo qua email. Nhập các ID mẫu thiết bị, "
+"phân tách bằng dấu phẩy"
