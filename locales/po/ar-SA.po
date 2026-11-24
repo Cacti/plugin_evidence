@@ -5,235 +5,246 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Cacti \n"
+"Project-Id-Version: Cacti\n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
 "POT-Creation-Date: 2026-09-30 11:26-0400\n"
-"PO-Revision-Date: 2026-09-30 11:26-0400\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
-"Language: ar_SA\n"
+"PO-Revision-Date: 2026-11-25 02:18+0000\n"
+"Last-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\n"
+"Language-Team: Arabic (Saudi Arabia) <https://translate.cacti.net/projects/"
+"cacti/evidence/ar_SA/>\n"
+"Language: ar-SA\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Weblate 5.11.4\n"
 
 #: evidence.php
 msgid "Disabled/down device. No actual data"
-msgstr ""
+msgstr "جهاز معطّل/متوقف. لا توجد بيانات فعلية"
 
 #: evidence.php
 msgid "Show older records"
-msgstr ""
+msgstr "عرض السجلات الأقدم"
 
 #: evidence.php includes/functions.php
 msgid "History data store disabled"
-msgstr ""
+msgstr "مخزن بيانات السجل معطل"
 
 #: evidence.php
 msgid "Permission issue"
-msgstr ""
+msgstr "مشكلة في الأذونات"
 
 #: evidence_tab.php includes/functions.php
 msgid "Evidence"
-msgstr ""
+msgstr "الأدلة"
 
 #: evidence_tab.php
 msgid "Template"
-msgstr ""
+msgstr "قالب"
 
 #: evidence_tab.php
 msgid "Any"
-msgstr ""
+msgstr "الجميع"
 
 #: evidence_tab.php
 msgid "Scan date"
-msgstr ""
+msgstr "تاريخ الفحص"
 
 #: evidence_tab.php
 msgid "Only last changed states"
-msgstr ""
+msgstr "آخر الحالات المتغيرة فقط"
 
 #: evidence_tab.php
 msgid "All history"
-msgstr ""
+msgstr "كل السجل"
 
 #: evidence_tab.php
 msgid "records changed"
-msgstr ""
+msgstr "سجلات تم تغييرها"
 
 #: evidence_tab.php
 msgid "Find"
-msgstr ""
+msgstr "بحث"
 
 #: evidence_tab.php
 msgid "Go"
-msgstr ""
+msgstr "أذهب"
 
 #: evidence_tab.php
 msgid "Clear"
-msgstr ""
+msgstr "مسح"
 
 #: evidence_tab.php
 msgid "Clear Filters"
-msgstr ""
+msgstr "مسح الفلتر"
 
 #: evidence_tab.php
 msgid "Search"
-msgstr ""
+msgstr "بحث"
 
 #: evidence_tab.php
 msgid "You can search serial number, firmware version, ip, mac address,..."
 msgstr ""
+"يمكنك البحث عن الرقم التسلسلي، إصدار البرنامج الثابت، عنوان IP، عنوان MAC، "
+"..."
 
 #: evidence_tab.php
 msgid "Search string must be 3-20 characters"
-msgstr ""
+msgstr "يجب أن يتكون نص البحث من 3 إلى 20 حرفاً"
 
 #: evidence_tab.php
 msgid "Select any device, template, select any scan date or try search"
-msgstr ""
+msgstr "حدد أي جهاز أو قالب، أو حدد أي تاريخ فحص أو جرّب البحث"
 
 #: evidence_tab.php
 msgid "No data. Allow periodic scan and store history in settings"
-msgstr ""
+msgstr "لا توجد بيانات. اسمح بالفحص الدوري وتخزين السجل في الإعدادات"
 
 #: evidence_tab.php
 msgid "Device or template - You can display information about specific host, all devices with the same template."
 msgstr ""
+"الجهاز أو القالب - يمكنك عرض معلومات حول مضيف محدد أو جميع الأجهزة التي "
+"تستخدم نفس القالب."
 
 #: evidence_tab.php
 msgid "Scan date (Only last changes or All history) - You can choose whether to retrieve only the most recent change or the entire history."
 msgstr ""
+"تاريخ الفحص (آخر التغييرات فقط أو السجل الكامل) - يمكنك اختيار استرداد أحدث "
+"تغيير فقط أو السجل بأكمله."
 
 #: evidence_tab.php
 msgid "If you use only `Scan Date`, the changes for all devices found during this scan will be displayed"
 msgstr ""
+"إذا استخدمت `تاريخ الفحص` فقط، فسيتم عرض التغييرات لجميع الأجهزة التي عُثر "
+"عليها خلال هذا الفحص"
 
 #: evidence_tab.php
 msgid "You can search any string in all data."
-msgstr ""
+msgstr "يمكنك البحث عن أي نص في جميع البيانات."
 
 #: evidence_tab.php
 msgid "Number of records"
-msgstr ""
+msgstr "عدد السجلات"
 
 #: evidence_tab.php
 #, php-format
 msgid "Devices: %d records"
-msgstr ""
+msgstr "الأجهزة: %d سجل"
 
 #: evidence_tab.php
 #, php-format
 msgid "Entity MIB: %d records, %d vendors"
-msgstr ""
+msgstr "Entity MIB: %d سجل، %d مورد"
 
 #: evidence_tab.php
 #, php-format
 msgid "Unique MAC addresses: %d"
-msgstr ""
+msgstr "عناوين MAC الفريدة: %d"
 
 #: evidence_tab.php
 #, php-format
 msgid "Unique IP addresses: %d"
-msgstr ""
+msgstr "عناوين IP الفريدة: %d"
 
 #: evidence_tab.php
 #, php-format
 msgid "Vendor specific data: %d"
-msgstr ""
+msgstr "بيانات خاصة بالشركة المصنّعة: %d"
 
 #: evidence_tab.php
 #, php-format
 msgid "Oldest record: %d"
-msgstr ""
+msgstr "أقدم سجل: %d"
 
 #: evidence_tab.php
 msgid "Vendors"
-msgstr ""
+msgstr "الشركات المصنّعة"
 
 #: evidence_tab.php
 msgid "Show or hide"
-msgstr ""
+msgstr "إظهار أو إخفاء"
 
 #: evidence_tab.php
 msgid "Expand all dates"
-msgstr ""
+msgstr "توسيع جميع التواريخ"
 
 #: evidence_tab.php
 msgid "Expand latest date"
-msgstr ""
+msgstr "توسيع أحدث تاريخ"
 
 #: includes/arrays.php
 msgid "Description"
-msgstr ""
+msgstr "الوصف"
 
 #: includes/arrays.php
 msgid "Name"
-msgstr ""
+msgstr "الاسم"
 
 #: includes/arrays.php
 msgid "Hardware revision"
-msgstr ""
+msgstr "إصدار العتاد"
 
 #: includes/arrays.php
 msgid "Firmware revision"
-msgstr ""
+msgstr "إصدار البرنامج الثابت"
 
 #: includes/arrays.php
 msgid "Software revision"
-msgstr ""
+msgstr "مراجعة البرنامج"
 
 #: includes/arrays.php
 msgid "Serial number"
-msgstr ""
+msgstr "الرقم التسلسلي"
 
 #: includes/arrays.php
 msgid "Manufacturer name"
-msgstr ""
+msgstr "اسم الشركة المصنعة"
 
 #: includes/arrays.php
 msgid "Model name"
-msgstr ""
+msgstr "اسم الطراز"
 
 #: includes/arrays.php
 msgid "Alias"
-msgstr ""
+msgstr "الاسم المستعار"
 
 #: includes/arrays.php
 msgid "Asset ID"
-msgstr ""
+msgstr "معرّف الأصل"
 
 #: includes/arrays.php
 msgid "Manufacturing date"
-msgstr ""
+msgstr "تاريخ التصنيع"
 
 #: includes/arrays.php
 msgid "UUID"
-msgstr ""
+msgstr "UUID"
 
 #: includes/arrays.php includes/functions.php
 msgid "SNMP info"
-msgstr ""
+msgstr "معلومات SNMP"
 
 #: includes/arrays.php includes/functions.php
 msgid "Entity MIB"
-msgstr ""
+msgstr "Entity MIB"
 
 #: includes/arrays.php
 msgid "Mac addresses"
-msgstr ""
+msgstr "عناوين MAC"
 
 #: includes/arrays.php includes/functions.php
 msgid "IP addresses"
-msgstr ""
+msgstr "عناوين IP"
 
 #: includes/arrays.php
 msgid "Vendor specific data"
-msgstr ""
+msgstr "بيانات خاصة بالشركة المصنّعة"
 
 #: includes/arrays.php
 msgid "Vendor optional data"
-msgstr ""
+msgstr "بيانات اختيارية للشركة المصنّعة"
 
 #: includes/functions.php
 msgid "Data"
@@ -241,143 +252,154 @@ msgstr ""
 
 #: includes/functions.php
 msgid "Store history is not allowed. Nothing to do."
-msgstr ""
+msgstr "تخزين السجل غير مسموح به. لا يوجد ما يمكن فعله."
 
 #: includes/functions.php
 msgid "Not found"
-msgstr ""
+msgstr "غير موجود"
 
 #: includes/functions.php
 msgid "Also show actual data"
-msgstr ""
+msgstr "إظهار البيانات الفعلية أيضاً"
 
 #: includes/functions.php
 msgid "ID ORG"
-msgstr ""
+msgstr "معرف المؤسسة"
 
 #: includes/functions.php
 msgid "No older data yet"
-msgstr ""
+msgstr "لا توجد بيانات أقدم بعد"
 
 #: includes/functions.php
 msgid "Entity"
-msgstr ""
+msgstr "الكيان"
 
 #: includes/functions.php
 msgid "MAC addresses"
-msgstr ""
+msgstr "عناوين MAC"
 
 #: includes/functions.php
 msgid "Vendor specific"
-msgstr ""
+msgstr "خاص بالشركة المصنّعة"
 
 #: includes/functions.php
 msgid "Actual data"
-msgstr ""
+msgstr "البيانات الفعلية"
 
 #: includes/functions.php
 msgid "Changed"
-msgstr ""
+msgstr "تم التغيير"
 
 #: includes/functions.php
 msgid "SNMP information"
-msgstr ""
+msgstr "معلومات SNMP"
 
 #: includes/functions.php
 msgid "Vendor specific information"
-msgstr ""
+msgstr "معلومات خاصة بالشركة المصنّعة"
 
 #: includes/functions.php
 msgid "Vendor optional information"
-msgstr ""
+msgstr "معلومات اختيارية للشركة المصنّعة"
 
 #: includes/functions.php
 msgid "Show only first 3 items, for the full listing click here"
-msgstr ""
+msgstr "عرض أول 3 عناصر فقط، وللقائمة الكاملة انقر هنا"
 
 #: includes/settings.php
 msgid "How often gather data"
-msgstr ""
+msgstr "تكرار جمع البيانات"
 
 #: includes/settings.php
 msgid "If enabled, Evidence will gather data periodically. If disabled, you can only view data for specific host"
 msgstr ""
+"عند التفعيل، سيجمع Evidence البيانات دورياً. وعند التعطيل، يمكنك فقط عرض "
+"البيانات لمضيف محدد"
 
 #: includes/settings.php
 msgid "Disabled"
-msgstr ""
+msgstr "معطل"
 
 #: includes/settings.php
 #, php-format
 msgid "Every %d hours"
-msgstr ""
+msgstr "كل %d ساعة"
 
 #: includes/settings.php
 msgid "Every day"
-msgstr ""
+msgstr "كل يوم"
 
 #: includes/settings.php
 msgid "Every week"
-msgstr ""
+msgstr "كل أسبوع"
 
 #: includes/settings.php
 msgid "When evidence will be started"
-msgstr ""
+msgstr "موعد بدء جمع الأدلة"
 
 #: includes/settings.php
 msgid "The Base Time for gather data to occur.  For example, if you use '12:00am' and you choose once per day, the action would begin at approximately midnight every day."
 msgstr ""
+"الوقت الأساسي لبدء جمع البيانات. على سبيل المثال، إذا استخدمت '12:00am' "
+"واخترت مرة واحدة يومياً، فسيبدأ الإجراء عند منتصف الليل تقريباً كل يوم."
 
 #: includes/settings.php
 msgid "How many changes store in database"
-msgstr ""
+msgstr "عدد التغييرات المخزنة في قاعدة البيانات"
 
 #: includes/settings.php
 msgid "If data gathering is enabled,  you can specify how many history (changed) records keep for each device"
 msgstr ""
+"إذا كان جمع البيانات مفعلاً، يمكنك تحديد عدد سجلات السجل (المتغيرة) التي يتم "
+"الاحتفاظ بها لكل جهاز"
 
 #: includes/settings.php
 msgid "Without history"
-msgstr ""
+msgstr "بدون سجل تاريخي"
 
 #: includes/settings.php
 #, php-format
 msgid "%d record"
-msgstr ""
+msgstr "%d سجل"
 
 #: includes/settings.php
 #, php-format
 msgid "%d records"
-msgstr ""
+msgstr "%d سجلات"
 
 #: includes/settings.php
 msgid "Display information on device edit page"
-msgstr ""
+msgstr "عرض المعلومات في صفحة تحرير الجهاز"
 
 #: includes/settings.php
 msgid "If enabled, flowview will display evidence data on device edit page"
 msgstr ""
+"عند التفعيل، سيعرض flowview بيانات الأدلة (evidence) في صفحة تعديل الجهاز"
 
 #: includes/settings.php
 msgid "Send email on evidence information change"
-msgstr ""
+msgstr "إرسال بريد إلكتروني عند تغير معلومات الأدلة"
 
 #: includes/settings.php
 msgid "If evidence find change, send email"
-msgstr ""
+msgstr "إذا وجد evidence تغييراً، أرسل بريداً إلكترونياً"
 
 #: includes/settings.php
 msgid "Excluded notification Host IDs"
-msgstr ""
+msgstr "معرّفات المضيفين المستبعدين من الإشعارات"
 
 #: includes/settings.php
 msgid "Some devices report hw changes too often. You can exclude these host from email notification. Insert Host IDs, comma separator"
 msgstr ""
+"تُبلغ بعض الأجهزة عن تغييرات العتاد بشكل متكرر جداً. يمكنك استبعاد هذه "
+"المضيفات من إشعارات البريد الإلكتروني. أدخل معرفات المضيفين مفصولة بفاصلة"
 
 #: includes/settings.php
 msgid "Excluded notification device templates"
-msgstr ""
+msgstr "قوالب الأجهزة المستبعدة من الإشعارات"
 
 #: includes/settings.php
 msgid "Some devices types report hw changes too often. You can exclude these templates from email notification. Insert device templates IDs, comma separator"
 msgstr ""
+"تُبلغ بعض أنواع الأجهزة عن تغييرات العتاد بشكل متكرر جداً. يمكنك استبعاد هذه "
+"القوالب من إشعارات البريد الإلكتروني. أدخل معرفات قوالب الأجهزة مفصولة بفاصلة"
