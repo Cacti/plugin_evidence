@@ -5,235 +5,249 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Cacti \n"
+"Project-Id-Version: Cacti\n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
 "POT-Creation-Date: 2026-09-30 11:26-0400\n"
-"PO-Revision-Date: 2026-09-30 11:26-0400\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
-"Language: el_GR\n"
+"PO-Revision-Date: 2026-11-25 02:18+0000\n"
+"Last-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\n"
+"Language-Team: Greek <https://translate.cacti.net/projects/cacti/evidence/el/"
+">\n"
+"Language: el-GR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.11.4\n"
 
 #: evidence.php
 msgid "Disabled/down device. No actual data"
-msgstr ""
+msgstr "Απενεργοποιημένη/ανενεργή συσκευή. Δεν υπάρχουν πραγματικά δεδομένα"
 
 #: evidence.php
 msgid "Show older records"
-msgstr ""
+msgstr "Εμφάνιση παλαιότερων εγγραφών"
 
 #: evidence.php includes/functions.php
 msgid "History data store disabled"
-msgstr ""
+msgstr "Η αποθήκευση ιστορικών δεδομένων είναι απενεργοποιημένη"
 
 #: evidence.php
 msgid "Permission issue"
-msgstr ""
+msgstr "Πρόβλημα δικαιωμάτων"
 
 #: evidence_tab.php includes/functions.php
 msgid "Evidence"
-msgstr ""
+msgstr "Στοιχεία"
 
 #: evidence_tab.php
 msgid "Template"
-msgstr ""
+msgstr "Πρότυπο"
 
 #: evidence_tab.php
 msgid "Any"
-msgstr ""
+msgstr "Οποιοδήποτε"
 
 #: evidence_tab.php
 msgid "Scan date"
-msgstr ""
+msgstr "Ημερομηνία σάρωσης"
 
 #: evidence_tab.php
 msgid "Only last changed states"
-msgstr ""
+msgstr "Μόνο οι τελευταίες αλλαγμένες καταστάσεις"
 
 #: evidence_tab.php
 msgid "All history"
-msgstr ""
+msgstr "Όλο το ιστορικό"
 
 #: evidence_tab.php
 msgid "records changed"
-msgstr ""
+msgstr "εγγραφές άλλαξαν"
 
 #: evidence_tab.php
 msgid "Find"
-msgstr ""
+msgstr "Εύρεση"
 
 #: evidence_tab.php
 msgid "Go"
-msgstr ""
+msgstr "Πήγαινε"
 
 #: evidence_tab.php
 msgid "Clear"
-msgstr ""
+msgstr "Καθαρισμός"
 
 #: evidence_tab.php
 msgid "Clear Filters"
-msgstr ""
+msgstr "Καθαρισμός Φίλτρων"
 
 #: evidence_tab.php
 msgid "Search"
-msgstr ""
+msgstr "Αναζήτηση"
 
 #: evidence_tab.php
 msgid "You can search serial number, firmware version, ip, mac address,..."
 msgstr ""
+"Μπορείτε να αναζητήσετε σειριακό αριθμό, έκδοση υλικολογισμικού (firmware), "
+"ip, διεύθυνση mac,..."
 
 #: evidence_tab.php
 msgid "Search string must be 3-20 characters"
-msgstr ""
+msgstr "Η συμβολοσειρά αναζήτησης πρέπει να είναι 3-20 χαρακτήρες"
 
 #: evidence_tab.php
 msgid "Select any device, template, select any scan date or try search"
 msgstr ""
+"Επιλέξτε οποιαδήποτε συσκευή, πρότυπο, επιλέξτε οποιαδήποτε ημερομηνία "
+"σάρωσης ή δοκιμάστε αναζήτηση"
 
 #: evidence_tab.php
 msgid "No data. Allow periodic scan and store history in settings"
 msgstr ""
+"Δεν υπάρχουν δεδομένα. Επιτρέψτε την περιοδική σάρωση και την αποθήκευση "
+"ιστορικού στις ρυθμίσεις"
 
 #: evidence_tab.php
 msgid "Device or template - You can display information about specific host, all devices with the same template."
 msgstr ""
+"Συσκευή ή πρότυπο - Μπορείτε να εμφανίσετε πληροφορίες για συγκεκριμένο "
+"κεντρικό υπολογιστή ή για όλες τις συσκευές με το ίδιο πρότυπο."
 
 #: evidence_tab.php
 msgid "Scan date (Only last changes or All history) - You can choose whether to retrieve only the most recent change or the entire history."
 msgstr ""
+"Ημερομηνία σάρωσης (Μόνο τελευταίες αλλαγές ή Όλο το ιστορικό) - Μπορείτε να "
+"επιλέξετε αν θα ανακτηθεί μόνο η πιο πρόσφατη αλλαγή ή ολόκληρο το ιστορικό."
 
 #: evidence_tab.php
 msgid "If you use only `Scan Date`, the changes for all devices found during this scan will be displayed"
 msgstr ""
+"Εάν χρησιμοποιήσετε μόνο την «Ημερομηνία σάρωσης», θα εμφανιστούν οι αλλαγές "
+"για όλες τις συσκευές που εντοπίστηκαν κατά τη διάρκεια αυτής της σάρωσης"
 
 #: evidence_tab.php
 msgid "You can search any string in all data."
-msgstr ""
+msgstr "Μπορείτε να αναζητήσετε οποιαδήποτε συμβολοσειρά σε όλα τα δεδομένα."
 
 #: evidence_tab.php
 msgid "Number of records"
-msgstr ""
+msgstr "Αριθμός εγγραφών"
 
 #: evidence_tab.php
 #, php-format
 msgid "Devices: %d records"
-msgstr ""
+msgstr "Συσκευές: %d εγγραφές"
 
 #: evidence_tab.php
 #, php-format
 msgid "Entity MIB: %d records, %d vendors"
-msgstr ""
+msgstr "Entity MIB: %d εγγραφές, %d κατασκευαστές"
 
 #: evidence_tab.php
 #, php-format
 msgid "Unique MAC addresses: %d"
-msgstr ""
+msgstr "Μοναδικές διευθύνσεις MAC: %d"
 
 #: evidence_tab.php
 #, php-format
 msgid "Unique IP addresses: %d"
-msgstr ""
+msgstr "Μοναδικές διευθύνσεις IP: %d"
 
 #: evidence_tab.php
 #, php-format
 msgid "Vendor specific data: %d"
-msgstr ""
+msgstr "Ειδικά δεδομένα κατασκευαστή: %d"
 
 #: evidence_tab.php
 #, php-format
 msgid "Oldest record: %d"
-msgstr ""
+msgstr "Παλαιότερη εγγραφή: %d"
 
 #: evidence_tab.php
 msgid "Vendors"
-msgstr ""
+msgstr "Κατασκευαστές"
 
 #: evidence_tab.php
 msgid "Show or hide"
-msgstr ""
+msgstr "Εμφάνιση ή απόκρυψη"
 
 #: evidence_tab.php
 msgid "Expand all dates"
-msgstr ""
+msgstr "Ανάπτυξη όλων των ημερομηνιών"
 
 #: evidence_tab.php
 msgid "Expand latest date"
-msgstr ""
+msgstr "Ανάπτυξη πιο πρόσφατης ημερομηνίας"
 
 #: includes/arrays.php
 msgid "Description"
-msgstr ""
+msgstr "Περιγραφή"
 
 #: includes/arrays.php
 msgid "Name"
-msgstr ""
+msgstr "Όνομα"
 
 #: includes/arrays.php
 msgid "Hardware revision"
-msgstr ""
+msgstr "Έκδοση υλικού"
 
 #: includes/arrays.php
 msgid "Firmware revision"
-msgstr ""
+msgstr "Έκδοση υλικολογισμικού (Firmware)"
 
 #: includes/arrays.php
 msgid "Software revision"
-msgstr ""
+msgstr "Αναθεώρηση λογισμικού"
 
 #: includes/arrays.php
 msgid "Serial number"
-msgstr ""
+msgstr "Σειριακός αριθμός"
 
 #: includes/arrays.php
 msgid "Manufacturer name"
-msgstr ""
+msgstr "Όνομα κατασκευαστή"
 
 #: includes/arrays.php
 msgid "Model name"
-msgstr ""
+msgstr "Όνομα μοντέλου"
 
 #: includes/arrays.php
 msgid "Alias"
-msgstr ""
+msgstr "Ψευδώνυμο"
 
 #: includes/arrays.php
 msgid "Asset ID"
-msgstr ""
+msgstr "Αναγνωριστικό παγίου"
 
 #: includes/arrays.php
 msgid "Manufacturing date"
-msgstr ""
+msgstr "Ημερομηνία κατασκευής"
 
 #: includes/arrays.php
 msgid "UUID"
-msgstr ""
+msgstr "UUID"
 
 #: includes/arrays.php includes/functions.php
 msgid "SNMP info"
-msgstr ""
+msgstr "Πληροφορίες SNMP"
 
 #: includes/arrays.php includes/functions.php
 msgid "Entity MIB"
-msgstr ""
+msgstr "Entity MIB"
 
 #: includes/arrays.php
 msgid "Mac addresses"
-msgstr ""
+msgstr "Διευθύνσεις MAC"
 
 #: includes/arrays.php includes/functions.php
 msgid "IP addresses"
-msgstr ""
+msgstr "Διευθύνσεις IP"
 
 #: includes/arrays.php
 msgid "Vendor specific data"
-msgstr ""
+msgstr "Ειδικά δεδομένα κατασκευαστή"
 
 #: includes/arrays.php
 msgid "Vendor optional data"
-msgstr ""
+msgstr "Προαιρετικά δεδομένα κατασκευαστή"
 
 #: includes/functions.php
 msgid "Data"
@@ -241,143 +255,160 @@ msgstr ""
 
 #: includes/functions.php
 msgid "Store history is not allowed. Nothing to do."
-msgstr ""
+msgstr "Η αποθήκευση ιστορικού δεν επιτρέπεται. Καμία ενέργεια."
 
 #: includes/functions.php
 msgid "Not found"
-msgstr ""
+msgstr "Δεν βρέθηκε"
 
 #: includes/functions.php
 msgid "Also show actual data"
-msgstr ""
+msgstr "Εμφάνιση και πραγματικών δεδομένων"
 
 #: includes/functions.php
 msgid "ID ORG"
-msgstr ""
+msgstr "ID οργανισμού"
 
 #: includes/functions.php
 msgid "No older data yet"
-msgstr ""
+msgstr "Δεν υπάρχουν ακόμη παλαιότερα δεδομένα"
 
 #: includes/functions.php
 msgid "Entity"
-msgstr ""
+msgstr "Οντότητα"
 
 #: includes/functions.php
 msgid "MAC addresses"
-msgstr ""
+msgstr "Διευθύνσεις MAC"
 
 #: includes/functions.php
 msgid "Vendor specific"
-msgstr ""
+msgstr "Ειδικό κατασκευαστή"
 
 #: includes/functions.php
 msgid "Actual data"
-msgstr ""
+msgstr "Πραγματικά δεδομένα"
 
 #: includes/functions.php
 msgid "Changed"
-msgstr ""
+msgstr "Αλλαγμένο"
 
 #: includes/functions.php
 msgid "SNMP information"
-msgstr ""
+msgstr "Πληροφορίες SNMP"
 
 #: includes/functions.php
 msgid "Vendor specific information"
-msgstr ""
+msgstr "Ειδικές πληροφορίες κατασκευαστή"
 
 #: includes/functions.php
 msgid "Vendor optional information"
-msgstr ""
+msgstr "Προαιρετικές πληροφορίες κατασκευαστή"
 
 #: includes/functions.php
 msgid "Show only first 3 items, for the full listing click here"
 msgstr ""
+"Εμφάνιση μόνο των 3 πρώτων στοιχείων, για την πλήρη λίστα κάντε κλικ εδώ"
 
 #: includes/settings.php
 msgid "How often gather data"
-msgstr ""
+msgstr "Πόσο συχνά να συλλέγονται δεδομένα"
 
 #: includes/settings.php
 msgid "If enabled, Evidence will gather data periodically. If disabled, you can only view data for specific host"
 msgstr ""
+"Εάν ενεργοποιηθεί, το Evidence θα συλλέγει δεδομένα περιοδικά. Εάν είναι "
+"απενεργοποιημένο, μπορείτε να προβάλλετε δεδομένα μόνο για συγκεκριμένο "
+"κεντρικό υπολογιστή"
 
 #: includes/settings.php
 msgid "Disabled"
-msgstr ""
+msgstr "Απενεργοποιημένο"
 
 #: includes/settings.php
 #, php-format
 msgid "Every %d hours"
-msgstr ""
+msgstr "Κάθε %d ώρες"
 
 #: includes/settings.php
 msgid "Every day"
-msgstr ""
+msgstr "Κάθε μέρα"
 
 #: includes/settings.php
 msgid "Every week"
-msgstr ""
+msgstr "Κάθε εβδομάδα"
 
 #: includes/settings.php
 msgid "When evidence will be started"
-msgstr ""
+msgstr "Πότε θα ξεκινήσει η συλλογή στοιχείων"
 
 #: includes/settings.php
 msgid "The Base Time for gather data to occur.  For example, if you use '12:00am' and you choose once per day, the action would begin at approximately midnight every day."
 msgstr ""
+"Η βασική ώρα κατά την οποία θα γίνεται η συλλογή δεδομένων. Για παράδειγμα, "
+"αν χρησιμοποιήσετε '12:00am' και επιλέξετε μία φορά την ημέρα, η ενέργεια θα "
+"ξεκινά περίπου τα μεσάνυχτα κάθε μέρα."
 
 #: includes/settings.php
 msgid "How many changes store in database"
-msgstr ""
+msgstr "Πόσες αλλαγές να αποθηκεύονται στη βάση δεδομένων"
 
 #: includes/settings.php
 msgid "If data gathering is enabled,  you can specify how many history (changed) records keep for each device"
 msgstr ""
+"Εάν είναι ενεργοποιημένη η συλλογή δεδομένων, μπορείτε να καθορίσετε πόσες "
+"εγγραφές ιστορικού (αλλαγών) θα διατηρούνται για κάθε συσκευή"
 
 #: includes/settings.php
 msgid "Without history"
-msgstr ""
+msgstr "Χωρίς ιστορικό"
 
 #: includes/settings.php
 #, php-format
 msgid "%d record"
-msgstr ""
+msgstr "%d εγγραφή"
 
 #: includes/settings.php
 #, php-format
 msgid "%d records"
-msgstr ""
+msgstr "%d εγγραφές"
 
 #: includes/settings.php
 msgid "Display information on device edit page"
-msgstr ""
+msgstr "Εμφάνιση πληροφοριών στη σελίδα επεξεργασίας συσκευής"
 
 #: includes/settings.php
 msgid "If enabled, flowview will display evidence data on device edit page"
 msgstr ""
+"Εάν ενεργοποιηθεί, το flowview θα εμφανίζει δεδομένα Evidence στη σελίδα "
+"επεξεργασίας συσκευής"
 
 #: includes/settings.php
 msgid "Send email on evidence information change"
-msgstr ""
+msgstr "Αποστολή email κατά την αλλαγή πληροφοριών τεκμηρίωσης"
 
 #: includes/settings.php
 msgid "If evidence find change, send email"
-msgstr ""
+msgstr "Εάν το Evidence εντοπίσει αλλαγή, αποστολή email"
 
 #: includes/settings.php
 msgid "Excluded notification Host IDs"
-msgstr ""
+msgstr "Εξαιρούμενα ID κεντρικών υπολογιστών ειδοποιήσεων"
 
 #: includes/settings.php
 msgid "Some devices report hw changes too often. You can exclude these host from email notification. Insert Host IDs, comma separator"
 msgstr ""
+"Ορισμένες συσκευές αναφέρουν αλλαγές υλικού (hw) πολύ συχνά. Μπορείτε να "
+"εξαιρέσετε αυτούς τους κεντρικούς υπολογιστές από την ειδοποίηση email. "
+"Εισαγάγετε αναγνωριστικά (ID) κεντρικών υπολογιστών, διαχωρισμένα με κόμμα"
 
 #: includes/settings.php
 msgid "Excluded notification device templates"
-msgstr ""
+msgstr "Εξαιρούμενα πρότυπα συσκευών ειδοποιήσεων"
 
 #: includes/settings.php
 msgid "Some devices types report hw changes too often. You can exclude these templates from email notification. Insert device templates IDs, comma separator"
 msgstr ""
+"Ορισμένοι τύποι συσκευών αναφέρουν αλλαγές υλικού (hw) πολύ συχνά. Μπορείτε "
+"να εξαιρέσετε αυτά τα πρότυπα από την ειδοποίηση email. Εισαγάγετε "
+"αναγνωριστικά (ID) προτύπων συσκευών, διαχωρισμένα με κόμμα"
