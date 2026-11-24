@@ -19,221 +19,221 @@ msgstr ""
 
 #: evidence.php
 msgid "Disabled/down device. No actual data"
-msgstr ""
+msgstr "無効または停止中のデバイスです。実データがありません"
 
 #: evidence.php
 msgid "Show older records"
-msgstr ""
+msgstr "古いレコードを表示"
 
 #: evidence.php includes/functions.php
 msgid "History data store disabled"
-msgstr ""
+msgstr "履歴データストアは無効です"
 
 #: evidence.php
 msgid "Permission issue"
-msgstr ""
+msgstr "権限の問題"
 
 #: evidence_tab.php includes/functions.php
 msgid "Evidence"
-msgstr ""
+msgstr "エビデンス"
 
 #: evidence_tab.php
 msgid "Template"
-msgstr ""
+msgstr "テンプレート"
 
 #: evidence_tab.php
 msgid "Any"
-msgstr ""
+msgstr "任意"
 
 #: evidence_tab.php
 msgid "Scan date"
-msgstr ""
+msgstr "スキャン日時"
 
 #: evidence_tab.php
 msgid "Only last changed states"
-msgstr ""
+msgstr "最後に変更された状態のみ"
 
 #: evidence_tab.php
 msgid "All history"
-msgstr ""
+msgstr "すべての履歴"
 
 #: evidence_tab.php
 msgid "records changed"
-msgstr ""
+msgstr "変更されたレコード"
 
 #: evidence_tab.php
 msgid "Find"
-msgstr ""
+msgstr "検索"
 
 #: evidence_tab.php
 msgid "Go"
-msgstr ""
+msgstr "Go"
 
 #: evidence_tab.php
 msgid "Clear"
-msgstr ""
+msgstr "クリア"
 
 #: evidence_tab.php
 msgid "Clear Filters"
-msgstr ""
+msgstr "絞り込み条件を解除する"
 
 #: evidence_tab.php
 msgid "Search"
-msgstr ""
+msgstr "検索"
 
 #: evidence_tab.php
 msgid "You can search serial number, firmware version, ip, mac address,..."
-msgstr ""
+msgstr "シリアル番号、ファームウェアバージョン、IP、MAC アドレスなどを検索できます..."
 
 #: evidence_tab.php
 msgid "Search string must be 3-20 characters"
-msgstr ""
+msgstr "検索文字列は 3〜20 文字で指定してください"
 
 #: evidence_tab.php
 msgid "Select any device, template, select any scan date or try search"
-msgstr ""
+msgstr "任意のデバイス、テンプレート、スキャン日を選択するか、検索をお試しください"
 
 #: evidence_tab.php
 msgid "No data. Allow periodic scan and store history in settings"
-msgstr ""
+msgstr "データがありません。設定で定期スキャンと履歴の保存を許可してください"
 
 #: evidence_tab.php
 msgid "Device or template - You can display information about specific host, all devices with the same template."
-msgstr ""
+msgstr "デバイスまたはテンプレート - 特定のホスト、または同じテンプレートを持つすべてのデバイスに関する情報を表示できます。"
 
 #: evidence_tab.php
 msgid "Scan date (Only last changes or All history) - You can choose whether to retrieve only the most recent change or the entire history."
-msgstr ""
+msgstr "スキャン日時 (最新の変更のみ、または全履歴) - 最新の変更のみを取得するか、全履歴を取得するかを選択できます。"
 
 #: evidence_tab.php
 msgid "If you use only `Scan Date`, the changes for all devices found during this scan will be displayed"
-msgstr ""
+msgstr "`スキャン日時` のみを使用した場合、このスキャン中に検出されたすべてのデバイスの変更が表示されます"
 
 #: evidence_tab.php
 msgid "You can search any string in all data."
-msgstr ""
+msgstr "すべてのデータ内の任意の文字列を検索できます。"
 
 #: evidence_tab.php
 msgid "Number of records"
-msgstr ""
+msgstr "レコード数"
 
 #: evidence_tab.php
 #, php-format
 msgid "Devices: %d records"
-msgstr ""
+msgstr "デバイス: %d 件"
 
 #: evidence_tab.php
 #, php-format
 msgid "Entity MIB: %d records, %d vendors"
-msgstr ""
+msgstr "Entity MIB: %d レコード、%d ベンダー"
 
 #: evidence_tab.php
 #, php-format
 msgid "Unique MAC addresses: %d"
-msgstr ""
+msgstr "一意の MAC アドレス数: %d"
 
 #: evidence_tab.php
 #, php-format
 msgid "Unique IP addresses: %d"
-msgstr ""
+msgstr "一意の IP アドレス数: %d"
 
 #: evidence_tab.php
 #, php-format
 msgid "Vendor specific data: %d"
-msgstr ""
+msgstr "ベンダー固有データ: %d"
 
 #: evidence_tab.php
 #, php-format
 msgid "Oldest record: %d"
-msgstr ""
+msgstr "最古のレコード: %d"
 
 #: evidence_tab.php
 msgid "Vendors"
-msgstr ""
+msgstr "ベンダー"
 
 #: evidence_tab.php
 msgid "Show or hide"
-msgstr ""
+msgstr "表示または非表示"
 
 #: evidence_tab.php
 msgid "Expand all dates"
-msgstr ""
+msgstr "すべての日付を展開"
 
 #: evidence_tab.php
 msgid "Expand latest date"
-msgstr ""
+msgstr "最新の日付を展開"
 
 #: includes/arrays.php
 msgid "Description"
-msgstr ""
+msgstr "説明"
 
 #: includes/arrays.php
 msgid "Name"
-msgstr ""
+msgstr "名前"
 
 #: includes/arrays.php
 msgid "Hardware revision"
-msgstr ""
+msgstr "ハードウェアリビジョン"
 
 #: includes/arrays.php
 msgid "Firmware revision"
-msgstr ""
+msgstr "ファームウェアリビジョン"
 
 #: includes/arrays.php
 msgid "Software revision"
-msgstr ""
+msgstr "ソフトウェアリビジョン"
 
 #: includes/arrays.php
 msgid "Serial number"
-msgstr ""
+msgstr "シリアル番号"
 
 #: includes/arrays.php
 msgid "Manufacturer name"
-msgstr ""
+msgstr "製造元名"
 
 #: includes/arrays.php
 msgid "Model name"
-msgstr ""
+msgstr "モデル名"
 
 #: includes/arrays.php
 msgid "Alias"
-msgstr ""
+msgstr "エイリアス"
 
 #: includes/arrays.php
 msgid "Asset ID"
-msgstr ""
+msgstr "資産 ID"
 
 #: includes/arrays.php
 msgid "Manufacturing date"
-msgstr ""
+msgstr "製造日"
 
 #: includes/arrays.php
 msgid "UUID"
-msgstr ""
+msgstr "UUID"
 
 #: includes/arrays.php includes/functions.php
 msgid "SNMP info"
-msgstr ""
+msgstr "SNMP 情報"
 
 #: includes/arrays.php includes/functions.php
 msgid "Entity MIB"
-msgstr ""
+msgstr "Entity MIB"
 
 #: includes/arrays.php
 msgid "Mac addresses"
-msgstr ""
+msgstr "MAC アドレス"
 
 #: includes/arrays.php includes/functions.php
 msgid "IP addresses"
-msgstr ""
+msgstr "IP アドレス"
 
 #: includes/arrays.php
 msgid "Vendor specific data"
-msgstr ""
+msgstr "ベンダー固有データ"
 
 #: includes/arrays.php
 msgid "Vendor optional data"
-msgstr ""
+msgstr "ベンダー任意データ"
 
 #: includes/functions.php
 msgid "Data"
@@ -241,143 +241,214 @@ msgstr ""
 
 #: includes/functions.php
 msgid "Store history is not allowed. Nothing to do."
-msgstr ""
+msgstr "履歴の保存は許可されていません。実行する処理はありません。"
 
 #: includes/functions.php
 msgid "Not found"
-msgstr ""
+msgstr "見つかりません"
 
 #: includes/functions.php
 msgid "Also show actual data"
-msgstr ""
+msgstr "実データも表示"
 
 #: includes/functions.php
 msgid "ID ORG"
-msgstr ""
+msgstr "組織 ID"
 
 #: includes/functions.php
 msgid "No older data yet"
-msgstr ""
+msgstr "過去のデータはまだありません"
 
 #: includes/functions.php
 msgid "Entity"
-msgstr ""
+msgstr "エンティティ"
 
 #: includes/functions.php
 msgid "MAC addresses"
-msgstr ""
+msgstr "MAC アドレス"
 
 #: includes/functions.php
 msgid "Vendor specific"
-msgstr ""
+msgstr "ベンダー固有"
 
 #: includes/functions.php
 msgid "Actual data"
-msgstr ""
+msgstr "実データ"
 
 #: includes/functions.php
 msgid "Changed"
-msgstr ""
+msgstr "変更済み"
 
 #: includes/functions.php
 msgid "SNMP information"
-msgstr ""
+msgstr "SNMP 情報"
 
 #: includes/functions.php
 msgid "Vendor specific information"
-msgstr ""
+msgstr "ベンダー固有情報"
 
 #: includes/functions.php
 msgid "Vendor optional information"
-msgstr ""
+msgstr "ベンダー任意情報"
 
 #: includes/functions.php
 msgid "Show only first 3 items, for the full listing click here"
-msgstr ""
+msgstr "最初の 3 件のみ表示しています。全一覧を表示するにはここをクリックしてください"
 
 #: includes/settings.php
 msgid "How often gather data"
-msgstr ""
+msgstr "データ収集の頻度"
 
 #: includes/settings.php
 msgid "If enabled, Evidence will gather data periodically. If disabled, you can only view data for specific host"
-msgstr ""
+msgstr "有効にすると、Evidence は定期的にデータを収集します。無効にすると、特定のホストのデータのみを表示できます"
 
 #: includes/settings.php
 msgid "Disabled"
-msgstr ""
+msgstr "無効"
 
 #: includes/settings.php
 #, php-format
 msgid "Every %d hours"
-msgstr ""
+msgstr "%d 時間ごと"
 
 #: includes/settings.php
 msgid "Every day"
-msgstr ""
+msgstr "毎日"
 
 #: includes/settings.php
 msgid "Every week"
-msgstr ""
+msgstr "毎週"
 
 #: includes/settings.php
 msgid "When evidence will be started"
-msgstr ""
+msgstr "エビデンス収集の開始時期"
 
 #: includes/settings.php
 msgid "The Base Time for gather data to occur.  For example, if you use '12:00am' and you choose once per day, the action would begin at approximately midnight every day."
-msgstr ""
+msgstr "データ収集を実行する基準時刻です。たとえば、'12:00am' を指定して 1 日 1 回を選択した場合、アクションは毎日ほぼ午前 0 時に開始されます。"
 
 #: includes/settings.php
 msgid "How many changes store in database"
-msgstr ""
+msgstr "データベースに保存する変更履歴数"
 
 #: includes/settings.php
 msgid "If data gathering is enabled,  you can specify how many history (changed) records keep for each device"
-msgstr ""
+msgstr "データ収集が有効な場合、デバイスごとに保持する履歴（変更）レコード数を指定できます"
 
 #: includes/settings.php
 msgid "Without history"
-msgstr ""
+msgstr "履歴なし"
 
 #: includes/settings.php
 #, php-format
 msgid "%d record"
-msgstr ""
+msgstr "%d レコード"
 
 #: includes/settings.php
 #, php-format
 msgid "%d records"
-msgstr ""
+msgstr "%d レコード"
 
 #: includes/settings.php
 msgid "Display information on device edit page"
-msgstr ""
+msgstr "デバイス編集ページに情報を表示"
 
 #: includes/settings.php
 msgid "If enabled, flowview will display evidence data on device edit page"
-msgstr ""
+msgstr "有効にすると、FlowView はデバイス編集ページに Evidence データを表示します"
 
 #: includes/settings.php
 msgid "Send email on evidence information change"
-msgstr ""
+msgstr "エビデンス情報の変更時にメールを送信する"
 
 #: includes/settings.php
 msgid "If evidence find change, send email"
-msgstr ""
+msgstr "Evidence が変更を検出した場合にメールを送信する"
 
 #: includes/settings.php
 msgid "Excluded notification Host IDs"
-msgstr ""
+msgstr "通知対象外ホスト ID"
 
 #: includes/settings.php
 msgid "Some devices report hw changes too often. You can exclude these host from email notification. Insert Host IDs, comma separator"
-msgstr ""
+msgstr "一部のデバイスはハードウェア変更を過度に頻繁に報告します。これらのホストをメール通知から除外できます。ホスト ID をカンマ区切りで入力してください"
 
 #: includes/settings.php
 msgid "Excluded notification device templates"
-msgstr ""
+msgstr "通知対象外デバイステンプレート"
 
 #: includes/settings.php
 msgid "Some devices types report hw changes too often. You can exclude these templates from email notification. Insert device templates IDs, comma separator"
-msgstr ""
+msgstr "一部のデバイスタイプはハードウェア変更を過度に頻繁に報告します。これらのテンプレートをメール通知から除外できます。デバイステンプレート ID をカンマ区切りで入力してください"
+
+#: evidence_tab.php
+msgid "Export"
+msgstr "エクスポート"
+
+#: evidence_tab.php
+msgid "Print"
+msgstr "印刷"
+
+#: evidence_tab.php
+msgid "Allow pop-ups to open the print view."
+msgstr "印刷ビューを開くためにポップアップを許可してください。"
+
+#: includes/functions.php
+msgid "No data"
+msgstr "データなし"
+
+#: includes/functions.php
+msgid "Organization"
+msgstr "組織"
+
+#: includes/functions.php
+msgid "Organization ID"
+msgstr "組織 ID"
+
+#: includes/functions.php
+msgid "System name"
+msgstr "システム名"
+
+#: includes/functions.php
+msgid "Contact"
+msgstr "お問い合わせ"
+
+#: includes/functions.php
+msgid "Location"
+msgstr "場所"
+
+#: includes/functions.php
+msgid "Field"
+msgstr "フィールド"
+
+#: includes/functions.php
+msgid "Value"
+msgstr "値"
+
+#: includes/functions.php
+msgid "IP address"
+msgstr "IP アドレス"
+
+#: includes/functions.php
+msgid "MAC address"
+msgstr "MAC アドレス"
+
+#: includes/functions.php
+msgid "OID"
+msgstr "OID"
+
+#: includes/functions.php
+#, php-format
+msgid "ID: %d, stored records: %d"
+msgstr "ID: %d、保存済みレコード数: %d"
+
+#: includes/functions.php
+#, php-format
+msgid "Records: %d"
+msgstr "レコード数: %d"
+
+#: includes/functions.php
+#, php-format
+msgid "ID: %d, found in %d records"
+msgstr "ID: %d、%d 件のレコードで見つかりました"

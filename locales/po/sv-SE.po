@@ -406,3 +406,74 @@ msgstr ""
 "Vissa enhetstyper rapporterar maskinvaruändringar för ofta. Du kan undanta "
 "dessa mallar från e-postaviseringar. Ange enhetsmallarnas ID:n, avgränsade "
 "med kommatecken."
+
+#: evidence_tab.php
+msgid "Export"
+msgstr "Exportera"
+
+#: evidence_tab.php
+msgid "Print"
+msgstr "Skriv ut"
+
+#: evidence_tab.php
+msgid "Allow pop-ups to open the print view."
+msgstr "Tillåt popup-fönster för att öppna utskriftsvyn."
+
+#: includes/functions.php
+msgid "No data"
+msgstr "Inga data"
+
+#: includes/functions.php
+msgid "Organization"
+msgstr "Organisation"
+
+#: includes/functions.php
+msgid "Organization ID"
+msgstr "Organisations-ID"
+
+#: includes/functions.php
+msgid "System name"
+msgstr "Systemnamn"
+
+#: includes/functions.php
+msgid "Contact"
+msgstr "Kontakt"
+
+#: includes/functions.php
+msgid "Location"
+msgstr "Placering"
+
+#: includes/functions.php
+msgid "Field"
+msgstr "Fält"
+
+#: includes/functions.php
+msgid "Value"
+msgstr "Värde"
+
+#: includes/functions.php
+msgid "IP address"
+msgstr "IP-adress"
+
+#: includes/functions.php
+msgid "MAC address"
+msgstr "MAC-adress"
+
+#: includes/functions.php
+msgid "OID"
+msgstr "objekt-ID, OID"
+
+#: includes/functions.php
+#, php-format
+msgid "ID: %d, stored records: %d"
+msgstr "ID: %d, lagrade poster: %d"
+
+#: includes/functions.php
+#, php-format
+msgid "Records: %d"
+msgstr "Poster: %d"
+
+#: includes/functions.php
+#, php-format
+msgid "ID: %d, found in %d records"
+msgstr "ID: %d, hittades i %d poster"

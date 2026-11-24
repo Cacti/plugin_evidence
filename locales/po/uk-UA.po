@@ -19,221 +19,221 @@ msgstr ""
 
 #: evidence.php
 msgid "Disabled/down device. No actual data"
-msgstr ""
+msgstr "Пристрій вимкнено/недоступний. Актуальних даних немає"
 
 #: evidence.php
 msgid "Show older records"
-msgstr ""
+msgstr "Показати старіші записи"
 
 #: evidence.php includes/functions.php
 msgid "History data store disabled"
-msgstr ""
+msgstr "Зберігання історичних даних вимкнено"
 
 #: evidence.php
 msgid "Permission issue"
-msgstr ""
+msgstr "Проблема з правами доступу"
 
 #: evidence_tab.php includes/functions.php
 msgid "Evidence"
-msgstr ""
+msgstr "Докази"
 
 #: evidence_tab.php
 msgid "Template"
-msgstr ""
+msgstr "Шаблон"
 
 #: evidence_tab.php
 msgid "Any"
-msgstr ""
+msgstr "Будь-який"
 
 #: evidence_tab.php
 msgid "Scan date"
-msgstr ""
+msgstr "Дата сканування"
 
 #: evidence_tab.php
 msgid "Only last changed states"
-msgstr ""
+msgstr "Лише останні змінені стани"
 
 #: evidence_tab.php
 msgid "All history"
-msgstr ""
+msgstr "Уся історія"
 
 #: evidence_tab.php
 msgid "records changed"
-msgstr ""
+msgstr "записів змінено"
 
 #: evidence_tab.php
 msgid "Find"
-msgstr ""
+msgstr "Знайти"
 
 #: evidence_tab.php
 msgid "Go"
-msgstr ""
+msgstr "Перейти"
 
 #: evidence_tab.php
 msgid "Clear"
-msgstr ""
+msgstr "Очистити"
 
 #: evidence_tab.php
 msgid "Clear Filters"
-msgstr ""
+msgstr "Очистити фільтри"
 
 #: evidence_tab.php
 msgid "Search"
-msgstr ""
+msgstr "Пошук"
 
 #: evidence_tab.php
 msgid "You can search serial number, firmware version, ip, mac address,..."
-msgstr ""
+msgstr "Ви можете шукати серійний номер, версію мікропрограми, IP, MAC-адресу, ..."
 
 #: evidence_tab.php
 msgid "Search string must be 3-20 characters"
-msgstr ""
+msgstr "Рядок пошуку має містити 3–20 символів"
 
 #: evidence_tab.php
 msgid "Select any device, template, select any scan date or try search"
-msgstr ""
+msgstr "Виберіть будь-який пристрій, шаблон, дату сканування або скористайтеся пошуком"
 
 #: evidence_tab.php
 msgid "No data. Allow periodic scan and store history in settings"
-msgstr ""
+msgstr "Немає даних. Увімкніть періодичне сканування та збереження історії в налаштуваннях"
 
 #: evidence_tab.php
 msgid "Device or template - You can display information about specific host, all devices with the same template."
-msgstr ""
+msgstr "Пристрій або шаблон — можна відобразити інформацію про конкретний вузол або всі пристрої з тим самим шаблоном."
 
 #: evidence_tab.php
 msgid "Scan date (Only last changes or All history) - You can choose whether to retrieve only the most recent change or the entire history."
-msgstr ""
+msgstr "Дата сканування (лише останні зміни або вся історія) — ви можете вибрати, отримувати лише найновішу зміну чи всю історію."
 
 #: evidence_tab.php
 msgid "If you use only `Scan Date`, the changes for all devices found during this scan will be displayed"
-msgstr ""
+msgstr "Якщо використовувати лише `Scan Date` (Дата сканування), буде відображено зміни для всіх пристроїв, знайдених під час цього сканування"
 
 #: evidence_tab.php
 msgid "You can search any string in all data."
-msgstr ""
+msgstr "Ви можете шукати будь-який рядок у всіх даних."
 
 #: evidence_tab.php
 msgid "Number of records"
-msgstr ""
+msgstr "Кількість записів"
 
 #: evidence_tab.php
 #, php-format
 msgid "Devices: %d records"
-msgstr ""
+msgstr "Пристрої: %d записів"
 
 #: evidence_tab.php
 #, php-format
 msgid "Entity MIB: %d records, %d vendors"
-msgstr ""
+msgstr "Entity MIB: %d записів, %d виробників"
 
 #: evidence_tab.php
 #, php-format
 msgid "Unique MAC addresses: %d"
-msgstr ""
+msgstr "Унікальних MAC-адрес: %d"
 
 #: evidence_tab.php
 #, php-format
 msgid "Unique IP addresses: %d"
-msgstr ""
+msgstr "Унікальних IP-адрес: %d"
 
 #: evidence_tab.php
 #, php-format
 msgid "Vendor specific data: %d"
-msgstr ""
+msgstr "Дані, специфічні для виробника: %d"
 
 #: evidence_tab.php
 #, php-format
 msgid "Oldest record: %d"
-msgstr ""
+msgstr "Найстаріший запис: %d"
 
 #: evidence_tab.php
 msgid "Vendors"
-msgstr ""
+msgstr "Виробники"
 
 #: evidence_tab.php
 msgid "Show or hide"
-msgstr ""
+msgstr "Показати або приховати"
 
 #: evidence_tab.php
 msgid "Expand all dates"
-msgstr ""
+msgstr "Розгорнути всі дати"
 
 #: evidence_tab.php
 msgid "Expand latest date"
-msgstr ""
+msgstr "Розгорнути останню дату"
 
 #: includes/arrays.php
 msgid "Description"
-msgstr ""
+msgstr "Опис"
 
 #: includes/arrays.php
 msgid "Name"
-msgstr ""
+msgstr "Ім'я"
 
 #: includes/arrays.php
 msgid "Hardware revision"
-msgstr ""
+msgstr "Апаратна ревізія"
 
 #: includes/arrays.php
 msgid "Firmware revision"
-msgstr ""
+msgstr "Версія мікропрограми"
 
 #: includes/arrays.php
 msgid "Software revision"
-msgstr ""
+msgstr "Ревізія програмного забезпечення"
 
 #: includes/arrays.php
 msgid "Serial number"
-msgstr ""
+msgstr "Серійний номер"
 
 #: includes/arrays.php
 msgid "Manufacturer name"
-msgstr ""
+msgstr "Назва виробника"
 
 #: includes/arrays.php
 msgid "Model name"
-msgstr ""
+msgstr "Назва моделі"
 
 #: includes/arrays.php
 msgid "Alias"
-msgstr ""
+msgstr "Псевдонім"
 
 #: includes/arrays.php
 msgid "Asset ID"
-msgstr ""
+msgstr "Ідентифікатор активу"
 
 #: includes/arrays.php
 msgid "Manufacturing date"
-msgstr ""
+msgstr "Дата виробництва"
 
 #: includes/arrays.php
 msgid "UUID"
-msgstr ""
+msgstr "UUID"
 
 #: includes/arrays.php includes/functions.php
 msgid "SNMP info"
-msgstr ""
+msgstr "Відомості SNMP"
 
 #: includes/arrays.php includes/functions.php
 msgid "Entity MIB"
-msgstr ""
+msgstr "Entity MIB"
 
 #: includes/arrays.php
 msgid "Mac addresses"
-msgstr ""
+msgstr "MAC-адреси"
 
 #: includes/arrays.php includes/functions.php
 msgid "IP addresses"
-msgstr ""
+msgstr "IP-адреси"
 
 #: includes/arrays.php
 msgid "Vendor specific data"
-msgstr ""
+msgstr "Дані, специфічні для виробника"
 
 #: includes/arrays.php
 msgid "Vendor optional data"
-msgstr ""
+msgstr "Додаткові дані виробника"
 
 #: includes/functions.php
 msgid "Data"
@@ -241,143 +241,214 @@ msgstr ""
 
 #: includes/functions.php
 msgid "Store history is not allowed. Nothing to do."
-msgstr ""
+msgstr "Збереження історії заборонено. Немає чого виконувати."
 
 #: includes/functions.php
 msgid "Not found"
-msgstr ""
+msgstr "Не знайдено"
 
 #: includes/functions.php
 msgid "Also show actual data"
-msgstr ""
+msgstr "Також показувати фактичні дані"
 
 #: includes/functions.php
 msgid "ID ORG"
-msgstr ""
+msgstr "ID організації"
 
 #: includes/functions.php
 msgid "No older data yet"
-msgstr ""
+msgstr "Старіших даних ще немає"
 
 #: includes/functions.php
 msgid "Entity"
-msgstr ""
+msgstr "Сутність"
 
 #: includes/functions.php
 msgid "MAC addresses"
-msgstr ""
+msgstr "MAC-адреси"
 
 #: includes/functions.php
 msgid "Vendor specific"
-msgstr ""
+msgstr "Специфічне для виробника"
 
 #: includes/functions.php
 msgid "Actual data"
-msgstr ""
+msgstr "Фактичні дані"
 
 #: includes/functions.php
 msgid "Changed"
-msgstr ""
+msgstr "Змінено"
 
 #: includes/functions.php
 msgid "SNMP information"
-msgstr ""
+msgstr "Інформація SNMP"
 
 #: includes/functions.php
 msgid "Vendor specific information"
-msgstr ""
+msgstr "Інформація, специфічна для виробника"
 
 #: includes/functions.php
 msgid "Vendor optional information"
-msgstr ""
+msgstr "Додаткова інформація виробника"
 
 #: includes/functions.php
 msgid "Show only first 3 items, for the full listing click here"
-msgstr ""
+msgstr "Показати лише перші 3 елементи; для повного списку натисніть тут"
 
 #: includes/settings.php
 msgid "How often gather data"
-msgstr ""
+msgstr "Як часто збирати дані"
 
 #: includes/settings.php
 msgid "If enabled, Evidence will gather data periodically. If disabled, you can only view data for specific host"
-msgstr ""
+msgstr "Якщо ввімкнено, Evidence збиратиме дані періодично. Якщо вимкнено, ви зможете переглядати дані лише для конкретного хоста"
 
 #: includes/settings.php
 msgid "Disabled"
-msgstr ""
+msgstr "Вимкнен"
 
 #: includes/settings.php
 #, php-format
 msgid "Every %d hours"
-msgstr ""
+msgstr "Кожні %d годин"
 
 #: includes/settings.php
 msgid "Every day"
-msgstr ""
+msgstr "Кожен день"
 
 #: includes/settings.php
 msgid "Every week"
-msgstr ""
+msgstr "Щотижня"
 
 #: includes/settings.php
 msgid "When evidence will be started"
-msgstr ""
+msgstr "Коли буде запущено збір даних Evidence"
 
 #: includes/settings.php
 msgid "The Base Time for gather data to occur.  For example, if you use '12:00am' and you choose once per day, the action would begin at approximately midnight every day."
-msgstr ""
+msgstr "Базовий час початку збирання даних. Наприклад, якщо вказати '12:00am' і вибрати періодичність раз на день, дія розпочинатиметься приблизно опівночі щодня."
 
 #: includes/settings.php
 msgid "How many changes store in database"
-msgstr ""
+msgstr "Скільки змін зберігати в базі даних"
 
 #: includes/settings.php
 msgid "If data gathering is enabled,  you can specify how many history (changed) records keep for each device"
-msgstr ""
+msgstr "Якщо збір даних увімкнено, ви можете вказати, скільки записів історії (змін) зберігати для кожного пристрою"
 
 #: includes/settings.php
 msgid "Without history"
-msgstr ""
+msgstr "Без історії"
 
 #: includes/settings.php
 #, php-format
 msgid "%d record"
-msgstr ""
+msgstr "%d запис"
 
 #: includes/settings.php
 #, php-format
 msgid "%d records"
-msgstr ""
+msgstr "%d записів"
 
 #: includes/settings.php
 msgid "Display information on device edit page"
-msgstr ""
+msgstr "Відображати інформацію на сторінці редагування пристрою"
 
 #: includes/settings.php
 msgid "If enabled, flowview will display evidence data on device edit page"
-msgstr ""
+msgstr "Якщо ввімкнено, FlowView відображатиме дані Evidence на сторінці редагування пристрою"
 
 #: includes/settings.php
 msgid "Send email on evidence information change"
-msgstr ""
+msgstr "Надсилати email при зміні інформації про свідчення"
 
 #: includes/settings.php
 msgid "If evidence find change, send email"
-msgstr ""
+msgstr "Якщо Evidence виявить зміну, надіслати електронний лист"
 
 #: includes/settings.php
 msgid "Excluded notification Host IDs"
-msgstr ""
+msgstr "Виключені ID хостів для сповіщень"
 
 #: includes/settings.php
 msgid "Some devices report hw changes too often. You can exclude these host from email notification. Insert Host IDs, comma separator"
-msgstr ""
+msgstr "Деякі пристрої надто часто повідомляють про зміни апаратного забезпечення. Ви можете виключити ці хости зі сповіщень електронною поштою. Введіть ідентифікатори хостів через кому"
 
 #: includes/settings.php
 msgid "Excluded notification device templates"
-msgstr ""
+msgstr "Виключені шаблони пристроїв для сповіщень"
 
 #: includes/settings.php
 msgid "Some devices types report hw changes too often. You can exclude these templates from email notification. Insert device templates IDs, comma separator"
-msgstr ""
+msgstr "Деякі типи пристроїв надто часто повідомляють про зміни апаратного забезпечення. Ви можете виключити ці шаблони зі сповіщень електронною поштою. Введіть ідентифікатори шаблонів пристроїв через кому"
+
+#: evidence_tab.php
+msgid "Export"
+msgstr "Експорт"
+
+#: evidence_tab.php
+msgid "Print"
+msgstr "Друк"
+
+#: evidence_tab.php
+msgid "Allow pop-ups to open the print view."
+msgstr "Дозволити спливні вікна для відкриття перегляду друку."
+
+#: includes/functions.php
+msgid "No data"
+msgstr "Немає даних"
+
+#: includes/functions.php
+msgid "Organization"
+msgstr "Організація"
+
+#: includes/functions.php
+msgid "Organization ID"
+msgstr "ID організації"
+
+#: includes/functions.php
+msgid "System name"
+msgstr "Системне ім'я"
+
+#: includes/functions.php
+msgid "Contact"
+msgstr "Контакти"
+
+#: includes/functions.php
+msgid "Location"
+msgstr "Місцезнаходження"
+
+#: includes/functions.php
+msgid "Field"
+msgstr "Поле"
+
+#: includes/functions.php
+msgid "Value"
+msgstr "Значення"
+
+#: includes/functions.php
+msgid "IP address"
+msgstr "IP-адреса"
+
+#: includes/functions.php
+msgid "MAC address"
+msgstr "MAC-адреса"
+
+#: includes/functions.php
+msgid "OID"
+msgstr "OID"
+
+#: includes/functions.php
+#, php-format
+msgid "ID: %d, stored records: %d"
+msgstr "ID: %d, збережено записів: %d"
+
+#: includes/functions.php
+#, php-format
+msgid "Records: %d"
+msgstr "Записів: %d"
+
+#: includes/functions.php
+#, php-format
+msgid "ID: %d, found in %d records"
+msgstr "ID: %d, знайдено в %d записах"

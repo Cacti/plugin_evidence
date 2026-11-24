@@ -19,221 +19,221 @@ msgstr ""
 
 #: evidence.php
 msgid "Disabled/down device. No actual data"
-msgstr ""
+msgstr "अक्षम/डाउन डिवाइस। कोई वास्तविक डेटा नहीं"
 
 #: evidence.php
 msgid "Show older records"
-msgstr ""
+msgstr "पुराने रिकॉर्ड दिखाएं"
 
 #: evidence.php includes/functions.php
 msgid "History data store disabled"
-msgstr ""
+msgstr "इतिहास डेटा संग्रह अक्षम है"
 
 #: evidence.php
 msgid "Permission issue"
-msgstr ""
+msgstr "अनुमति समस्या"
 
 #: evidence_tab.php includes/functions.php
 msgid "Evidence"
-msgstr ""
+msgstr "साक्ष्य"
 
 #: evidence_tab.php
 msgid "Template"
-msgstr ""
+msgstr "खाका"
 
 #: evidence_tab.php
 msgid "Any"
-msgstr ""
+msgstr "कोई भी"
 
 #: evidence_tab.php
 msgid "Scan date"
-msgstr ""
+msgstr "स्कैन दिनांक"
 
 #: evidence_tab.php
 msgid "Only last changed states"
-msgstr ""
+msgstr "केवल अंतिम परिवर्तित स्थितियाँ"
 
 #: evidence_tab.php
 msgid "All history"
-msgstr ""
+msgstr "सभी इतिहास"
 
 #: evidence_tab.php
 msgid "records changed"
-msgstr ""
+msgstr "रिकॉर्ड बदले गए"
 
 #: evidence_tab.php
 msgid "Find"
-msgstr ""
+msgstr "खोजें"
 
 #: evidence_tab.php
 msgid "Go"
-msgstr ""
+msgstr "जाएं"
 
 #: evidence_tab.php
 msgid "Clear"
-msgstr ""
+msgstr "साफ़ करें"
 
 #: evidence_tab.php
 msgid "Clear Filters"
-msgstr ""
+msgstr "साफ फिल्टर"
 
 #: evidence_tab.php
 msgid "Search"
-msgstr ""
+msgstr "खोजें"
 
 #: evidence_tab.php
 msgid "You can search serial number, firmware version, ip, mac address,..."
-msgstr ""
+msgstr "आप सीरियल नंबर, फ़र्मवेयर संस्करण, IP, MAC पता आदि खोज सकते हैं..."
 
 #: evidence_tab.php
 msgid "Search string must be 3-20 characters"
-msgstr ""
+msgstr "खोज स्ट्रिंग 3-20 अक्षरों की होनी चाहिए"
 
 #: evidence_tab.php
 msgid "Select any device, template, select any scan date or try search"
-msgstr ""
+msgstr "कोई डिवाइस, टेम्पलेट चुनें, कोई स्कैन दिनांक चुनें या खोज का प्रयास करें"
 
 #: evidence_tab.php
 msgid "No data. Allow periodic scan and store history in settings"
-msgstr ""
+msgstr "कोई डेटा नहीं। सेटिंग्स में आवधिक स्कैन और इतिहास संग्रहण की अनुमति दें"
 
 #: evidence_tab.php
 msgid "Device or template - You can display information about specific host, all devices with the same template."
-msgstr ""
+msgstr "डिवाइस या टेम्पलेट - आप किसी विशिष्ट होस्ट, या समान टेम्पलेट वाले सभी डिवाइस के बारे में जानकारी प्रदर्शित कर सकते हैं।"
 
 #: evidence_tab.php
 msgid "Scan date (Only last changes or All history) - You can choose whether to retrieve only the most recent change or the entire history."
-msgstr ""
+msgstr "स्कैन दिनांक (केवल अंतिम परिवर्तन या सभी इतिहास) - आप चुन सकते हैं कि केवल सबसे हालिया परिवर्तन प्राप्त करना है या पूरा इतिहास।"
 
 #: evidence_tab.php
 msgid "If you use only `Scan Date`, the changes for all devices found during this scan will be displayed"
-msgstr ""
+msgstr "यदि आप केवल `स्कैन दिनांक` (`Scan Date`) का उपयोग करते हैं, तो इस स्कैन के दौरान मिले सभी डिवाइस के बदलाव प्रदर्शित किए जाएंगे"
 
 #: evidence_tab.php
 msgid "You can search any string in all data."
-msgstr ""
+msgstr "आप सभी डेटा में कोई भी स्ट्रिंग खोज सकते हैं।"
 
 #: evidence_tab.php
 msgid "Number of records"
-msgstr ""
+msgstr "रिकॉर्ड की संख्या"
 
 #: evidence_tab.php
 #, php-format
 msgid "Devices: %d records"
-msgstr ""
+msgstr "डिवाइस: %d रिकॉर्ड"
 
 #: evidence_tab.php
 #, php-format
 msgid "Entity MIB: %d records, %d vendors"
-msgstr ""
+msgstr "एंटिटी MIB: %d रिकॉर्ड, %d विक्रेता"
 
 #: evidence_tab.php
 #, php-format
 msgid "Unique MAC addresses: %d"
-msgstr ""
+msgstr "अद्वितीय MAC पते: %d"
 
 #: evidence_tab.php
 #, php-format
 msgid "Unique IP addresses: %d"
-msgstr ""
+msgstr "अद्वितीय IP पते: %d"
 
 #: evidence_tab.php
 #, php-format
 msgid "Vendor specific data: %d"
-msgstr ""
+msgstr "विक्रेता विशिष्ट डेटा: %d"
 
 #: evidence_tab.php
 #, php-format
 msgid "Oldest record: %d"
-msgstr ""
+msgstr "सबसे पुराना रिकॉर्ड: %d"
 
 #: evidence_tab.php
 msgid "Vendors"
-msgstr ""
+msgstr "विक्रेता"
 
 #: evidence_tab.php
 msgid "Show or hide"
-msgstr ""
+msgstr "दिखाएं या छिपाएं"
 
 #: evidence_tab.php
 msgid "Expand all dates"
-msgstr ""
+msgstr "सभी तिथियां विस्तृत करें"
 
 #: evidence_tab.php
 msgid "Expand latest date"
-msgstr ""
+msgstr "नवीनतम तिथि विस्तृत करें"
 
 #: includes/arrays.php
 msgid "Description"
-msgstr ""
+msgstr "विवरण"
 
 #: includes/arrays.php
 msgid "Name"
-msgstr ""
+msgstr "नाम"
 
 #: includes/arrays.php
 msgid "Hardware revision"
-msgstr ""
+msgstr "हार्डवेयर संशोधन"
 
 #: includes/arrays.php
 msgid "Firmware revision"
-msgstr ""
+msgstr "फ़र्मवेयर संशोधन"
 
 #: includes/arrays.php
 msgid "Software revision"
-msgstr ""
+msgstr "सॉफ़्टवेयर संशोधन"
 
 #: includes/arrays.php
 msgid "Serial number"
-msgstr ""
+msgstr "सीरियल नंबर"
 
 #: includes/arrays.php
 msgid "Manufacturer name"
-msgstr ""
+msgstr "निर्माता का नाम"
 
 #: includes/arrays.php
 msgid "Model name"
-msgstr ""
+msgstr "मॉडल का नाम"
 
 #: includes/arrays.php
 msgid "Alias"
-msgstr ""
+msgstr "उपनाम (Alias)"
 
 #: includes/arrays.php
 msgid "Asset ID"
-msgstr ""
+msgstr "एसेट ID"
 
 #: includes/arrays.php
 msgid "Manufacturing date"
-msgstr ""
+msgstr "निर्माण तिथि"
 
 #: includes/arrays.php
 msgid "UUID"
-msgstr ""
+msgstr "UUID"
 
 #: includes/arrays.php includes/functions.php
 msgid "SNMP info"
-msgstr ""
+msgstr "SNMP जानकारी"
 
 #: includes/arrays.php includes/functions.php
 msgid "Entity MIB"
-msgstr ""
+msgstr "एंटिटी MIB"
 
 #: includes/arrays.php
 msgid "Mac addresses"
-msgstr ""
+msgstr "MAC पते"
 
 #: includes/arrays.php includes/functions.php
 msgid "IP addresses"
-msgstr ""
+msgstr "IP पते"
 
 #: includes/arrays.php
 msgid "Vendor specific data"
-msgstr ""
+msgstr "विक्रेता विशिष्ट डेटा"
 
 #: includes/arrays.php
 msgid "Vendor optional data"
-msgstr ""
+msgstr "विक्रेता वैकल्पिक डेटा"
 
 #: includes/functions.php
 msgid "Data"
@@ -241,143 +241,214 @@ msgstr ""
 
 #: includes/functions.php
 msgid "Store history is not allowed. Nothing to do."
-msgstr ""
+msgstr "इतिहास संग्रहीत करने की अनुमति नहीं है। करने के लिए कुछ नहीं है।"
 
 #: includes/functions.php
 msgid "Not found"
-msgstr ""
+msgstr "नहीं मिला"
 
 #: includes/functions.php
 msgid "Also show actual data"
-msgstr ""
+msgstr "वास्तविक डेटा भी दिखाएं"
 
 #: includes/functions.php
 msgid "ID ORG"
-msgstr ""
+msgstr "संगठन ID"
 
 #: includes/functions.php
 msgid "No older data yet"
-msgstr ""
+msgstr "अभी तक कोई पुराना डेटा नहीं है"
 
 #: includes/functions.php
 msgid "Entity"
-msgstr ""
+msgstr "एंटिटी"
 
 #: includes/functions.php
 msgid "MAC addresses"
-msgstr ""
+msgstr "MAC पते"
 
 #: includes/functions.php
 msgid "Vendor specific"
-msgstr ""
+msgstr "विक्रेता विशिष्ट"
 
 #: includes/functions.php
 msgid "Actual data"
-msgstr ""
+msgstr "वास्तविक डेटा"
 
 #: includes/functions.php
 msgid "Changed"
-msgstr ""
+msgstr "बदला हुआ"
 
 #: includes/functions.php
 msgid "SNMP information"
-msgstr ""
+msgstr "SNMP जानकारी"
 
 #: includes/functions.php
 msgid "Vendor specific information"
-msgstr ""
+msgstr "विक्रेता विशिष्ट जानकारी"
 
 #: includes/functions.php
 msgid "Vendor optional information"
-msgstr ""
+msgstr "विक्रेता वैकल्पिक जानकारी"
 
 #: includes/functions.php
 msgid "Show only first 3 items, for the full listing click here"
-msgstr ""
+msgstr "केवल पहले 3 आइटम दिखाएं, पूरी सूची के लिए यहाँ क्लिक करें"
 
 #: includes/settings.php
 msgid "How often gather data"
-msgstr ""
+msgstr "डेटा कितनी बार एकत्र करना है"
 
 #: includes/settings.php
 msgid "If enabled, Evidence will gather data periodically. If disabled, you can only view data for specific host"
-msgstr ""
+msgstr "यदि सक्षम है, तो Evidence समय-समय पर डेटा एकत्र करेगा। यदि अक्षम है, तो आप केवल विशिष्ट होस्ट के लिए डेटा देख सकते हैं"
 
 #: includes/settings.php
 msgid "Disabled"
-msgstr ""
+msgstr "अक्षम"
 
 #: includes/settings.php
 #, php-format
 msgid "Every %d hours"
-msgstr ""
+msgstr "प्रत्येक %d घंटे"
 
 #: includes/settings.php
 msgid "Every day"
-msgstr ""
+msgstr "हर रोज"
 
 #: includes/settings.php
 msgid "Every week"
-msgstr ""
+msgstr "प्रत्येक सप्ताह"
 
 #: includes/settings.php
 msgid "When evidence will be started"
-msgstr ""
+msgstr "साक्ष्य कब प्रारंभ किया जाएगा"
 
 #: includes/settings.php
 msgid "The Base Time for gather data to occur.  For example, if you use '12:00am' and you choose once per day, the action would begin at approximately midnight every day."
-msgstr ""
+msgstr "डेटा एकत्र करने के लिए आधार समय। उदाहरण के लिए, यदि आप '12:00am' का उपयोग करते हैं और प्रति दिन एक बार चुनते हैं, तो कार्रवाई प्रतिदिन लगभग आधी रात को शुरू होगी।"
 
 #: includes/settings.php
 msgid "How many changes store in database"
-msgstr ""
+msgstr "डेटाबेस में कितने बदलाव संग्रहीत करने हैं"
 
 #: includes/settings.php
 msgid "If data gathering is enabled,  you can specify how many history (changed) records keep for each device"
-msgstr ""
+msgstr "यदि डेटा संग्रहण सक्षम है, तो आप निर्दिष्ट कर सकते हैं कि प्रत्येक डिवाइस के लिए कितने इतिहास (परिवर्तित) रिकॉर्ड रखने हैं"
 
 #: includes/settings.php
 msgid "Without history"
-msgstr ""
+msgstr "इतिहास के बिना"
 
 #: includes/settings.php
 #, php-format
 msgid "%d record"
-msgstr ""
+msgstr "%d रिकॉर्ड"
 
 #: includes/settings.php
 #, php-format
 msgid "%d records"
-msgstr ""
+msgstr "%d रिकॉर्ड"
 
 #: includes/settings.php
 msgid "Display information on device edit page"
-msgstr ""
+msgstr "डिवाइस संपादन पृष्ठ पर जानकारी प्रदर्शित करें"
 
 #: includes/settings.php
 msgid "If enabled, flowview will display evidence data on device edit page"
-msgstr ""
+msgstr "यदि सक्षम है, तो FlowView डिवाइस संपादन पृष्ठ पर साक्ष्य (Evidence) डेटा प्रदर्शित करेगा"
 
 #: includes/settings.php
 msgid "Send email on evidence information change"
-msgstr ""
+msgstr "साक्ष्य जानकारी बदलने पर ईमेल भेजें"
 
 #: includes/settings.php
 msgid "If evidence find change, send email"
-msgstr ""
+msgstr "यदि Evidence को कोई बदलाव मिलता है, तो ईमेल भेजें"
 
 #: includes/settings.php
 msgid "Excluded notification Host IDs"
-msgstr ""
+msgstr "बहिष्कृत सूचना होस्ट ID"
 
 #: includes/settings.php
 msgid "Some devices report hw changes too often. You can exclude these host from email notification. Insert Host IDs, comma separator"
-msgstr ""
+msgstr "कुछ डिवाइस हार्डवेयर परिवर्तन बहुत अधिक बार रिपोर्ट करते हैं। आप इन होस्ट को ईमेल अधिसूचना से बाहर रख सकते हैं। अल्पविराम से अलग किए गए होस्ट ID दर्ज करें"
 
 #: includes/settings.php
 msgid "Excluded notification device templates"
-msgstr ""
+msgstr "बहिष्कृत सूचना डिवाइस टेम्पलेट"
 
 #: includes/settings.php
 msgid "Some devices types report hw changes too often. You can exclude these templates from email notification. Insert device templates IDs, comma separator"
-msgstr ""
+msgstr "कुछ डिवाइस प्रकार हार्डवेयर परिवर्तन बहुत अधिक बार रिपोर्ट करते हैं। आप इन टेम्पलेट को ईमेल अधिसूचना से बाहर रख सकते हैं। अल्पविराम से अलग किए गए डिवाइस टेम्पलेट ID दर्ज करें"
+
+#: evidence_tab.php
+msgid "Export"
+msgstr "एक्सपोर्ट"
+
+#: evidence_tab.php
+msgid "Print"
+msgstr "प्रिंट करें"
+
+#: evidence_tab.php
+msgid "Allow pop-ups to open the print view."
+msgstr "प्रिंट दृश्य खोलने के लिए पॉप-अप की अनुमति दें।"
+
+#: includes/functions.php
+msgid "No data"
+msgstr "कोई डेटा नहीं"
+
+#: includes/functions.php
+msgid "Organization"
+msgstr "संगठन"
+
+#: includes/functions.php
+msgid "Organization ID"
+msgstr "संगठन ID"
+
+#: includes/functions.php
+msgid "System name"
+msgstr "सिस्टम नाम"
+
+#: includes/functions.php
+msgid "Contact"
+msgstr "संपर्क करें"
+
+#: includes/functions.php
+msgid "Location"
+msgstr "स्थान"
+
+#: includes/functions.php
+msgid "Field"
+msgstr "क्षेत्र"
+
+#: includes/functions.php
+msgid "Value"
+msgstr "मूल्य"
+
+#: includes/functions.php
+msgid "IP address"
+msgstr "IP पता"
+
+#: includes/functions.php
+msgid "MAC address"
+msgstr "MAC पता"
+
+#: includes/functions.php
+msgid "OID"
+msgstr "OID"
+
+#: includes/functions.php
+#, php-format
+msgid "ID: %d, stored records: %d"
+msgstr "ID: %d, संग्रहीत रिकॉर्ड: %d"
+
+#: includes/functions.php
+#, php-format
+msgid "Records: %d"
+msgstr "रिकॉर्ड: %d"
+
+#: includes/functions.php
+#, php-format
+msgid "ID: %d, found in %d records"
+msgstr "ID: %d, %d रिकॉर्ड में मिला"

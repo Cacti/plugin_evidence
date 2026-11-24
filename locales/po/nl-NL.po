@@ -19,221 +19,221 @@ msgstr ""
 
 #: evidence.php
 msgid "Disabled/down device. No actual data"
-msgstr ""
+msgstr "Uitgeschakeld/inactief apparaat. Geen actuele gegevens"
 
 #: evidence.php
 msgid "Show older records"
-msgstr ""
+msgstr "Oudere records weergeven"
 
 #: evidence.php includes/functions.php
 msgid "History data store disabled"
-msgstr ""
+msgstr "Opslag van historische gegevens uitgeschakeld"
 
 #: evidence.php
 msgid "Permission issue"
-msgstr ""
+msgstr "Machtigingsprobleem"
 
 #: evidence_tab.php includes/functions.php
 msgid "Evidence"
-msgstr ""
+msgstr "Bewijs"
 
 #: evidence_tab.php
 msgid "Template"
-msgstr ""
+msgstr "Template"
 
 #: evidence_tab.php
 msgid "Any"
-msgstr ""
+msgstr "Alle"
 
 #: evidence_tab.php
 msgid "Scan date"
-msgstr ""
+msgstr "Scandatum"
 
 #: evidence_tab.php
 msgid "Only last changed states"
-msgstr ""
+msgstr "Alleen laatst gewijzigde statussen"
 
 #: evidence_tab.php
 msgid "All history"
-msgstr ""
+msgstr "Volledige geschiedenis"
 
 #: evidence_tab.php
 msgid "records changed"
-msgstr ""
+msgstr "records gewijzigd"
 
 #: evidence_tab.php
 msgid "Find"
-msgstr ""
+msgstr "Zoeken"
 
 #: evidence_tab.php
 msgid "Go"
-msgstr ""
+msgstr "Ga"
 
 #: evidence_tab.php
 msgid "Clear"
-msgstr ""
+msgstr "Wissen"
 
 #: evidence_tab.php
 msgid "Clear Filters"
-msgstr ""
+msgstr "Stel filters opnieuw in"
 
 #: evidence_tab.php
 msgid "Search"
-msgstr ""
+msgstr "Zoeken"
 
 #: evidence_tab.php
 msgid "You can search serial number, firmware version, ip, mac address,..."
-msgstr ""
+msgstr "U kunt zoeken op serienummer, firmwareversie, IP-adres, MAC-adres,..."
 
 #: evidence_tab.php
 msgid "Search string must be 3-20 characters"
-msgstr ""
+msgstr "Zoekreeks moet 3-20 tekens lang zijn"
 
 #: evidence_tab.php
 msgid "Select any device, template, select any scan date or try search"
-msgstr ""
+msgstr "Selecteer een apparaat of sjabloon, selecteer een scandatum of probeer te zoeken"
 
 #: evidence_tab.php
 msgid "No data. Allow periodic scan and store history in settings"
-msgstr ""
+msgstr "Geen gegevens. Sta periodieke scan en opslag van geschiedenis toe in instellingen"
 
 #: evidence_tab.php
 msgid "Device or template - You can display information about specific host, all devices with the same template."
-msgstr ""
+msgstr "Apparaat of sjabloon - U kunt informatie weergeven over een specifieke host of alle apparaten met hetzelfde sjabloon."
 
 #: evidence_tab.php
 msgid "Scan date (Only last changes or All history) - You can choose whether to retrieve only the most recent change or the entire history."
-msgstr ""
+msgstr "Scandatum (Alleen laatste wijzigingen of Alle geschiedenis) - U kunt kiezen of u alleen de meest recente wijziging of de volledige geschiedenis wilt ophalen."
 
 #: evidence_tab.php
 msgid "If you use only `Scan Date`, the changes for all devices found during this scan will be displayed"
-msgstr ""
+msgstr "Als u alleen `Scandatum` gebruikt, worden de wijzigingen voor alle apparaten die tijdens deze scan zijn gevonden weergegeven"
 
 #: evidence_tab.php
 msgid "You can search any string in all data."
-msgstr ""
+msgstr "U kunt elke tekenreeks in alle gegevens zoeken."
 
 #: evidence_tab.php
 msgid "Number of records"
-msgstr ""
+msgstr "Aantal records"
 
 #: evidence_tab.php
 #, php-format
 msgid "Devices: %d records"
-msgstr ""
+msgstr "Apparaten: %d records"
 
 #: evidence_tab.php
 #, php-format
 msgid "Entity MIB: %d records, %d vendors"
-msgstr ""
+msgstr "Entity MIB: %d records, %d leveranciers"
 
 #: evidence_tab.php
 #, php-format
 msgid "Unique MAC addresses: %d"
-msgstr ""
+msgstr "Unieke MAC-adressen: %d"
 
 #: evidence_tab.php
 #, php-format
 msgid "Unique IP addresses: %d"
-msgstr ""
+msgstr "Unieke IP-adressen: %d"
 
 #: evidence_tab.php
 #, php-format
 msgid "Vendor specific data: %d"
-msgstr ""
+msgstr "Leverancierspecifieke gegevens: %d"
 
 #: evidence_tab.php
 #, php-format
 msgid "Oldest record: %d"
-msgstr ""
+msgstr "Oudste record: %d"
 
 #: evidence_tab.php
 msgid "Vendors"
-msgstr ""
+msgstr "Leveranciers"
 
 #: evidence_tab.php
 msgid "Show or hide"
-msgstr ""
+msgstr "Weergeven of verbergen"
 
 #: evidence_tab.php
 msgid "Expand all dates"
-msgstr ""
+msgstr "Alle datums uitvouwen"
 
 #: evidence_tab.php
 msgid "Expand latest date"
-msgstr ""
+msgstr "Nieuwste datum uitvouwen"
 
 #: includes/arrays.php
 msgid "Description"
-msgstr ""
+msgstr "Omschrijving"
 
 #: includes/arrays.php
 msgid "Name"
-msgstr ""
+msgstr "Naam"
 
 #: includes/arrays.php
 msgid "Hardware revision"
-msgstr ""
+msgstr "Hardwarerevisie"
 
 #: includes/arrays.php
 msgid "Firmware revision"
-msgstr ""
+msgstr "Firmwarerevisie"
 
 #: includes/arrays.php
 msgid "Software revision"
-msgstr ""
+msgstr "Softwarerevisie"
 
 #: includes/arrays.php
 msgid "Serial number"
-msgstr ""
+msgstr "Serienummer"
 
 #: includes/arrays.php
 msgid "Manufacturer name"
-msgstr ""
+msgstr "Naam van fabrikant"
 
 #: includes/arrays.php
 msgid "Model name"
-msgstr ""
+msgstr "Modelnaam"
 
 #: includes/arrays.php
 msgid "Alias"
-msgstr ""
+msgstr "Alias"
 
 #: includes/arrays.php
 msgid "Asset ID"
-msgstr ""
+msgstr "Asset-ID"
 
 #: includes/arrays.php
 msgid "Manufacturing date"
-msgstr ""
+msgstr "Productiedatum"
 
 #: includes/arrays.php
 msgid "UUID"
-msgstr ""
+msgstr "UUID"
 
 #: includes/arrays.php includes/functions.php
 msgid "SNMP info"
-msgstr ""
+msgstr "SNMP-info"
 
 #: includes/arrays.php includes/functions.php
 msgid "Entity MIB"
-msgstr ""
+msgstr "Entity MIB"
 
 #: includes/arrays.php
 msgid "Mac addresses"
-msgstr ""
+msgstr "MAC-adressen"
 
 #: includes/arrays.php includes/functions.php
 msgid "IP addresses"
-msgstr ""
+msgstr "IP-adressen"
 
 #: includes/arrays.php
 msgid "Vendor specific data"
-msgstr ""
+msgstr "Leverancierspecifieke gegevens"
 
 #: includes/arrays.php
 msgid "Vendor optional data"
-msgstr ""
+msgstr "Optionele gegevens van leverancier"
 
 #: includes/functions.php
 msgid "Data"
@@ -241,143 +241,214 @@ msgstr ""
 
 #: includes/functions.php
 msgid "Store history is not allowed. Nothing to do."
-msgstr ""
+msgstr "Geschiedenis opslaan is niet toegestaan. Niets om uit te voeren."
 
 #: includes/functions.php
 msgid "Not found"
-msgstr ""
+msgstr "Niet gevonden"
 
 #: includes/functions.php
 msgid "Also show actual data"
-msgstr ""
+msgstr "Ook werkelijke gegevens tonen"
 
 #: includes/functions.php
 msgid "ID ORG"
-msgstr ""
+msgstr "ID ORG"
 
 #: includes/functions.php
 msgid "No older data yet"
-msgstr ""
+msgstr "Nog geen oudere gegevens"
 
 #: includes/functions.php
 msgid "Entity"
-msgstr ""
+msgstr "Entiteit"
 
 #: includes/functions.php
 msgid "MAC addresses"
-msgstr ""
+msgstr "MAC-adressen"
 
 #: includes/functions.php
 msgid "Vendor specific"
-msgstr ""
+msgstr "Leverancierspecifiek"
 
 #: includes/functions.php
 msgid "Actual data"
-msgstr ""
+msgstr "Werkelijke gegevens"
 
 #: includes/functions.php
 msgid "Changed"
-msgstr ""
+msgstr "Gewijzigd"
 
 #: includes/functions.php
 msgid "SNMP information"
-msgstr ""
+msgstr "SNMP-informatie"
 
 #: includes/functions.php
 msgid "Vendor specific information"
-msgstr ""
+msgstr "Leverancierspecifieke informatie"
 
 #: includes/functions.php
 msgid "Vendor optional information"
-msgstr ""
+msgstr "Optionele informatie van leverancier"
 
 #: includes/functions.php
 msgid "Show only first 3 items, for the full listing click here"
-msgstr ""
+msgstr "Alleen de eerste 3 items weergeven, klik hier voor het volledige overzicht"
 
 #: includes/settings.php
 msgid "How often gather data"
-msgstr ""
+msgstr "Hoe vaak gegevens moeten worden verzameld"
 
 #: includes/settings.php
 msgid "If enabled, Evidence will gather data periodically. If disabled, you can only view data for specific host"
-msgstr ""
+msgstr "Indien ingeschakeld verzamelt Evidence periodiek gegevens. Indien uitgeschakeld kunt u alleen gegevens voor een specifieke host bekijken"
 
 #: includes/settings.php
 msgid "Disabled"
-msgstr ""
+msgstr "Uitgeschakeld"
 
 #: includes/settings.php
 #, php-format
 msgid "Every %d hours"
-msgstr ""
+msgstr "Elke %d uur"
 
 #: includes/settings.php
 msgid "Every day"
-msgstr ""
+msgstr "Elke dag"
 
 #: includes/settings.php
 msgid "Every week"
-msgstr ""
+msgstr "Elke week"
 
 #: includes/settings.php
 msgid "When evidence will be started"
-msgstr ""
+msgstr "Wanneer Evidence wordt gestart"
 
 #: includes/settings.php
 msgid "The Base Time for gather data to occur.  For example, if you use '12:00am' and you choose once per day, the action would begin at approximately midnight every day."
-msgstr ""
+msgstr "De basistijd waarop gegevens worden verzameld. Als u bijvoorbeeld '12:00am' gebruikt en één keer per dag kiest, begint de actie elke dag rond middernacht."
 
 #: includes/settings.php
 msgid "How many changes store in database"
-msgstr ""
+msgstr "Aantal wijzigingen dat in de database wordt opgeslagen"
 
 #: includes/settings.php
 msgid "If data gathering is enabled,  you can specify how many history (changed) records keep for each device"
-msgstr ""
+msgstr "Als gegevensverzameling is ingeschakeld, kunt u opgeven hoeveel historische (gewijzigde) records er voor elk apparaat moeten worden bewaard"
 
 #: includes/settings.php
 msgid "Without history"
-msgstr ""
+msgstr "Zonder geschiedenis"
 
 #: includes/settings.php
 #, php-format
 msgid "%d record"
-msgstr ""
+msgstr "%d record"
 
 #: includes/settings.php
 #, php-format
 msgid "%d records"
-msgstr ""
+msgstr "%d records"
 
 #: includes/settings.php
 msgid "Display information on device edit page"
-msgstr ""
+msgstr "Informatie weergeven op de pagina voor het bewerken van apparaten"
 
 #: includes/settings.php
 msgid "If enabled, flowview will display evidence data on device edit page"
-msgstr ""
+msgstr "Indien ingeschakeld toont FlowView evidence-gegevens op de pagina voor het bewerken van apparaten"
 
 #: includes/settings.php
 msgid "Send email on evidence information change"
-msgstr ""
+msgstr "E-mail verzenden bij wijziging van evidence-informatie"
 
 #: includes/settings.php
 msgid "If evidence find change, send email"
-msgstr ""
+msgstr "E-mail verzenden als Evidence een wijziging detecteert"
 
 #: includes/settings.php
 msgid "Excluded notification Host IDs"
-msgstr ""
+msgstr "Uitgesloten host-ID's voor meldingen"
 
 #: includes/settings.php
 msgid "Some devices report hw changes too often. You can exclude these host from email notification. Insert Host IDs, comma separator"
-msgstr ""
+msgstr "Sommige apparaten melden hardwarewijzigingen te vaak. U kunt deze hosts uitsluiten van e-mailmeldingen. Voer host-ID's in, gescheiden door komma's"
 
 #: includes/settings.php
 msgid "Excluded notification device templates"
-msgstr ""
+msgstr "Uitgesloten apparaatsjablonen voor meldingen"
 
 #: includes/settings.php
 msgid "Some devices types report hw changes too often. You can exclude these templates from email notification. Insert device templates IDs, comma separator"
-msgstr ""
+msgstr "Sommige apparaattypen melden hardwarewijzigingen te vaak. U kunt deze sjablonen uitsluiten van e-mailmeldingen. Voer apparaatsjabloon-ID's in, gescheiden door komma's"
+
+#: evidence_tab.php
+msgid "Export"
+msgstr "Exporteer"
+
+#: evidence_tab.php
+msgid "Print"
+msgstr "Afdrukken"
+
+#: evidence_tab.php
+msgid "Allow pop-ups to open the print view."
+msgstr "Sta pop-ups toe om de afdrukweergave te openen."
+
+#: includes/functions.php
+msgid "No data"
+msgstr "Geen gegevens"
+
+#: includes/functions.php
+msgid "Organization"
+msgstr "Organisatie"
+
+#: includes/functions.php
+msgid "Organization ID"
+msgstr "Organisatie-ID"
+
+#: includes/functions.php
+msgid "System name"
+msgstr "Systeemnaam"
+
+#: includes/functions.php
+msgid "Contact"
+msgstr "Contactgegevens"
+
+#: includes/functions.php
+msgid "Location"
+msgstr "Locatie"
+
+#: includes/functions.php
+msgid "Field"
+msgstr "Veld"
+
+#: includes/functions.php
+msgid "Value"
+msgstr "Waarde"
+
+#: includes/functions.php
+msgid "IP address"
+msgstr "IP-adres"
+
+#: includes/functions.php
+msgid "MAC address"
+msgstr "MAC-adres"
+
+#: includes/functions.php
+msgid "OID"
+msgstr "OID"
+
+#: includes/functions.php
+#, php-format
+msgid "ID: %d, stored records: %d"
+msgstr "ID: %d, opgeslagen records: %d"
+
+#: includes/functions.php
+#, php-format
+msgid "Records: %d"
+msgstr "Records: %d"
+
+#: includes/functions.php
+#, php-format
+msgid "ID: %d, found in %d records"
+msgstr "ID: %d, gevonden in %d records"
