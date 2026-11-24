@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: Cacti\n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
 "POT-Creation-Date: 2026-09-30 11:26-0400\n"
-"PO-Revision-Date: 2026-11-09 22:18+0000\n"
-"Last-Translator: Daniel Nylander <daniel@danielnylander.se>\n"
+"PO-Revision-Date: 2026-11-25 02:18+0000\n"
+"Last-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\n"
 "Language-Team: Swedish <https://translate.cacti.net/projects/cacti/evidence/"
 "sv/>\n"
 "Language: sv-SE\n"
@@ -95,13 +95,13 @@ msgstr "Söksträngen måste vara 3–20 tecken lång"
 
 #: evidence_tab.php
 msgid "Select any device, template, select any scan date or try search"
-msgstr "Välj en enhet eller mall, ett skanningsdatum eller sök."
+msgstr "Välj en enhet eller mall, ett skanningsdatum eller sök"
 
 #: evidence_tab.php
 msgid "No data. Allow periodic scan and store history in settings"
 msgstr ""
 "Inga data. Aktivera periodisk skanning och lagring av historik i "
-"inställningarna."
+"inställningarna"
 
 #: evidence_tab.php
 msgid "Device or template - You can display information about specific host, all devices with the same template."
@@ -119,7 +119,7 @@ msgstr ""
 msgid "If you use only `Scan Date`, the changes for all devices found during this scan will be displayed"
 msgstr ""
 "Om du bara använder ”Skanningsdatum” visas ändringarna för alla enheter som "
-"hittades under denna skanning."
+"hittades under denna skanning"
 
 #: evidence_tab.php
 msgid "You can search any string in all data."
@@ -305,7 +305,7 @@ msgstr "Valfri tillverkarinformation"
 
 #: includes/functions.php
 msgid "Show only first 3 items, for the full listing click here"
-msgstr "Visa endast de första 3 objekten. Klicka här för hela listan."
+msgstr "Visa endast de första 3 objekten. Klicka här för hela listan"
 
 #: includes/settings.php
 msgid "How often gather data"
@@ -315,7 +315,7 @@ msgstr "Hur ofta data ska samlas in"
 msgid "If enabled, Evidence will gather data periodically. If disabled, you can only view data for specific host"
 msgstr ""
 "Om detta är aktiverat samlar Inventeringsdata in data regelbundet. Om det är "
-"inaktiverat kan du endast visa data för en viss värd."
+"inaktiverat kan du endast visa data för en viss värd"
 
 #: includes/settings.php
 msgid "Disabled"
@@ -352,7 +352,7 @@ msgstr "Hur många ändringar som lagras i databasen"
 msgid "If data gathering is enabled,  you can specify how many history (changed) records keep for each device"
 msgstr ""
 "Om datainsamling är aktiverad kan du ange hur många historikposter med "
-"ändringar som ska behållas för varje enhet."
+"ändringar som ska behållas för varje enhet"
 
 #: includes/settings.php
 msgid "Without history"
@@ -376,7 +376,7 @@ msgstr "Visa information på enhetens redigeringssida"
 msgid "If enabled, flowview will display evidence data on device edit page"
 msgstr ""
 "Om detta är aktiverat visar Flowview inventeringsdata på enhetens "
-"redigeringssida."
+"redigeringssida"
 
 #: includes/settings.php
 msgid "Send email on evidence information change"
@@ -394,7 +394,7 @@ msgstr "Värd-ID:n som undantas från aviseringar"
 msgid "Some devices report hw changes too often. You can exclude these host from email notification. Insert Host IDs, comma separator"
 msgstr ""
 "Vissa enheter rapporterar maskinvaruändringar för ofta. Du kan undanta dessa "
-"värdar från e-postaviseringar. Ange värd-ID:n, avgränsade med kommatecken."
+"värdar från e-postaviseringar. Ange värd-ID:n, avgränsade med kommatecken"
 
 #: includes/settings.php
 msgid "Excluded notification device templates"
@@ -405,4 +405,4 @@ msgid "Some devices types report hw changes too often. You can exclude these tem
 msgstr ""
 "Vissa enhetstyper rapporterar maskinvaruändringar för ofta. Du kan undanta "
 "dessa mallar från e-postaviseringar. Ange enhetsmallarnas ID:n, avgränsade "
-"med kommatecken."
+"med kommatecken"
