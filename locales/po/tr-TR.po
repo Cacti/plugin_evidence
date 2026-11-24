@@ -5,235 +5,246 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Cacti \n"
+"Project-Id-Version: Cacti\n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
 "POT-Creation-Date: 2026-09-30 11:26-0400\n"
-"PO-Revision-Date: 2026-09-30 11:26-0400\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
-"Language: tr_TR\n"
+"PO-Revision-Date: 2026-11-25 02:18+0000\n"
+"Last-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\n"
+"Language-Team: Turkish <https://translate.cacti.net/projects/cacti/evidence/"
+"tr/>\n"
+"Language: tr-TR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.11.4\n"
 
 #: evidence.php
 msgid "Disabled/down device. No actual data"
-msgstr ""
+msgstr "Devre dışı/kapalı cihaz. Gerçek veri yok"
 
 #: evidence.php
 msgid "Show older records"
-msgstr ""
+msgstr "Daha eski kayıtları göster"
 
 #: evidence.php includes/functions.php
 msgid "History data store disabled"
-msgstr ""
+msgstr "Geçmiş veri deposu devre dışı"
 
 #: evidence.php
 msgid "Permission issue"
-msgstr ""
+msgstr "İzin sorunu"
 
 #: evidence_tab.php includes/functions.php
 msgid "Evidence"
-msgstr ""
+msgstr "Kanıt"
 
 #: evidence_tab.php
 msgid "Template"
-msgstr ""
+msgstr "Şablon"
 
 #: evidence_tab.php
 msgid "Any"
-msgstr ""
+msgstr "Herhangi"
 
 #: evidence_tab.php
 msgid "Scan date"
-msgstr ""
+msgstr "Tarama tarihi"
 
 #: evidence_tab.php
 msgid "Only last changed states"
-msgstr ""
+msgstr "Yalnızca son değiştirilen durumlar"
 
 #: evidence_tab.php
 msgid "All history"
-msgstr ""
+msgstr "Tüm geçmiş"
 
 #: evidence_tab.php
 msgid "records changed"
-msgstr ""
+msgstr "kayıt değiştirildi"
 
 #: evidence_tab.php
 msgid "Find"
-msgstr ""
+msgstr "Bul"
 
 #: evidence_tab.php
 msgid "Go"
-msgstr ""
+msgstr "Git"
 
 #: evidence_tab.php
 msgid "Clear"
-msgstr ""
+msgstr "Temizle"
 
 #: evidence_tab.php
 msgid "Clear Filters"
-msgstr ""
+msgstr "Filtreleri Temizle"
 
 #: evidence_tab.php
 msgid "Search"
-msgstr ""
+msgstr "Ara"
 
 #: evidence_tab.php
 msgid "You can search serial number, firmware version, ip, mac address,..."
 msgstr ""
+"Seri numarası, üretici yazılımı sürümü, IP, MAC adresi vb. arayabilirsiniz..."
 
 #: evidence_tab.php
 msgid "Search string must be 3-20 characters"
-msgstr ""
+msgstr "Arama dizesi 3-20 karakter olmalıdır"
 
 #: evidence_tab.php
 msgid "Select any device, template, select any scan date or try search"
 msgstr ""
+"Herhangi bir cihaz, şablon veya tarama tarihi seçin ya da arama yapmayı "
+"deneyin"
 
 #: evidence_tab.php
 msgid "No data. Allow periodic scan and store history in settings"
-msgstr ""
+msgstr "Veri yok. Ayarlarda periyodik taramaya ve geçmişi saklamaya izin verin"
 
 #: evidence_tab.php
 msgid "Device or template - You can display information about specific host, all devices with the same template."
 msgstr ""
+"Cihaz veya şablon - Belirli bir ana bilgisayar veya aynı şablona sahip tüm "
+"cihazlar hakkındaki bilgileri görüntüleyebilirsiniz."
 
 #: evidence_tab.php
 msgid "Scan date (Only last changes or All history) - You can choose whether to retrieve only the most recent change or the entire history."
 msgstr ""
+"Tarama tarihi (Yalnızca son değişiklikler veya Tüm geçmiş) - Yalnızca en son "
+"değişikliğin mi yoksa tüm geçmişin mi getirileceğini seçebilirsiniz."
 
 #: evidence_tab.php
 msgid "If you use only `Scan Date`, the changes for all devices found during this scan will be displayed"
 msgstr ""
+"Yalnızca `Tarama Tarihi` seçeneğini kullanırsanız, bu tarama sırasında "
+"bulunan tüm cihazlara ait değişiklikler görüntülenir"
 
 #: evidence_tab.php
 msgid "You can search any string in all data."
-msgstr ""
+msgstr "Tüm verilerde herhangi bir dize arayabilirsiniz."
 
 #: evidence_tab.php
 msgid "Number of records"
-msgstr ""
+msgstr "Kayıt sayısı"
 
 #: evidence_tab.php
 #, php-format
 msgid "Devices: %d records"
-msgstr ""
+msgstr "Cihazlar: %d kayıt"
 
 #: evidence_tab.php
 #, php-format
 msgid "Entity MIB: %d records, %d vendors"
-msgstr ""
+msgstr "Entity MIB: %d kayıt, %d üretici"
 
 #: evidence_tab.php
 #, php-format
 msgid "Unique MAC addresses: %d"
-msgstr ""
+msgstr "Benzersiz MAC adresleri: %d"
 
 #: evidence_tab.php
 #, php-format
 msgid "Unique IP addresses: %d"
-msgstr ""
+msgstr "Benzersiz IP adresleri: %d"
 
 #: evidence_tab.php
 #, php-format
 msgid "Vendor specific data: %d"
-msgstr ""
+msgstr "Üreticiye özel veriler: %d"
 
 #: evidence_tab.php
 #, php-format
 msgid "Oldest record: %d"
-msgstr ""
+msgstr "En eski kayıt: %d"
 
 #: evidence_tab.php
 msgid "Vendors"
-msgstr ""
+msgstr "Üreticiler"
 
 #: evidence_tab.php
 msgid "Show or hide"
-msgstr ""
+msgstr "Göster veya gizle"
 
 #: evidence_tab.php
 msgid "Expand all dates"
-msgstr ""
+msgstr "Tüm tarihleri genişlet"
 
 #: evidence_tab.php
 msgid "Expand latest date"
-msgstr ""
+msgstr "En son tarihi genişlet"
 
 #: includes/arrays.php
 msgid "Description"
-msgstr ""
+msgstr "Açıklama"
 
 #: includes/arrays.php
 msgid "Name"
-msgstr ""
+msgstr "İsim"
 
 #: includes/arrays.php
 msgid "Hardware revision"
-msgstr ""
+msgstr "Donanım sürümü"
 
 #: includes/arrays.php
 msgid "Firmware revision"
-msgstr ""
+msgstr "Firmware sürümü"
 
 #: includes/arrays.php
 msgid "Software revision"
-msgstr ""
+msgstr "Yazılım revizyonu"
 
 #: includes/arrays.php
 msgid "Serial number"
-msgstr ""
+msgstr "Seri numarası"
 
 #: includes/arrays.php
 msgid "Manufacturer name"
-msgstr ""
+msgstr "Üretici adı"
 
 #: includes/arrays.php
 msgid "Model name"
-msgstr ""
+msgstr "Model adı"
 
 #: includes/arrays.php
 msgid "Alias"
-msgstr ""
+msgstr "Takma Ad"
 
 #: includes/arrays.php
 msgid "Asset ID"
-msgstr ""
+msgstr "Varlık ID"
 
 #: includes/arrays.php
 msgid "Manufacturing date"
-msgstr ""
+msgstr "Üretim tarihi"
 
 #: includes/arrays.php
 msgid "UUID"
-msgstr ""
+msgstr "UUID"
 
 #: includes/arrays.php includes/functions.php
 msgid "SNMP info"
-msgstr ""
+msgstr "SNMP bilgisi"
 
 #: includes/arrays.php includes/functions.php
 msgid "Entity MIB"
-msgstr ""
+msgstr "Entity MIB"
 
 #: includes/arrays.php
 msgid "Mac addresses"
-msgstr ""
+msgstr "MAC adresleri"
 
 #: includes/arrays.php includes/functions.php
 msgid "IP addresses"
-msgstr ""
+msgstr "IP adresleri"
 
 #: includes/arrays.php
 msgid "Vendor specific data"
-msgstr ""
+msgstr "Üreticiye özel veriler"
 
 #: includes/arrays.php
 msgid "Vendor optional data"
-msgstr ""
+msgstr "Üretici isteğe bağlı verileri"
 
 #: includes/functions.php
 msgid "Data"
@@ -241,143 +252,159 @@ msgstr ""
 
 #: includes/functions.php
 msgid "Store history is not allowed. Nothing to do."
-msgstr ""
+msgstr "Geçmişin saklanmasına izin verilmiyor. Yapılacak bir şey yok."
 
 #: includes/functions.php
 msgid "Not found"
-msgstr ""
+msgstr "Bulunamadı"
 
 #: includes/functions.php
 msgid "Also show actual data"
-msgstr ""
+msgstr "Gerçek verileri de göster"
 
 #: includes/functions.php
 msgid "ID ORG"
-msgstr ""
+msgstr "ORG Kimliği"
 
 #: includes/functions.php
 msgid "No older data yet"
-msgstr ""
+msgstr "Henüz daha eski veri yok"
 
 #: includes/functions.php
 msgid "Entity"
-msgstr ""
+msgstr "Varlık"
 
 #: includes/functions.php
 msgid "MAC addresses"
-msgstr ""
+msgstr "MAC adresleri"
 
 #: includes/functions.php
 msgid "Vendor specific"
-msgstr ""
+msgstr "Üreticiye özel"
 
 #: includes/functions.php
 msgid "Actual data"
-msgstr ""
+msgstr "Gerçek veriler"
 
 #: includes/functions.php
 msgid "Changed"
-msgstr ""
+msgstr "Değiştirildi"
 
 #: includes/functions.php
 msgid "SNMP information"
-msgstr ""
+msgstr "SNMP bilgileri"
 
 #: includes/functions.php
 msgid "Vendor specific information"
-msgstr ""
+msgstr "Üreticiye özel bilgiler"
 
 #: includes/functions.php
 msgid "Vendor optional information"
-msgstr ""
+msgstr "Üretici isteğe bağlı bilgileri"
 
 #: includes/functions.php
 msgid "Show only first 3 items, for the full listing click here"
-msgstr ""
+msgstr "Yalnızca ilk 3 öğeyi göster, tam liste için buraya tıklayın"
 
 #: includes/settings.php
 msgid "How often gather data"
-msgstr ""
+msgstr "Verilerin ne sıklıkla toplanacağı"
 
 #: includes/settings.php
 msgid "If enabled, Evidence will gather data periodically. If disabled, you can only view data for specific host"
 msgstr ""
+"Etkinleştirilirse Evidence periyodik olarak veri toplar. Devre dışı "
+"bırakılırsa yalnızca belirli bir ana bilgisayar için verileri "
+"görüntüleyebilirsiniz"
 
 #: includes/settings.php
 msgid "Disabled"
-msgstr ""
+msgstr "Devre dışı"
 
 #: includes/settings.php
 #, php-format
 msgid "Every %d hours"
-msgstr ""
+msgstr "Her %d saatte bir"
 
 #: includes/settings.php
 msgid "Every day"
-msgstr ""
+msgstr "Her gün"
 
 #: includes/settings.php
 msgid "Every week"
-msgstr ""
+msgstr "Her hafta"
 
 #: includes/settings.php
 msgid "When evidence will be started"
-msgstr ""
+msgstr "Evidence ne zaman başlatılacak"
 
 #: includes/settings.php
 msgid "The Base Time for gather data to occur.  For example, if you use '12:00am' and you choose once per day, the action would begin at approximately midnight every day."
 msgstr ""
+"Veri toplama işleminin gerçekleşeceği Temel Zaman. Örneğin, '12:00am' "
+"kullanıp günde bir kez seçeneğini seçerseniz, işlem her gün yaklaşık gece "
+"yarısı başlar."
 
 #: includes/settings.php
 msgid "How many changes store in database"
-msgstr ""
+msgstr "Veritabanında kaç değişiklik saklanacağı"
 
 #: includes/settings.php
 msgid "If data gathering is enabled,  you can specify how many history (changed) records keep for each device"
 msgstr ""
+"Veri toplama etkinse, her cihaz için kaç adet geçmiş (değişen) kaydın "
+"saklanacağını belirtebilirsiniz"
 
 #: includes/settings.php
 msgid "Without history"
-msgstr ""
+msgstr "Geçmiş olmadan"
 
 #: includes/settings.php
 #, php-format
 msgid "%d record"
-msgstr ""
+msgstr "%d kayıt"
 
 #: includes/settings.php
 #, php-format
 msgid "%d records"
-msgstr ""
+msgstr "%d kayıt"
 
 #: includes/settings.php
 msgid "Display information on device edit page"
-msgstr ""
+msgstr "Cihaz düzenleme sayfasında bilgileri görüntüle"
 
 #: includes/settings.php
 msgid "If enabled, flowview will display evidence data on device edit page"
 msgstr ""
+"Etkinleştirilirse FlowView, cihaz düzenleme sayfasında Evidence verilerini "
+"görüntüler"
 
 #: includes/settings.php
 msgid "Send email on evidence information change"
-msgstr ""
+msgstr "Kanıt bilgileri değiştiğinde e-posta gönder"
 
 #: includes/settings.php
 msgid "If evidence find change, send email"
-msgstr ""
+msgstr "Evidence değişiklik bulursa e-posta gönder"
 
 #: includes/settings.php
 msgid "Excluded notification Host IDs"
-msgstr ""
+msgstr "Bildirimden hariç tutulan Ana Bilgisayar Kimlikleri"
 
 #: includes/settings.php
 msgid "Some devices report hw changes too often. You can exclude these host from email notification. Insert Host IDs, comma separator"
 msgstr ""
+"Bazı cihazlar donanım değişikliklerini çok sık bildirir. Bu ana "
+"bilgisayarları e-posta bildiriminden hariç tutabilirsiniz. Ana Bilgisayar "
+"Kimliklerini virgülle ayırarak girin"
 
 #: includes/settings.php
 msgid "Excluded notification device templates"
-msgstr ""
+msgstr "Bildirimden hariç tutulan cihaz şablonları"
 
 #: includes/settings.php
 msgid "Some devices types report hw changes too often. You can exclude these templates from email notification. Insert device templates IDs, comma separator"
 msgstr ""
+"Bazı cihaz türleri donanım değişikliklerini çok sık bildirir. Bu şablonları "
+"e-posta bildiriminden hariç tutabilirsiniz. Cihaz şablonu kimliklerini "
+"virgülle ayırarak girin"
