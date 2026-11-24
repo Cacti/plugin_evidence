@@ -5,235 +5,238 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Cacti \n"
+"Project-Id-Version: Cacti\n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
 "POT-Creation-Date: 2026-09-30 11:26-0400\n"
-"PO-Revision-Date: 2026-09-30 11:26-0400\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
-"Language: zh_TW\n"
+"PO-Revision-Date: 2026-11-25 02:18+0000\n"
+"Last-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\n"
+"Language-Team: Chinese (Traditional Han script) <https://translate.cacti.net/"
+"projects/cacti/evidence/zh_Hant/>\n"
+"Language: zh-TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.11.4\n"
 
 #: evidence.php
 msgid "Disabled/down device. No actual data"
-msgstr ""
+msgstr "已停用/離線裝置。無實際資料"
 
 #: evidence.php
 msgid "Show older records"
-msgstr ""
+msgstr "顯示較舊的記錄"
 
 #: evidence.php includes/functions.php
 msgid "History data store disabled"
-msgstr ""
+msgstr "已停用歷史資料儲存"
 
 #: evidence.php
 msgid "Permission issue"
-msgstr ""
+msgstr "權限問題"
 
 #: evidence_tab.php includes/functions.php
 msgid "Evidence"
-msgstr ""
+msgstr "證據"
 
 #: evidence_tab.php
 msgid "Template"
-msgstr ""
+msgstr "範本"
 
 #: evidence_tab.php
 msgid "Any"
-msgstr ""
+msgstr "任何"
 
 #: evidence_tab.php
 msgid "Scan date"
-msgstr ""
+msgstr "掃描日期"
 
 #: evidence_tab.php
 msgid "Only last changed states"
-msgstr ""
+msgstr "僅最後變更的狀態"
 
 #: evidence_tab.php
 msgid "All history"
-msgstr ""
+msgstr "所有歷史記錄"
 
 #: evidence_tab.php
 msgid "records changed"
-msgstr ""
+msgstr "筆紀錄已變更"
 
 #: evidence_tab.php
 msgid "Find"
-msgstr ""
+msgstr "尋找"
 
 #: evidence_tab.php
 msgid "Go"
-msgstr ""
+msgstr "送出"
 
 #: evidence_tab.php
 msgid "Clear"
-msgstr ""
+msgstr "清除"
 
 #: evidence_tab.php
 msgid "Clear Filters"
-msgstr ""
+msgstr "清除過濾器"
 
 #: evidence_tab.php
 msgid "Search"
-msgstr ""
+msgstr "搜尋"
 
 #: evidence_tab.php
 msgid "You can search serial number, firmware version, ip, mac address,..."
-msgstr ""
+msgstr "您可以搜尋序號、韌體版本、IP、MAC 位址等..."
 
 #: evidence_tab.php
 msgid "Search string must be 3-20 characters"
-msgstr ""
+msgstr "搜尋字串必須為 3-20 個字元"
 
 #: evidence_tab.php
 msgid "Select any device, template, select any scan date or try search"
-msgstr ""
+msgstr "選取任何裝置、範本、任何掃描日期或嘗試搜尋"
 
 #: evidence_tab.php
 msgid "No data. Allow periodic scan and store history in settings"
-msgstr ""
+msgstr "無資料。請在設定中允許定期掃描並儲存歷史記錄"
 
 #: evidence_tab.php
 msgid "Device or template - You can display information about specific host, all devices with the same template."
-msgstr ""
+msgstr "裝置或範本 - 您可以顯示特定主機或具有相同範本的所有裝置之資訊。"
 
 #: evidence_tab.php
 msgid "Scan date (Only last changes or All history) - You can choose whether to retrieve only the most recent change or the entire history."
-msgstr ""
+msgstr "掃描日期（僅最近變更或所有歷史記錄）- "
+"您可以選擇僅擷取最新的變更或完整歷史記錄。"
 
 #: evidence_tab.php
 msgid "If you use only `Scan Date`, the changes for all devices found during this scan will be displayed"
-msgstr ""
+msgstr "如果您僅使用 `Scan Date`（掃描日期），將會顯示在此掃描期間找到的所有裝置變更"
 
 #: evidence_tab.php
 msgid "You can search any string in all data."
-msgstr ""
+msgstr "您可以在所有資料中搜尋任何字串。"
 
 #: evidence_tab.php
 msgid "Number of records"
-msgstr ""
+msgstr "記錄筆數"
 
 #: evidence_tab.php
 #, php-format
 msgid "Devices: %d records"
-msgstr ""
+msgstr "裝置：%d 筆記錄"
 
 #: evidence_tab.php
 #, php-format
 msgid "Entity MIB: %d records, %d vendors"
-msgstr ""
+msgstr "Entity MIB：%d 筆記錄，%d 個供應商"
 
 #: evidence_tab.php
 #, php-format
 msgid "Unique MAC addresses: %d"
-msgstr ""
+msgstr "不重複 MAC 位址數：%d"
 
 #: evidence_tab.php
 #, php-format
 msgid "Unique IP addresses: %d"
-msgstr ""
+msgstr "不重複 IP 位址數：%d"
 
 #: evidence_tab.php
 #, php-format
 msgid "Vendor specific data: %d"
-msgstr ""
+msgstr "廠商特定資料：%d"
 
 #: evidence_tab.php
 #, php-format
 msgid "Oldest record: %d"
-msgstr ""
+msgstr "最舊記錄：%d"
 
 #: evidence_tab.php
 msgid "Vendors"
-msgstr ""
+msgstr "廠商"
 
 #: evidence_tab.php
 msgid "Show or hide"
-msgstr ""
+msgstr "顯示或隱藏"
 
 #: evidence_tab.php
 msgid "Expand all dates"
-msgstr ""
+msgstr "展開所有日期"
 
 #: evidence_tab.php
 msgid "Expand latest date"
-msgstr ""
+msgstr "展開最新日期"
 
 #: includes/arrays.php
 msgid "Description"
-msgstr ""
+msgstr "描述"
 
 #: includes/arrays.php
 msgid "Name"
-msgstr ""
+msgstr "名稱"
 
 #: includes/arrays.php
 msgid "Hardware revision"
-msgstr ""
+msgstr "硬體修訂版本"
 
 #: includes/arrays.php
 msgid "Firmware revision"
-msgstr ""
+msgstr "韌體修訂版本"
 
 #: includes/arrays.php
 msgid "Software revision"
-msgstr ""
+msgstr "軟體修訂版本"
 
 #: includes/arrays.php
 msgid "Serial number"
-msgstr ""
+msgstr "序號"
 
 #: includes/arrays.php
 msgid "Manufacturer name"
-msgstr ""
+msgstr "製造商名稱"
 
 #: includes/arrays.php
 msgid "Model name"
-msgstr ""
+msgstr "型號名稱"
 
 #: includes/arrays.php
 msgid "Alias"
-msgstr ""
+msgstr "別名"
 
 #: includes/arrays.php
 msgid "Asset ID"
-msgstr ""
+msgstr "資產 ID"
 
 #: includes/arrays.php
 msgid "Manufacturing date"
-msgstr ""
+msgstr "製造日期"
 
 #: includes/arrays.php
 msgid "UUID"
-msgstr ""
+msgstr "UUID"
 
 #: includes/arrays.php includes/functions.php
 msgid "SNMP info"
-msgstr ""
+msgstr "SNMP 資訊"
 
 #: includes/arrays.php includes/functions.php
 msgid "Entity MIB"
-msgstr ""
+msgstr "Entity MIB"
 
 #: includes/arrays.php
 msgid "Mac addresses"
-msgstr ""
+msgstr "MAC 位址"
 
 #: includes/arrays.php includes/functions.php
 msgid "IP addresses"
-msgstr ""
+msgstr "IP 位址"
 
 #: includes/arrays.php
 msgid "Vendor specific data"
-msgstr ""
+msgstr "廠商特定資料"
 
 #: includes/arrays.php
 msgid "Vendor optional data"
-msgstr ""
+msgstr "廠商選用資料"
 
 #: includes/functions.php
 msgid "Data"
@@ -241,143 +244,146 @@ msgstr ""
 
 #: includes/functions.php
 msgid "Store history is not allowed. Nothing to do."
-msgstr ""
+msgstr "不允許儲存歷史記錄。無須執行任何動作。"
 
 #: includes/functions.php
 msgid "Not found"
-msgstr ""
+msgstr "找不到"
 
 #: includes/functions.php
 msgid "Also show actual data"
-msgstr ""
+msgstr "同時顯示實際資料"
 
 #: includes/functions.php
 msgid "ID ORG"
-msgstr ""
+msgstr "組織 ID"
 
 #: includes/functions.php
 msgid "No older data yet"
-msgstr ""
+msgstr "尚無較舊資料"
 
 #: includes/functions.php
 msgid "Entity"
-msgstr ""
+msgstr "實體"
 
 #: includes/functions.php
 msgid "MAC addresses"
-msgstr ""
+msgstr "MAC 位址"
 
 #: includes/functions.php
 msgid "Vendor specific"
-msgstr ""
+msgstr "廠商特定"
 
 #: includes/functions.php
 msgid "Actual data"
-msgstr ""
+msgstr "實際資料"
 
 #: includes/functions.php
 msgid "Changed"
-msgstr ""
+msgstr "已變更"
 
 #: includes/functions.php
 msgid "SNMP information"
-msgstr ""
+msgstr "SNMP 資訊"
 
 #: includes/functions.php
 msgid "Vendor specific information"
-msgstr ""
+msgstr "廠商特定資訊"
 
 #: includes/functions.php
 msgid "Vendor optional information"
-msgstr ""
+msgstr "廠商選用資訊"
 
 #: includes/functions.php
 msgid "Show only first 3 items, for the full listing click here"
-msgstr ""
+msgstr "僅顯示前 3 個項目，按一下此處查看完整清單"
 
 #: includes/settings.php
 msgid "How often gather data"
-msgstr ""
+msgstr "資料收集頻率"
 
 #: includes/settings.php
 msgid "If enabled, Evidence will gather data periodically. If disabled, you can only view data for specific host"
-msgstr ""
+msgstr "如果啟用，Evidence 將會定期收集資料。如果停用，您只能檢視特定主機的資料"
 
 #: includes/settings.php
 msgid "Disabled"
-msgstr ""
+msgstr "已停用"
 
 #: includes/settings.php
 #, php-format
 msgid "Every %d hours"
-msgstr ""
+msgstr "每 %d 小時"
 
 #: includes/settings.php
 msgid "Every day"
-msgstr ""
+msgstr "每天"
 
 #: includes/settings.php
 msgid "Every week"
-msgstr ""
+msgstr "每週"
 
 #: includes/settings.php
 msgid "When evidence will be started"
-msgstr ""
+msgstr "Evidence 的啟動時間"
 
 #: includes/settings.php
 msgid "The Base Time for gather data to occur.  For example, if you use '12:00am' and you choose once per day, the action would begin at approximately midnight every day."
-msgstr ""
+msgstr "收集資料的基準時間。例如，若您使用「12:00am」並選擇每天一次，則動作會於每天約"
+"午夜時開始。"
 
 #: includes/settings.php
 msgid "How many changes store in database"
-msgstr ""
+msgstr "在資料庫中儲存的變更筆數"
 
 #: includes/settings.php
 msgid "If data gathering is enabled,  you can specify how many history (changed) records keep for each device"
-msgstr ""
+msgstr "如果已啟用資料收集，您可以指定每個裝置要保留多少筆歷史（變更）記錄"
 
 #: includes/settings.php
 msgid "Without history"
-msgstr ""
+msgstr "不含歷程記錄"
 
 #: includes/settings.php
 #, php-format
 msgid "%d record"
-msgstr ""
+msgstr "%d 筆紀錄"
 
 #: includes/settings.php
 #, php-format
 msgid "%d records"
-msgstr ""
+msgstr "%d 筆紀錄"
 
 #: includes/settings.php
 msgid "Display information on device edit page"
-msgstr ""
+msgstr "在裝置編輯頁面上顯示資訊"
 
 #: includes/settings.php
 msgid "If enabled, flowview will display evidence data on device edit page"
-msgstr ""
+msgstr "如果啟用，flowview 將會在裝置編輯頁面顯示 evidence 資料"
 
 #: includes/settings.php
 msgid "Send email on evidence information change"
-msgstr ""
+msgstr "當 Evidence 資訊變更時傳送電子郵件"
 
 #: includes/settings.php
 msgid "If evidence find change, send email"
-msgstr ""
+msgstr "如果 evidence 發現變更，即發送電子郵件"
 
 #: includes/settings.php
 msgid "Excluded notification Host IDs"
-msgstr ""
+msgstr "排除通知的主機 ID"
 
 #: includes/settings.php
 msgid "Some devices report hw changes too often. You can exclude these host from email notification. Insert Host IDs, comma separator"
-msgstr ""
+msgstr "部分裝置過於頻繁回報硬體變更。您可以將這些主機排除於電子郵件通知之外。"
+"請輸入主機 ID，以逗號分隔"
 
 #: includes/settings.php
 msgid "Excluded notification device templates"
-msgstr ""
+msgstr "排除通知的裝置範本"
 
 #: includes/settings.php
 msgid "Some devices types report hw changes too often. You can exclude these templates from email notification. Insert device templates IDs, comma separator"
-msgstr ""
+msgstr "部分裝置類型過於頻繁回報硬體變更。您可以將這些範本排除於電子郵件通知之外。"
+"請輸入裝置範本 ID，以逗號分隔"
