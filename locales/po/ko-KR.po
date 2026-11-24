@@ -5,235 +5,240 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Cacti \n"
+"Project-Id-Version: Cacti\n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
 "POT-Creation-Date: 2026-09-30 11:26-0400\n"
-"PO-Revision-Date: 2026-09-30 11:26-0400\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
-"Language: ko_KR\n"
+"PO-Revision-Date: 2026-11-25 02:18+0000\n"
+"Last-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\n"
+"Language-Team: Korean <https://translate.cacti.net/projects/cacti/evidence/"
+"ko/>\n"
+"Language: ko-KR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.11.4\n"
 
 #: evidence.php
 msgid "Disabled/down device. No actual data"
-msgstr ""
+msgstr "비활성/다운된 장치입니다. 실제 데이터가 없습니다"
 
 #: evidence.php
 msgid "Show older records"
-msgstr ""
+msgstr "이전 레코드 표시"
 
 #: evidence.php includes/functions.php
 msgid "History data store disabled"
-msgstr ""
+msgstr "기록 데이터 저장소 비활성화됨"
 
 #: evidence.php
 msgid "Permission issue"
-msgstr ""
+msgstr "권한 문제"
 
 #: evidence_tab.php includes/functions.php
 msgid "Evidence"
-msgstr ""
+msgstr "증적"
 
 #: evidence_tab.php
 msgid "Template"
-msgstr ""
+msgstr "템플릿"
 
 #: evidence_tab.php
 msgid "Any"
-msgstr ""
+msgstr "일부"
 
 #: evidence_tab.php
 msgid "Scan date"
-msgstr ""
+msgstr "스캔 날짜"
 
 #: evidence_tab.php
 msgid "Only last changed states"
-msgstr ""
+msgstr "마지막으로 변경된 상태만"
 
 #: evidence_tab.php
 msgid "All history"
-msgstr ""
+msgstr "전체 기록"
 
 #: evidence_tab.php
 msgid "records changed"
-msgstr ""
+msgstr "레코드 변경됨"
 
 #: evidence_tab.php
 msgid "Find"
-msgstr ""
+msgstr "찾기"
 
 #: evidence_tab.php
 msgid "Go"
-msgstr ""
+msgstr "가기"
 
 #: evidence_tab.php
 msgid "Clear"
-msgstr ""
+msgstr "지우기"
 
 #: evidence_tab.php
 msgid "Clear Filters"
-msgstr ""
+msgstr "필터 지우기"
 
 #: evidence_tab.php
 msgid "Search"
-msgstr ""
+msgstr "검색"
 
 #: evidence_tab.php
 msgid "You can search serial number, firmware version, ip, mac address,..."
-msgstr ""
+msgstr "일련 번호, 펌웨어 버전, IP, MAC 주소 등을 검색할 수 있습니다..."
 
 #: evidence_tab.php
 msgid "Search string must be 3-20 characters"
-msgstr ""
+msgstr "검색 문자열은 3~20자여야 합니다"
 
 #: evidence_tab.php
 msgid "Select any device, template, select any scan date or try search"
-msgstr ""
+msgstr "장치, 템플릿, 스캔 날짜를 선택하거나 검색을 시도하십시오"
 
 #: evidence_tab.php
 msgid "No data. Allow periodic scan and store history in settings"
-msgstr ""
+msgstr "데이터가 없습니다. 설정에서 주기적 검색 및 기록 저장을 허용하십시오"
 
 #: evidence_tab.php
 msgid "Device or template - You can display information about specific host, all devices with the same template."
-msgstr ""
+msgstr "장치 또는 템플릿 - 특정 호스트 또는 동일한 템플릿을 사용하는 모든 장치에 "
+"대한 정보를 표시할 수 있습니다."
 
 #: evidence_tab.php
 msgid "Scan date (Only last changes or All history) - You can choose whether to retrieve only the most recent change or the entire history."
-msgstr ""
+msgstr "스캔 날짜(최근 변경 사항만 또는 전체 이력) - 가장 최근 변경 사항만 가져올지 "
+"전체 이력을 가져올지 선택할 수 있습니다."
 
 #: evidence_tab.php
 msgid "If you use only `Scan Date`, the changes for all devices found during this scan will be displayed"
-msgstr ""
+msgstr "`Scan Date`만 사용하면 이 스캔 중에 발견된 모든 장치의 변경 사항이 "
+"표시됩니다."
 
 #: evidence_tab.php
 msgid "You can search any string in all data."
-msgstr ""
+msgstr "모든 데이터에서 임의의 문자열을 검색할 수 있습니다."
 
 #: evidence_tab.php
 msgid "Number of records"
-msgstr ""
+msgstr "레코드 수"
 
 #: evidence_tab.php
 #, php-format
 msgid "Devices: %d records"
-msgstr ""
+msgstr "장치: %d개 레코드"
 
 #: evidence_tab.php
 #, php-format
 msgid "Entity MIB: %d records, %d vendors"
-msgstr ""
+msgstr "Entity MIB: %d개 레코드, %d개 벤더"
 
 #: evidence_tab.php
 #, php-format
 msgid "Unique MAC addresses: %d"
-msgstr ""
+msgstr "고유 MAC 주소: %d"
 
 #: evidence_tab.php
 #, php-format
 msgid "Unique IP addresses: %d"
-msgstr ""
+msgstr "고유 IP 주소: %d"
 
 #: evidence_tab.php
 #, php-format
 msgid "Vendor specific data: %d"
-msgstr ""
+msgstr "공급업체별 데이터: %d"
 
 #: evidence_tab.php
 #, php-format
 msgid "Oldest record: %d"
-msgstr ""
+msgstr "가장 오래된 레코드: %d"
 
 #: evidence_tab.php
 msgid "Vendors"
-msgstr ""
+msgstr "공급업체"
 
 #: evidence_tab.php
 msgid "Show or hide"
-msgstr ""
+msgstr "표시 또는 숨기기"
 
 #: evidence_tab.php
 msgid "Expand all dates"
-msgstr ""
+msgstr "모든 날짜 펼치기"
 
 #: evidence_tab.php
 msgid "Expand latest date"
-msgstr ""
+msgstr "최신 날짜 펼치기"
 
 #: includes/arrays.php
 msgid "Description"
-msgstr ""
+msgstr "설명"
 
 #: includes/arrays.php
 msgid "Name"
-msgstr ""
+msgstr "이름"
 
 #: includes/arrays.php
 msgid "Hardware revision"
-msgstr ""
+msgstr "하드웨어 리비전"
 
 #: includes/arrays.php
 msgid "Firmware revision"
-msgstr ""
+msgstr "펌웨어 리비전"
 
 #: includes/arrays.php
 msgid "Software revision"
-msgstr ""
+msgstr "소프트웨어 리비전"
 
 #: includes/arrays.php
 msgid "Serial number"
-msgstr ""
+msgstr "일련 번호"
 
 #: includes/arrays.php
 msgid "Manufacturer name"
-msgstr ""
+msgstr "제조사 이름"
 
 #: includes/arrays.php
 msgid "Model name"
-msgstr ""
+msgstr "모델 이름"
 
 #: includes/arrays.php
 msgid "Alias"
-msgstr ""
+msgstr "별칭"
 
 #: includes/arrays.php
 msgid "Asset ID"
-msgstr ""
+msgstr "자산 ID"
 
 #: includes/arrays.php
 msgid "Manufacturing date"
-msgstr ""
+msgstr "제조일"
 
 #: includes/arrays.php
 msgid "UUID"
-msgstr ""
+msgstr "UUID"
 
 #: includes/arrays.php includes/functions.php
 msgid "SNMP info"
-msgstr ""
+msgstr "SNMP 정보"
 
 #: includes/arrays.php includes/functions.php
 msgid "Entity MIB"
-msgstr ""
+msgstr "Entity MIB"
 
 #: includes/arrays.php
 msgid "Mac addresses"
-msgstr ""
+msgstr "MAC 주소"
 
 #: includes/arrays.php includes/functions.php
 msgid "IP addresses"
-msgstr ""
+msgstr "IP 주소"
 
 #: includes/arrays.php
 msgid "Vendor specific data"
-msgstr ""
+msgstr "공급업체별 데이터"
 
 #: includes/arrays.php
 msgid "Vendor optional data"
-msgstr ""
+msgstr "공급업체 선택적 데이터"
 
 #: includes/functions.php
 msgid "Data"
@@ -241,143 +246,152 @@ msgstr ""
 
 #: includes/functions.php
 msgid "Store history is not allowed. Nothing to do."
-msgstr ""
+msgstr "이력 저장이 허용되지 않습니다. 수행할 작업이 없습니다."
 
 #: includes/functions.php
 msgid "Not found"
-msgstr ""
+msgstr "찾을 수 없음"
 
 #: includes/functions.php
 msgid "Also show actual data"
-msgstr ""
+msgstr "실제 데이터도 표시"
 
 #: includes/functions.php
 msgid "ID ORG"
-msgstr ""
+msgstr "ID ORG"
 
 #: includes/functions.php
 msgid "No older data yet"
-msgstr ""
+msgstr "아직 이전 데이터가 없습니다"
 
 #: includes/functions.php
 msgid "Entity"
-msgstr ""
+msgstr "엔티티"
 
 #: includes/functions.php
 msgid "MAC addresses"
-msgstr ""
+msgstr "MAC 주소"
 
 #: includes/functions.php
 msgid "Vendor specific"
-msgstr ""
+msgstr "공급업체별"
 
 #: includes/functions.php
 msgid "Actual data"
-msgstr ""
+msgstr "실제 데이터"
 
 #: includes/functions.php
 msgid "Changed"
-msgstr ""
+msgstr "변경됨"
 
 #: includes/functions.php
 msgid "SNMP information"
-msgstr ""
+msgstr "SNMP 정보"
 
 #: includes/functions.php
 msgid "Vendor specific information"
-msgstr ""
+msgstr "공급업체별 정보"
 
 #: includes/functions.php
 msgid "Vendor optional information"
-msgstr ""
+msgstr "공급업체 선택적 정보"
 
 #: includes/functions.php
 msgid "Show only first 3 items, for the full listing click here"
-msgstr ""
+msgstr "처음 3개 항목만 표시합니다. 전체 목록을 보려면 여기를 클릭하십시오"
 
 #: includes/settings.php
 msgid "How often gather data"
-msgstr ""
+msgstr "데이터 수집 주기"
 
 #: includes/settings.php
 msgid "If enabled, Evidence will gather data periodically. If disabled, you can only view data for specific host"
-msgstr ""
+msgstr "활성화하면 Evidence가 주기적으로 데이터를 수집합니다. 비활성화하면 특정 "
+"호스트의 데이터만 볼 수 있습니다."
 
 #: includes/settings.php
 msgid "Disabled"
-msgstr ""
+msgstr "비활성화"
 
 #: includes/settings.php
 #, php-format
 msgid "Every %d hours"
-msgstr ""
+msgstr "%d시간마다"
 
 #: includes/settings.php
 msgid "Every day"
-msgstr ""
+msgstr "매일"
 
 #: includes/settings.php
 msgid "Every week"
-msgstr ""
+msgstr "매주"
 
 #: includes/settings.php
 msgid "When evidence will be started"
-msgstr ""
+msgstr "Evidence 시작 시점"
 
 #: includes/settings.php
 msgid "The Base Time for gather data to occur.  For example, if you use '12:00am' and you choose once per day, the action would begin at approximately midnight every day."
 msgstr ""
+"데이터 수집이 실행될 기준 시간입니다. 예를 들어 '12:00am'을 사용하고 하루에 "
+"한 번을 선택하면 매일 자정 무렵에 작업이 시작됩니다."
 
 #: includes/settings.php
 msgid "How many changes store in database"
-msgstr ""
+msgstr "데이터베이스에 저장할 변경 사항 수"
 
 #: includes/settings.php
 msgid "If data gathering is enabled,  you can specify how many history (changed) records keep for each device"
-msgstr ""
+msgstr "데이터 수집이 활성화된 경우 각 장치별로 보관할 기록(변경됨) 레코드 수를 "
+"지정할 수 있습니다."
 
 #: includes/settings.php
 msgid "Without history"
-msgstr ""
+msgstr "이력 제외"
 
 #: includes/settings.php
 #, php-format
 msgid "%d record"
-msgstr ""
+msgstr "레코드 %d개"
 
 #: includes/settings.php
 #, php-format
 msgid "%d records"
-msgstr ""
+msgstr "레코드 %d개"
 
 #: includes/settings.php
 msgid "Display information on device edit page"
-msgstr ""
+msgstr "장치 편집 페이지에 정보 표시"
 
 #: includes/settings.php
 msgid "If enabled, flowview will display evidence data on device edit page"
-msgstr ""
+msgstr "활성화하면 FlowView가 장치 편집 페이지에 Evidence 데이터를 표시합니다."
 
 #: includes/settings.php
 msgid "Send email on evidence information change"
-msgstr ""
+msgstr "증거 정보 변경 시 이메일 발송"
 
 #: includes/settings.php
 msgid "If evidence find change, send email"
-msgstr ""
+msgstr "Evidence가 변경 사항을 발견하면 이메일 전송"
 
 #: includes/settings.php
 msgid "Excluded notification Host IDs"
-msgstr ""
+msgstr "알림 제외 호스트 ID"
 
 #: includes/settings.php
 msgid "Some devices report hw changes too often. You can exclude these host from email notification. Insert Host IDs, comma separator"
 msgstr ""
+"일부 장치는 하드웨어 변경을 너무 자주 보고합니다. 이러한 호스트를 이메일 "
+"알림에서 제외할 수 있습니다. 호스트 ID를 쉼표로 구분하여 입력하십시오."
 
 #: includes/settings.php
 msgid "Excluded notification device templates"
-msgstr ""
+msgstr "알림 제외 장치 템플릿"
 
 #: includes/settings.php
 msgid "Some devices types report hw changes too often. You can exclude these templates from email notification. Insert device templates IDs, comma separator"
 msgstr ""
+"일부 장치 유형은 하드웨어 변경을 너무 자주 보고합니다. 이러한 템플릿을 "
+"이메일 알림에서 제외할 수 있습니다. 장치 템플릿 ID를 쉼표로 구분하여 "
+"입력하십시오."
