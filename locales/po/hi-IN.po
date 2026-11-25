@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Cacti\n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
 "POT-Creation-Date: 2026-09-30 11:26-0400\n"
-"PO-Revision-Date: 2026-11-25 02:18+0000\n"
+"PO-Revision-Date: 2026-11-26 03:18+0000\n"
 "Last-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\n"
 "Language-Team: Hindi <https://translate.cacti.net/projects/cacti/evidence/hi/"
 ">\n"
@@ -329,7 +329,7 @@ msgstr "हर रोज"
 
 #: includes/settings.php
 msgid "Every week"
-msgstr "प्रति सप्ताह"
+msgstr "प्रत्येक सप्ताह"
 
 #: includes/settings.php
 msgid "When evidence will be started"
