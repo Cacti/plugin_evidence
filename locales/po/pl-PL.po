@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Cacti\n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
 "POT-Creation-Date: 2026-09-30 11:26-0400\n"
-"PO-Revision-Date: 2026-11-25 02:18+0000\n"
+"PO-Revision-Date: 2026-11-26 03:18+0000\n"
 "Last-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\n"
 "Language-Team: Polish <https://translate.cacti.net/projects/cacti/evidence/"
 "pl/>\n"
@@ -120,7 +120,7 @@ msgstr ""
 msgid "If you use only `Scan Date`, the changes for all devices found during this scan will be displayed"
 msgstr ""
 "Jeśli użyjesz tylko opcji `Data skanowania`, zostaną wyświetlone zmiany dla "
-"wszystkich urządzeń wykrytych podczas tego skanowania."
+"wszystkich urządzeń wykrytych podczas tego skanowania"
 
 #: evidence_tab.php
 msgid "You can search any string in all data."
@@ -318,7 +318,7 @@ msgstr "Jak często zbierać dane"
 msgid "If enabled, Evidence will gather data periodically. If disabled, you can only view data for specific host"
 msgstr ""
 "Po włączeniu wtyczka Evidence będzie okresowo zbierać dane. Po wyłączeniu "
-"można jedynie przeglądać dane dla konkretnego hosta."
+"można jedynie przeglądać dane dla konkretnego hosta"
 
 #: includes/settings.php
 msgid "Disabled"
@@ -327,7 +327,7 @@ msgstr "Wyłączone"
 #: includes/settings.php
 #, php-format
 msgid "Every %d hours"
-msgstr "Co %d godz."
+msgstr "Co %d godzin"
 
 #: includes/settings.php
 msgid "Every day"
@@ -356,7 +356,7 @@ msgstr "Ile zmian przechowywać w bazie danych"
 msgid "If data gathering is enabled,  you can specify how many history (changed) records keep for each device"
 msgstr ""
 "Jeśli zbieranie danych jest włączone, możesz określić, ile rekordów historii "
-"(zmian) przechowywać dla każdego urządzenia."
+"(zmian) przechowywać dla każdego urządzenia"
 
 #: includes/settings.php
 msgid "Without history"
@@ -380,7 +380,7 @@ msgstr "Wyświetlaj informacje na stronie edycji urządzenia"
 msgid "If enabled, flowview will display evidence data on device edit page"
 msgstr ""
 "Po włączeniu wtyczka flowview wyświetli dane z Evidence na stronie edycji "
-"urządzenia."
+"urządzenia"
 
 #: includes/settings.php
 msgid "Send email on evidence information change"
