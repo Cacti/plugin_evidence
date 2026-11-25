@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Cacti\n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
 "POT-Creation-Date: 2026-09-30 11:26-0400\n"
-"PO-Revision-Date: 2026-11-25 02:18+0000\n"
+"PO-Revision-Date: 2026-11-26 03:18+0000\n"
 "Last-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\n"
 "Language-Team: Korean <https://translate.cacti.net/projects/cacti/evidence/"
 "ko/>\n"
@@ -111,8 +111,7 @@ msgstr "스캔 날짜(최근 변경 사항만 또는 전체 이력) - 가장 최
 
 #: evidence_tab.php
 msgid "If you use only `Scan Date`, the changes for all devices found during this scan will be displayed"
-msgstr "`Scan Date`만 사용하면 이 스캔 중에 발견된 모든 장치의 변경 사항이 "
-"표시됩니다."
+msgstr "`Scan Date`만 사용하면 이 스캔 중에 발견된 모든 장치의 변경 사항이 표시됩니다"
 
 #: evidence_tab.php
 msgid "You can search any string in all data."
@@ -307,7 +306,7 @@ msgstr "데이터 수집 주기"
 #: includes/settings.php
 msgid "If enabled, Evidence will gather data periodically. If disabled, you can only view data for specific host"
 msgstr "활성화하면 Evidence가 주기적으로 데이터를 수집합니다. 비활성화하면 특정 "
-"호스트의 데이터만 볼 수 있습니다."
+"호스트의 데이터만 볼 수 있습니다"
 
 #: includes/settings.php
 msgid "Disabled"
@@ -343,7 +342,7 @@ msgstr "데이터베이스에 저장할 변경 사항 수"
 #: includes/settings.php
 msgid "If data gathering is enabled,  you can specify how many history (changed) records keep for each device"
 msgstr "데이터 수집이 활성화된 경우 각 장치별로 보관할 기록(변경됨) 레코드 수를 "
-"지정할 수 있습니다."
+"지정할 수 있습니다"
 
 #: includes/settings.php
 msgid "Without history"
@@ -365,7 +364,7 @@ msgstr "장치 편집 페이지에 정보 표시"
 
 #: includes/settings.php
 msgid "If enabled, flowview will display evidence data on device edit page"
-msgstr "활성화하면 FlowView가 장치 편집 페이지에 Evidence 데이터를 표시합니다."
+msgstr "활성화하면 FlowView가 장치 편집 페이지에 Evidence 데이터를 표시합니다"
 
 #: includes/settings.php
 msgid "Send email on evidence information change"
@@ -383,7 +382,7 @@ msgstr "알림 제외 호스트 ID"
 msgid "Some devices report hw changes too often. You can exclude these host from email notification. Insert Host IDs, comma separator"
 msgstr ""
 "일부 장치는 하드웨어 변경을 너무 자주 보고합니다. 이러한 호스트를 이메일 "
-"알림에서 제외할 수 있습니다. 호스트 ID를 쉼표로 구분하여 입력하십시오."
+"알림에서 제외할 수 있습니다. 호스트 ID를 쉼표로 구분하여 입력하십시오"
 
 #: includes/settings.php
 msgid "Excluded notification device templates"
@@ -394,4 +393,4 @@ msgid "Some devices types report hw changes too often. You can exclude these tem
 msgstr ""
 "일부 장치 유형은 하드웨어 변경을 너무 자주 보고합니다. 이러한 템플릿을 "
 "이메일 알림에서 제외할 수 있습니다. 장치 템플릿 ID를 쉼표로 구분하여 "
-"입력하십시오."
+"입력하십시오"
