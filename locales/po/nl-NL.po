@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Cacti\n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
 "POT-Creation-Date: 2026-09-30 11:26-0400\n"
-"PO-Revision-Date: 2026-11-25 02:18+0000\n"
+"PO-Revision-Date: 2026-11-26 03:18+0000\n"
 "Last-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\n"
 "Language-Team: Dutch <https://translate.cacti.net/projects/cacti/evidence/nl/"
 ">\n"
@@ -45,7 +45,7 @@ msgstr "Template"
 
 #: evidence_tab.php
 msgid "Any"
-msgstr "Alle"
+msgstr "Elke"
 
 #: evidence_tab.php
 msgid "Scan date"
