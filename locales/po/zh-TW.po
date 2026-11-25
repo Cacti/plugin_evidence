@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Cacti\n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
 "POT-Creation-Date: 2026-09-30 11:26-0400\n"
-"PO-Revision-Date: 2026-11-25 02:18+0000\n"
+"PO-Revision-Date: 2026-11-26 03:18+0000\n"
 "Last-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\n"
 "Language-Team: Chinese (Traditional Han script) <https://translate.cacti.net/"
 "projects/cacti/evidence/zh_Hant/>\n"
@@ -41,7 +41,7 @@ msgstr "證據"
 
 #: evidence_tab.php
 msgid "Template"
-msgstr "範本"
+msgstr "模板"
 
 #: evidence_tab.php
 msgid "Any"
@@ -248,7 +248,7 @@ msgstr "不允許儲存歷史記錄。無須執行任何動作。"
 
 #: includes/functions.php
 msgid "Not found"
-msgstr "找不到"
+msgstr "未找到"
 
 #: includes/functions.php
 msgid "Also show actual data"
@@ -284,7 +284,7 @@ msgstr "已變更"
 
 #: includes/functions.php
 msgid "SNMP information"
-msgstr "SNMP 資訊"
+msgstr "SNMP信息"
 
 #: includes/functions.php
 msgid "Vendor specific information"
@@ -308,12 +308,12 @@ msgstr "如果啟用，Evidence 將會定期收集資料。如果停用，您只
 
 #: includes/settings.php
 msgid "Disabled"
-msgstr "已停用"
+msgstr "停用"
 
 #: includes/settings.php
 #, php-format
 msgid "Every %d hours"
-msgstr "每 %d 小時"
+msgstr "每個 %d 小時"
 
 #: includes/settings.php
 msgid "Every day"
