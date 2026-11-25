@@ -5,17 +5,19 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Cacti \n"
+"Project-Id-Version: Cacti\n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
 "POT-Creation-Date: 2026-09-30 11:26-0400\n"
-"PO-Revision-Date: 2026-09-30 11:26-0400\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
-"Language: ka_GE\n"
+"PO-Revision-Date: 2026-11-26 03:18+0000\n"
+"Last-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\n"
+"Language-Team: Georgian <https://translate.cacti.net/projects/cacti/evidence/"
+"ka/>\n"
+"Language: ka-GE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.11.4\n"
 
 #: evidence.php
 msgid "Disabled/down device. No actual data"
@@ -39,11 +41,11 @@ msgstr ""
 
 #: evidence_tab.php
 msgid "Template"
-msgstr ""
+msgstr "შაბლონი"
 
 #: evidence_tab.php
 msgid "Any"
-msgstr ""
+msgstr "ნებისმიერი"
 
 #: evidence_tab.php
 msgid "Scan date"
@@ -149,7 +151,7 @@ msgstr ""
 
 #: evidence_tab.php
 msgid "Vendors"
-msgstr ""
+msgstr "მომწოდებლები"
 
 #: evidence_tab.php
 msgid "Show or hide"
@@ -225,7 +227,7 @@ msgstr ""
 
 #: includes/arrays.php includes/functions.php
 msgid "IP addresses"
-msgstr ""
+msgstr "IP მისამართები"
 
 #: includes/arrays.php
 msgid "Vendor specific data"
@@ -305,7 +307,7 @@ msgstr ""
 
 #: includes/settings.php
 msgid "Disabled"
-msgstr ""
+msgstr "გათიშულია"
 
 #: includes/settings.php
 #, php-format
