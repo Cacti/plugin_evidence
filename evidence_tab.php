@@ -166,7 +166,7 @@ function evidence_display_form() {
 
 	print '</td>';
 	print '<td>';
-	print '<input type="submit" class="ui-button ui-corner-all ui-widget" id="refresh" value="' . __('Go') . '" title="' . __esc('Find') . '">';
+	print '<input type="submit" class="ui-button ui-corner-all ui-widget" id="refresh" value="' . __('Go') . '" title="' . __esc('Find', 'evidence') . '">';
 	print '<input type="button" class="ui-button ui-corner-all ui-widget" id="clear" value="' . __('Clear') . '" title="' . __esc('Clear Filters') . '">';
 	if (get_nfilter_request_var('action') == 'find') {
 		print '<input type="button" class="ui-button ui-corner-all ui-widget" id="evidence_export" value="' . __esc('Export', 'evidence') .
