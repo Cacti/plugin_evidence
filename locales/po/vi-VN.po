@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Cacti\n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
 "POT-Creation-Date: 2026-09-30 11:26-0400\n"
-"PO-Revision-Date: 2026-11-25 02:18+0000\n"
+"PO-Revision-Date: 2026-11-27 00:18+0000\n"
 "Last-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\n"
 "Language-Team: Vietnamese <https://translate.cacti.net/projects/cacti/"
 "evidence/vi/>\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: evidence.php
 msgid "Disabled/down device. No actual data"
-msgstr "Thiết bị bị vô hiệu hóa/ngừng hoạt động. Không có dữ liệu thực tế"
+msgstr "Thiết bị đã bị vô hiệu hóa/ngừng hoạt động. Không có dữ liệu thực tế"
 
 #: evidence.php
 msgid "Show older records"
@@ -398,7 +398,7 @@ msgstr ""
 
 #: includes/settings.php
 msgid "Excluded notification device templates"
-msgstr "Mẫu thiết bị bị loại trừ khỏi thông báo"
+msgstr "Mẫu thiết bị được loại trừ khỏi thông báo"
 
 #: includes/settings.php
 msgid "Some devices types report hw changes too often. You can exclude these templates from email notification. Insert device templates IDs, comma separator"
