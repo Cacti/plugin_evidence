@@ -1,0 +1,451 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-11-02 16:25+0100\n"
+"PO-Revision-Date: 2026-11-24 19:00+0000\n"
+"Last-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\n"
+"Language-Team: Yoruba\n"
+"Language: yo-NG\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: evidence.php
+msgid "Disabled/down device. No actual data"
+msgstr "Ẹ̀rọ àìṣiṣẹ́/tí ó dádúró. Kò sí dátà gidi"
+
+#: evidence.php
+msgid "Show older records"
+msgstr "Ṣàfihàn àwọn àkọsílẹ̀ àtijọ́"
+
+#: evidence.php includes/functions.php
+msgid "History data store disabled"
+msgstr "Ibùdó ìpamọ́ dátà ìtàn wà ní àìṣiṣẹ́"
+
+#: evidence.php
+msgid "Permission issue"
+msgstr "Ìṣòro àṣẹ"
+
+#: evidence_tab.php includes/functions.php
+msgid "Evidence"
+msgstr "Ẹ̀rí"
+
+#: evidence_tab.php
+msgid "Template"
+msgstr "Àdàkọ"
+
+#: evidence_tab.php
+msgid "Any"
+msgstr "Èyíkéyìí"
+
+#: evidence_tab.php
+msgid "Scan date"
+msgstr "Ọjọ́ ìṣàyẹ̀wò"
+
+#: evidence_tab.php
+msgid "Only last changed states"
+msgstr "Àwọn ipò tí a yí padà kẹ́yìn nìkan"
+
+#: evidence_tab.php
+msgid "All history"
+msgstr "Gbogbo ìtàn"
+
+#: evidence_tab.php
+msgid "records changed"
+msgstr "àwọn àkọsílẹ̀ tí ó yípadà"
+
+#: evidence_tab.php
+msgid "Find"
+msgstr "Wá"
+
+#: evidence_tab.php
+msgid "Go"
+msgstr "Lọ"
+
+#: evidence_tab.php
+msgid "Clear"
+msgstr "Nu Kúrò"
+
+#: evidence_tab.php
+msgid "Clear Filters"
+msgstr "Pa Àwọn Àlẹ̀mọ́ Rẹ́"
+
+#: evidence_tab.php
+msgid "Export"
+msgstr "Kó Jáde"
+
+#: evidence_tab.php
+msgid "Print"
+msgstr "Tẹ̀ jáde"
+
+#: evidence_tab.php
+msgid "Allow pop-ups to open the print view."
+msgstr "Gba àwọn fèrèsé àfihàn lójijì láàyè láti ṣí ojú ìwò ìtẹ̀wé."
+
+#: evidence_tab.php
+msgid "Search"
+msgstr "Ṣàwárí"
+
+#: evidence_tab.php
+msgid "You can search serial number, firmware version, ip, mac address,..."
+msgstr "O lè wá nọ́ńbà ìtẹ̀léra, ẹ̀yà firmware, ip, àdírẹ́sì mac,..."
+
+#: evidence_tab.php
+msgid "Search string must be 3-20 characters"
+msgstr "Ọ̀rọ̀ ìwádìí gbọ́dọ̀ jẹ́ lẹ́tà 3-20"
+
+#: evidence_tab.php
+msgid "Select any device, template, select any scan date or try search"
+msgstr "Yan ẹ̀rọ èyíkéyìí, àdàkọ, yan déètì àyẹ̀wò èyíkéyìí tàbí gbìyànjú ìṣàwárí"
+
+#: evidence_tab.php
+msgid "No data. Allow periodic scan and store history in settings"
+msgstr "Kò sí dátà. Gba àyẹ̀wò lẹ́ẹ̀kọ̀ọ̀kan láàyè kí o sì tọ́jú ìtàn nínú àwọn ètò"
+
+#: evidence_tab.php
+msgid "Device or template - You can display information about specific host, all devices with the same template."
+msgstr "Ẹ̀rọ tàbí àdàkọ - O lè fi àlàyé hàn nípa olùgbàlejò kan pàtó, tàbí gbogbo àwọn ẹ̀rọ tí wọ́n ní àdàkọ kan náà."
+
+#: evidence_tab.php
+msgid "Scan date (Only last changes or All history) - You can choose whether to retrieve only the most recent change or the entire history."
+msgstr "Ọjọ́ ìṣàyẹ̀wò (Àwọn ìyípadà tó kẹ́yìn nìkan tàbí Gbogbo ìtàn) - O lè yan bóyá kí o gba ìyípadà tuntun jùlọ nìkan tàbí gbogbo ìtàn."
+
+#: evidence_tab.php
+msgid "If you use only `Scan Date`, the changes for all devices found during this scan will be displayed"
+msgstr "Tí o bá lo `Ọjọ́ Àyẹ̀wò` nìkan, àwọn ìyípadà fún gbogbo Àwọn Ẹ̀rọ tí a rí nígbà àyẹ̀wò yìí ni a óò ṣàfihàn"
+
+#: evidence_tab.php
+msgid "You can search any string in all data."
+msgstr "O lè wá òrò èyíkéyìí nínú gbogbo dátà."
+
+#: evidence_tab.php
+msgid "Number of records"
+msgstr "Iye àwọn àkọsílẹ̀"
+
+#: evidence_tab.php
+#, php-format
+msgid "Devices: %d records"
+msgstr "Àwọn Ẹ̀rọ: àkọsílẹ̀ %d"
+
+#: evidence_tab.php
+#, php-format
+msgid "Entity MIB: %d records, %d vendors"
+msgstr "Entity MIB: àkọsílẹ̀ %d, olùtajà %d"
+
+#: evidence_tab.php
+#, php-format
+msgid "Unique MAC addresses: %d"
+msgstr "Àwọn àdírẹ́sì MAC àkànṣe: %d"
+
+#: evidence_tab.php
+#, php-format
+msgid "Unique IP addresses: %d"
+msgstr "Àwọn àdírẹ́sì IP àkànṣe: %d"
+
+#: evidence_tab.php
+#, php-format
+msgid "Vendor specific data: %d"
+msgstr "Dátà pàtó fún olùpèsè: %d"
+
+#: evidence_tab.php
+#, php-format
+msgid "Oldest record: %d"
+msgstr "Àkọsílẹ̀ tí ó pẹ́ jùlọ: %d"
+
+#: evidence_tab.php
+msgid "Vendors"
+msgstr "Àwọn Olùpèsè"
+
+#: evidence_tab.php
+msgid "Show or hide"
+msgstr "Ṣàfihàn tàbí fi pamọ́"
+
+#: evidence_tab.php
+msgid "Expand all dates"
+msgstr "Fẹ gbogbo àwọn ọjọ́"
+
+#: evidence_tab.php
+msgid "Expand latest date"
+msgstr "Fẹ ọjọ́ tuntun jù lọ"
+
+#: includes/arrays.php includes/functions.php
+msgid "Description"
+msgstr "Àpèjúwe"
+
+#: includes/arrays.php includes/functions.php
+msgid "Name"
+msgstr "Orúkọ"
+
+#: includes/arrays.php
+msgid "Hardware revision"
+msgstr "Àtúnyẹ̀wò ohun èlò líle"
+
+#: includes/arrays.php
+msgid "Firmware revision"
+msgstr "Àtúnṣe Firmware"
+
+#: includes/arrays.php
+msgid "Software revision"
+msgstr "Àtúnyẹ̀wò sọ́fítíwèà"
+
+#: includes/arrays.php
+msgid "Serial number"
+msgstr "Nọ́ńbà ìtẹ̀léra"
+
+#: includes/arrays.php
+msgid "Manufacturer name"
+msgstr "Orúkọ olùpèsè"
+
+#: includes/arrays.php
+msgid "Model name"
+msgstr "Orúkọ àwòṣe"
+
+#: includes/arrays.php
+msgid "Alias"
+msgstr "Orúkọ Àpèlé"
+
+#: includes/arrays.php
+msgid "Asset ID"
+msgstr "ID Ohun-ìní"
+
+#: includes/arrays.php
+msgid "Manufacturing date"
+msgstr "Ọjọ́ ìṣẹ̀dá"
+
+#: includes/arrays.php
+msgid "UUID"
+msgstr "UUID"
+
+#: includes/arrays.php includes/functions.php
+msgid "SNMP info"
+msgstr "Àlàyé SNMP"
+
+#: includes/arrays.php includes/functions.php
+msgid "Entity MIB"
+msgstr "Entity MIB"
+
+#: includes/arrays.php
+msgid "Mac addresses"
+msgstr "Àwọn àdírẹ́ẹ̀sì Mac"
+
+#: includes/arrays.php includes/functions.php
+msgid "IP addresses"
+msgstr "Àwọn àdírẹ́sì IP"
+
+#: includes/arrays.php
+msgid "Vendor specific data"
+msgstr "Dátà pàtó fún olùpèsè"
+
+#: includes/arrays.php
+msgid "Vendor optional data"
+msgstr "Dátà àṣàyàn olùpèsè"
+
+#: includes/functions.php
+msgid "No data"
+msgstr "Kò sí dátà"
+
+#: includes/functions.php
+msgid "Organization"
+msgstr "Àjọ"
+
+#: includes/functions.php
+msgid "Organization ID"
+msgstr "ID Àjọ"
+
+#: includes/functions.php
+msgid "System name"
+msgstr "Orúkọ ètò"
+
+#: includes/functions.php
+msgid "Contact"
+msgstr "Olùbásọ̀rọ̀"
+
+#: includes/functions.php
+msgid "Location"
+msgstr "Ibùdó"
+
+#: includes/functions.php
+msgid "Field"
+msgstr "Pápá"
+
+#: includes/functions.php
+msgid "Value"
+msgstr "Iye"
+
+#: includes/functions.php
+msgid "Entity"
+msgstr "Ohun-ìdánimọ̀"
+
+#: includes/functions.php
+msgid "Show only first 3 items, for the full listing click here"
+msgstr "Ṣàfihàn àwọn ohun 3 àkọ́kọ́ nìkan, fún àtòjọ kíkún tẹ ibí"
+
+#: includes/functions.php
+msgid "IP address"
+msgstr "Àdírẹ́sì IP"
+
+#: includes/functions.php
+msgid "MAC address"
+msgstr "Àdírẹ́ẹ̀sì MAC"
+
+#: includes/functions.php
+msgid "OID"
+msgstr "OID"
+
+#: includes/functions.php
+msgid "Store history is not allowed. Nothing to do."
+msgstr "Ìtọ́jú ìtàn kò ní àṣẹ. Kò sí ohun láti ṣe."
+
+#: includes/functions.php
+#, php-format
+msgid "ID: %d, stored records: %d"
+msgstr "ID: %d, àwọn àkọsílẹ̀ tí a tọ́jú: %d"
+
+#: includes/functions.php
+msgid "Also show actual data"
+msgstr "Tún fi dátà gidi hàn"
+
+#: includes/functions.php
+msgid "ID ORG"
+msgstr "ID ÀJỌ"
+
+#: includes/functions.php
+msgid "No older data yet"
+msgstr "Kò sí dátà àtijọ́ síbẹ̀"
+
+#: includes/functions.php
+msgid "MAC addresses"
+msgstr "Àwọn àdírẹ́ẹ̀sì MAC"
+
+#: includes/functions.php
+msgid "Vendor specific"
+msgstr "Pàtó fún olùpèsè"
+
+#: includes/functions.php
+#, php-format
+msgid "Records: %d"
+msgstr "Àwọn àkọsílẹ̀: %d"
+
+#: includes/functions.php
+msgid "Actual data"
+msgstr "Dátà gidi"
+
+#: includes/functions.php
+msgid "Changed"
+msgstr "Ti yí padà"
+
+#: includes/functions.php
+msgid "SNMP information"
+msgstr "Ìfitónilétí SNMP"
+
+#: includes/functions.php
+msgid "Vendor specific information"
+msgstr "Àlàyé pàtó fún olùpèsè"
+
+#: includes/functions.php
+msgid "Vendor optional information"
+msgstr "Àlàyé àṣàyàn olùpèsè"
+
+#: includes/functions.php
+#, php-format
+msgid "ID: %d, found in %d records"
+msgstr "ID: %d, a rí i nínú àwọn àkọsílẹ̀ %d"
+
+#: includes/functions.php
+msgid "Not found"
+msgstr "A kò rí i"
+
+#: includes/settings.php
+msgid "How often gather data"
+msgstr "Ìgbà mélòó láti kó dátà jọ"
+
+#: includes/settings.php
+msgid "If enabled, Evidence will gather data periodically. If disabled, you can only view data for specific host"
+msgstr "Tí ó bá wà ní Ṣiṣẹ́, Evidence yóò máa kó dátà jọ ní ìgbàkugbà. Tí ó bá wà ní Àìṣiṣẹ́, o lè wo dátà fún Olùgbàlejò pàtó kan nìkan"
+
+#: includes/settings.php
+msgid "Disabled"
+msgstr "Àìṣiṣẹ́"
+
+#: includes/settings.php
+#, php-format
+msgid "Every %d hours"
+msgstr "Ní gbogbo wákàtí %d"
+
+#: includes/settings.php
+msgid "Every day"
+msgstr "Lójoojúmọ́"
+
+#: includes/settings.php
+msgid "Every week"
+msgstr "Gbogbo ọ̀sẹ̀"
+
+#: includes/settings.php
+msgid "When evidence will be started"
+msgstr "Ìgbà tí ẹ̀rí yóò bẹ̀rẹ̀"
+
+#: includes/settings.php
+msgid "The Base Time for gather data to occur.  For example, if you use '12:00am' and you choose once per day, the action would begin at approximately midnight every day."
+msgstr "Àkókò Ìpìlẹ̀ fún kíkó dátà jọ láti wáyé.  Fún àpẹẹrẹ, tí o bá lo '12:00am' tí o sì yan ẹ̀ẹ̀kan lójúmọ́, ìṣe náà yóò bẹ̀rẹ̀ ní nǹkan bí ọ̀gànjọ́ òru lójoojúmọ́."
+
+#: includes/settings.php
+msgid "How many changes store in database"
+msgstr "Àwọn àyípadà mélòó láti fipamọ́ sínú ibi ìpamọ́ dátà"
+
+#: includes/settings.php
+msgid "If data gathering is enabled,  you can specify how many history (changed) records keep for each device"
+msgstr "Tí ìkójọpọ̀ dátà bá wà ní Ṣiṣẹ́, o lè sọ iye àkọsílẹ̀ ìtàn (tí ó ti yípadà) tí a óò tọ́jú fún Ẹ̀rọ kọ̀ọ̀kan"
+
+#: includes/settings.php
+msgid "Without history"
+msgstr "Láìsí ìtàn"
+
+#: includes/settings.php
+#, php-format
+msgid "%d record"
+msgstr "àkọsílẹ̀ %d"
+
+#: includes/settings.php
+#, php-format
+msgid "%d records"
+msgstr "àwọn àkọsílẹ̀ %d"
+
+#: includes/settings.php
+msgid "Display information on device edit page"
+msgstr "Ṣàfihàn àlàyé lórí ojú-ìwé àtúnṣe ẹ̀rọ"
+
+#: includes/settings.php
+msgid "If enabled, flowview will display evidence data on device edit page"
+msgstr "Tí ó bá wà ní Ṣiṣẹ́, flowview yóò ṣàfihàn dátà evidence lórí ojú-ewé àtúnṣe Ẹ̀rọ"
+
+#: includes/settings.php
+msgid "Send email on evidence information change"
+msgstr "Fi ímeèlì ránṣẹ́ nígbà tí àlàyé ẹ̀rí bá yípadà"
+
+#: includes/settings.php
+msgid "If evidence find change, send email"
+msgstr "Tí evidence bá rí ìyípadà, fi Ímeèlì ránṣẹ́"
+
+#: includes/settings.php
+msgid "Excluded notification Host IDs"
+msgstr "Àwọn ID Olùgbàlejò ìfitọ́nilétí tí a yọ kúrò"
+
+#: includes/settings.php
+msgid "Some devices report hw changes too often. You can exclude these host from email notification. Insert Host IDs, comma separator"
+msgstr "Àwọn Ẹ̀rọ kan máa ń jábọ̀ àyípadà ohun èlò lọ́pọ̀lọpọ̀. O lè yọ àwọn Olùgbàlejò wọ̀nyí kúrò nínú ìfitónilétí ímeèlì. Fi àwọn ID Olùgbàlejò sí i, pẹ̀lú àmì kọ́mà láàárín wọn"
+
+#: includes/settings.php
+msgid "Excluded notification device templates"
+msgstr "Àwọn àdàkọ ẹ̀rọ ìfitọ́nilétí tí a yọ kúrò"
+
+#: includes/settings.php
+msgid "Some devices types report hw changes too often. You can exclude these templates from email notification. Insert device templates IDs, comma separator"
+msgstr "Àwọn irú Ẹ̀rọ kan máa ń jábọ̀ àyípadà ohun èlò lọ́pọ̀lọpọ̀. O lè yọ àwọn Àdàkọ wọ̀nyí kúrò nínú ìfitónilétí ímeèlì. Fi àwọn ID Àdàkọ Ẹ̀rọ sí i, pẹ̀lú àmì kọ́mà láàárín wọn"
+

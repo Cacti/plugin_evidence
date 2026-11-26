@@ -1,0 +1,451 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-11-02 16:25+0100\n"
+"PO-Revision-Date: 2026-11-24 19:00+0000\n"
+"Last-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\n"
+"Language-Team: Somali\n"
+"Language: so-SO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: evidence.php
+msgid "Disabled/down device. No actual data"
+msgstr "Qalab la joojiyay/dansan. Ma jirto xog dhab ah"
+
+#: evidence.php
+msgid "Show older records"
+msgstr "Muuji diiwaannadii hore"
+
+#: evidence.php includes/functions.php
+msgid "History data store disabled"
+msgstr "Kaydinta xogta taariikhda waa la joojiyay"
+
+#: evidence.php
+msgid "Permission issue"
+msgstr "Arrin ogolaansho"
+
+#: evidence_tab.php includes/functions.php
+msgid "Evidence"
+msgstr "Caddeyn"
+
+#: evidence_tab.php
+msgid "Template"
+msgstr "Qaab-dhismeed"
+
+#: evidence_tab.php
+msgid "Any"
+msgstr "Mid kasta"
+
+#: evidence_tab.php
+msgid "Scan date"
+msgstr "Taariikhda baaritaanka"
+
+#: evidence_tab.php
+msgid "Only last changed states"
+msgstr "Kaliya xaaladaha ugu dambeeyay ee isbeddelay"
+
+#: evidence_tab.php
+msgid "All history"
+msgstr "Dhammaan taariikhda"
+
+#: evidence_tab.php
+msgid "records changed"
+msgstr "diiwaannada la beddelay"
+
+#: evidence_tab.php
+msgid "Find"
+msgstr "Raadi"
+
+#: evidence_tab.php
+msgid "Go"
+msgstr "Soco"
+
+#: evidence_tab.php
+msgid "Clear"
+msgstr "Nadiifi"
+
+#: evidence_tab.php
+msgid "Clear Filters"
+msgstr "Nadiifi Shaandheeyayaasha"
+
+#: evidence_tab.php
+msgid "Export"
+msgstr "Dhoofi"
+
+#: evidence_tab.php
+msgid "Print"
+msgstr "Daabac"
+
+#: evidence_tab.php
+msgid "Allow pop-ups to open the print view."
+msgstr "Oggolow daaqadaha soo booda si ay u furaan muuqaalka daabacaadda."
+
+#: evidence_tab.php
+msgid "Search"
+msgstr "Raadi"
+
+#: evidence_tab.php
+msgid "You can search serial number, firmware version, ip, mac address,..."
+msgstr "Waxaad raadin kartaa lambarka taxanaha, nooca firmware-ka, IP, ciwaanka MAC,..."
+
+#: evidence_tab.php
+msgid "Search string must be 3-20 characters"
+msgstr "Erayga raadinta waa inuu ahaadaa 3-20 xaraf"
+
+#: evidence_tab.php
+msgid "Select any device, template, select any scan date or try search"
+msgstr "Dooro qalab kasta, qaab-dhismeed, dooro taariikh kasta oo baaritaan ama isku day raadinta"
+
+#: evidence_tab.php
+msgid "No data. Allow periodic scan and store history in settings"
+msgstr "Xog ma jirto. U oggolow baaritaanka joogtada ah oo ku keydi taariikhda dejinta"
+
+#: evidence_tab.php
+msgid "Device or template - You can display information about specific host, all devices with the same template."
+msgstr "Qalab ama qaab-dhismeed - Waxaad soo bandhigi kartaa macluumaadka ku saabsan martigeliye gaar ah, ama dhammaan aaladaha leh isku qaab-dhismeed."
+
+#: evidence_tab.php
+msgid "Scan date (Only last changes or All history) - You can choose whether to retrieve only the most recent change or the entire history."
+msgstr "Taariikhda baaritaanka (Isbeddellada u dambeeyay oo keliya ama Taariikhda oo dhan) - Waxaad dooran kartaa in la soo saaro isbeddelka ugu dambeeyay oo keliya ama taariikhda oo dhan."
+
+#: evidence_tab.php
+msgid "If you use only `Scan Date`, the changes for all devices found during this scan will be displayed"
+msgstr "Haddii aad isticmaasho kaliya `Taariikhda Baaritaanka`, isbeddellada dhammaan Aaladaha la helay intii lagu jiray baaritaankan ayaa la soo bandhigi doonaa"
+
+#: evidence_tab.php
+msgid "You can search any string in all data."
+msgstr "Waxaad ka raadin kartaa xaraf kasta dhammaan xogta."
+
+#: evidence_tab.php
+msgid "Number of records"
+msgstr "Tirada diiwaannada"
+
+#: evidence_tab.php
+#, php-format
+msgid "Devices: %d records"
+msgstr "Aaladaha: %d diiwaan"
+
+#: evidence_tab.php
+#, php-format
+msgid "Entity MIB: %d records, %d vendors"
+msgstr "Entity MIB: %d diiwaan, %d iibiyeyaal"
+
+#: evidence_tab.php
+#, php-format
+msgid "Unique MAC addresses: %d"
+msgstr "Ciwaannada MAC ee gaarka ah: %d"
+
+#: evidence_tab.php
+#, php-format
+msgid "Unique IP addresses: %d"
+msgstr "Ciwaannada IP ee gaarka ah: %d"
+
+#: evidence_tab.php
+#, php-format
+msgid "Vendor specific data: %d"
+msgstr "Xog gaar u ah iibiyaha: %d"
+
+#: evidence_tab.php
+#, php-format
+msgid "Oldest record: %d"
+msgstr "Diiwaanka ugu da'da weyn: %d"
+
+#: evidence_tab.php
+msgid "Vendors"
+msgstr "Iibiyeyaasha"
+
+#: evidence_tab.php
+msgid "Show or hide"
+msgstr "Muuji ama qari"
+
+#: evidence_tab.php
+msgid "Expand all dates"
+msgstr "Ballaadhi dhammaan taariikhaha"
+
+#: evidence_tab.php
+msgid "Expand latest date"
+msgstr "Ballaadhi taariikhda ugu dambeysa"
+
+#: includes/arrays.php includes/functions.php
+msgid "Description"
+msgstr "Sharaxaadda"
+
+#: includes/arrays.php includes/functions.php
+msgid "Name"
+msgstr "Magac"
+
+#: includes/arrays.php
+msgid "Hardware revision"
+msgstr "Dib-u-eegista qalabka adag"
+
+#: includes/arrays.php
+msgid "Firmware revision"
+msgstr "Nooca firmware-ka"
+
+#: includes/arrays.php
+msgid "Software revision"
+msgstr "Dib-u-eegista barnaamijka"
+
+#: includes/arrays.php
+msgid "Serial number"
+msgstr "Lambarka taxanaha"
+
+#: includes/arrays.php
+msgid "Manufacturer name"
+msgstr "Magaca soo-saaraha"
+
+#: includes/arrays.php
+msgid "Model name"
+msgstr "Magaca nooca"
+
+#: includes/arrays.php
+msgid "Alias"
+msgstr "Magac kale"
+
+#: includes/arrays.php
+msgid "Asset ID"
+msgstr "Aqoonsiga Hantida"
+
+#: includes/arrays.php
+msgid "Manufacturing date"
+msgstr "Taariikhda soo-saarka"
+
+#: includes/arrays.php
+msgid "UUID"
+msgstr "UUID"
+
+#: includes/arrays.php includes/functions.php
+msgid "SNMP info"
+msgstr "Macluumaadka SNMP"
+
+#: includes/arrays.php includes/functions.php
+msgid "Entity MIB"
+msgstr "Entity MIB"
+
+#: includes/arrays.php
+msgid "Mac addresses"
+msgstr "Cinwaannada MAC"
+
+#: includes/arrays.php includes/functions.php
+msgid "IP addresses"
+msgstr "Ciwaannada IP"
+
+#: includes/arrays.php
+msgid "Vendor specific data"
+msgstr "Xog gaar u ah iibiyaha"
+
+#: includes/arrays.php
+msgid "Vendor optional data"
+msgstr "Xogta ikhtiyaariga ah ee iibiyaha"
+
+#: includes/functions.php
+msgid "No data"
+msgstr "Xog ma jirto"
+
+#: includes/functions.php
+msgid "Organization"
+msgstr "Ururka"
+
+#: includes/functions.php
+msgid "Organization ID"
+msgstr "Aqoonsiga Ururka"
+
+#: includes/functions.php
+msgid "System name"
+msgstr "Magaca nidaamka"
+
+#: includes/functions.php
+msgid "Contact"
+msgstr "Xiriirka"
+
+#: includes/functions.php
+msgid "Location"
+msgstr "Goobta"
+
+#: includes/functions.php
+msgid "Field"
+msgstr "Goob"
+
+#: includes/functions.php
+msgid "Value"
+msgstr "Qiime"
+
+#: includes/functions.php
+msgid "Entity"
+msgstr "Hay'ad"
+
+#: includes/functions.php
+msgid "Show only first 3 items, for the full listing click here"
+msgstr "Muuji kaliya 3-da shay ee ugu horreysa, liiska oo dhan halkan guji"
+
+#: includes/functions.php
+msgid "IP address"
+msgstr "Ciwaanka IP"
+
+#: includes/functions.php
+msgid "MAC address"
+msgstr "Cinwaanka MAC"
+
+#: includes/functions.php
+msgid "OID"
+msgstr "OID"
+
+#: includes/functions.php
+msgid "Store history is not allowed. Nothing to do."
+msgstr "Kaydinta taariikhda lama oggola. Wax la qabanayo ma jiraan."
+
+#: includes/functions.php
+#, php-format
+msgid "ID: %d, stored records: %d"
+msgstr "Aqoonsiga: %d, diiwaannada la keydiyay: %d"
+
+#: includes/functions.php
+msgid "Also show actual data"
+msgstr "Sidoo kale muuji xogta dhabta ah"
+
+#: includes/functions.php
+msgid "ID ORG"
+msgstr "Aqoonsiga Ururka"
+
+#: includes/functions.php
+msgid "No older data yet"
+msgstr "Weli ma jirto xog ka sii horreysay"
+
+#: includes/functions.php
+msgid "MAC addresses"
+msgstr "Cinwaannada MAC"
+
+#: includes/functions.php
+msgid "Vendor specific"
+msgstr "Gaar u ah iibiyaha"
+
+#: includes/functions.php
+#, php-format
+msgid "Records: %d"
+msgstr "Diiwaannada: %d"
+
+#: includes/functions.php
+msgid "Actual data"
+msgstr "Xogta dhabta ah"
+
+#: includes/functions.php
+msgid "Changed"
+msgstr "La beddelay"
+
+#: includes/functions.php
+msgid "SNMP information"
+msgstr "Macluumaadka SNMP"
+
+#: includes/functions.php
+msgid "Vendor specific information"
+msgstr "Macluumaad gaar u ah iibiyaha"
+
+#: includes/functions.php
+msgid "Vendor optional information"
+msgstr "Macluumaadka ikhtiyaariga ah ee iibiyaha"
+
+#: includes/functions.php
+#, php-format
+msgid "ID: %d, found in %d records"
+msgstr "Aqoonsiga: %d, waxaa laga helay %d diiwaan"
+
+#: includes/functions.php
+msgid "Not found"
+msgstr "Lama helin"
+
+#: includes/settings.php
+msgid "How often gather data"
+msgstr "Intee jeer ayaa xogta la ururiyaa"
+
+#: includes/settings.php
+msgid "If enabled, Evidence will gather data periodically. If disabled, you can only view data for specific host"
+msgstr "Haddii la hawlgeliyo, Evidence wuxuu xog ururin doonaa marar joogto ah. Haddii La joojiyay, waxaad kaliya arki kartaa xogta Martigeliye gaar ah."
+
+#: includes/settings.php
+msgid "Disabled"
+msgstr "La joojiyay"
+
+#: includes/settings.php
+#, php-format
+msgid "Every %d hours"
+msgstr "%d saacadood kasta"
+
+#: includes/settings.php
+msgid "Every day"
+msgstr "Maalin kasta"
+
+#: includes/settings.php
+msgid "Every week"
+msgstr "Toddobaad kasta"
+
+#: includes/settings.php
+msgid "When evidence will be started"
+msgstr "Marka caddaynta la bilaabayo"
+
+#: includes/settings.php
+msgid "The Base Time for gather data to occur.  For example, if you use '12:00am' and you choose once per day, the action would begin at approximately midnight every day."
+msgstr "Waqtiga Aasaasiga ah ee ururinta xogtu dhacayso.  Tusaale ahaan, haddii aad isticmaasho '12:00am' oo aad doorato hal mar maalintii, hawshu waxay bilaaban doontaa ku dhowaad saqda dhexe maalin kasta."
+
+#: includes/settings.php
+msgid "How many changes store in database"
+msgstr "Immisa isbeddel ayaa lagu kaydiyaa kaydka xogta"
+
+#: includes/settings.php
+msgid "If data gathering is enabled,  you can specify how many history (changed) records keep for each device"
+msgstr "Haddii ururinta xogtu ay tahay mid La hawlgeliyay, waxaad cayimi kartaa inta diiwaan taariikheed (ee isbeddelay) ee loo haynayo Qalab kasta."
+
+#: includes/settings.php
+msgid "Without history"
+msgstr "Aan lahayn taariikh"
+
+#: includes/settings.php
+#, php-format
+msgid "%d record"
+msgstr "%d diiwaan"
+
+#: includes/settings.php
+#, php-format
+msgid "%d records"
+msgstr "%d diiwaanno"
+
+#: includes/settings.php
+msgid "Display information on device edit page"
+msgstr "Muuji macluumaadka bogga wax ka beddelka qalabka"
+
+#: includes/settings.php
+msgid "If enabled, flowview will display evidence data on device edit page"
+msgstr "Haddii la hawlgeliyo, flowview wuxuu ku soo bandhigi doonaa xogta Evidence bogga Wax ka beddelka Qalabka."
+
+#: includes/settings.php
+msgid "Send email on evidence information change"
+msgstr "Dir iimayl marka ay isbeddesho macluumaadka caddaynta"
+
+#: includes/settings.php
+msgid "If evidence find change, send email"
+msgstr "Haddii Evidence helo isbeddel, dir Iimayl"
+
+#: includes/settings.php
+msgid "Excluded notification Host IDs"
+msgstr "Aqoonsiyada Martigeliyaha ee laga reebay ogeysiiska"
+
+#: includes/settings.php
+msgid "Some devices report hw changes too often. You can exclude these host from email notification. Insert Host IDs, comma separator"
+msgstr "Aaladaha qaar waxay aad u soo sheegaan isbeddellada qalabka adag (hw) si joogto ah. Waad ka reebi kartaa martigeliyeyaashan ogeysiiska iimaylka. Geli aqoonsiyada Martigeliyaha (Host IDs), oo hakad u dhexeeyo"
+
+#: includes/settings.php
+msgid "Excluded notification device templates"
+msgstr "Qaab-dhismeedyada qalabka ee laga reebay ogeysiiska"
+
+#: includes/settings.php
+msgid "Some devices types report hw changes too often. You can exclude these templates from email notification. Insert device templates IDs, comma separator"
+msgstr "Noocyada aaladaha qaar waxay aad u soo sheegaan isbeddellada qalabka adag (hw) si joogto ah. Waad ka reebi kartaa qaab-dhismeedyadan ogeysiiska iimaylka. Geli aqoonsiyada qaab-dhismeedyada qalabka, oo hakad u dhexeeyo"
+

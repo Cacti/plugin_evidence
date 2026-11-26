@@ -1,0 +1,451 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-11-02 16:25+0100\n"
+"PO-Revision-Date: 2026-11-24 19:00+0000\n"
+"Last-Translator: Thomas Vincent <balder.infuser.6n@icloud.com>\n"
+"Language-Team: Kinyarwanda\n"
+"Language: rw-RW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: evidence.php
+msgid "Disabled/down device. No actual data"
+msgstr "Igikoresho cyahagaritswe/kitakora. Nta makuru nyakuri ahari"
+
+#: evidence.php
+msgid "Show older records"
+msgstr "Erekana inyandiko za kera"
+
+#: evidence.php includes/functions.php
+msgid "History data store disabled"
+msgstr "Ububiko bw'amateka y'amakuru bwahagaritswe"
+
+#: evidence.php
+msgid "Permission issue"
+msgstr "Ikibazo cy'uruhushya"
+
+#: evidence_tab.php includes/functions.php
+msgid "Evidence"
+msgstr "Ibimenyetso"
+
+#: evidence_tab.php
+msgid "Template"
+msgstr "Inyandikorugero"
+
+#: evidence_tab.php
+msgid "Any"
+msgstr "Icyo ari cyo cyose"
+
+#: evidence_tab.php
+msgid "Scan date"
+msgstr "Itariki y'isuzuma"
+
+#: evidence_tab.php
+msgid "Only last changed states"
+msgstr "Imiterere yahindutse bwa nyuma gusa"
+
+#: evidence_tab.php
+msgid "All history"
+msgstr "Amateka yose"
+
+#: evidence_tab.php
+msgid "records changed"
+msgstr "inyandiko zahindutse"
+
+#: evidence_tab.php
+msgid "Find"
+msgstr "Shaka"
+
+#: evidence_tab.php
+msgid "Go"
+msgstr "Komeza"
+
+#: evidence_tab.php
+msgid "Clear"
+msgstr "Siba"
+
+#: evidence_tab.php
+msgid "Clear Filters"
+msgstr "Gusiba muyunguruzi"
+
+#: evidence_tab.php
+msgid "Export"
+msgstr "Sohora"
+
+#: evidence_tab.php
+msgid "Print"
+msgstr "Capisha"
+
+#: evidence_tab.php
+msgid "Allow pop-ups to open the print view."
+msgstr "Emera amadirishya yikubita afungure imigaragarire yo gucapa."
+
+#: evidence_tab.php
+msgid "Search"
+msgstr "Shakisha"
+
+#: evidence_tab.php
+msgid "You can search serial number, firmware version, ip, mac address,..."
+msgstr "Ushobora gushakisha nimero iranga, verisiyo ya firmware, aderesi ya IP, aderesi ya MAC,..."
+
+#: evidence_tab.php
+msgid "Search string must be 3-20 characters"
+msgstr "Ijambo rishakishwa rigomba kugira inyuguti 3-20"
+
+#: evidence_tab.php
+msgid "Select any device, template, select any scan date or try search"
+msgstr "Hitamo igikoresho icyo ari cyo cyose, inyandikorugero, hitamo itariki iyo ari yo yose y'igenzura cyangwa gerageza gushakisha"
+
+#: evidence_tab.php
+msgid "No data. Allow periodic scan and store history in settings"
+msgstr "Nta makuru. Emera isuzuma rya buri gihe kandi ubike amateka mu magenamiterere"
+
+#: evidence_tab.php
+msgid "Device or template - You can display information about specific host, all devices with the same template."
+msgstr "Igikoresho cyangwa inyandikorugero - Ushobora kwerekana amakuru yerekeye mwakirizi wihariye, cyangwa ibikoresho byose bifite inyandikorugero imwe."
+
+#: evidence_tab.php
+msgid "Scan date (Only last changes or All history) - You can choose whether to retrieve only the most recent change or the entire history."
+msgstr "Itariki y'isuzuma (Impinduka ziheruka gusa cyangwa Amateka yose) - Ushobora guhitamo niba ushaka kugarura gusa impinduka iheruka cyangwa amateka yose."
+
+#: evidence_tab.php
+msgid "If you use only `Scan Date`, the changes for all devices found during this scan will be displayed"
+msgstr "Niba ukoresha gusa `Scan Date`, impinduka ku Bikoresho byose byabonetse muri iri suzuma zizagaragara"
+
+#: evidence_tab.php
+msgid "You can search any string in all data."
+msgstr "Ushobora gushakisha inyuguti izo ari zo zose mu makuru yose."
+
+#: evidence_tab.php
+msgid "Number of records"
+msgstr "Umubare w'inyandiko"
+
+#: evidence_tab.php
+#, php-format
+msgid "Devices: %d records"
+msgstr "Ibikoresho: inyandiko %d"
+
+#: evidence_tab.php
+#, php-format
+msgid "Entity MIB: %d records, %d vendors"
+msgstr "Entity MIB: inyandiko %d, abacuruzi %d"
+
+#: evidence_tab.php
+#, php-format
+msgid "Unique MAC addresses: %d"
+msgstr "Aderesi za MAC zihariye: %d"
+
+#: evidence_tab.php
+#, php-format
+msgid "Unique IP addresses: %d"
+msgstr "Aderesi za IP zihariye: %d"
+
+#: evidence_tab.php
+#, php-format
+msgid "Vendor specific data: %d"
+msgstr "Amakuru yihariye y'umucuruzi: %d"
+
+#: evidence_tab.php
+#, php-format
+msgid "Oldest record: %d"
+msgstr "Inyandiko ishaje kurusha izindi: %d"
+
+#: evidence_tab.php
+msgid "Vendors"
+msgstr "Abacuruzi"
+
+#: evidence_tab.php
+msgid "Show or hide"
+msgstr "Erekana cyangwa hisha"
+
+#: evidence_tab.php
+msgid "Expand all dates"
+msgstr "Kwagura amatariki yose"
+
+#: evidence_tab.php
+msgid "Expand latest date"
+msgstr "Kwagura itariki iheruka"
+
+#: includes/arrays.php includes/functions.php
+msgid "Description"
+msgstr "Ibisobanuro"
+
+#: includes/arrays.php includes/functions.php
+msgid "Name"
+msgstr "Izina"
+
+#: includes/arrays.php
+msgid "Hardware revision"
+msgstr "Isubiramo ry'ibikoresho fatizo"
+
+#: includes/arrays.php
+msgid "Firmware revision"
+msgstr "Ivugurura rya Firmware"
+
+#: includes/arrays.php
+msgid "Software revision"
+msgstr "Isubiramo rya porogaramu"
+
+#: includes/arrays.php
+msgid "Serial number"
+msgstr "Umubare w'urukurikirane"
+
+#: includes/arrays.php
+msgid "Manufacturer name"
+msgstr "Izina ry'uruganda rwabikoze"
+
+#: includes/arrays.php
+msgid "Model name"
+msgstr "Izina rya modeli"
+
+#: includes/arrays.php
+msgid "Alias"
+msgstr "Irindi zina"
+
+#: includes/arrays.php
+msgid "Asset ID"
+msgstr "Nimero iranga umutungo"
+
+#: includes/arrays.php
+msgid "Manufacturing date"
+msgstr "Itariki yakoreweho"
+
+#: includes/arrays.php
+msgid "UUID"
+msgstr "UUID"
+
+#: includes/arrays.php includes/functions.php
+msgid "SNMP info"
+msgstr "Amakuru ya SNMP"
+
+#: includes/arrays.php includes/functions.php
+msgid "Entity MIB"
+msgstr "Entity MIB"
+
+#: includes/arrays.php
+msgid "Mac addresses"
+msgstr "Aderesi za MAC"
+
+#: includes/arrays.php includes/functions.php
+msgid "IP addresses"
+msgstr "Aderesi za IP"
+
+#: includes/arrays.php
+msgid "Vendor specific data"
+msgstr "Amakuru yihariye y'umucuruzi"
+
+#: includes/arrays.php
+msgid "Vendor optional data"
+msgstr "Amakuru y'inyongera y'umucuruzi"
+
+#: includes/functions.php
+msgid "No data"
+msgstr "Nta makuru"
+
+#: includes/functions.php
+msgid "Organization"
+msgstr "Ikigo"
+
+#: includes/functions.php
+msgid "Organization ID"
+msgstr "ID y'ikigo"
+
+#: includes/functions.php
+msgid "System name"
+msgstr "Izina rya sisitemu"
+
+#: includes/functions.php
+msgid "Contact"
+msgstr "Uwo kuvugana na we"
+
+#: includes/functions.php
+msgid "Location"
+msgstr "Ahantu"
+
+#: includes/functions.php
+msgid "Field"
+msgstr "Umwanya"
+
+#: includes/functions.php
+msgid "Value"
+msgstr "Agaciro"
+
+#: includes/functions.php
+msgid "Entity"
+msgstr "Ikintu"
+
+#: includes/functions.php
+msgid "Show only first 3 items, for the full listing click here"
+msgstr "Erekana ibintu 3 bya mbere gusa, kugira ngo ubone urutonde rwose kanda hano"
+
+#: includes/functions.php
+msgid "IP address"
+msgstr "Aderesi ya IP"
+
+#: includes/functions.php
+msgid "MAC address"
+msgstr "Aderesi ya MAC"
+
+#: includes/functions.php
+msgid "OID"
+msgstr "OID"
+
+#: includes/functions.php
+msgid "Store history is not allowed. Nothing to do."
+msgstr "Kubika amateka ntibyemewe. Nta cyo gukora."
+
+#: includes/functions.php
+#, php-format
+msgid "ID: %d, stored records: %d"
+msgstr "ID: %d, ibyanditswe bibitswe: %d"
+
+#: includes/functions.php
+msgid "Also show actual data"
+msgstr "Erekana kandi amakuru nyayo"
+
+#: includes/functions.php
+msgid "ID ORG"
+msgstr "ID y'Ikigo"
+
+#: includes/functions.php
+msgid "No older data yet"
+msgstr "Nta makuru ya kera arahari"
+
+#: includes/functions.php
+msgid "MAC addresses"
+msgstr "Aderesi za MAC"
+
+#: includes/functions.php
+msgid "Vendor specific"
+msgstr "Byihariye ku mucuruzi"
+
+#: includes/functions.php
+#, php-format
+msgid "Records: %d"
+msgstr "Inyandiko: %d"
+
+#: includes/functions.php
+msgid "Actual data"
+msgstr "Amakuru nyayo"
+
+#: includes/functions.php
+msgid "Changed"
+msgstr "Byahinduwe"
+
+#: includes/functions.php
+msgid "SNMP information"
+msgstr "Amakuru ya SNMP"
+
+#: includes/functions.php
+msgid "Vendor specific information"
+msgstr "Ibisobanuro byihariye by'umucuruzi"
+
+#: includes/functions.php
+msgid "Vendor optional information"
+msgstr "Ibisobanuro by'inyongera by'umucuruzi"
+
+#: includes/functions.php
+#, php-format
+msgid "ID: %d, found in %d records"
+msgstr "ID: %d, yabonetse mu byanditswe %d"
+
+#: includes/functions.php
+msgid "Not found"
+msgstr "Ntibyabonetse"
+
+#: includes/settings.php
+msgid "How often gather data"
+msgstr "Ni kangahe hakusanywa amakuru"
+
+#: includes/settings.php
+msgid "If enabled, Evidence will gather data periodically. If disabled, you can only view data for specific host"
+msgstr "Niba byafunguwe, Evidence izakusanya amakuru rimwe na rimwe. Niba byahagaritswe, ushobora kureba gusa amakuru ya Mwakirizi wihariye"
+
+#: includes/settings.php
+msgid "Disabled"
+msgstr "Byahagaritswe"
+
+#: includes/settings.php
+#, php-format
+msgid "Every %d hours"
+msgstr "Buri masaha %d"
+
+#: includes/settings.php
+msgid "Every day"
+msgstr "Buri munsi"
+
+#: includes/settings.php
+msgid "Every week"
+msgstr "Buri cyumweru"
+
+#: includes/settings.php
+msgid "When evidence will be started"
+msgstr "Igihe ibimenyetso bizatangirira"
+
+#: includes/settings.php
+msgid "The Base Time for gather data to occur.  For example, if you use '12:00am' and you choose once per day, the action would begin at approximately midnight every day."
+msgstr "Igihe fatizo cyo gukusanya amakuru.  Urugero, niba ukoresheje '12:00am' kandi ugahitamo rimwe ku munsi, igikorwa kizatangira hafi ya saa sita z'ijoro buri munsi."
+
+#: includes/settings.php
+msgid "How many changes store in database"
+msgstr "Umubare w'impinduka zibikwa mu bubiko bw'amakuru"
+
+#: includes/settings.php
+msgid "If data gathering is enabled,  you can specify how many history (changed) records keep for each device"
+msgstr "Niba ikusanyamakuru ryafunguwe, ushobora kugaragaza umubare w'inyandiko z'amateka (zahindutse) zibikwa kuri buri Gikoresho"
+
+#: includes/settings.php
+msgid "Without history"
+msgstr "Nta mateka"
+
+#: includes/settings.php
+#, php-format
+msgid "%d record"
+msgstr "icyanditswe %d"
+
+#: includes/settings.php
+#, php-format
+msgid "%d records"
+msgstr "ibyanditswe %d"
+
+#: includes/settings.php
+msgid "Display information on device edit page"
+msgstr "Erekana amakuru ku rupapuro rwo guhindura Igikoresho"
+
+#: includes/settings.php
+msgid "If enabled, flowview will display evidence data on device edit page"
+msgstr "Niba byafunguwe, flowview izerekana amakuru ya evidence ku rupapuro rwo guhindura Igikoresho"
+
+#: includes/settings.php
+msgid "Send email on evidence information change"
+msgstr "Ohereza imeyili igihe amakuru y'ibimenyetso ahindutse"
+
+#: includes/settings.php
+msgid "If evidence find change, send email"
+msgstr "Niba evidence ibonye impinduka, ohereza Imeyili"
+
+#: includes/settings.php
+msgid "Excluded notification Host IDs"
+msgstr "ID za Mwakirizi zitabona amenyesha"
+
+#: includes/settings.php
+msgid "Some devices report hw changes too often. You can exclude these host from email notification. Insert Host IDs, comma separator"
+msgstr "Ibikoresho bimwe bitanga raporo y'impinduka za hardware kenshi cyane. Ushobora gukura aba bakirizi mu imenyekanisha rya imeyili. Shyiramo ID za Mwakirizi, zitandukanyijwe n'akitso"
+
+#: includes/settings.php
+msgid "Excluded notification device templates"
+msgstr "Inyandikorugero z'ibikoresho zitabona amenyesha"
+
+#: includes/settings.php
+msgid "Some devices types report hw changes too often. You can exclude these templates from email notification. Insert device templates IDs, comma separator"
+msgstr "Ubwoko bumwe bw'ibikoresho butanga raporo y'impinduka za hardware kenshi cyane. Ushobora gukura izi nyandikorugero mu imenyekanisha rya imeyili. Shyiramo ID z'inyandikorugero z'igikoresho, zitandukanyijwe n'akitso"
+
