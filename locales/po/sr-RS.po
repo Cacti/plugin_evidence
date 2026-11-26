@@ -1,0 +1,449 @@
+# Serbian translation for Cacti.
+# Copyright (C) 2004-2026 The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-11-02 16:25+0100\n"
+"PO-Revision-Date: 2026-11-26 18:57+0000\n"
+"Last-Translator: Thomas Vincent <thomasvincent@gmail.com>\n"
+"Language-Team: Serbian <developers@cacti.net>\n"
+"Language: sr-RS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+
+#: evidence.php
+msgid "Disabled/down device. No actual data"
+msgstr "Онемогућен/недоступан уређај. Нема стварних података"
+
+#: evidence.php
+msgid "Show older records"
+msgstr "Прикажи старије записе"
+
+#: evidence.php includes/functions.php
+msgid "History data store disabled"
+msgstr "Складиште података историје је онемогућено"
+
+#: evidence.php
+msgid "Permission issue"
+msgstr "Проблем са дозволама"
+
+#: evidence_tab.php includes/functions.php
+msgid "Evidence"
+msgstr "Евиденција"
+
+#: evidence_tab.php
+msgid "Template"
+msgstr "Шаблон"
+
+#: evidence_tab.php
+msgid "Any"
+msgstr "Било који"
+
+#: evidence_tab.php
+msgid "Scan date"
+msgstr "Датум скенирања"
+
+#: evidence_tab.php
+msgid "Only last changed states"
+msgstr "Само последња промењена стања"
+
+#: evidence_tab.php
+msgid "All history"
+msgstr "Сва историја"
+
+#: evidence_tab.php
+msgid "records changed"
+msgstr "промењених записа"
+
+#: evidence_tab.php
+msgid "Find"
+msgstr "Пронађи"
+
+#: evidence_tab.php
+msgid "Go"
+msgstr "Иди"
+
+#: evidence_tab.php
+msgid "Clear"
+msgstr "Очисти"
+
+#: evidence_tab.php
+msgid "Clear Filters"
+msgstr "Очисти филтере"
+
+#: evidence_tab.php
+msgid "Export"
+msgstr "Извези"
+
+#: evidence_tab.php
+msgid "Print"
+msgstr "Штампај"
+
+#: evidence_tab.php
+msgid "Allow pop-ups to open the print view."
+msgstr "Дозволите искачуће прозоре да бисте отворили приказ за штампу."
+
+#: evidence_tab.php
+msgid "Search"
+msgstr "Претражи"
+
+#: evidence_tab.php
+msgid "You can search serial number, firmware version, ip, mac address,..."
+msgstr "Можете претраживати серијски број, верзију фирмвера, IP, MAC адресу,..."
+
+#: evidence_tab.php
+msgid "Search string must be 3-20 characters"
+msgstr "Ниска за претрагу мора имати 3-20 знакова"
+
+#: evidence_tab.php
+msgid "Select any device, template, select any scan date or try search"
+msgstr "Изаберите било који уређај, шаблон, изаберите било који датум скенирања или покушајте претрагу"
+
+#: evidence_tab.php
+msgid "No data. Allow periodic scan and store history in settings"
+msgstr "Нема података. Дозволите периодично скенирање и чување историје у подешавањима"
+
+#: evidence_tab.php
+msgid "Device or template - You can display information about specific host, all devices with the same template."
+msgstr "Уређај или шаблон - Можете приказати информације о одређеном хосту, свим уређајима са истим шаблоном."
+
+#: evidence_tab.php
+msgid "Scan date (Only last changes or All history) - You can choose whether to retrieve only the most recent change or the entire history."
+msgstr "Датум скенирања (Само последње промене или Сва историја) - Можете изабрати да ли да преузмете само најновију промену или целу историју."
+
+#: evidence_tab.php
+msgid "If you use only `Scan Date`, the changes for all devices found during this scan will be displayed"
+msgstr "Ако користите само `Датум скенирања`, биће приказане промене за све уређаје пронађене током овог скенирања"
+
+#: evidence_tab.php
+msgid "You can search any string in all data."
+msgstr "Можете претражити било коју ниску у свим подацима."
+
+#: evidence_tab.php
+msgid "Number of records"
+msgstr "Број записа"
+
+#: evidence_tab.php
+#, php-format
+msgid "Devices: %d records"
+msgstr "Уређаји: %d записа"
+
+#: evidence_tab.php
+#, php-format
+msgid "Entity MIB: %d records, %d vendors"
+msgstr "Entity MIB: %d записа, %d произвођача"
+
+#: evidence_tab.php
+#, php-format
+msgid "Unique MAC addresses: %d"
+msgstr "Јединствених MAC адреса: %d"
+
+#: evidence_tab.php
+#, php-format
+msgid "Unique IP addresses: %d"
+msgstr "Јединствених IP адреса: %d"
+
+#: evidence_tab.php
+#, php-format
+msgid "Vendor specific data: %d"
+msgstr "Подаци специфични за произвођача: %d"
+
+#: evidence_tab.php
+#, php-format
+msgid "Oldest record: %d"
+msgstr "Најстарији запис: %d"
+
+#: evidence_tab.php
+msgid "Vendors"
+msgstr "Произвођачи"
+
+#: evidence_tab.php
+msgid "Show or hide"
+msgstr "Прикажи или сакриј"
+
+#: evidence_tab.php
+msgid "Expand all dates"
+msgstr "Прошири све датуме"
+
+#: evidence_tab.php
+msgid "Expand latest date"
+msgstr "Прошири најновији датум"
+
+#: includes/arrays.php includes/functions.php
+msgid "Description"
+msgstr "Опис"
+
+#: includes/arrays.php includes/functions.php
+msgid "Name"
+msgstr "Назив"
+
+#: includes/arrays.php
+msgid "Hardware revision"
+msgstr "Ревизија хардвера"
+
+#: includes/arrays.php
+msgid "Firmware revision"
+msgstr "Ревизија фирмвера"
+
+#: includes/arrays.php
+msgid "Software revision"
+msgstr "Ревизија софтвера"
+
+#: includes/arrays.php
+msgid "Serial number"
+msgstr "Серијски број"
+
+#: includes/arrays.php
+msgid "Manufacturer name"
+msgstr "Назив произвођача"
+
+#: includes/arrays.php
+msgid "Model name"
+msgstr "Назив модела"
+
+#: includes/arrays.php
+msgid "Alias"
+msgstr "Алијас"
+
+#: includes/arrays.php
+msgid "Asset ID"
+msgstr "ID имовине"
+
+#: includes/arrays.php
+msgid "Manufacturing date"
+msgstr "Датум производње"
+
+#: includes/arrays.php
+msgid "UUID"
+msgstr "UUID"
+
+#: includes/arrays.php includes/functions.php
+msgid "SNMP info"
+msgstr "SNMP информације"
+
+#: includes/arrays.php includes/functions.php
+msgid "Entity MIB"
+msgstr "Entity MIB"
+
+#: includes/arrays.php
+msgid "Mac addresses"
+msgstr "MAC адресе"
+
+#: includes/arrays.php includes/functions.php
+msgid "IP addresses"
+msgstr "IP адресе"
+
+#: includes/arrays.php
+msgid "Vendor specific data"
+msgstr "Подаци специфични за произвођача"
+
+#: includes/arrays.php
+msgid "Vendor optional data"
+msgstr "Опциони подаци произвођача"
+
+#: includes/functions.php
+msgid "No data"
+msgstr "Нема података"
+
+#: includes/functions.php
+msgid "Organization"
+msgstr "Организација"
+
+#: includes/functions.php
+msgid "Organization ID"
+msgstr "ID организације"
+
+#: includes/functions.php
+msgid "System name"
+msgstr "Назив система"
+
+#: includes/functions.php
+msgid "Contact"
+msgstr "Контакт"
+
+#: includes/functions.php
+msgid "Location"
+msgstr "Локација"
+
+#: includes/functions.php
+msgid "Field"
+msgstr "Поље"
+
+#: includes/functions.php
+msgid "Value"
+msgstr "Вредност"
+
+#: includes/functions.php
+msgid "Entity"
+msgstr "Ентитет"
+
+#: includes/functions.php
+msgid "Show only first 3 items, for the full listing click here"
+msgstr "Приказују се само прве 3 ставке, за цео списак кликните овде"
+
+#: includes/functions.php
+msgid "IP address"
+msgstr "IP адреса"
+
+#: includes/functions.php
+msgid "MAC address"
+msgstr "MAC адреса"
+
+#: includes/functions.php
+msgid "OID"
+msgstr "OID"
+
+#: includes/functions.php
+msgid "Store history is not allowed. Nothing to do."
+msgstr "Чување историје није дозвољено. Нема шта да се уради."
+
+#: includes/functions.php
+#, php-format
+msgid "ID: %d, stored records: %d"
+msgstr "ID: %d, сачуваних записа: %d"
+
+#: includes/functions.php
+msgid "Also show actual data"
+msgstr "Прикажи и актуелне податке"
+
+#: includes/functions.php
+msgid "ID ORG"
+msgstr "ID ОРГ"
+
+#: includes/functions.php
+msgid "No older data yet"
+msgstr "Још увек нема старијих података"
+
+#: includes/functions.php
+msgid "MAC addresses"
+msgstr "MAC адресе"
+
+#: includes/functions.php
+msgid "Vendor specific"
+msgstr "Специфично за произвођача"
+
+#: includes/functions.php
+#, php-format
+msgid "Records: %d"
+msgstr "Записа: %d"
+
+#: includes/functions.php
+msgid "Actual data"
+msgstr "Актуелни подаци"
+
+#: includes/functions.php
+msgid "Changed"
+msgstr "Измењено"
+
+#: includes/functions.php
+msgid "SNMP information"
+msgstr "SNMP информације"
+
+#: includes/functions.php
+msgid "Vendor specific information"
+msgstr "Информације специфичне за произвођача"
+
+#: includes/functions.php
+msgid "Vendor optional information"
+msgstr "Опционе информације произвођача"
+
+#: includes/functions.php
+#, php-format
+msgid "ID: %d, found in %d records"
+msgstr "ID: %d, пронађено у %d записа"
+
+#: includes/functions.php
+msgid "Not found"
+msgstr "Није пронађено"
+
+#: includes/settings.php
+msgid "How often gather data"
+msgstr "Колико често прикупљати податке"
+
+#: includes/settings.php
+msgid "If enabled, Evidence will gather data periodically. If disabled, you can only view data for specific host"
+msgstr "Ако је омогућено, Evidence ће периодично прикупљати податке. Ако је онемогућено, можете прегледати податке само за одређени хост"
+
+#: includes/settings.php
+msgid "Disabled"
+msgstr "Онемогућено"
+
+#: includes/settings.php
+#, php-format
+msgid "Every %d hours"
+msgstr "Сваких %d сати"
+
+#: includes/settings.php
+msgid "Every day"
+msgstr "Сваког дана"
+
+#: includes/settings.php
+msgid "Every week"
+msgstr "Сваке недеље"
+
+#: includes/settings.php
+msgid "When evidence will be started"
+msgstr "Када ће Evidence бити покренут"
+
+#: includes/settings.php
+msgid "The Base Time for gather data to occur.  For example, if you use '12:00am' and you choose once per day, the action would begin at approximately midnight every day."
+msgstr "Основно време за покретање прикупљања података. На пример, ако користите '12:00am' и изаберете једном дневно, радња ће почети приближно у поноћ сваког дана."
+
+#: includes/settings.php
+msgid "How many changes store in database"
+msgstr "Колико измена чувати у бази података"
+
+#: includes/settings.php
+msgid "If data gathering is enabled,  you can specify how many history (changed) records keep for each device"
+msgstr "Ако је прикупљање података омогућено, можете навести колико историјских (измењених) записа чувати за сваки уређај"
+
+#: includes/settings.php
+msgid "Without history"
+msgstr "Без историје"
+
+#: includes/settings.php
+#, php-format
+msgid "%d record"
+msgstr "%d запис"
+
+#: includes/settings.php
+#, php-format
+msgid "%d records"
+msgstr "%d записа"
+
+#: includes/settings.php
+msgid "Display information on device edit page"
+msgstr "Прикажи информације на страници за уређивање уређаја"
+
+#: includes/settings.php
+msgid "If enabled, flowview will display evidence data on device edit page"
+msgstr "Ако је омогућено, flowview ће приказивати evidence податке на страници за уређивање уређаја"
+
+#: includes/settings.php
+msgid "Send email on evidence information change"
+msgstr "Пошаљи е-пошту при измени evidence информација"
+
+#: includes/settings.php
+msgid "If evidence find change, send email"
+msgstr "Ако evidence пронађе измену, пошаљи е-пошту"
+
+#: includes/settings.php
+msgid "Excluded notification Host IDs"
+msgstr "ID-ови хостова искључени из обавештења"
+
+#: includes/settings.php
+msgid "Some devices report hw changes too often. You can exclude these host from email notification. Insert Host IDs, comma separator"
+msgstr "Неки уређаји пречесто пријављују хардверске измене. Можете искључити ове хостове из обавештења е-поштом. Унесите ID-ове хостова, одвојене зарезом"
+
+#: includes/settings.php
+msgid "Excluded notification device templates"
+msgstr "Шаблони уређаја искључени из обавештења"
+
+#: includes/settings.php
+msgid "Some devices types report hw changes too often. You can exclude these templates from email notification. Insert device templates IDs, comma separator"
+msgstr "Неке врсте уређаја пречесто пријављују хардверске измене. Можете искључити ове шаблоне из обавештења е-поштом. Унесите ID-ове шаблона уређаја, одвојене зарезом"
